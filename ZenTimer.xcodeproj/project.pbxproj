@@ -3,25 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
-		B4A34A9D22FBD76100FB66DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9C22FBD76100FB66DE /* ViewController.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
 		B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */; };
+		B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */; };
+		B4C6985B22FCAA7A0088DA5C /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6985A22FCAA7A0088DA5C /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
+		82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4A34A9C22FBD76100FB66DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4A34AA122FBD76200FB66DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A34AA422FBD76200FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4A34AA622FBD76200FB66DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4C6985A22FCAA7A0088DA5C /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7613DA346EBC135F9317AF04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */,
+				2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7BA769F9B4A4D1E1CAE2E0F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B4A34A8E22FBD76100FB66DE = {
 			isa = PBXGroup;
 			children = (
 				B4A34A9922FBD76100FB66DE /* ZenTimer */,
 				B4A34A9822FBD76100FB66DE /* Products */,
+				7613DA346EBC135F9317AF04 /* Pods */,
+				7BA769F9B4A4D1E1CAE2E0F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,47 @@
 		B4A34A9922FBD76100FB66DE /* ZenTimer */ = {
 			isa = PBXGroup;
 			children = (
-				B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */,
-				B4A34A9C22FBD76100FB66DE /* ViewController.swift */,
-				B4A34A9E22FBD76100FB66DE /* Main.storyboard */,
+				B4C6985822FCA5730088DA5C /* Model */,
+				B4C6985722FCA5650088DA5C /* View */,
+				B4C6985922FCA5790088DA5C /* Controller */,
+				B4C6985622FCA5470088DA5C /* UI */,
 				B4A34AA122FBD76200FB66DE /* Assets.xcassets */,
-				B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */,
 				B4A34AA622FBD76200FB66DE /* Info.plist */,
+				B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */,
 			);
 			path = ZenTimer;
+			sourceTree = "<group>";
+		};
+		B4C6985622FCA5470088DA5C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B4A34A9E22FBD76100FB66DE /* Main.storyboard */,
+				B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B4C6985722FCA5650088DA5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */,
+				B4C6985A22FCAA7A0088DA5C /* TimerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4C6985822FCA5730088DA5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4C6985922FCA5790088DA5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4A34AA922FBD76200FB66DE /* Build configuration list for PBXNativeTarget "ZenTimer" */;
 			buildPhases = (
+				829B1D4690E1063DB2239152 /* [CP] Check Pods Manifest.lock */,
 				B4A34A9322FBD76100FB66DE /* Sources */,
 				B4A34A9422FBD76100FB66DE /* Frameworks */,
 				B4A34A9522FBD76100FB66DE /* Resources */,
+				598D291327B4F5703970F8DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
+				B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */,
 				B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */,
 				B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */,
 			);
@@ -130,12 +192,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		598D291327B4F5703970F8DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		829B1D4690E1063DB2239152 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZenTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4A34A9322FBD76100FB66DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A34A9D22FBD76100FB66DE /* ViewController.swift in Sources */,
+				B4C6985B22FCAA7A0088DA5C /* TimerViewController.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +384,7 @@
 		};
 		B4A34AAA22FBD76200FB66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +403,7 @@
 		};
 		B4A34AAB22FBD76200FB66DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>289075330492-2rl6u8ql83m2l5cg4sj2qog22t4e2fno.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.289075330492-2rl6u8ql83m2l5cg4sj2qog22t4e2fno</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBd_iK-AWQSLTSYXoCfMmE9msOr2s6KVy4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>289075330492</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.KainoaPalama.ZenTimer</string>
+	<key>PROJECT_ID</key>
+	<string>zentimer-ac8da</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zentimer-ac8da.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:289075330492:ios:b9d82d19adf0fe31</string>
+	<key>DATABASE_URL</key>
+	<string>https://zentimer-ac8da.firebaseio.com</string>
+</dict>
+</plist>
