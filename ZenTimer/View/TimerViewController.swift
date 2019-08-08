@@ -21,7 +21,6 @@ class TimerViewController: UIViewController {
     // MARK: - Views
     
     func setupUI(){
-        
         overlayView.layer.compositingFilter = "overlayBlendMode"
         
         if isMuted == false {

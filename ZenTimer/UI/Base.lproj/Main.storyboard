@@ -210,7 +210,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHI-Ie-IrW" userLabel="Start / Stop Button">
                                 <rect key="frame" x="0.0" y="685.5" width="414" height="210.5"/>
-                                <color key="backgroundColor" red="0.10980392160000001" green="0.3803921569" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14269939064979553" green="0.52955514192581177" blue="0.4904596209526062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="TAP TO START">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.3204562883" colorSpace="custom" customColorSpace="sRGB"/>
