@@ -21,6 +21,7 @@ class TimerViewController: UIViewController {
     // MARK: - Views
     
     func setupUI(){
+        settingsView.alpha = 0
         overlayView.layer.compositingFilter = "overlayBlendMode"
         
         if isMuted == false {
@@ -46,10 +47,26 @@ class TimerViewController: UIViewController {
     @IBAction func settingsButtonTapped(_ sender: Any) {
         if settingsMenuOpen == true {
             settingsMenuOpen = false
+            for button in topContainerButtons {
+                button.isEnabled = true
+                button.isHidden = false
+            }
+            for label in topContainerLabels {
+                label.isHidden = false
+            }
             settingsButton.alpha = 0.25
+            settingsView.alpha = 0
         } else {
             settingsMenuOpen = true
+            for button in topContainerButtons {
+                button.isEnabled = false
+                button.isHidden = true
+            }
+            for label in topContainerLabels {
+                label.isHidden = true
+            }
             settingsButton.alpha = 100
+            settingsView.alpha = 100
         }
     }
     
@@ -83,9 +100,23 @@ class TimerViewController: UIViewController {
     
     @IBAction func startButtonTapped(_ sender: Any) {
         if timerDidStart == false {
+            for button in topContainerButtons {
+                button.isEnabled = false
+            }
+            //Start Timer
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
+                self.time += 1
+                self.timerLabel.text = String((self.sessionLength * 60) - self.time)
+            })
             timerDidStart = true
             startButton.setTitle("TAP TO PAUSE", for: .normal)
         } else {
+            for button in topContainerButtons {
+                button.isEnabled = true
+            }
+            //Stop Timer
+            timer.invalidate()
+            timerLabel.text = String(time)
             timerDidStart = false
             startButton.setTitle("TAP TO START", for: .normal)
         }
@@ -98,6 +129,9 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var breakLengthLabel: UILabel!
     @IBOutlet weak var sessionLengthLabel: UILabel!
+    @IBOutlet var topContainerButtons: [UIButton]!
+    @IBOutlet var topContainerLabels: [UILabel]!
+    @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var overlayView: UIImageView!
@@ -110,6 +144,8 @@ class TimerViewController: UIViewController {
     var breakLength = 5
     var isMuted = false
     var settingsMenuOpen = false
+    var timer = Timer()
+    var time = 0
     var timerDidStart = false
     
 }
