@@ -47,6 +47,7 @@ class TimerViewController: UIViewController {
     @IBAction func settingsButtonTapped(_ sender: Any) {
         if settingsMenuOpen == true {
             settingsMenuOpen = false
+            //Show and enable buttons/labels in Top Container
             for button in topContainerButtons {
                 button.isEnabled = true
                 button.isHidden = false
@@ -54,10 +55,12 @@ class TimerViewController: UIViewController {
             for label in topContainerLabels {
                 label.isHidden = false
             }
+            //Hide SettingsView and 'grey out' button
             settingsButton.alpha = 0.25
             settingsView.alpha = 0
         } else {
             settingsMenuOpen = true
+            //Hide and disable buttons/labels in Top Container
             for button in topContainerButtons {
                 button.isEnabled = false
                 button.isHidden = true
@@ -65,6 +68,7 @@ class TimerViewController: UIViewController {
             for label in topContainerLabels {
                 label.isHidden = true
             }
+            //Show SettingsView and highlight button
             settingsButton.alpha = 100
             settingsView.alpha = 100
         }
@@ -100,6 +104,7 @@ class TimerViewController: UIViewController {
     
     @IBAction func startButtonTapped(_ sender: Any) {
         if timerDidStart == false {
+            //Disable buttons in Top Container when timer Starts
             for button in topContainerButtons {
                 button.isEnabled = false
             }
@@ -111,12 +116,13 @@ class TimerViewController: UIViewController {
             timerDidStart = true
             startButton.setTitle("TAP TO PAUSE", for: .normal)
         } else {
+            //Stop Timer
+            timer.invalidate()
+            //Enable buttons in Top Container when timer Ends
             for button in topContainerButtons {
                 button.isEnabled = true
             }
-            //Stop Timer
-            timer.invalidate()
-            timerLabel.text = String(time)
+            timerLabel.text = String((self.sessionLength * 60) - self.time)
             timerDidStart = false
             startButton.setTitle("TAP TO START", for: .normal)
         }
