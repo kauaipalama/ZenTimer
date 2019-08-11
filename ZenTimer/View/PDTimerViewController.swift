@@ -1,5 +1,5 @@
 //
-//  TimerViewController.swift
+//  PDgit TimerViewController.swift
 //  ZenTimer
 //
 //  Created by Kainoa Palama on 8/8/19.
@@ -107,74 +107,7 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        if timerIsOn == false {
-            //Hide and Disable buttons in Top Container when timer Starts
-            for button in topContainerButtons {
-                button.isEnabled = false
-                button.alpha = 0
-            }
-            //Start Timer
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
-                self.time += 1
-                self.timerLabel.text = String((self.sessionLength * 60) - self.time)
-                //TEST: To Change state from session to break
-                if self.timerLabel.text == "0" && self.time < 0 && self.isOnBreak == false {
-                    self.isOnBreak = true
-                    self.messageLabel.text = "take a break"
-                    print("isOnBreak: \(self.isOnBreak)")
-                } else if self.timerLabel.text == "0" && self.time < 0 && self.isOnBreak == true {
-                    self.isOnBreak = false
-                    self.messageLabel.text = "break time is over"
-                    print("isOnBreak: \(self.isOnBreak)")
-                }
-                if self.isOnBreak == false {
-                    self.messageLabel.text = "until your next break"
-                    if self.time == (self.sessionLength * 60) {
-                        self.timer.invalidate()
-                        self.timerIsOn = false
-                        self.time = 0
-                        if self.isOnBreak == false {
-                            self.messageLabel.text = "it's time for a break"
-                        }
-                        self.timerLabel.text = "\(self.sessionLength):00"
-                        for button in self.topContainerButtons {
-                            button.alpha = 100
-                            button.isEnabled = true
-                        }
-                        self.startButton.setTitle("TAP TO PAUSE", for: .normal)
-                    }
-                } else if self.isOnBreak == true {
-                    self.messageLabel.text = "Take a break"
-                    if self.time == (self.breakLength * 60) {
-                        self.timer.invalidate()
-                        self.timerIsOn = false
-                        self.time = 0
-                        if self.isOnBreak == true {
-                            self.messageLabel.text = "break time is over"
-                            self.timerLabel.text = "\(self.breakLength):00"
-                        }
-                        for button in self.topContainerButtons {
-                            button.alpha = 100
-                            button.isEnabled = true
-                        }
-                        self.startButton.setTitle("TAP TO START", for: .normal)
-                    }
-                }
-            })
-            timerIsOn = true
-            startButton.setTitle("TAP TO PAUSE", for: .normal)
-        } else {
-            //Stop Timer
-            timer.invalidate()
-            //Show and Enable buttons in Top Container when timer Ends
-            for button in topContainerButtons {
-                button.isEnabled = true
-                button.alpha = 0
-            }
-            timerLabel.text = String((self.sessionLength * 60) - self.time)
-            timerIsOn = false
-            startButton.setTitle("TAP TO START", for: .normal)
-        }
+        
     }
     
     // MARK: - IBObjects

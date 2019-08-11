@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */; };
+		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
+		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
 		B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */; };
 		B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */; };
-		B4C6985B22FCAA7A0088DA5C /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6985A22FCAA7A0088DA5C /* TimerViewController.swift */; };
+		B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
 		82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		B448109B22FFC9270092E4F0 /* PDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimer.swift; sourceTree = "<group>"; };
+		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,7 +30,7 @@
 		B4A34AA422FBD76200FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4A34AA622FBD76200FB66DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B4C6985A22FCAA7A0088DA5C /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerViewController.swift; sourceTree = "<group>"; };
 		EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */,
-				B4C6985A22FCAA7A0088DA5C /* TimerViewController.swift */,
+				B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +116,7 @@
 		B4C6985822FCA5730088DA5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B448109B22FFC9270092E4F0 /* PDTimer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		B4C6985922FCA5790088DA5C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B448109D22FFC93A0092E4F0 /* PDTimerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,8 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C6985B22FCAA7A0088DA5C /* TimerViewController.swift in Sources */,
+				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
+				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
+				B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
