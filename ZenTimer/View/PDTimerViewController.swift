@@ -1,5 +1,5 @@
 //
-//  PDgit TimerViewController.swift
+//  PDTimerViewController.swift
 //  ZenTimer
 //
 //  Created by Kainoa Palama on 8/8/19.
@@ -23,11 +23,10 @@ class TimerViewController: UIViewController {
     func setupUI(){
         settingsView.alpha = 0
         overlayView.layer.compositingFilter = "overlayBlendMode"
-        
-        if isMuted == false {
-            muteButton.alpha = 0.25
-        } else {
+        if pdTimer.audioSettingsState == .soundOff {
             muteButton.alpha = 100
+        } else if pdTimer.audioSettingsState == .soundOn {
+            muteButton.alpha = 0.25
         }
     }
     
@@ -35,18 +34,18 @@ class TimerViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func muteButtonTapped(_ sender: Any) {
-        if isMuted == true {
-            isMuted = false
-            muteButton.alpha = 0.25
-        } else {
-            isMuted = true
+        if pdTimer.audioSettingsState == .soundOn {
+            pdTimer.audioSettingsState = .soundOff
             muteButton.alpha = 100
+        } else if pdTimer.audioSettingsState == .soundOff {
+            pdTimer.audioSettingsState = .soundOn
+            muteButton.alpha = 0.25
         }
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
-        if settingsMenuOpen == true {
-            settingsMenuOpen = false
+        if pdTimer.settingsMenuState == .open {
+            pdTimer.settingsMenuState = .closed
             //Show and enable buttons/labels in Top Container
             for button in topContainerButtons {
                 button.isEnabled = true
@@ -58,8 +57,8 @@ class TimerViewController: UIViewController {
             //Hide SettingsView and 'grey out' button
             settingsButton.alpha = 0.25
             settingsView.alpha = 0
-        } else {
-            settingsMenuOpen = true
+        } else if pdTimer.settingsMenuState == .closed {
+            pdTimer.settingsMenuState = .open
             //Hide and disable buttons/labels in Top Container
             for button in topContainerButtons {
                 button.isEnabled = false
@@ -75,34 +74,34 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func decreaseBreakLengthTapped(_ sender: Any) {
-        if breakLength > 0 {
-            breakLength -= 1
-            breakLengthLabel.text = String(breakLength)
+        if pdTimer.breakLength > 0 {
+            pdTimer.breakLength -= 1
+            breakLengthLabel.text = String(Int(pdTimer.breakLength))
             messageLabel.text = ""
         }
     }
     
     @IBAction func increaseBreakLengthTapped(_ sender: Any) {
-        breakLength += 1
-        breakLengthLabel.text = String(breakLength)
+        pdTimer.breakLength += 1
+        breakLengthLabel.text = String(Int(pdTimer.breakLength))
         messageLabel.text = ""
     }
     
     @IBAction func decreaseSessionLengthTapped(_ sender: Any) {
-        if sessionLength > 0 {
-            sessionLength -= 1
-            sessionLengthLabel.text = String(sessionLength)
+        if pdTimer.workLength > 0 {
+            pdTimer.workLength -= 1
+            sessionLengthLabel.text = String(Int(pdTimer.workLength))
             //Fix later to reflect Int as timer
-            timerLabel.text = "\(sessionLength):00"
+            timerLabel.text = "\(Int(pdTimer.workLength)):00"
             messageLabel.text = ""
         }
     }
     
     @IBAction func increaseSessionLengthTapped(_ sender: Any) {
-        sessionLength += 1
-        sessionLengthLabel.text = String(sessionLength)
+        pdTimer.workLength += 1
+        sessionLengthLabel.text = String(Int(pdTimer.workLength))
         //Fix later to reflect Int as timer
-        timerLabel.text = "\(sessionLength):00"
+        timerLabel.text = "\(Int(pdTimer.workLength)):00"
         messageLabel.text = ""
     }
     
@@ -124,16 +123,6 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     
-    
-    // MARK: - Parameters
-    
-    var sessionLength = 25
-    var breakLength = 5
-    var isMuted = false
-    var isOnBreak = false
-    var settingsMenuOpen = false
-    var timer = Timer()
-    var time = 0
-    var timerIsOn = false
-    
+    // MARK: - Properties
+    let pdTimer = PDTimer()
 }

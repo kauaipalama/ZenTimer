@@ -10,6 +10,7 @@
 		07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */; };
 		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
+		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		B448109B22FFC9270092E4F0 /* PDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimer.swift; sourceTree = "<group>"; };
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
+		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B44810A122FFCA310092E4F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B448109F22FFCA2A0092E4F0 /* States.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B44810A222FFCA4B0092E4F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4A34AA622FBD76200FB66DE /* Info.plist */,
+				B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B4A34A8E22FBD76100FB66DE = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +107,8 @@
 				B4C6985722FCA5650088DA5C /* View */,
 				B4C6985922FCA5790088DA5C /* Controller */,
 				B4C6985622FCA5470088DA5C /* UI */,
-				B4A34AA122FBD76200FB66DE /* Assets.xcassets */,
-				B4A34AA622FBD76200FB66DE /* Info.plist */,
-				B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */,
+				B44810A122FFCA310092E4F0 /* Helpers */,
+				B44810A222FFCA4B0092E4F0 /* Resources */,
 			);
 			path = ZenTimer;
 			sourceTree = "<group>";
@@ -100,6 +118,7 @@
 			children = (
 				B4A34A9E22FBD76100FB66DE /* Main.storyboard */,
 				B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */,
+				B4A34AA122FBD76200FB66DE /* Assets.xcassets */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -245,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44810A022FFCA2A0092E4F0 /* States.swift in Sources */,
 				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
 				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
@@ -397,7 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QXP9H2CH3;
-				INFOPLIST_FILE = ZenTimer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ZenTimer/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QXP9H2CH3;
-				INFOPLIST_FILE = ZenTimer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ZenTimer/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
