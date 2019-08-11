@@ -10,6 +10,12 @@ import Foundation
 
 class PDTimerController {
     
+    // MARK: - Initializer
+    
+    init() {
+        loadFromPersistentStore()
+    }
+    
     // MARK: - Timer Functions
     
     func setDisplayedTime() {
@@ -43,7 +49,11 @@ class PDTimerController {
     // MARK: - Persistence
     
     func saveToPersistentStore() {
-        
+        print("Saved")
+    }
+    
+    func loadFromPersistentStore() {
+        print("Loaded")
     }
     
     // MARK: - Properties

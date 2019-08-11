@@ -37,9 +37,11 @@ class TimerViewController: UIViewController {
         if pdTimer.audioSettingsState == .soundOn {
             pdTimer.audioSettingsState = .soundOff
             muteButton.alpha = 100
+            PDTimerController.shared.saveToPersistentStore()
         } else if pdTimer.audioSettingsState == .soundOff {
             pdTimer.audioSettingsState = .soundOn
             muteButton.alpha = 0.25
+            PDTimerController.shared.saveToPersistentStore()
         }
     }
     
@@ -57,6 +59,7 @@ class TimerViewController: UIViewController {
             //Hide SettingsView and 'grey out' button
             settingsButton.alpha = 0.25
             settingsView.alpha = 0
+            PDTimerController.shared.saveToPersistentStore()
         } else if pdTimer.settingsMenuState == .closed {
             pdTimer.settingsMenuState = .open
             //Hide and disable buttons/labels in Top Container
@@ -70,6 +73,7 @@ class TimerViewController: UIViewController {
             //Show SettingsView and highlight button
             settingsButton.alpha = 100
             settingsView.alpha = 100
+            PDTimerController.shared.saveToPersistentStore()
         }
     }
     
@@ -78,6 +82,7 @@ class TimerViewController: UIViewController {
             pdTimer.breakLength -= 1
             breakLengthLabel.text = String(Int(pdTimer.breakLength))
             messageLabel.text = ""
+            PDTimerController.shared.saveToPersistentStore()
         }
     }
     
@@ -85,6 +90,7 @@ class TimerViewController: UIViewController {
         pdTimer.breakLength += 1
         breakLengthLabel.text = String(Int(pdTimer.breakLength))
         messageLabel.text = ""
+        PDTimerController.shared.saveToPersistentStore()
     }
     
     @IBAction func decreaseSessionLengthTapped(_ sender: Any) {
@@ -94,6 +100,7 @@ class TimerViewController: UIViewController {
             //Fix later to reflect Int as timer
             timerLabel.text = "\(Int(pdTimer.workLength)):00"
             messageLabel.text = ""
+            PDTimerController.shared.saveToPersistentStore()
         }
     }
     
@@ -103,6 +110,7 @@ class TimerViewController: UIViewController {
         //Fix later to reflect Int as timer
         timerLabel.text = "\(Int(pdTimer.workLength)):00"
         messageLabel.text = ""
+        PDTimerController.shared.saveToPersistentStore()
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
