@@ -16,10 +16,11 @@ enum WorkState {
 enum TimerState {
     case ready
     case running
+    case stopped
     case finished
 }
 
-enum MessageState {
+enum TimerMessageState {
     case readyMessage
     case runningMessage
     case finishedMessage

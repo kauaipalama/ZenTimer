@@ -166,13 +166,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1Q-mh-Hms" userLabel="Timer Container">
                                                 <rect key="frame" x="21" y="60" width="346" height="364"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Djm-bq-Uac">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djm-bq-Uac">
                                                         <rect key="frame" x="64.000000000000014" y="124" width="218.33333333333337" height="116"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="116" id="3og-9u-rZf"/>
                                                             <constraint firstAttribute="width" constant="218.33333333333334" id="r7Q-cq-Wh9"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="97"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="85"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

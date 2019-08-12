@@ -11,6 +11,7 @@
 		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
+		B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		B448109B22FFC9270092E4F0 /* PDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimer.swift; sourceTree = "<group>"; };
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				B448109F22FFCA2A0092E4F0 /* States.swift */,
+				B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */,
 				B44810A022FFCA2A0092E4F0 /* States.swift in Sources */,
 				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
 				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,

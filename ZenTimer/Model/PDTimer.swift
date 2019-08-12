@@ -12,15 +12,31 @@ class PDTimer {
     
     // MARK: - Properties
     
-    var workLength: TimeInterval = 25
-    var breakLength: TimeInterval = 5
-    var timer = Timer()
-    var duration = 0
-    var displayedTime: TimeInterval = 0
-    var timerState: TimerState = .ready
-    var workState: WorkState = .working
-    var message = ""
-    var messageState: MessageState = .readyMessage
-    var settingsMenuState: SettingsMenuState = .closed
-    var audioSettingsState: AudioSettingsState = .soundOn
+    var settingsMenuState: SettingsMenuState
+    var audioSettingsState: AudioSettingsState
+    var workLength: TimeInterval
+    var breakLength: TimeInterval
+    var timer: Timer
+    var duration: TimeInterval
+    var timeRemaining: TimeInterval
+    var timerState: TimerState
+    var workState: WorkState
+    var timerMessage: String
+    var timerMessageState: TimerMessageState
+    var startButtonMessage: String
+    
+    init(settingsMenuState: SettingsMenuState, audioSettingsState: AudioSettingsState, workLength: TimeInterval, breakLength: TimeInterval, timer: Timer, duration: TimeInterval, timeRemaining: TimeInterval, timerState: TimerState, workState: WorkState, timerMessage: String, timerMessageState: TimerMessageState, startButtonMessage: String) {
+        self.settingsMenuState = settingsMenuState
+        self.audioSettingsState = audioSettingsState
+        self.workLength = workLength
+        self.breakLength = breakLength
+        self.timer = timer
+        self.duration = duration
+        self.timeRemaining = timeRemaining
+        self.timerState = timerState
+        self.workState = workState
+        self.timerMessage = timerMessage
+        self.timerMessageState = timerMessageState
+        self.startButtonMessage = startButtonMessage
+    }
 }
