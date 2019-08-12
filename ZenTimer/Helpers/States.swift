@@ -35,3 +35,8 @@ enum AudioSettingsState {
     case soundOn
     case soundOff
 }
+
+enum ResetButtonState {
+    case notTapped
+    case tapped
+}

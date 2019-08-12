@@ -12,6 +12,7 @@ class PDTimer {
     
     // MARK: - Properties
     
+    var resetButtonState: ResetButtonState
     var settingsMenuState: SettingsMenuState
     var audioSettingsState: AudioSettingsState
     var workLength: TimeInterval
@@ -25,7 +26,8 @@ class PDTimer {
     var timerMessageState: TimerMessageState
     var startButtonMessage: String
     
-    init(settingsMenuState: SettingsMenuState, audioSettingsState: AudioSettingsState, workLength: TimeInterval, breakLength: TimeInterval, timer: Timer, duration: TimeInterval, timeRemaining: TimeInterval, timerState: TimerState, workState: WorkState, timerMessage: String, timerMessageState: TimerMessageState, startButtonMessage: String) {
+    init(resetButtonState: ResetButtonState, settingsMenuState: SettingsMenuState, audioSettingsState: AudioSettingsState, workLength: TimeInterval, breakLength: TimeInterval, timer: Timer, duration: TimeInterval, timeRemaining: TimeInterval, timerState: TimerState, workState: WorkState, timerMessage: String, timerMessageState: TimerMessageState, startButtonMessage: String) {
+        self.resetButtonState = resetButtonState
         self.settingsMenuState = settingsMenuState
         self.audioSettingsState = audioSettingsState
         self.workLength = workLength

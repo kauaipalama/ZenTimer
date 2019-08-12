@@ -22,6 +22,7 @@ class TimerViewController: UIViewController {
     // MARK: - Views
     
     func setupUI(){
+        resetView.alpha = 0
         settingsView.alpha = 0
         overlayView.layer.compositingFilter = "overlayBlendMode"
         if pdTimer.audioSettingsState == .soundOff {
@@ -38,6 +39,33 @@ class TimerViewController: UIViewController {
     
 
     // MARK: - IBActions
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        if pdTimer.resetButtonState == .notTapped {
+            pdTimer.resetButtonState = .tapped
+            for button in topContainerButtons {
+                button.isEnabled = false
+                button.isHidden = true
+            }
+            for label in topContainerLabels {
+                label.isHidden = true
+            }
+            resetButton.alpha = 100
+            resetView.alpha = 100
+        } else if pdTimer.resetButtonState == .tapped {
+            pdTimer.resetButtonState = .notTapped
+            for button in topContainerButtons {
+                button.isEnabled = true
+                button.isHidden = false
+            }
+            for label in topContainerLabels {
+                label.isHidden = false
+            }
+            resetButton.alpha = 0.25
+            resetView.alpha = 0
+        }
+    }
+    
     
     @IBAction func muteButtonTapped(_ sender: Any) {
         if pdTimer.audioSettingsState == .soundOn {
@@ -172,12 +200,14 @@ class TimerViewController: UIViewController {
     
     // MARK: - IBObjects
     
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var breakLengthLabel: UILabel!
     @IBOutlet weak var sessionLengthLabel: UILabel!
     @IBOutlet var topContainerButtons: [UIButton]!
     @IBOutlet var topContainerLabels: [UILabel]!
+    @IBOutlet weak var resetView: UIView!
     @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
