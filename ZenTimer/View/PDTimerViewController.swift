@@ -40,6 +40,13 @@ class TimerViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func resetButtonTapped(_ sender: Any) {
+        
+        if pdTimer.settingsMenuState == .open {
+            settingsButton.alpha = 0.25
+            settingsView.alpha = 0
+            pdTimer.resetButtonState = .notTapped
+        }
+        
         if pdTimer.resetButtonState == .notTapped {
             pdTimer.resetButtonState = .tapped
             for button in topContainerButtons {
@@ -84,20 +91,14 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
-        if pdTimer.settingsMenuState == .open {
+        
+        if pdTimer.resetButtonState == .tapped {
+            resetButton.alpha = 0.25
+            resetView.alpha = 0
             pdTimer.settingsMenuState = .closed
-            //Show and enable buttons/labels in Top Container
-            for button in topContainerButtons {
-                button.isEnabled = true
-                button.isHidden = false
-            }
-            for label in topContainerLabels {
-                label.isHidden = false
-            }
-            //Hide SettingsView and 'grey out' button
-            settingsButton.alpha = 0.25
-            settingsView.alpha = 0
-        } else if pdTimer.settingsMenuState == .closed {
+        }
+        
+        if pdTimer.settingsMenuState == .closed {
             pdTimer.settingsMenuState = .open
             //Hide and disable buttons/labels in Top Container
             for button in topContainerButtons {
@@ -110,6 +111,20 @@ class TimerViewController: UIViewController {
             //Show SettingsView and highlight button
             settingsButton.alpha = 100
             settingsView.alpha = 100
+            
+        } else if pdTimer.settingsMenuState == .open {
+            pdTimer.settingsMenuState = .closed
+            //Show and enable buttons/labels in Top Container
+            for button in topContainerButtons {
+                button.isEnabled = true
+                button.isHidden = false
+            }
+            for label in topContainerLabels {
+                label.isHidden = false
+            }
+            //Hide SettingsView and 'grey out' button
+            settingsButton.alpha = 0.25
+            settingsView.alpha = 0
         }
     }
     
