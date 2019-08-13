@@ -16,7 +16,6 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
     // MARK: - Views
@@ -66,6 +65,13 @@ class TimerViewController: UIViewController {
         }
     }
     
+    @IBAction func tapToResetButtonTapped(_ sender: Any) {
+        PDTimerController.shared.reset()
+        PDTimerController.shared.toggleStartButtonLabelMessage {
+            self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+        }
+        self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
+    }
     
     @IBAction func muteButtonTapped(_ sender: Any) {
         if pdTimer.audioSettingsState == .soundOn {
@@ -104,6 +110,16 @@ class TimerViewController: UIViewController {
             //Show SettingsView and highlight button
             settingsButton.alpha = 100
             settingsView.alpha = 100
+        }
+    }
+    
+    @IBAction func tapToTurnOffNotificationsButtonTapped(_ sender: Any) {
+        //Send to settings to change notifications setting
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return}
+        if UIApplication.shared.canOpenURL(settingsURL) {
+            UIApplication.shared.open(settingsURL) { (success) in
+                print("Settings open: \(success)")
+            }
         }
     }
     
@@ -176,10 +192,8 @@ class TimerViewController: UIViewController {
         } else if pdTimer.timerState == .finished {
             PDTimerController.shared.toggleWorkState()
             pdTimer.timerState = .running
-            //If it is finished. Ready it again and
             PDTimerController.shared.setTimeRemaining()
             timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
-//            pdTimer.timerState = .running
             PDTimerController.shared.toggleStartButtonLabelMessage {
                 self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }

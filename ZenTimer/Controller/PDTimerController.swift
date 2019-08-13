@@ -109,6 +109,14 @@ class PDTimerController {
         print("Alarm alarm alarm!")
     }
     
+    func reset() {
+        pdTimer.timer.invalidate()
+        pdTimer.duration = 0
+        pdTimer.timerState = .ready
+        toggleMessage()
+        setTimeRemaining()
+    }
+    
     // MARK: - Persistence
     
     func saveToPersistentStore() {
