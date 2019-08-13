@@ -6,7 +6,6 @@
 //  Copyright © 2019 Kainoa Palama. All rights reserved.
 //
 
-//BUG: Time remaining seems to be not updating judging by the label. COunt goes negative and start buttton loses proper functionality. It doubles the speed of the countdown every other press. LIGHT AT THE END OF THE TUNNEL BOYS!
 import UIKit
 
 class TimerViewController: UIViewController {
@@ -40,11 +39,10 @@ class TimerViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        
         if pdTimer.settingsMenuState == .open {
             settingsButton.alpha = 0.25
             settingsView.alpha = 0
-            pdTimer.resetButtonState = .notTapped
+            pdTimer.settingsMenuState = .closed
         }
         
         if pdTimer.resetButtonState == .notTapped {
@@ -91,16 +89,14 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
-        
         if pdTimer.resetButtonState == .tapped {
             resetButton.alpha = 0.25
             resetView.alpha = 0
-            pdTimer.settingsMenuState = .closed
+            pdTimer.resetButtonState = .notTapped
         }
         
         if pdTimer.settingsMenuState == .closed {
             pdTimer.settingsMenuState = .open
-            //Hide and disable buttons/labels in Top Container
             for button in topContainerButtons {
                 button.isEnabled = false
                 button.isHidden = true
@@ -108,13 +104,10 @@ class TimerViewController: UIViewController {
             for label in topContainerLabels {
                 label.isHidden = true
             }
-            //Show SettingsView and highlight button
             settingsButton.alpha = 100
             settingsView.alpha = 100
-            
         } else if pdTimer.settingsMenuState == .open {
             pdTimer.settingsMenuState = .closed
-            //Show and enable buttons/labels in Top Container
             for button in topContainerButtons {
                 button.isEnabled = true
                 button.isHidden = false
@@ -122,14 +115,12 @@ class TimerViewController: UIViewController {
             for label in topContainerLabels {
                 label.isHidden = false
             }
-            //Hide SettingsView and 'grey out' button
             settingsButton.alpha = 0.25
             settingsView.alpha = 0
         }
     }
     
     @IBAction func tapToTurnOffNotificationsButtonTapped(_ sender: Any) {
-        //Send to settings to change notifications setting
         guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return}
         if UIApplication.shared.canOpenURL(settingsURL) {
             UIApplication.shared.open(settingsURL) { (success) in
@@ -171,7 +162,6 @@ class TimerViewController: UIViewController {
             PDTimerController.shared.toggleStartButtonLabelMessage {
                 self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
-            //Need a reusable start timer func
             pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
                 PDTimerController.shared.pdTimer.duration += 1
                 PDTimerController.shared.setTimeRemaining()
@@ -193,7 +183,6 @@ class TimerViewController: UIViewController {
             PDTimerController.shared.toggleStartButtonLabelMessage {
                 self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
-            //Need a reusable start timer func
             pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
                 PDTimerController.shared.pdTimer.duration += 1
                 PDTimerController.shared.setTimeRemaining()
