@@ -72,10 +72,24 @@ class TimerViewController: UIViewController {
     
     @IBAction func tapToResetButtonTapped(_ sender: Any) {
         PDTimerController.shared.reset()
-        PDTimerController.shared.toggleStartButtonLabelMessage {
-            self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+        PDTimerController.shared.pdTimer.workState = .working
+        PDTimerController.shared.setTimeRemaining()
+        PDTimerController.shared.toggleMessage()
+        messageLabel.text = pdTimer.timerMessage
+        PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+            self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
         }
         self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
+        for button in topContainerButtons {
+            button.isEnabled = true
+            button.isHidden = false
+        }
+        for label in topContainerLabels {
+            label.isHidden = false
+        }
+        resetButton.alpha = 0.25
+        resetView.alpha = 0
+        pdTimer.resetButtonState = .notTapped
     }
     
     @IBAction func muteButtonTapped(_ sender: Any) {
@@ -127,6 +141,16 @@ class TimerViewController: UIViewController {
                 print("Settings open: \(success)")
             }
         }
+        for button in topContainerButtons {
+            button.isEnabled = true
+            button.isHidden = false
+        }
+        for label in topContainerLabels {
+            label.isHidden = false
+        }
+        settingsView.alpha = 0
+        settingsButton.alpha = 0.25
+        pdTimer.settingsMenuState = .closed
     }
     
     @IBAction func decreaseBreakLengthTapped(_ sender: Any) {
@@ -163,14 +187,14 @@ class TimerViewController: UIViewController {
         PDTimerController.shared.toggleMessage()
         if pdTimer.timerState == .ready {
             pdTimer.timerState = .running
-            PDTimerController.shared.toggleStartButtonLabelMessage {
-                self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+            PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+                self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
             pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
                 PDTimerController.shared.pdTimer.duration += 1
                 PDTimerController.shared.setTimeRemaining()
-                PDTimerController.shared.checkTimer(completion: {
-                    self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                PDTimerController.shared.checkTimer(completion: { [weak self] in
+                    self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
                 })
                 self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
                 PDTimerController.shared.toggleMessage()
@@ -179,37 +203,38 @@ class TimerViewController: UIViewController {
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
             pdTimer.timerState = .stopped
-            PDTimerController.shared.toggleStartButtonLabelMessage {
-                self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+            PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+                self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
         } else if pdTimer.timerState == .stopped {
             pdTimer.timerState = .running
-            PDTimerController.shared.toggleStartButtonLabelMessage {
-                self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+            PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+                self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
             pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
                 PDTimerController.shared.pdTimer.duration += 1
                 PDTimerController.shared.setTimeRemaining()
-                PDTimerController.shared.checkTimer(completion: {
-                    self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                PDTimerController.shared.checkTimer(completion: { [weak self] in
+                    self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
                 })
                 self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
                 PDTimerController.shared.toggleMessage()
                 self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
             })
         } else if pdTimer.timerState == .finished {
+            //Possibly trigger this in alert vc to make switch. also in alert change timerstate to ready. instead of in 
             PDTimerController.shared.toggleWorkState()
             pdTimer.timerState = .running
             PDTimerController.shared.setTimeRemaining()
             timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
-            PDTimerController.shared.toggleStartButtonLabelMessage {
-                self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+            PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+                self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
             pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
                 PDTimerController.shared.pdTimer.duration += 1
                 PDTimerController.shared.setTimeRemaining()
-                PDTimerController.shared.checkTimer(completion: {
-                    self.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                PDTimerController.shared.checkTimer(completion: { [weak self] in
+                    self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
                 })
                 self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
                 PDTimerController.shared.toggleMessage()

@@ -75,17 +75,14 @@ class PDTimerController {
         }
         completion?()
     }
+    
+    //Use a delegate to call function in viewController when checkTimer is run
+    //call delegate function in checkTimer
     func checkTimer(completion: () -> Void) {
         if pdTimer.timerState == .running && pdTimer.workState == .working && (pdTimer.duration * 60 == pdTimer.workLength || pdTimer.timeRemaining == 0) {
-            fireAlarm {
-                print("Alarm closure switching to onBreak")
-                pdTimer.timerState = .ready
-            }
+            fireAlarm()
         } else if pdTimer.timerState == .running && pdTimer.workState == .onBreak && (pdTimer.duration * 60 == pdTimer.breakLength || pdTimer.timeRemaining == 0) {
-            fireAlarm {
-                print("Alarm closure switching to working")
-                pdTimer.timerState = .ready
-            }
+            fireAlarm()
         }
         completion()
     }
@@ -98,15 +95,15 @@ class PDTimerController {
         }
     }
     
-    func fireAlarm(completion: () -> Void) {
+    func fireAlarm() {
         setTimeRemaining()
         pdTimer.timer.invalidate()
         pdTimer.duration = 0
         pdTimer.timerState = .finished
         toggleMessage()
-        //Might need a closure in this function as well to reset the text of the VC when done. USe same non-returning clousre method. Maybe make closure optional.
         toggleStartButtonLabelMessage(completion: nil)
         print("Alarm alarm alarm!")
+        //or trigger alert here
     }
     
     func reset() {
