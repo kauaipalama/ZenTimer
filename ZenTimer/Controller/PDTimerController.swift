@@ -67,17 +67,15 @@ class PDTimerController {
         }
     }
     
-    func toggleStartButtonLabelMessage(completion: (() -> Void)?) {
+    func toggleStartButtonLabelMessage(completion: () -> Void) {
         if pdTimer.timerState == .ready || pdTimer.timerState == .finished || pdTimer.timerState == .stopped {
             pdTimer.startButtonMessage = "TAP TO START"
         } else if pdTimer.timerState == .running {
             pdTimer.startButtonMessage = "TAP TO PAUSE"
         }
-        completion?()
+        completion()
     }
     
-    //Use a delegate to call function in viewController when checkTimer is run
-    //call delegate function in checkTimer
     func checkTimer(completion: () -> Void) {
         if pdTimer.timerState == .running && pdTimer.workState == .working && (pdTimer.duration * 60 == pdTimer.workLength || pdTimer.timeRemaining == 0) {
             fireAlarm()
@@ -95,13 +93,14 @@ class PDTimerController {
         }
     }
     
+    //Use a delegate to call function in viewController when fireAlarm is run
+    //call delegate function in fireAlarm
     func fireAlarm() {
         setTimeRemaining()
         pdTimer.timer.invalidate()
         pdTimer.duration = 0
         pdTimer.timerState = .finished
         toggleMessage()
-        toggleStartButtonLabelMessage(completion: nil)
         print("Alarm alarm alarm!")
         //or trigger alert here
     }
