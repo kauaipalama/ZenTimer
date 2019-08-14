@@ -59,7 +59,7 @@
                                                     <action selector="settingsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnr-Pc-oWg"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-G9-HgX">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-G9-HgX">
                                                 <rect key="frame" x="41" y="81" width="332" height="63"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wsF-2N-utI">
@@ -218,7 +218,7 @@
                                     <constraint firstItem="HLN-46-qEU" firstAttribute="height" secondItem="TMu-bf-qLY" secondAttribute="height" multiplier="0.199" id="bWZ-oq-Y4n"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-GH-Ygx" userLabel="Reset Container">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-GH-Ygx" userLabel="Reset Container">
                                 <rect key="frame" x="0.0" y="89" width="414" height="124.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWZ-Vr-3kR">
@@ -248,7 +248,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="397" height="124.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <state key="normal" title="TURN FOR NOTIFICATIONS">
+                                        <state key="normal" title="TAP FOR NOTIFICATIONS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

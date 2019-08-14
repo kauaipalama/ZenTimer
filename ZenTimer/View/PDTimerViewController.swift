@@ -130,19 +130,21 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func decreaseBreakLengthTapped(_ sender: Any) {
-        if pdTimer.breakLength > 0 {
+        if pdTimer.breakLength > 1 {
             pdTimer.breakLength -= 1
             breakLengthLabel.text = String(Int(pdTimer.breakLength))
         }
     }
     
     @IBAction func increaseBreakLengthTapped(_ sender: Any) {
-        pdTimer.breakLength += 1
-        breakLengthLabel.text = String(Int(pdTimer.breakLength))
+        if pdTimer.breakLength < 60 {
+            pdTimer.breakLength += 1
+            breakLengthLabel.text = String(Int(pdTimer.breakLength))
+        }
     }
     
     @IBAction func decreaseSessionLengthTapped(_ sender: Any) {
-        if pdTimer.workLength > 0 {
+        if pdTimer.workLength > 1 {
             pdTimer.workLength -= 1
             sessionLengthLabel.text = String(Int(pdTimer.workLength))
             timerLabel.text = "\(Int(pdTimer.workLength)):00"
@@ -150,9 +152,11 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func increaseSessionLengthTapped(_ sender: Any) {
-        pdTimer.workLength += 1
-        sessionLengthLabel.text = String(Int(pdTimer.workLength))
-        timerLabel.text = "\(Int(pdTimer.workLength)):00"
+        if pdTimer.workLength < 60 {
+            pdTimer.workLength += 1
+            sessionLengthLabel.text = String(Int(pdTimer.workLength))
+            timerLabel.text = "\(Int(pdTimer.workLength)):00"
+        }
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
