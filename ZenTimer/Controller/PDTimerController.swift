@@ -20,7 +20,7 @@ class PDTimerController {
         loadFromPersistentStore()
     }
     
-    // MARK: - Timer Functions
+    // MARK: - UI Functionality
     
     func setTimeRemaining() {
         if pdTimer.workState == .working {
@@ -59,13 +59,6 @@ class PDTimerController {
         }
     }
     
-    func toggleWorkState() {
-        if pdTimer.workState == .onBreak {
-            pdTimer.workState = .working
-        } else if pdTimer.workState == .working {
-            pdTimer.workState = .onBreak
-        }
-    }
     
     func toggleStartButtonLabelMessage(completion: () -> Void) {
         if pdTimer.timerState == .ready || pdTimer.timerState == .finished || pdTimer.timerState == .stopped {
@@ -74,6 +67,16 @@ class PDTimerController {
             pdTimer.startButtonMessage = "TAP TO PAUSE"
         }
         completion()
+    }
+    
+    // MARK: - Timer Functionality
+    
+    func toggleWorkState() {
+        if pdTimer.workState == .onBreak {
+            pdTimer.workState = .working
+        } else if pdTimer.workState == .working {
+            pdTimer.workState = .onBreak
+        }
     }
     
     func checkTimer(completion: () -> Void) {
