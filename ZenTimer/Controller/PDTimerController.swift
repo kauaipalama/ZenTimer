@@ -96,8 +96,6 @@ class PDTimerController {
         }
     }
     
-    //Use a delegate to call function in viewController when fireAlarm is run
-    //call delegate function in fireAlarm
     func fireAlarm() {
         setTimeRemaining()
         pdTimer.timer.invalidate()
@@ -105,7 +103,6 @@ class PDTimerController {
         pdTimer.timerState = .finished
         toggleMessage()
         print("Alarm alarm alarm!")
-        //or trigger alert here
     }
     
     func reset() {
