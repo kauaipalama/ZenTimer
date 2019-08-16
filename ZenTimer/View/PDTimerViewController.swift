@@ -36,6 +36,49 @@ class TimerViewController: UIViewController {
         messageLabel.text = pdTimer.timerMessage
     }
     
+    // MARK: - Private
+    
+    fileprivate func runTimer() {
+        pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
+            PDTimerController.shared.pdTimer.duration += 1
+            PDTimerController.shared.setTimeRemaining()
+            PDTimerController.shared.checkTimer(completion: { [weak self] in
+                PDTimerController.shared.toggleStartButtonLabelMessage(completion: { [weak self] in
+                    self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                })
+                if self?.pdTimer.timerState == .finished {
+                    let alert = UIAlertController(title: "Timer Finished", message: "Love and Gratitude", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                        alert.dismiss(animated: true, completion: nil)
+                    })
+                    alert.addAction(ok)
+                    //Fire Sound Here
+                    if UIApplication.shared.applicationState != .background {
+                        AudioServicesPlaySystemSound(1007)
+                    }
+                    self?.present(alert, animated: true, completion: {
+                        PDTimerController.shared.toggleWorkState()
+                        self?.pdTimer.timerState = .ready
+                        PDTimerController.shared.toggleMessage()
+                        self?.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
+                        PDTimerController.shared.setTimeRemaining()
+                        self?.timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
+                        PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+                            self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                        }
+                    })
+                    //Fire Notification Here if app is in background
+                    PDTimerController.shared.scheduleNotification()
+                    
+                }
+            })
+            self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
+            PDTimerController.shared.toggleMessage()
+            self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
+        })
+    }
+    
+    
     
     // MARK: - IBActions
     
@@ -193,7 +236,7 @@ class TimerViewController: UIViewController {
             sessionLengthLabel.text = String(Int(pdTimer.workLength))
         }
     }
-    
+
     @IBAction func startButtonTapped(_ sender: Any) {
         PDTimerController.shared.toggleMessage()
         if pdTimer.timerState == .ready {
@@ -201,43 +244,7 @@ class TimerViewController: UIViewController {
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
-            pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
-                PDTimerController.shared.pdTimer.duration += 1
-                PDTimerController.shared.setTimeRemaining()
-                PDTimerController.shared.checkTimer(completion: { [weak self] in
-                    PDTimerController.shared.toggleStartButtonLabelMessage(completion: { [weak self] in
-                        self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
-                    })
-                    if self?.pdTimer.timerState == .finished {
-                        let alert = UIAlertController(title: "Timer Finished", message: "Love and Gratitude", preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                            alert.dismiss(animated: true, completion: nil)
-                        })
-                        alert.addAction(ok)
-                        //Fire Sound Here
-                        if UIApplication.shared.applicationState != .background {
-                            AudioServicesPlaySystemSound(1007)
-                        }
-                        self?.present(alert, animated: true, completion: {
-                            PDTimerController.shared.toggleWorkState()
-                            self?.pdTimer.timerState = .ready
-                            PDTimerController.shared.toggleMessage()
-                            self?.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
-                            PDTimerController.shared.setTimeRemaining()
-                            self?.timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
-                            PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
-                                self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
-                            }
-                        })
-                        //Fire Notification Here if app is in background
-                        PDTimerController.shared.scheduleNotification()
-                        
-                    }
-                })
-                self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
-                PDTimerController.shared.toggleMessage()
-                self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
-            })
+            runTimer()
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
             pdTimer.timerState = .stopped
@@ -249,42 +256,7 @@ class TimerViewController: UIViewController {
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
-            pdTimer.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
-                PDTimerController.shared.pdTimer.duration += 1
-                PDTimerController.shared.setTimeRemaining()
-                PDTimerController.shared.checkTimer(completion: { [weak self] in
-                    PDTimerController.shared.toggleStartButtonLabelMessage(completion: { [weak self] in
-                        self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
-                    })
-                    if self?.pdTimer.timerState == .finished {
-                        let alert = UIAlertController(title: "Timer Finished", message: "Love and Gratitude", preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                            alert.dismiss(animated: true, completion: nil)
-                        })
-                        alert.addAction(ok)
-                        //Fire Sound here
-                        if UIApplication.shared.applicationState != .background {
-                            AudioServicesPlaySystemSound(1007)
-                        }
-                        self?.present(alert, animated: true, completion: {
-                            PDTimerController.shared.toggleWorkState()
-                            self?.pdTimer.timerState = .ready
-                            PDTimerController.shared.toggleMessage()
-                            self?.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
-                            PDTimerController.shared.setTimeRemaining()
-                            self?.timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
-                            PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
-                                self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
-                            }
-                        })
-                        //Fire Notification Here if app is in background
-                        PDTimerController.shared.scheduleNotification()
-                    }
-                })
-                self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
-                PDTimerController.shared.toggleMessage()
-                self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
-            })
+            runTimer()
         }
         PDTimerController.shared.toggleMessage()
         self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
