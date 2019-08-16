@@ -11,6 +11,7 @@ timerMessage is not updating properly. Need to
  */
 
 import Foundation
+import UserNotifications
 
 class PDTimerController {
     
@@ -113,6 +114,39 @@ class PDTimerController {
         setTimeRemaining()
     }
     
+    // MARK: - Local Notifications
+    
+    func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        var bodyString: String  {
+            var string = ""
+            if pdTimer.workState == .working {
+                string = "Time for a break!"
+            } else if pdTimer.workState == .onBreak {
+                string = "Break time's over!"
+            }
+            return string
+        }
+        content.title = "Alarm"
+        content.body = bodyString
+        content.sound = .default
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let identifier = "localNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationCenter.getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+                self.notificationCenter.add(request) { (error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: - Persistence
     
     func saveToPersistentStore() {
@@ -126,5 +160,6 @@ class PDTimerController {
     // MARK: - Properties
     
     static let shared = PDTimerController()
+    let notificationCenter = UNUserNotificationCenter.current()
     var pdTimer = PDTimer(resetButtonState: .notTapped,settingsMenuState: .closed, audioSettingsState: .soundOn, workLength: 25, breakLength: 5, timer: Timer(), duration: 0, timeRemaining: 0, timerState: .ready, workState: .working, timerMessage: "", timerMessageState: .readyMessage, startButtonMessage: "TAP TO START")
 }
