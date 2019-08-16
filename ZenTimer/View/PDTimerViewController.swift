@@ -70,7 +70,7 @@ class TimerViewController: UIViewController {
                     })
                     //Fire Notification Here if app is in background
                     PDTimerController.shared.scheduleNotification()
-                    
+                    self?.audioPlayer.volume = 0
                 }
             })
             self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
@@ -95,6 +95,7 @@ class TimerViewController: UIViewController {
                 print(error)
             }
         }
+        audioPlayer.volume = 0
     }
     
     // MARK: - IBActions
@@ -263,9 +264,11 @@ class TimerViewController: UIViewController {
             }
             runTimer()
             audioPlayer.play()
+            audioPlayer.setVolume(1, fadeDuration: 3)
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
-            audioPlayer.stop()
+            audioPlayer.pause()
+            audioPlayer.volume = 0
             pdTimer.timerState = .stopped
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
@@ -277,6 +280,7 @@ class TimerViewController: UIViewController {
             }
             runTimer()
             audioPlayer.play()
+            audioPlayer.setVolume(1, fadeDuration: 3)
         }
         PDTimerController.shared.toggleMessage()
         self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
