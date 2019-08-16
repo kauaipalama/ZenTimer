@@ -158,6 +158,7 @@ class TimerViewController: UIViewController {
         if pdTimer.audioSettingsState == .soundOn {
             pdTimer.audioSettingsState = .soundOff
             muteButton.alpha = 100
+            audioPlayer.volume = 0
         } else if pdTimer.audioSettingsState == .soundOff {
             pdTimer.audioSettingsState = .soundOn
             muteButton.alpha = 0.25
@@ -264,7 +265,12 @@ class TimerViewController: UIViewController {
             }
             runTimer()
             audioPlayer.play()
-            audioPlayer.setVolume(1, fadeDuration: 3)
+            if pdTimer.audioSettingsState == .soundOff {
+                audioPlayer.volume = 0
+            } else if pdTimer.audioSettingsState == .soundOn {
+                audioPlayer.setVolume(1, fadeDuration: 3)
+            }
+            
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
             audioPlayer.pause()
@@ -280,7 +286,11 @@ class TimerViewController: UIViewController {
             }
             runTimer()
             audioPlayer.play()
-            audioPlayer.setVolume(1, fadeDuration: 3)
+            if pdTimer.audioSettingsState == .soundOff {
+                audioPlayer.volume = 0
+            } else if pdTimer.audioSettingsState == .soundOn {
+                audioPlayer.setVolume(1, fadeDuration: 3)
+            }
         }
         PDTimerController.shared.toggleMessage()
         self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
