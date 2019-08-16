@@ -96,6 +96,7 @@ class TimerViewController: UIViewController {
             }
         }
         audioPlayer.volume = 0
+        
     }
     
     // MARK: - IBActions
@@ -162,6 +163,7 @@ class TimerViewController: UIViewController {
         } else if pdTimer.audioSettingsState == .soundOff {
             pdTimer.audioSettingsState = .soundOn
             muteButton.alpha = 0.25
+            audioPlayer.setVolume(1, fadeDuration: 1)
         }
     }
     

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import UserNotifications
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("User declined notifications")
             }
         }
-        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
         return true
     }
 
