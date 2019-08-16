@@ -15,6 +15,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpAudio()
         setupUI()
     }
     
@@ -78,7 +79,23 @@ class TimerViewController: UIViewController {
         })
     }
     
-    
+    fileprivate func setUpAudio() {
+        //Need sound to play in background
+        //Need fade in at start
+        //Need fade out when timer finished
+        //Needs to play white noise one and loop ocean sound for timeRemaining
+        //Needs to be mutable
+        //Needs to load audio state whether muted or not on load to match muteButton state
+        //Check audio level against sound of notifications incoming
+        if let sound = Bundle.main.path(forResource: "whiteNoise+Ocean", ofType: "mp3") {
+            let url = URL(fileURLWithPath: sound)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print(error)
+            }
+        }
+    }
     
     // MARK: - IBActions
     
@@ -236,7 +253,7 @@ class TimerViewController: UIViewController {
             sessionLengthLabel.text = String(Int(pdTimer.workLength))
         }
     }
-
+    
     @IBAction func startButtonTapped(_ sender: Any) {
         PDTimerController.shared.toggleMessage()
         if pdTimer.timerState == .ready {
@@ -245,8 +262,10 @@ class TimerViewController: UIViewController {
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
             runTimer()
+            audioPlayer.play()
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
+            audioPlayer.stop()
             pdTimer.timerState = .stopped
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
@@ -257,6 +276,7 @@ class TimerViewController: UIViewController {
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
             runTimer()
+            audioPlayer.play()
         }
         PDTimerController.shared.toggleMessage()
         self.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
@@ -280,4 +300,5 @@ class TimerViewController: UIViewController {
     
     // MARK: - Properties
     let pdTimer = PDTimerController.shared.pdTimer
+    var audioPlayer = AVAudioPlayer()
 }

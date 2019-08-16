@@ -18,6 +18,8 @@
 		B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */; };
 		B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */; };
 		B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */; };
+		B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E5E13E23064EA9000640D7 /* AVFoundation.framework */; };
+		B4E5E14223065096000640D7 /* whiteNoise+Ocean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E14123065096000640D7 /* whiteNoise+Ocean.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		B4A34AA622FBD76200FB66DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerViewController.swift; sourceTree = "<group>"; };
+		B4E5E13E23064EA9000640D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B4E5E14123065096000640D7 /* whiteNoise+Ocean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whiteNoise+Ocean.mp3"; sourceTree = "<group>"; };
 		EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */,
 				07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +67,7 @@
 		7BA769F9B4A4D1E1CAE2E0F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4E5E13E23064EA9000640D7 /* AVFoundation.framework */,
 				EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */,
 			);
 			name = Frameworks;
@@ -106,6 +112,7 @@
 		B4A34A9922FBD76100FB66DE /* ZenTimer */ = {
 			isa = PBXGroup;
 			children = (
+				B4E5E1402306505C000640D7 /* Sounds */,
 				B4C6985822FCA5730088DA5C /* Model */,
 				B4C6985722FCA5650088DA5C /* View */,
 				B4C6985922FCA5790088DA5C /* Controller */,
@@ -149,6 +156,14 @@
 				B448109D22FFC93A0092E4F0 /* PDTimerController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4E5E1402306505C000640D7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B4E5E14123065096000640D7 /* whiteNoise+Ocean.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
+				B4E5E14223065096000640D7 /* whiteNoise+Ocean.mp3 in Resources */,
 				B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */,
 				B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */,
 				B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */,
