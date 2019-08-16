@@ -135,6 +135,8 @@ class TimerViewController: UIViewController {
     
     @IBAction func tapToResetButtonTapped(_ sender: Any) {
         PDTimerController.shared.reset()
+        audioPlayer.stop()
+        audioPlayer.volume = 0
         PDTimerController.shared.pdTimer.workState = .working
         PDTimerController.shared.setTimeRemaining()
         PDTimerController.shared.toggleMessage()
