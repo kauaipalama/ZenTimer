@@ -100,6 +100,7 @@ class TimerViewController: UIViewController {
             }
         }
         audioPlayer.volume = 0
+        audioPlayer.numberOfLoops = -1
         
     }
     

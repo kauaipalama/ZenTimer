@@ -38,24 +38,20 @@ class PDTimerController {
     
     func toggleMessage() {
         if pdTimer.workState == .working {
-            //Messages switching on timerState
             if pdTimer.timerState == .ready {
                 pdTimer.timerMessage = "Ready to Work. I love my job!"
             } else if pdTimer.timerState == .running {
                 pdTimer.timerMessage = "Working hard. Hardly Working"
             } else if pdTimer.timerState == .finished {
                 pdTimer.timerMessage = "Finished Working. Thank goodness!"
-//                toggleWorkState()
             }
         } else if pdTimer.workState == .onBreak {
-            //Messages switching on timerState
             if pdTimer.timerState == .ready {
                 pdTimer.timerMessage = "Ready for a Break!"
             } else if pdTimer.timerState == .running {
                 pdTimer.timerMessage = "On Break. My boss is so generous!"
             } else if pdTimer.timerState == .finished {
                 pdTimer.timerMessage = "Finished Break. I love my job!"
-//                toggleWorkState()
             }
         }
     }
@@ -132,7 +128,7 @@ class PDTimerController {
         content.sound = .default
         content.badge = 1
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let identifier = "localNotification"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
