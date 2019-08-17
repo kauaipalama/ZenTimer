@@ -81,9 +81,9 @@ class PDTimerController {
     }
     
     func checkTimer(completion: () -> Void) {
-        if pdTimer.timerState == .running && pdTimer.workState == .working && (pdTimer.duration * 60 == pdTimer.workLength || pdTimer.timeRemaining == 0) {
+        if pdTimer.timerState == .running && pdTimer.workState == .working && (pdTimer.duration == pdTimer.workLength * 60 || pdTimer.timeRemaining == 0) {
             fireAlarm()
-        } else if pdTimer.timerState == .running && pdTimer.workState == .onBreak && (pdTimer.duration * 60 == pdTimer.breakLength || pdTimer.timeRemaining == 0) {
+        } else if pdTimer.timerState == .running && pdTimer.workState == .onBreak && (pdTimer.duration == pdTimer.breakLength * 60 || pdTimer.timeRemaining == 0) {
             fireAlarm()
         }
         completion()

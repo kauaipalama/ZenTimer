@@ -54,6 +54,12 @@ class TimerViewController: UIViewController {
                     })
                     alert.addAction(ok)
                     //Fire Sound Here
+                    if let topContainerButtons = self?.topContainerButtons {
+                        for button in topContainerButtons {
+                            button.isEnabled = true
+                            button.alpha = 100
+                        }
+                    }
                     if UIApplication.shared.applicationState != .background {
                         AudioServicesPlaySystemSound(1007)
                     }
@@ -71,6 +77,7 @@ class TimerViewController: UIViewController {
                     //Fire Notification Here if app is in background
                     PDTimerController.shared.scheduleNotification()
                     self?.audioPlayer.volume = 0
+
                 }
             })
             self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
@@ -112,7 +119,7 @@ class TimerViewController: UIViewController {
             pdTimer.resetButtonState = .tapped
             for button in topContainerButtons {
                 button.isEnabled = false
-                button.isHidden = true
+                button.alpha = 0
             }
             for label in topContainerLabels {
                 label.isHidden = true
@@ -123,7 +130,7 @@ class TimerViewController: UIViewController {
             pdTimer.resetButtonState = .notTapped
             for button in topContainerButtons {
                 button.isEnabled = true
-                button.isHidden = false
+                button.alpha = 100
             }
             for label in topContainerLabels {
                 label.isHidden = false
@@ -147,7 +154,7 @@ class TimerViewController: UIViewController {
         self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
         for button in topContainerButtons {
             button.isEnabled = true
-            button.isHidden = false
+            button.alpha = 100
         }
         for label in topContainerLabels {
             label.isHidden = false
@@ -180,7 +187,7 @@ class TimerViewController: UIViewController {
             pdTimer.settingsMenuState = .open
             for button in topContainerButtons {
                 button.isEnabled = false
-                button.isHidden = true
+                button.alpha = 0
             }
             for label in topContainerLabels {
                 label.isHidden = true
@@ -191,7 +198,7 @@ class TimerViewController: UIViewController {
             pdTimer.settingsMenuState = .closed
             for button in topContainerButtons {
                 button.isEnabled = true
-                button.isHidden = false
+                button.alpha = 100
             }
             for label in topContainerLabels {
                 label.isHidden = false
@@ -228,6 +235,7 @@ class TimerViewController: UIViewController {
             }
             breakLengthLabel.text = String(Int(pdTimer.breakLength))
         }
+        AudioServicesPlaySystemSound(1105)
     }
     
     @IBAction func increaseBreakLengthTapped(_ sender: Any) {
@@ -237,6 +245,7 @@ class TimerViewController: UIViewController {
                 timerLabel.text = "\(Int(pdTimer.breakLength)):00"
             }
             breakLengthLabel.text = String(Int(pdTimer.breakLength))
+            AudioServicesPlaySystemSound(1105)
         }
     }
     
@@ -248,6 +257,7 @@ class TimerViewController: UIViewController {
             }
             sessionLengthLabel.text = String(Int(pdTimer.workLength))
         }
+        AudioServicesPlaySystemSound(1105)
     }
     
     @IBAction func increaseSessionLengthTapped(_ sender: Any) {
@@ -258,12 +268,17 @@ class TimerViewController: UIViewController {
             }
             sessionLengthLabel.text = String(Int(pdTimer.workLength))
         }
+        AudioServicesPlaySystemSound(1105)
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
         PDTimerController.shared.toggleMessage()
         if pdTimer.timerState == .ready {
             pdTimer.timerState = .running
+            for button in topContainerButtons {
+                button.isEnabled = false
+                button.alpha = 0
+            }
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
