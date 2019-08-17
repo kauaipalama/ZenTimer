@@ -87,14 +87,11 @@ class TimerViewController: UIViewController {
     }
     
     fileprivate func setUpAudio() {
-        //Need sound to play in background
-        //Need fade in at start
         //Need fade out when timer finished
         //Needs to play white noise one and loop ocean sound for timeRemaining
-        //Needs to be mutable
         //Needs to load audio state whether muted or not on load to match muteButton state
         //Check audio level against sound of notifications incoming
-        if let sound = Bundle.main.path(forResource: "whiteNoise+Ocean", ofType: "mp3") {
+        if let sound = Bundle.main.path(forResource: "whiteNoise", ofType: "mp3") {
             let url = URL(fileURLWithPath: sound)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)

@@ -19,7 +19,7 @@
 		B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */; };
 		B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */; };
 		B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E5E13E23064EA9000640D7 /* AVFoundation.framework */; };
-		B4E5E14223065096000640D7 /* whiteNoise+Ocean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E14123065096000640D7 /* whiteNoise+Ocean.mp3 */; };
+		B4E5E14823089422000640D7 /* whiteNoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E14723089422000640D7 /* whiteNoise.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 		B4C6985422FCA5070088DA5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerViewController.swift; sourceTree = "<group>"; };
 		B4E5E13E23064EA9000640D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B4E5E14123065096000640D7 /* whiteNoise+Ocean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whiteNoise+Ocean.mp3"; sourceTree = "<group>"; };
+		B4E5E14723089422000640D7 /* whiteNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whiteNoise.mp3; sourceTree = "<group>"; };
 		EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,7 +161,7 @@
 		B4E5E1402306505C000640D7 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				B4E5E14123065096000640D7 /* whiteNoise+Ocean.mp3 */,
+				B4E5E14723089422000640D7 /* whiteNoise.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -231,8 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E5E14823089422000640D7 /* whiteNoise.mp3 in Resources */,
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
-				B4E5E14223065096000640D7 /* whiteNoise+Ocean.mp3 in Resources */,
 				B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */,
 				B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */,
 				B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */,
