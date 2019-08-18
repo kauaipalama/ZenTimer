@@ -38,10 +38,8 @@ class TimerViewController: UIViewController {
         messageLabel.text = pdTimer.timerMessage
         if pdTimer.audioSettingsState == .soundOff {
             muteButton.alpha = 100
-            audioPlayer.volume = 0
         } else if pdTimer.audioSettingsState == .soundOn {
             muteButton.alpha = 0.25
-            audioPlayer.volume = 1
         }
     }
     
