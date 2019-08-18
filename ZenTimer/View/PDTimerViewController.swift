@@ -15,6 +15,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
         setupUI()
     }
@@ -35,6 +36,13 @@ class TimerViewController: UIViewController {
         timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
         PDTimerController.shared.toggleMessage()
         messageLabel.text = pdTimer.timerMessage
+        if pdTimer.audioSettingsState == .soundOff {
+            muteButton.alpha = 100
+            audioPlayer.volume = 0
+        } else if pdTimer.audioSettingsState == .soundOn {
+            muteButton.alpha = 0.25
+            audioPlayer.volume = 1
+        }
     }
     
     // MARK: - Private
@@ -172,6 +180,7 @@ class TimerViewController: UIViewController {
             muteButton.alpha = 0.25
             audioPlayer.setVolume(1, fadeDuration: 1)
         }
+        PDTimerController.shared.saveToPersistentStore()
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {

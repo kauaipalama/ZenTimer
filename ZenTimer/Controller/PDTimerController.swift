@@ -18,7 +18,6 @@ class PDTimerController {
     // MARK: - Initializer
     
     init() {
-        loadFromPersistentStore()
     }
     
     // MARK: - UI Functionality
@@ -146,16 +145,24 @@ class PDTimerController {
     // MARK: - Persistence
     
     func saveToPersistentStore() {
-        print("Saved")
+        soundOn.toggle()
+        defaults.set(soundOn, forKey: "AudioSettings")
     }
     
     func loadFromPersistentStore() {
-        print("Loaded")
+        soundOn = defaults.object(forKey: "AudioSettings") as? Bool ?? true
+        if soundOn == true {
+            pdTimer.audioSettingsState = .soundOn
+        } else if soundOn == false {
+            pdTimer.audioSettingsState = .soundOff
+        }
     }
     
     // MARK: - Properties
     
     static let shared = PDTimerController()
+    let defaults = UserDefaults.standard
     let notificationCenter = UNUserNotificationCenter.current()
+    var soundOn = true
     var pdTimer = PDTimer(resetButtonState: .notTapped,settingsMenuState: .closed, audioSettingsState: .soundOn, workLength: 25, breakLength: 5, timer: Timer(), duration: 0, timeRemaining: 0, timerState: .ready, workState: .working, timerMessage: "", timerMessageState: .readyMessage, startButtonMessage: "TAP TO START")
 }
