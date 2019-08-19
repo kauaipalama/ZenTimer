@@ -124,7 +124,7 @@ class PDTimerController {
         }
         content.title = "Alarm"
         content.body = bodyString
-        content.sound = .default
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("glass_DoneLoud.wav"))
         content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)

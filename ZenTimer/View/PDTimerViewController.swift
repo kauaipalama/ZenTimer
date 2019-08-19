@@ -67,7 +67,7 @@ class TimerViewController: UIViewController {
                         }
                     }
                     if UIApplication.shared.applicationState != .background {
-                        AudioServicesPlaySystemSound(1007)
+                        self?.alertSoundPlayer.play()
                     }
                     self?.present(alert, animated: true, completion: {
                         PDTimerController.shared.toggleWorkState()
@@ -82,7 +82,7 @@ class TimerViewController: UIViewController {
                     })
                     //Fire Notification Here if app is in background
                     PDTimerController.shared.scheduleNotification()
-                    self?.audioPlayer.volume = 0
+                    self?.whiteNoisePlayer.volume = 0
 
                 }
             })
@@ -97,18 +97,41 @@ class TimerViewController: UIViewController {
         //Needs to play white noise one and loop ocean sound for timeRemaining
         //Needs to load audio state whether muted or not on load to match muteButton state
         //Check audio level against sound of notifications incoming
-        if let sound = Bundle.main.path(forResource: "whiteNoise", ofType: "mp3") {
-            let url = URL(fileURLWithPath: sound)
+        if let whiteNoiseFilePath = Bundle.main.path(forResource: "whiteNoise", ofType: "mp3") {
+            let url = URL(fileURLWithPath: whiteNoiseFilePath)
             do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                whiteNoisePlayer = try AVAudioPlayer(contentsOf: url)
             } catch {
                 print(error)
             }
         }
-        audioPlayer.volume = 0
-        audioPlayer.numberOfLoops = -1
+        whiteNoisePlayer.volume = 0
+        whiteNoisePlayer.numberOfLoops = -1
+        
+        if let alertSoundFilePath = Bundle.main.path(forResource: "glass_Done", ofType: "wav") {
+            let url = URL(fileURLWithPath: alertSoundFilePath)
+            do {
+                alertSoundPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print(error)
+            }
+        }
+        alertSoundPlayer.volume = 2
+        alertSoundPlayer.numberOfLoops = 0
+        
+        if let startButtonSoundFilePath = Bundle.main.path(forResource: "rainbow1", ofType: "wav") {
+            let url = URL(fileURLWithPath: startButtonSoundFilePath)
+            do {
+                startButtonSoundPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print(error)
+            }
+        }
+        startButtonSoundPlayer.volume = 2
+        startButtonSoundPlayer.numberOfLoops = 0
         
     }
+    
     
     // MARK: - IBActions
     
@@ -146,8 +169,8 @@ class TimerViewController: UIViewController {
     
     @IBAction func tapToResetButtonTapped(_ sender: Any) {
         PDTimerController.shared.reset()
-        audioPlayer.stop()
-        audioPlayer.volume = 0
+        whiteNoisePlayer.stop()
+        whiteNoisePlayer.volume = 0
         PDTimerController.shared.pdTimer.workState = .working
         PDTimerController.shared.setTimeRemaining()
         PDTimerController.shared.toggleMessage()
@@ -172,11 +195,11 @@ class TimerViewController: UIViewController {
         if pdTimer.audioSettingsState == .soundOn {
             pdTimer.audioSettingsState = .soundOff
             muteButton.alpha = 100
-            audioPlayer.volume = 0
+            whiteNoisePlayer.volume = 0
         } else if pdTimer.audioSettingsState == .soundOff {
             pdTimer.audioSettingsState = .soundOn
             muteButton.alpha = 0.25
-            audioPlayer.setVolume(1, fadeDuration: 1)
+            whiteNoisePlayer.setVolume(1, fadeDuration: 1)
         }
         PDTimerController.shared.saveToPersistentStore()
     }
@@ -277,6 +300,7 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
+        impactFeedbackGenerator.prepare()
         PDTimerController.shared.toggleMessage()
         if pdTimer.timerState == .ready {
             pdTimer.timerState = .running
@@ -287,18 +311,21 @@ class TimerViewController: UIViewController {
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
+            impactFeedbackGenerator.impactOccurred()
+            startButtonSoundPlayer.play()
             runTimer()
-            audioPlayer.play()
+            whiteNoisePlayer.play()
             if pdTimer.audioSettingsState == .soundOff {
-                audioPlayer.volume = 0
+                whiteNoisePlayer.volume = 0
             } else if pdTimer.audioSettingsState == .soundOn {
-                audioPlayer.setVolume(1, fadeDuration: 3)
+                whiteNoisePlayer.setVolume(1, fadeDuration: 3)
             }
             
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
-            audioPlayer.pause()
-            audioPlayer.volume = 0
+            impactFeedbackGenerator.impactOccurred()
+            whiteNoisePlayer.pause()
+            whiteNoisePlayer.volume = 0
             pdTimer.timerState = .stopped
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
@@ -309,11 +336,12 @@ class TimerViewController: UIViewController {
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
             }
             runTimer()
-            audioPlayer.play()
+            impactFeedbackGenerator.impactOccurred()
+            whiteNoisePlayer.play()
             if pdTimer.audioSettingsState == .soundOff {
-                audioPlayer.volume = 0
+                whiteNoisePlayer.volume = 0
             } else if pdTimer.audioSettingsState == .soundOn {
-                audioPlayer.setVolume(1, fadeDuration: 3)
+                whiteNoisePlayer.setVolume(1, fadeDuration: 3)
             }
         }
         PDTimerController.shared.toggleMessage()
@@ -338,5 +366,8 @@ class TimerViewController: UIViewController {
     
     // MARK: - Properties
     let pdTimer = PDTimerController.shared.pdTimer
-    var audioPlayer = AVAudioPlayer()
+    var whiteNoisePlayer = AVAudioPlayer()
+    var alertSoundPlayer = AVAudioPlayer()
+    var startButtonSoundPlayer = AVAudioPlayer()
+    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
 }
