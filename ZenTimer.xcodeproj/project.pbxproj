@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */; };
+		264D363769BF083CE383C38A /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE4B411475D0A351D731C88 /* Pods_ZenTimer.framework */; };
 		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
-		82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		5DE4B411475D0A351D731C88 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F44DBD73A0117B84464001 /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		B448109B22FFC9270092E4F0 /* PDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimer.swift; sourceTree = "<group>"; };
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		B4E5E157230A2DCF000640D7 /* glass_DoneLoud.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glass_DoneLoud.wav; sourceTree = "<group>"; };
 		B4E5E15B230A3090000640D7 /* rainbow1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow1.wav; sourceTree = "<group>"; };
 		B4F6D7AA2310DB5500A63AD0 /* glass_Interruption.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glass_Interruption.wav; sourceTree = "<group>"; };
-		EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6DB99B5FD9E82E7FA18149 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */,
-				07A00207CF5FD92BE34201D2 /* Pods_ZenTimer.framework in Frameworks */,
+				264D363769BF083CE383C38A /* Pods_ZenTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +66,8 @@
 		7613DA346EBC135F9317AF04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */,
-				2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */,
+				67F44DBD73A0117B84464001 /* Pods-ZenTimer.debug.xcconfig */,
+				FD6DB99B5FD9E82E7FA18149 /* Pods-ZenTimer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B4E5E13E23064EA9000640D7 /* AVFoundation.framework */,
-				EDEB2470E1BDF0EBC693FDF7 /* Pods_ZenTimer.framework */,
+				5DE4B411475D0A351D731C88 /* Pods_ZenTimer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,11 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4A34AA922FBD76200FB66DE /* Build configuration list for PBXNativeTarget "ZenTimer" */;
 			buildPhases = (
-				829B1D4690E1063DB2239152 /* [CP] Check Pods Manifest.lock */,
+				98A6C3BD81E6174324ECAFD4 /* [CP] Check Pods Manifest.lock */,
 				B4A34A9322FBD76100FB66DE /* Sources */,
 				B4A34A9422FBD76100FB66DE /* Frameworks */,
 				B4A34A9522FBD76100FB66DE /* Resources */,
-				598D291327B4F5703970F8DE /* [CP] Embed Pods Frameworks */,
+				74E7A2A18940D65054E7EA9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,7 +258,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		598D291327B4F5703970F8DE /* [CP] Embed Pods Frameworks */ = {
+		74E7A2A18940D65054E7EA9A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,7 +275,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		829B1D4690E1063DB2239152 /* [CP] Check Pods Manifest.lock */ = {
+		98A6C3BD81E6174324ECAFD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,7 +453,7 @@
 		};
 		B4A34AAA22FBD76200FB66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82B35623D2E1D81A1B8927FC /* Pods-ZenTimer.debug.xcconfig */;
+			baseConfigurationReference = 67F44DBD73A0117B84464001 /* Pods-ZenTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,7 +472,7 @@
 		};
 		B4A34AAB22FBD76200FB66DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2291E2653EE9DED509A85683 /* Pods-ZenTimer.release.xcconfig */;
+			baseConfigurationReference = FD6DB99B5FD9E82E7FA18149 /* Pods-ZenTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
