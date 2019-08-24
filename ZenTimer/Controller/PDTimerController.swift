@@ -115,9 +115,9 @@ class PDTimerController {
         let content = UNMutableNotificationContent()
         var bodyString: String  {
             var string = ""
-            if pdTimer.workState == .working {
+            if pdTimer.workState == .onBreak {
                 string = "Time for a break!"
-            } else if pdTimer.workState == .onBreak {
+            } else if pdTimer.workState == .working{
                 string = "Break time's over!"
             }
             return string
