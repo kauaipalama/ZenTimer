@@ -57,12 +57,6 @@ class TimerViewController: UIViewController {
                 if self?.pdTimer.timerState == .finished {
                     self?.whiteNoisePlayer.stop()
                     self?.startButtonSoundPlayer.stop()
-                    let alert = UIAlertController(title: "Timer Finished", message: "Love and Gratitude", preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                        alert.dismiss(animated: true, completion: nil)
-                    })
-                    alert.addAction(ok)
-                    //Fire Sound Here
                     if let topContainerButtons = self?.topContainerButtons {
                         for button in topContainerButtons {
                             button.isEnabled = true
@@ -72,7 +66,7 @@ class TimerViewController: UIViewController {
                     if UIApplication.shared.applicationState != .background {
                         self?.alertSoundPlayer.play()
                     }
-                    self?.present(alert, animated: true, completion: {
+
                         PDTimerController.shared.toggleWorkState()
                         self?.pdTimer.timerState = .ready
                         PDTimerController.shared.toggleMessage()
@@ -82,8 +76,6 @@ class TimerViewController: UIViewController {
                         PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                             self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
                         }
-                    })
-                    //Fire Notification Here if app is in background
                     PDTimerController.shared.scheduleAlarmNotification()
                     self?.whiteNoisePlayer.volume = 0
 
@@ -96,10 +88,6 @@ class TimerViewController: UIViewController {
     }
     
     fileprivate func setUpAudio() {
-        //Need fade out when timer finished
-        //Needs to play white noise one and loop ocean sound for timeRemaining
-        //Needs to load audio state whether muted or not on load to match muteButton state
-        //Check audio level against sound of notifications incoming
         if let whiteNoiseFilePath = Bundle.main.path(forResource: "whiteNoise", ofType: "mp3") {
             let url = URL(fileURLWithPath: whiteNoiseFilePath)
             do {
@@ -404,6 +392,7 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     // MARK: - Properties
+    
     let pdTimer = PDTimerController.shared.pdTimer
     var whiteNoisePlayer = AVAudioPlayer()
     var alertSoundPlayer = AVAudioPlayer()
