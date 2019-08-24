@@ -15,6 +15,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerForNotifications()
         PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
         setupUI()
@@ -54,6 +55,8 @@ class TimerViewController: UIViewController {
                     self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
                 })
                 if self?.pdTimer.timerState == .finished {
+                    self?.whiteNoisePlayer.stop()
+                    self?.startButtonSoundPlayer.stop()
                     let alert = UIAlertController(title: "Timer Finished", message: "Love and Gratitude", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "OK", style: .default, handler: { (_) in
                         alert.dismiss(animated: true, completion: nil)
@@ -81,7 +84,7 @@ class TimerViewController: UIViewController {
                         }
                     })
                     //Fire Notification Here if app is in background
-                    PDTimerController.shared.scheduleNotification()
+                    PDTimerController.shared.scheduleAlarmNotification()
                     self?.whiteNoisePlayer.volume = 0
 
                 }
@@ -132,6 +135,42 @@ class TimerViewController: UIViewController {
         
     }
     
+    // MARK: - Notification Center
+    //Handling of interruption of AVAudioPlayer here
+    func registerForNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
+    }
+    
+    @objc func handleInterruption(_ notification: Notification) {
+        guard let info = notification.userInfo,
+            let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+            let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
+        if type == .began {
+            //Pause timer. Stop Audio. Set timer state to stopped
+            PDTimerController.shared.stop()
+            pdTimer.timerState = .stopped
+            PDTimerController.shared.toggleStartButtonLabelMessage {
+                startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+            }
+            whiteNoisePlayer.volume = 0
+            whiteNoisePlayer.pause()
+            alertSoundPlayer.pause()
+            startButtonSoundPlayer.pause()
+        } else if type == .ended {
+            guard let optionsValue = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
+            let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+            if options.contains(.shouldResume) {
+                //Interruption Ended - playback should resume
+                runTimer()
+                pdTimer.timerState = .running
+                PDTimerController.shared.toggleStartButtonLabelMessage {
+                    startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                }
+                whiteNoisePlayer.play()
+                whiteNoisePlayer.setVolume(1, fadeDuration: 3)
+            }
+        }
+    }
     
     // MARK: - IBActions
     

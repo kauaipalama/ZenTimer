@@ -12,6 +12,7 @@ timerMessage is not updating properly. Need to
 
 import Foundation
 import UserNotifications
+import AVFoundation
 
 class PDTimerController {
     
@@ -111,7 +112,7 @@ class PDTimerController {
     
     // MARK: - Local Notifications
     
-    func scheduleNotification() {
+    func scheduleAlarmNotification() {
         let content = UNMutableNotificationContent()
         var bodyString: String  {
             var string = ""
@@ -137,6 +138,28 @@ class PDTimerController {
                     if let error = error {
                         print("Error: \(error.localizedDescription)")
                     }
+                }
+            }
+        }
+    }
+    
+    func scheduleInterruptionNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Timer Interrupted"
+        content.body = "Tap to Resume"
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("glass_Interruption.wav"))
+        content.badge = 1
+        
+        let identifier = "interruptionNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: nil)
+        
+        notificationCenter.getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+                self.notificationCenter.add(request) { (error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    }
+                    NotificationCenter.default.removeObserver(self)
                 }
             }
         }
