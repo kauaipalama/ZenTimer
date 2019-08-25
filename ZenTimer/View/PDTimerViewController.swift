@@ -66,6 +66,7 @@ class TimerViewController: UIViewController {
                         }
                     }
                     if UIApplication.shared.applicationState != .background {
+                        self?.alertSoundPlayer.prepareToPlay()
                         self?.alertSoundPlayer.play()
                     }
 
@@ -123,6 +124,17 @@ class TimerViewController: UIViewController {
         startButtonSoundPlayer.volume = 2
         startButtonSoundPlayer.numberOfLoops = 0
         
+        if let pauseButtonSoundFilePath = Bundle.main.path(forResource: "rainbow2", ofType: "wav") {
+            let url = URL(fileURLWithPath: pauseButtonSoundFilePath)
+            do {
+                pauseButtonSoundPlayer = try  AVAudioPlayer(contentsOf: url)
+            } catch {
+                print(error)
+            }
+        }
+        pauseButtonSoundPlayer.volume = 2
+        pauseButtonSoundPlayer.numberOfLoops = 0
+        
     }
     
     fileprivate func addPulseAnimation() {
@@ -156,8 +168,6 @@ class TimerViewController: UIViewController {
                 }
                 whiteNoisePlayer.volume = 0
                 whiteNoisePlayer.pause()
-                alertSoundPlayer.pause()
-                startButtonSoundPlayer.pause()
             }
         } else if type == .ended {
             guard let optionsValue = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
@@ -170,6 +180,7 @@ class TimerViewController: UIViewController {
                     PDTimerController.shared.toggleStartButtonLabelMessage {
                         startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
                     }
+                    whiteNoisePlayer.prepareToPlay()
                     whiteNoisePlayer.play()
                     whiteNoisePlayer.setVolume(1, fadeDuration: 3)
                 }
@@ -358,16 +369,21 @@ class TimerViewController: UIViewController {
             }
             impactFeedbackGenerator.impactOccurred()
             runTimer()
+            whiteNoisePlayer.prepareToPlay()
             whiteNoisePlayer.play()
             if pdTimer.audioSettingsState == .soundOff {
                 whiteNoisePlayer.volume = 0
             } else if pdTimer.audioSettingsState == .soundOn {
+                startButtonSoundPlayer.prepareToPlay()
                 startButtonSoundPlayer.play()
                 whiteNoisePlayer.setVolume(1, fadeDuration: 3)
             }
             
         } else if pdTimer.timerState == .running  {
             PDTimerController.shared.stop()
+            if pdTimer.audioSettingsState == .soundOn {
+                pauseButtonSoundPlayer.play()
+            }
             impactFeedbackGenerator.impactOccurred()
             whiteNoisePlayer.pause()
             whiteNoisePlayer.volume = 0
@@ -388,6 +404,7 @@ class TimerViewController: UIViewController {
             if pdTimer.audioSettingsState == .soundOff {
                 whiteNoisePlayer.volume = 0
             } else if pdTimer.audioSettingsState == .soundOn {
+                startButtonSoundPlayer.prepareToPlay()
                 startButtonSoundPlayer.play()
                 whiteNoisePlayer.setVolume(1, fadeDuration: 2)
             }
@@ -418,6 +435,7 @@ class TimerViewController: UIViewController {
     var whiteNoisePlayer = AVAudioPlayer()
     var alertSoundPlayer = AVAudioPlayer()
     var startButtonSoundPlayer = AVAudioPlayer()
+    var pauseButtonSoundPlayer = AVAudioPlayer()
     let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
 }
