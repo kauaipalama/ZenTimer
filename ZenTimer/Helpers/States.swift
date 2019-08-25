@@ -16,7 +16,8 @@ enum WorkState {
 enum TimerState {
     case ready
     case running
-    case stopped
+    case paused
+    case interrupted
     case finished
 }
 

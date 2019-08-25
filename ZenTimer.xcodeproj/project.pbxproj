@@ -12,6 +12,7 @@
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
 		B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */; };
+		B497888723121067009AFF48 /* rainbow2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497888623121067009AFF48 /* rainbow2.wav */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		B497888623121067009AFF48 /* rainbow2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow2.wav; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				B4E5E14F230A27A8000640D7 /* glass_Done.wav */,
 				B4F6D7AA2310DB5500A63AD0 /* glass_Interruption.wav */,
 				B4E5E15B230A3090000640D7 /* rainbow1.wav */,
+				B497888623121067009AFF48 /* rainbow2.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
 				B4C6985522FCA5070088DA5C /* GoogleService-Info.plist in Resources */,
 				B4E5E15D230A3091000640D7 /* rainbow1.wav in Resources */,
+				B497888723121067009AFF48 /* rainbow2.wav in Resources */,
 				B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */,
 				B4E5E151230A27A8000640D7 /* glass_Done.wav in Resources */,
 				B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */,
