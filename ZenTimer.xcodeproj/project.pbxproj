@@ -13,6 +13,8 @@
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
 		B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */; };
 		B497888723121067009AFF48 /* rainbow2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497888623121067009AFF48 /* rainbow2.wav */; };
+		B497888B23122A6D009AFF48 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B497888A23122A6D009AFF48 /* SplashScreen.storyboard */; };
+		B497888D23122B88009AFF48 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497888C23122B88009AFF48 /* SplashScreenViewController.swift */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		B497888623121067009AFF48 /* rainbow2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow2.wav; sourceTree = "<group>"; };
+		B497888A23122A6D009AFF48 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		B497888C23122B88009AFF48 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A34A9E22FBD76100FB66DE /* Main.storyboard */,
+				B497888A23122A6D009AFF48 /* SplashScreen.storyboard */,
 				B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */,
 				B4A34AA122FBD76200FB66DE /* Assets.xcassets */,
 			);
@@ -148,6 +153,7 @@
 			children = (
 				B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */,
 				B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */,
+				B497888C23122B88009AFF48 /* SplashScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E5E14823089422000640D7 /* whiteNoise.mp3 in Resources */,
+				B497888B23122A6D009AFF48 /* SplashScreen.storyboard in Resources */,
 				B4E5E159230A2DCF000640D7 /* glass_DoneLoud.wav in Resources */,
 				B4F6D7AB2310DB5500A63AD0 /* glass_Interruption.wav in Resources */,
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
@@ -310,6 +317,7 @@
 			files = (
 				B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */,
 				B44810A022FFCA2A0092E4F0 /* States.swift in Sources */,
+				B497888D23122B88009AFF48 /* SplashScreenViewController.swift in Sources */,
 				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
 				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,

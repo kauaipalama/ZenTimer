@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="diH-V5-ULk">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="cyO-gO-8YZ">
+            <objects>
+                <viewController id="diH-V5-ULk" customClass="SplashScreenViewController" customModule="ZenTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kur-04-3sh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgW-vQ-QJm" userLabel="Bottom Container">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.7725490196" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-dN-pyl" userLabel="Top Container">
+                                <rect key="frame" x="0.0" y="44" width="414" height="178.5"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="fqB-tf-fHf" userLabel="Overlay">
+                                <rect key="frame" x="0.0" y="5" width="174" height="449"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZVv-dN-pyl" firstAttribute="height" secondItem="Kur-04-3sh" secondAttribute="height" multiplier="0.199" id="0TG-1H-TGV"/>
+                            <constraint firstItem="ZVv-dN-pyl" firstAttribute="leading" secondItem="rY4-yb-cZm" secondAttribute="leading" id="4E7-MQ-X6J"/>
+                            <constraint firstItem="rY4-yb-cZm" firstAttribute="top" secondItem="ZVv-dN-pyl" secondAttribute="top" id="6vq-0t-hvL"/>
+                            <constraint firstItem="lgW-vQ-QJm" firstAttribute="height" secondItem="Kur-04-3sh" secondAttribute="height" id="CP8-ek-GRK"/>
+                            <constraint firstItem="lgW-vQ-QJm" firstAttribute="centerY" secondItem="Kur-04-3sh" secondAttribute="centerY" id="TPg-bJ-3fS"/>
+                            <constraint firstItem="ZVv-dN-pyl" firstAttribute="width" secondItem="Kur-04-3sh" secondAttribute="width" id="Wqh-D0-pCa"/>
+                            <constraint firstItem="rY4-yb-cZm" firstAttribute="leading" secondItem="fqB-tf-fHf" secondAttribute="leading" id="ahq-VV-KKv"/>
+                            <constraint firstItem="lgW-vQ-QJm" firstAttribute="width" secondItem="Kur-04-3sh" secondAttribute="width" id="fSJ-fl-ZR9"/>
+                            <constraint firstItem="lgW-vQ-QJm" firstAttribute="centerX" secondItem="rY4-yb-cZm" secondAttribute="centerX" id="ml1-1O-0b9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rY4-yb-cZm"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="overlayImageView" destination="fqB-tf-fHf" id="6Fm-ax-JZJ"/>
+                        <outlet property="overlayLeadingConstraint" destination="ahq-VV-KKv" id="ydP-QO-Lrg"/>
+                        <outlet property="topContainerTopConstraint" destination="6vq-0t-hvL" id="EeV-2w-gPq"/>
+                        <outlet property="topContainerView" destination="ZVv-dN-pyl" id="BUi-Zj-DiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVY-oD-hl3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="137.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle" width="174" height="449"/>
+    </resources>
+</document>

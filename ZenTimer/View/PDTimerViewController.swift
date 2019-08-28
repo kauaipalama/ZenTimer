@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class TimerViewController: UIViewController {
+class PDTimerViewController: UIViewController {
     
     // MARK: - Lifecycle
     
