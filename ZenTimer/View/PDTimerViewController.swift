@@ -187,7 +187,6 @@ class PDTimerViewController: UIViewController {
     
     
     // MARK: - Notification Center
-    //Handling of interruption of AVAudioPlayer here
     func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
         NotificationCenter.default.addObserver(self, selector: #selector(reloadAnimation), name: UIApplication.didBecomeActiveNotification, object: nil)
