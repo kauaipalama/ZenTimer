@@ -7,32 +7,94 @@
 //
 
 import UIKit
+import AVFoundation
+import UserNotifications
 
 class SplashScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        overlayLeadingConstraint.constant = overlayImageView.frame.width
-        topContainerTopConstraint.constant = -(topContainerView.frame.height + 1000)
+        logoLabel.layer.opacity = 0
+        topContainerView.layer.opacity = 0
+        overlayImageView.layer.opacity = 0
+        timerLabel.layer.opacity = 0
+        timerMessage.layer.opacity = 0
+        startButton.layer.opacity = 0
+        statusBarView.layer.opacity = 0
+        overlayImageView.layer.compositingFilter = "overlayBlendMode"
+        setupAudio()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        animateLogo {
+            self.animateViews {
+                self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
+            }
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return statusBarHidden
     }
     
-    @IBOutlet weak var overlayLeadingConstraint: NSLayoutConstraint!
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .fade
+    }
+    
+    func animateLogo(completionHandler: @escaping () -> Void) {
+        whiteNoisePlayer.prepareToPlay()
+        whiteNoisePlayer.play()
+        UIView.animate(withDuration: 0.75, animations: {
+            self.logoLabel.layer.opacity = 1
+        }) { (_) in
+            UIView.animate(withDuration: 0.75, delay: 2.25, animations: {
+                self.logoLabel.layer.opacity = 0
+            }, completion: { (_) in
+                completionHandler()
+            })
+        }
+    }
+    
+    func animateViews(completionHandler: @escaping () -> Void) {
+        whiteNoisePlayer.prepareToPlay()
+        whiteNoisePlayer.play()
+        self.statusBarHidden = false
+        UIView.animate(withDuration: 02.25, animations: {
+            self.setNeedsStatusBarAppearanceUpdate()
+        })
+        UIView.animate(withDuration: 2.25, animations: {
+            self.timerLabel.layer.opacity = 1
+            self.overlayImageView.layer.opacity = 0.6
+            self.topContainerView.layer.opacity = 1
+            self.statusBarView.layer.opacity = 1
+        }, completion: { (_) in
+            completionHandler()
+        })
+    }
+    
+    func setupAudio() {
+        if let whiteNoiseFilePath = Bundle.main.path(forResource: "whiteNoise_transition", ofType: "wav") {
+            let url = URL(fileURLWithPath: whiteNoiseFilePath)
+            do {
+                whiteNoisePlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print(error)
+            }
+        }
+        whiteNoisePlayer.volume = 1.5
+        whiteNoisePlayer.numberOfLoops = 0
+    }
+    
+    @IBOutlet weak var timerMessage: UILabel!
+    @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var overlayImageView: UIImageView!
-    @IBOutlet weak var topContainerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var topContainerView: UIView!
+    @IBOutlet weak var statusBarView: UIView!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    var statusBarHidden = true
+    var logoSoundPlayer = AVAudioPlayer()
+    var whiteNoisePlayer = AVAudioPlayer()
 }

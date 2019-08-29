@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        UINavigationBar.appearance().layer.backgroundColor = UIColor.clear.cgColor
-        
         //User Notifications
         let options: UNAuthorizationOptions = [.alert, .badge, .sound]
         notificationCenter.requestAuthorization(options: options) { (didAllow, error) in

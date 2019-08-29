@@ -38,19 +38,19 @@ class PDTimerController {
     func toggleMessage() {
         if pdTimer.workState == .working {
             if pdTimer.timerState == .ready {
-                pdTimer.timerMessage = "Ready to Work. I love my job!"
+                pdTimer.timerMessage = "ready"
             } else if pdTimer.timerState == .running {
-                pdTimer.timerMessage = "Working hard. Hardly Working"
+                pdTimer.timerMessage = "until your next break"
             } else if pdTimer.timerState == .finished {
-                pdTimer.timerMessage = "Finished Working. Thank goodness!"
+                pdTimer.timerMessage = ""
             }
         } else if pdTimer.workState == .onBreak {
             if pdTimer.timerState == .ready {
-                pdTimer.timerMessage = "Ready for a Break!"
+                pdTimer.timerMessage = "ready"
             } else if pdTimer.timerState == .running {
-                pdTimer.timerMessage = "On Break. My boss is so generous!"
+                pdTimer.timerMessage = "until your next session"
             } else if pdTimer.timerState == .finished {
-                pdTimer.timerMessage = "Finished Break. I love my job!"
+                pdTimer.timerMessage = ""
             }
         }
     }
@@ -124,7 +124,7 @@ class PDTimerController {
         }
         content.title = "Alarm"
         content.body = bodyString
-        content.sound = UNNotificationSound(named: UNNotificationSoundName("glass_DoneLoud.wav"))
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("rainbow3+glass_DoneLoud.wav"))
         content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
