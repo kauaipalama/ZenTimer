@@ -24,9 +24,9 @@ class PDTimerViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         addPulseAnimation()
-        UIView.animate(withDuration: 2.25) {
+        UIView.animate(withDuration: 1, delay: 1, options: .curveLinear, animations: {
             self.messageLabel.layer.opacity = 1
-        }
+        }, completion: nil)
     }
     
     // MARK: - Views
@@ -175,11 +175,22 @@ class PDTimerViewController: UIViewController {
         startButton.layer.add(pulseAnimation, forKey: nil)
     }
     
+    fileprivate func addReversedPulseAnimation() {
+        pulseAnimation.duration = 1.1
+        pulseAnimation.fromValue = NSNumber(value: 1)
+        pulseAnimation.toValue = NSNumber(value: 0)
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = .greatestFiniteMagnitude
+        startButton.layer.add(pulseAnimation, forKey: nil)
+    }
+    
     
     // MARK: - Notification Center
     //Handling of interruption of AVAudioPlayer here
     func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadAnimation), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     @objc func handleInterruption(_ notification: Notification) {
@@ -187,7 +198,6 @@ class PDTimerViewController: UIViewController {
             let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
             let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
         if type == .began {
-            //Pause timer. Stop Audio. Set timer state to stopped
             if pdTimer.timerState == .running {
                 PDTimerController.shared.stop()
                 pdTimer.timerState = .interrupted
@@ -213,6 +223,14 @@ class PDTimerViewController: UIViewController {
                     whiteNoisePlayer.setVolume(1, fadeDuration: 3)
                 }
             }
+        }
+    }
+    
+    @objc func reloadAnimation() {
+        //Needs some work. Its a little rough between reloads
+        if pdTimer.timerState == .ready || pdTimer.timerState == .paused {
+            startButton.layer.removeAllAnimations()
+            addReversedPulseAnimation()
         }
     }
     
@@ -416,6 +434,7 @@ class PDTimerViewController: UIViewController {
             whiteNoisePlayer.pause()
             whiteNoisePlayer.volume = 0
             pdTimer.timerState = .paused
+            startButton.layer.removeAllAnimations()
             addPulseAnimation()
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
                 self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
