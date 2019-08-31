@@ -82,7 +82,7 @@ class SplashScreenViewController: UIViewController {
                 print(error)
             }
         }
-        whiteNoisePlayer.volume = 1.5
+        whiteNoisePlayer.volume = 2
         whiteNoisePlayer.numberOfLoops = 0
     }
     

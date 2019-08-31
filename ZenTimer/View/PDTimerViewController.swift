@@ -67,7 +67,7 @@ class PDTimerViewController: UIViewController {
                     if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOn {
                         self?.preAlertSoundPlayer.prepareToPlay()
                         self?.preAlertSoundPlayer.play()
-                        self?.preAlertSoundPlayer.setVolume(1, fadeDuration: 1)
+                        self?.preAlertSoundPlayer.setVolume(2, fadeDuration: 1)
                     }
                 }
                 if self?.pdTimer.timerState == .finished {
@@ -421,7 +421,7 @@ class PDTimerViewController: UIViewController {
             } else if pdTimer.audioSettingsState == .soundOn {
                 startButtonSoundPlayer.prepareToPlay()
                 startButtonSoundPlayer.play()
-                whiteNoisePlayer.setVolume(1.5, fadeDuration: 3)
+                whiteNoisePlayer.setVolume(2, fadeDuration: 1)
             }
             
         } else if pdTimer.timerState == .running  {
@@ -452,7 +452,7 @@ class PDTimerViewController: UIViewController {
             } else if pdTimer.audioSettingsState == .soundOn {
                 startButtonSoundPlayer.prepareToPlay()
                 startButtonSoundPlayer.play()
-                whiteNoisePlayer.setVolume(1, fadeDuration: 2)
+                whiteNoisePlayer.setVolume(2, fadeDuration: 1)
             }
         }
         PDTimerController.shared.toggleMessage()
