@@ -210,6 +210,7 @@ class PDTimerViewController: UIViewController {
     
     
     // MARK: - Notification Center
+    
     func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
         NotificationCenter.default.addObserver(self, selector: #selector(removePulseAnimation), name: UIApplication.didEnterBackgroundNotification, object: nil)

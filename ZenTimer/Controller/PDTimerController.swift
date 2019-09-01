@@ -53,7 +53,6 @@ class PDTimerController {
         }
     }
     
-    
     func toggleStartButtonLabelMessage(completion: () -> Void) {
         if pdTimer.timerState == .ready || pdTimer.timerState == .paused || pdTimer.timerState == .finished || pdTimer.timerState == .interrupted {
             pdTimer.startButtonMessage = "TAP TO START"
