@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3110A73C4ED7EE5EFD2683E2 /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E469133453E0683BAD00240C /* Pods_ZenTimer.framework */; };
+		48779BAB34F7BC024554989F /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E9043E6BB911AF8827310B /* Pods_ZenTimer.framework */; };
 		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
 		B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */; };
-		B46F4547231BA11F003A4EA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B46F4546231BA11F003A4EA2 /* GoogleService-Info.plist */; };
 		B497888723121067009AFF48 /* rainbow2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497888623121067009AFF48 /* rainbow2.wav */; };
 		B497888B23122A6D009AFF48 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B497888A23122A6D009AFF48 /* SplashScreen.storyboard */; };
 		B497888D23122B88009AFF48 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497888C23122B88009AFF48 /* SplashScreenViewController.swift */; };
@@ -31,13 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BD1556EFF9FCF558328C513 /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
-		935C12BC66E8B2A8874B2ACF /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
+		3304E30C881A1C8BC63F55A2 /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		929736DEC96B0FDC10990B48 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
 		B448109B22FFC9270092E4F0 /* PDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimer.swift; sourceTree = "<group>"; };
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		B46F4546231BA11F003A4EA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B497888623121067009AFF48 /* rainbow2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow2.wav; sourceTree = "<group>"; };
 		B497888A23122A6D009AFF48 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		B497888C23122B88009AFF48 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +53,7 @@
 		B4E5E14723089422000640D7 /* whiteNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whiteNoise.mp3; sourceTree = "<group>"; };
 		B4E5E157230A2DCF000640D7 /* glass_DoneLoud.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glass_DoneLoud.wav; sourceTree = "<group>"; };
 		B4E5E15B230A3090000640D7 /* rainbow1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow1.wav; sourceTree = "<group>"; };
-		E469133453E0683BAD00240C /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E9043E6BB911AF8827310B /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */,
-				3110A73C4ED7EE5EFD2683E2 /* Pods_ZenTimer.framework in Frameworks */,
+				48779BAB34F7BC024554989F /* Pods_ZenTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +72,8 @@
 		7613DA346EBC135F9317AF04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4BD1556EFF9FCF558328C513 /* Pods-ZenTimer.debug.xcconfig */,
-				935C12BC66E8B2A8874B2ACF /* Pods-ZenTimer.release.xcconfig */,
+				3304E30C881A1C8BC63F55A2 /* Pods-ZenTimer.debug.xcconfig */,
+				929736DEC96B0FDC10990B48 /* Pods-ZenTimer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -84,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B4E5E13E23064EA9000640D7 /* AVFoundation.framework */,
-				E469133453E0683BAD00240C /* Pods_ZenTimer.framework */,
+				D4E9043E6BB911AF8827310B /* Pods_ZenTimer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,7 +99,6 @@
 		B44810A222FFCA4B0092E4F0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B46F4546231BA11F003A4EA2 /* GoogleService-Info.plist */,
 				B4A34AA622FBD76200FB66DE /* Info.plist */,
 			);
 			path = Resources;
@@ -197,11 +194,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4A34AA922FBD76200FB66DE /* Build configuration list for PBXNativeTarget "ZenTimer" */;
 			buildPhases = (
-				B651C70B255671CAF2CFACCE /* [CP] Check Pods Manifest.lock */,
+				B690514622AEF39DFF726EEB /* [CP] Check Pods Manifest.lock */,
 				B4A34A9322FBD76100FB66DE /* Sources */,
 				B4A34A9422FBD76100FB66DE /* Frameworks */,
 				B4A34A9522FBD76100FB66DE /* Resources */,
-				0E8F7301C78DEE1AB48E8CA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,7 +256,6 @@
 				B4E5E159230A2DCF000640D7 /* glass_DoneLoud.wav in Resources */,
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
 				B4E5E15D230A3091000640D7 /* rainbow1.wav in Resources */,
-				B46F4547231BA11F003A4EA2 /* GoogleService-Info.plist in Resources */,
 				B497888723121067009AFF48 /* rainbow2.wav in Resources */,
 				B497889523171507009AFF48 /* rainbow3+glass_DoneLoud.wav in Resources */,
 				B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */,
@@ -273,24 +268,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E8F7301C78DEE1AB48E8CA7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B651C70B255671CAF2CFACCE /* [CP] Check Pods Manifest.lock */ = {
+		B690514622AEF39DFF726EEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -469,7 +447,7 @@
 		};
 		B4A34AAA22FBD76200FB66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BD1556EFF9FCF558328C513 /* Pods-ZenTimer.debug.xcconfig */;
+			baseConfigurationReference = 3304E30C881A1C8BC63F55A2 /* Pods-ZenTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,7 +466,7 @@
 		};
 		B4A34AAB22FBD76200FB66DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 935C12BC66E8B2A8874B2ACF /* Pods-ZenTimer.release.xcconfig */;
+			baseConfigurationReference = 929736DEC96B0FDC10990B48 /* Pods-ZenTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

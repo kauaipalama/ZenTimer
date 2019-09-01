@@ -6,6 +6,5 @@ target 'ZenTimer' do
   use_frameworks!
 
   # Pods for ZenTimer
-  pod 'Firebase/Analytics'
 
 end
