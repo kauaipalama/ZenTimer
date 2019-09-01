@@ -41,6 +41,8 @@ class PDTimerController {
                 pdTimer.timerMessage = "ready"
             } else if pdTimer.timerState == .running {
                 pdTimer.timerMessage = "until your next break"
+            } else if pdTimer.timerState == .paused {
+                pdTimer.timerMessage = "paused"
             } else if pdTimer.timerState == .finished {
                 pdTimer.timerMessage = ""
             }

@@ -85,6 +85,18 @@ class PDTimerViewController: UIViewController {
                         self?.alertSoundPlayer.play()
                     } else if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOff {
                         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                        var message: String {
+                            var string = ""
+                            if self?.pdTimer.workState == .onBreak {
+                                string = "Break Completed"
+                            } else if self?.pdTimer.workState == .working {
+                                string = "Session Completed"
+                            }
+                            return string
+                        }
+                        let alert = UIAlertController(title: "message", message: nil, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self?.present(alert, animated: true, completion: nil)
                     }
 
                         PDTimerController.shared.toggleWorkState()
@@ -189,7 +201,8 @@ class PDTimerViewController: UIViewController {
     // MARK: - Notification Center
     func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadAnimation), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(removePulseAnimation), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadPulseAnimation), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     @objc func handleInterruption(_ notification: Notification) {
@@ -225,10 +238,13 @@ class PDTimerViewController: UIViewController {
         }
     }
     
-    @objc func reloadAnimation() {
+    @objc func removePulseAnimation() {
+        startButton.layer.removeAllAnimations()
+    }
+    
+    @objc func reloadPulseAnimation() {
         //Needs some work. Its a little rough between reloads
         if pdTimer.timerState == .ready || pdTimer.timerState == .paused {
-            startButton.layer.removeAllAnimations()
             addReversedPulseAnimation()
         }
     }
@@ -289,6 +305,7 @@ class PDTimerViewController: UIViewController {
         resetButton.alpha = 0.25
         resetView.alpha = 0
         pdTimer.resetButtonState = .notTapped
+        addReversedPulseAnimation()
     }
     
     @IBAction func muteButtonTapped(_ sender: Any) {
@@ -433,6 +450,7 @@ class PDTimerViewController: UIViewController {
             whiteNoisePlayer.pause()
             whiteNoisePlayer.volume = 0
             pdTimer.timerState = .paused
+            PDTimerController.shared.toggleMessage()
             startButton.layer.removeAllAnimations()
             addPulseAnimation()
             PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
