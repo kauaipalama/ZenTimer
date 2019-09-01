@@ -6,10 +6,6 @@
 //  Copyright © 2019 Kainoa Palama. All rights reserved.
 //
 
-/*
-timerMessage is not updating properly. Need to
- */
-
 import Foundation
 import UserNotifications
 
