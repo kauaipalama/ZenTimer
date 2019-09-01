@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import UserNotifications
 
 class PDTimerViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class PDTimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerForNotifications()
+        addObservers()
         PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
         setupUI()
@@ -26,7 +27,17 @@ class PDTimerViewController: UIViewController {
         addPulseAnimation()
         UIView.animate(withDuration: 1, delay: 1, options: .curveLinear, animations: {
             self.messageLabel.layer.opacity = 1
-        }, completion: nil)
+        }) { (_) in
+            if self.permissionsPresented == false {
+                let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+                self.notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
+                    if let error = error {
+                        print(error)
+                    }
+                    UserDefaults.standard.set(true, forKey: "permissionsPresented")
+                }
+            }
+        }
     }
     
     // MARK: - Views
@@ -199,7 +210,7 @@ class PDTimerViewController: UIViewController {
     
     
     // MARK: - Notification Center
-    func registerForNotifications() {
+    func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
         NotificationCenter.default.addObserver(self, selector: #selector(removePulseAnimation), name: UIApplication.didEnterBackgroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadPulseAnimation), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -243,7 +254,6 @@ class PDTimerViewController: UIViewController {
     }
     
     @objc func reloadPulseAnimation() {
-        //Needs some work. Its a little rough between reloads
         if pdTimer.timerState == .ready || pdTimer.timerState == .paused {
             addReversedPulseAnimation()
         }
@@ -502,5 +512,7 @@ class PDTimerViewController: UIViewController {
     var startButtonSoundPlayer = AVAudioPlayer()
     var pauseButtonSoundPlayer = AVAudioPlayer()
     let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
-    let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+    let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+    let notificationCenter = UNUserNotificationCenter.current()
+    var permissionsPresented = UserDefaults.standard.bool(forKey: "permissionsPresented")
 }

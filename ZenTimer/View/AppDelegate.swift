@@ -20,15 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
-        //User Notifications
-        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
-        notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
-            if let error = error {
-                print(error)
-            } else if !(didAllow) {
-                print("User declined notifications")
-            }
-        }
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
             print("Playback OK")
