@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bgu-F2-Bx2">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="LzF-rc-w2h">
+            <objects>
+                <viewController id="Bgu-F2-Bx2" customClass="OnboardingViewController" customModule="ZenTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xcv-pZ-rfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-a7-Lv9">
+                                <rect key="frame" x="132" y="822" width="150" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.31847919861963192" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Bgu-F2-Bx2" eventType="touchUpInside" id="u44-SD-fhV"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDf-Le-a5P">
+                                <rect key="frame" x="0.0" y="148" width="414" height="600"/>
+                                <color key="backgroundColor" red="0.48873955011367798" green="0.82843345403671265" blue="0.7568584680557251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-IK-8sh">
+                                <rect key="frame" x="334" y="44" width="51" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.31847919860000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Bgu-F2-Bx2" eventType="touchUpInside" id="F9z-3h-7Hx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25882352941176467" green="0.77254901960784317" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VDR-a7-Lv9" firstAttribute="centerX" secondItem="Xcv-pZ-rfQ" secondAttribute="centerX" id="8JG-GY-Sh3"/>
+                            <constraint firstItem="hDf-Le-a5P" firstAttribute="width" secondItem="Xcv-pZ-rfQ" secondAttribute="width" id="HR5-Op-3KB"/>
+                            <constraint firstItem="VDR-a7-Lv9" firstAttribute="bottom" secondItem="dvH-8A-sUf" secondAttribute="bottom" id="JFR-UZ-qNA"/>
+                            <constraint firstItem="hDf-Le-a5P" firstAttribute="height" secondItem="Xcv-pZ-rfQ" secondAttribute="height" multiplier="0.67" id="Rnx-lG-p2A"/>
+                            <constraint firstItem="hDf-Le-a5P" firstAttribute="centerX" secondItem="Xcv-pZ-rfQ" secondAttribute="centerX" id="eU6-su-m1k"/>
+                            <constraint firstItem="hDf-Le-a5P" firstAttribute="centerY" secondItem="Xcv-pZ-rfQ" secondAttribute="centerY" id="wD5-VL-fBV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dvH-8A-sUf"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="VDR-a7-Lv9" id="OEN-Gg-NkX"/>
+                        <outlet property="pageView" destination="hDf-Le-a5P" id="AYd-3n-9fI"/>
+                        <outlet property="skipButton" destination="kA3-IK-8sh" id="Wyu-dA-ZWF"/>
+                        <segue destination="aM5-hq-EVj" kind="presentation" identifier="toSplashScreen" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="NE2-gL-EyJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaW-IL-D5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513.04347826086962" y="-247.09821428571428"/>
+        </scene>
+        <!--SplashScreen-->
+        <scene sceneID="Kvm-HN-goa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SplashScreen" id="aM5-hq-EVj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkp-5M-Sie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="-319"/>
+        </scene>
+    </scenes>
+</document>

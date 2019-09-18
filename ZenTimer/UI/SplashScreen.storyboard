@@ -18,6 +18,14 @@
             </objects>
             <point key="canvasLocation" x="1088" y="133"/>
         </scene>
+        <!--Onboarding-->
+        <scene sceneID="czP-Dw-Flv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="YpL-A7-gGr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zM-fz-Sxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="540"/>
+        </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="Acz-vJ-6Sf">
             <objects>
@@ -319,11 +327,12 @@
                         <outlet property="timerMessage" destination="six-Bu-vsv" id="8Dz-1R-9t8"/>
                         <outlet property="topContainerView" destination="uat-We-SSR" id="jcx-Ns-teJ"/>
                         <segue destination="0oz-Nc-Ol5" kind="presentation" identifier="toMainStoryboard" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="TaA-6h-368"/>
+                        <segue destination="YpL-A7-gGr" kind="presentation" identifier="toOnboarding" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oeR-Gj-2xp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhy-ak-SHZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530" y="406"/>
+            <point key="canvasLocation" x="-276" y="457"/>
         </scene>
     </scenes>
     <resources>

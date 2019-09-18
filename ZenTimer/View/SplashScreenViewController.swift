@@ -28,8 +28,13 @@ class SplashScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         animateLogo {
-            self.animateViews {
-                self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
+            if self.onboardingPresented == false {
+                self.performSegue(withIdentifier: "toOnboarding", sender: nil)
+                UserDefaults.standard.set(true, forKey: "onboardingPresented")
+            } else {
+                self.animateViews {
+                    self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
+                }
             }
         }
     }
@@ -97,4 +102,5 @@ class SplashScreenViewController: UIViewController {
     var statusBarHidden = true
     var logoSoundPlayer = AVAudioPlayer()
     var whiteNoisePlayer = AVAudioPlayer()
+    var onboardingPresented = UserDefaults.standard.bool(forKey: "onboardingPresented")
 }
