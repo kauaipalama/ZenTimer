@@ -7,59 +7,165 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A644199BB378F6F085D1F3A1648EA411 /* Pods-ZenTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A1CC8BCF1AA2C7E168DEDA667FE390 /* Pods-ZenTimer-dummy.m */; };
-		B2619B63DA2490DA9AA663E48E39B4B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F42EB9DDFB27A944DF9FCD62B38A3561 /* Pods-ZenTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B726AACC567278DAC057C370AC59387 /* Pods-ZenTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07F30B15B1E9FD878007C41ED8B8CCFA /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EB4932B1195DA58F388D0E9576E55 /* OnboardingContantViewItem.swift */; };
+		118E8D4D644A478EBD621D11CD495D8C /* Pods-ZenTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34BE018A1B958056D18F8873CBDC7E08 /* Pods-ZenTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8BE755A684FC132E1C0D62AD35A56A /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B70DAFB4A263F76752E227CAAF632 /* FillAnimationView.swift */; };
+		1E43AD13C988387C35D65D341FA2A8C8 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3F9076BF3E4BBCC631A55BB22205A /* PageView.swift */; };
+		215DB0325BCFB9A6153B5C7C5595080B /* Pods-ZenTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5407F6C131658E24A96815C1A4BB00 /* Pods-ZenTimer-dummy.m */; };
+		223F3449974BEA68231F1EA9C6E1FE8D /* paper-onboarding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E4D4B483F240E57FD746580ACD1042 /* paper-onboarding-dummy.m */; };
+		2389208835126ADD6B969F7031EBFDCB /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD366F9EBFCFD57D677F535E6270B2C /* PaperOnboarding.swift */; };
+		342607275DABA8DA2A32D101196496EB /* paper-onboarding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 538EBA46AF767395BFCBF1F5358C5E55 /* paper-onboarding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B970F50B6565183DF0FD689A68C7CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4C615F57B763AA6170BBE5251567F140 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C33D90A8EA34008A9A775A8950E71 /* OnboardingContentView.swift */; };
+		4F17055D20B820F265F0C174C67CA94B /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C7966FCBB46DBDE620B9AF774E78E /* PageContainer.swift */; };
+		77F112403440A7419C4880CABD38A962 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD1729D36093FAE6C2ABD32E9C0178 /* PageViewItem.swift */; };
+		7D669CE134F23BB348238F83F58F94D5 /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B54941850251DBF0DCDA119EEF53488 /* PaperOnboardingDelegate.swift */; };
+		8E4E8665231216670E0DD1DE32224812 /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A1ABC9F580A680554B6FA2A1278AD /* Configuring.swift */; };
+		B2CE4FC5C310FC8F7FF6B91362C6D513 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BF0D0688A4B24346E9A182A5BF4F57 /* GestureControl.swift */; };
+		CDB7F4F915583999B67BDDDF0F4749E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EBA796C399BD028C7BDE122FD28B24FE /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E384EF7101F45BEAC74488E4F4B0E75 /* ConstraintsHelper.swift */; };
+		F3513898978812B5DB65771F46CF7707 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7047CB627E07545591277A6752F965 /* PaperOnboardingDataSource.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		91BA5AF65F6A63494EB90868497D0030 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 092BBAE106FF2FFA56F415EFB1EDBC41;
+			remoteInfo = "paper-onboarding";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1BE39136C19306314568C57817F7F58C /* Pods-ZenTimer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZenTimer-Info.plist"; sourceTree = "<group>"; };
-		2C6DE4BC25362C9CD9105D9381CF23CE /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
+		0BD366F9EBFCFD57D677F535E6270B2C /* PaperOnboarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboarding.swift; path = Source/PaperOnboarding.swift; sourceTree = "<group>"; };
+		0D7047CB627E07545591277A6752F965 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboardingDataSource.swift; path = Source/PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
+		0E28449C0B8661200BEB36A28153BEDA /* paper-onboarding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "paper-onboarding.xcconfig"; sourceTree = "<group>"; };
+		100A1ABC9F580A680554B6FA2A1278AD /* Configuring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuring.swift; path = Source/Helpers/Configuring.swift; sourceTree = "<group>"; };
+		1E384EF7101F45BEAC74488E4F4B0E75 /* ConstraintsHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintsHelper.swift; path = Source/Helpers/ConstraintsHelper.swift; sourceTree = "<group>"; };
+		2B54941850251DBF0DCDA119EEF53488 /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboardingDelegate.swift; path = Source/PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
+		2F5407F6C131658E24A96815C1A4BB00 /* Pods-ZenTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZenTimer-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		34BE018A1B958056D18F8873CBDC7E08 /* Pods-ZenTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZenTimer-umbrella.h"; sourceTree = "<group>"; };
+		38BF0D0688A4B24346E9A182A5BF4F57 /* GestureControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GestureControl.swift; path = Source/GestureControl/GestureControl.swift; sourceTree = "<group>"; };
 		397B14902E91735D417DE32F8E29027B /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZenTimer.framework; path = "Pods-ZenTimer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B726AACC567278DAC057C370AC59387 /* Pods-ZenTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZenTimer-umbrella.h"; sourceTree = "<group>"; };
-		59A696EA5604DEA3A9FD81029BADFE7D /* Pods-ZenTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZenTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9229E6F69E74615F2512EC812BB27396 /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		51E702447BB1C1282D11F0D24839E4D8 /* Pods-ZenTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZenTimer-frameworks.sh"; sourceTree = "<group>"; };
+		538EBA46AF767395BFCBF1F5358C5E55 /* paper-onboarding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "paper-onboarding-umbrella.h"; sourceTree = "<group>"; };
+		5715F04BE5E8C044D510A928B59221FC /* Pods-ZenTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZenTimer-acknowledgements.plist"; sourceTree = "<group>"; };
+		59D77404C137A6B5C055C7CA4CEF91C5 /* Pods-ZenTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZenTimer.modulemap"; sourceTree = "<group>"; };
+		60BE093661E78CCBCB039CE8F8836C78 /* Pods-ZenTimer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZenTimer-Info.plist"; sourceTree = "<group>"; };
+		8521857EEEC459A1D88E0775B46BA664 /* paper-onboarding-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "paper-onboarding-Info.plist"; sourceTree = "<group>"; };
+		870B70DAFB4A263F76752E227CAAF632 /* FillAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillAnimationView.swift; path = Source/FillAnimationView/FillAnimationView.swift; sourceTree = "<group>"; };
+		929EB4932B1195DA58F388D0E9576E55 /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnboardingContantViewItem.swift; path = Source/OnboardingContentView/Item/OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		9C3AA73C7C5B9DA3C31E079DBA631D23 /* paper-onboarding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "paper-onboarding.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E76C0609825C18B6C597FF3E0A43033B /* Pods-ZenTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZenTimer-acknowledgements.plist"; sourceTree = "<group>"; };
-		E9A1CC8BCF1AA2C7E168DEDA667FE390 /* Pods-ZenTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZenTimer-dummy.m"; sourceTree = "<group>"; };
-		F5FDD5BEF69BAD55A1DD25A6FCD93E26 /* Pods-ZenTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZenTimer.modulemap"; sourceTree = "<group>"; };
+		A9E4D4B483F240E57FD746580ACD1042 /* paper-onboarding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "paper-onboarding-dummy.m"; sourceTree = "<group>"; };
+		B1D0054470585EDBD36511B13B2BBEC9 /* Pods-ZenTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZenTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BFF2591415F9E11048ACCC10A3D52E86 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = paper_onboarding.framework; path = "paper-onboarding.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39FF4D4BEED37E9B77245ED7FCCC6D5 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
+		C8F3F9076BF3E4BBCC631A55BB22205A /* PageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = Source/PageView/PageView.swift; sourceTree = "<group>"; };
+		C91EDDF0ED451B095BB67380100148D7 /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		CA0C33D90A8EA34008A9A775A8950E71 /* OnboardingContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnboardingContentView.swift; path = Source/OnboardingContentView/OnboardingContentView.swift; sourceTree = "<group>"; };
+		CB6C7966FCBB46DBDE620B9AF774E78E /* PageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageContainer.swift; path = Source/PageView/PageContainerView/PageContainer.swift; sourceTree = "<group>"; };
+		D8CD1729D36093FAE6C2ABD32E9C0178 /* PageViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewItem.swift; path = Source/PageView/Item/PageViewItem.swift; sourceTree = "<group>"; };
+		F1550A55801C42947A447472D75724B0 /* paper-onboarding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "paper-onboarding-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D3BD97921107CF0E7E5F98EAF3AA710E /* Frameworks */ = {
+		0995386CC00378FB8BC461EAAD6AC26F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2619B63DA2490DA9AA663E48E39B4B6 /* Foundation.framework in Frameworks */,
+				3B970F50B6565183DF0FD689A68C7CF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E73467E7C244F0C775BF0EDF219085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB7F4F915583999B67BDDDF0F4749E8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3632BBC23529ED265FB998390B8D97EA /* Targets Support Files */ = {
+		00AEC9DB17F12E9E55A49228317996F7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				737BA137141DBBB3F98A1DBACFB8EEEA /* Pods-ZenTimer */,
+				83350D9C240139B408A5E5FD9430B9B5 /* paper-onboarding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5CF90E5D7D9C0A5A9F43D1A033CB765D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C3AA73C7C5B9DA3C31E079DBA631D23 /* paper-onboarding.modulemap */,
+				0E28449C0B8661200BEB36A28153BEDA /* paper-onboarding.xcconfig */,
+				A9E4D4B483F240E57FD746580ACD1042 /* paper-onboarding-dummy.m */,
+				8521857EEEC459A1D88E0775B46BA664 /* paper-onboarding-Info.plist */,
+				F1550A55801C42947A447472D75724B0 /* paper-onboarding-prefix.pch */,
+				538EBA46AF767395BFCBF1F5358C5E55 /* paper-onboarding-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/paper-onboarding";
+			sourceTree = "<group>";
+		};
+		710C724B8D4AE1F5AEEEF22BA0C971FC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F61D246D744B95F549A3FABB4CE101A /* Pods-ZenTimer */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		737BA137141DBBB3F98A1DBACFB8EEEA /* Pods-ZenTimer */ = {
+		83350D9C240139B408A5E5FD9430B9B5 /* paper-onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				F5FDD5BEF69BAD55A1DD25A6FCD93E26 /* Pods-ZenTimer.modulemap */,
-				59A696EA5604DEA3A9FD81029BADFE7D /* Pods-ZenTimer-acknowledgements.markdown */,
-				E76C0609825C18B6C597FF3E0A43033B /* Pods-ZenTimer-acknowledgements.plist */,
-				E9A1CC8BCF1AA2C7E168DEDA667FE390 /* Pods-ZenTimer-dummy.m */,
-				1BE39136C19306314568C57817F7F58C /* Pods-ZenTimer-Info.plist */,
-				3B726AACC567278DAC057C370AC59387 /* Pods-ZenTimer-umbrella.h */,
-				9229E6F69E74615F2512EC812BB27396 /* Pods-ZenTimer.debug.xcconfig */,
-				2C6DE4BC25362C9CD9105D9381CF23CE /* Pods-ZenTimer.release.xcconfig */,
+				100A1ABC9F580A680554B6FA2A1278AD /* Configuring.swift */,
+				1E384EF7101F45BEAC74488E4F4B0E75 /* ConstraintsHelper.swift */,
+				870B70DAFB4A263F76752E227CAAF632 /* FillAnimationView.swift */,
+				38BF0D0688A4B24346E9A182A5BF4F57 /* GestureControl.swift */,
+				929EB4932B1195DA58F388D0E9576E55 /* OnboardingContantViewItem.swift */,
+				CA0C33D90A8EA34008A9A775A8950E71 /* OnboardingContentView.swift */,
+				CB6C7966FCBB46DBDE620B9AF774E78E /* PageContainer.swift */,
+				C8F3F9076BF3E4BBCC631A55BB22205A /* PageView.swift */,
+				D8CD1729D36093FAE6C2ABD32E9C0178 /* PageViewItem.swift */,
+				0BD366F9EBFCFD57D677F535E6270B2C /* PaperOnboarding.swift */,
+				0D7047CB627E07545591277A6752F965 /* PaperOnboardingDataSource.swift */,
+				2B54941850251DBF0DCDA119EEF53488 /* PaperOnboardingDelegate.swift */,
+				5CF90E5D7D9C0A5A9F43D1A033CB765D /* Support Files */,
+			);
+			name = "paper-onboarding";
+			path = "paper-onboarding";
+			sourceTree = "<group>";
+		};
+		8F61D246D744B95F549A3FABB4CE101A /* Pods-ZenTimer */ = {
+			isa = PBXGroup;
+			children = (
+				59D77404C137A6B5C055C7CA4CEF91C5 /* Pods-ZenTimer.modulemap */,
+				B1D0054470585EDBD36511B13B2BBEC9 /* Pods-ZenTimer-acknowledgements.markdown */,
+				5715F04BE5E8C044D510A928B59221FC /* Pods-ZenTimer-acknowledgements.plist */,
+				2F5407F6C131658E24A96815C1A4BB00 /* Pods-ZenTimer-dummy.m */,
+				51E702447BB1C1282D11F0D24839E4D8 /* Pods-ZenTimer-frameworks.sh */,
+				60BE093661E78CCBCB039CE8F8836C78 /* Pods-ZenTimer-Info.plist */,
+				34BE018A1B958056D18F8873CBDC7E08 /* Pods-ZenTimer-umbrella.h */,
+				C91EDDF0ED451B095BB67380100148D7 /* Pods-ZenTimer.debug.xcconfig */,
+				C39FF4D4BEED37E9B77245ED7FCCC6D5 /* Pods-ZenTimer.release.xcconfig */,
 			);
 			name = "Pods-ZenTimer";
 			path = "Target Support Files/Pods-ZenTimer";
+			sourceTree = "<group>";
+		};
+		A65142A349A2DD754A0BCA667227ACCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF2591415F9E11048ACCC10A3D52E86 /* paper_onboarding.framework */,
+				397B14902E91735D417DE32F8E29027B /* Pods_ZenTimer.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -75,8 +181,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				F879DE1C22E7EBAE664C0AE4ABB2C368 /* Products */,
-				3632BBC23529ED265FB998390B8D97EA /* Targets Support Files */,
+				00AEC9DB17F12E9E55A49228317996F7 /* Pods */,
+				A65142A349A2DD754A0BCA667227ACCD /* Products */,
+				710C724B8D4AE1F5AEEEF22BA0C971FC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,40 +195,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F879DE1C22E7EBAE664C0AE4ABB2C368 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				397B14902E91735D417DE32F8E29027B /* Pods_ZenTimer.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F96994252D3CE81A6DD6F234812E1C9B /* Headers */ = {
+		2B3A6789E7C644A210736CFFC9CA8E0C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42EB9DDFB27A944DF9FCD62B38A3561 /* Pods-ZenTimer-umbrella.h in Headers */,
+				118E8D4D644A478EBD621D11CD495D8C /* Pods-ZenTimer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D37B5C2555F4F5ACBD41A881AF50797 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342607275DABA8DA2A32D101196496EB /* paper-onboarding-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BAC183C017833009944525D40706027D /* Pods-ZenTimer */ = {
+		092BBAE106FF2FFA56F415EFB1EDBC41 /* paper-onboarding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 877C7C8119F5FEB2EDFDB19FF14FE528 /* Build configuration list for PBXNativeTarget "Pods-ZenTimer" */;
+			buildConfigurationList = AFFF71E528A02CBD2D7497ADC845C057 /* Build configuration list for PBXNativeTarget "paper-onboarding" */;
 			buildPhases = (
-				F96994252D3CE81A6DD6F234812E1C9B /* Headers */,
-				A2DA39EC655B5784784D7A864C7931BB /* Sources */,
-				D3BD97921107CF0E7E5F98EAF3AA710E /* Frameworks */,
-				4602CB6DDCDA8FEDD32F8F7A65A1CCAE /* Resources */,
+				6D37B5C2555F4F5ACBD41A881AF50797 /* Headers */,
+				28B14E019345581A4A106E50E54F7A35 /* Sources */,
+				0995386CC00378FB8BC461EAAD6AC26F /* Frameworks */,
+				9F304C62837AB904FCB12E99521A80D5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = "paper-onboarding";
+			productName = "paper-onboarding";
+			productReference = BFF2591415F9E11048ACCC10A3D52E86 /* paper_onboarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BAC183C017833009944525D40706027D /* Pods-ZenTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C7E89FDEF05A5AF769F4761495B519 /* Build configuration list for PBXNativeTarget "Pods-ZenTimer" */;
+			buildPhases = (
+				2B3A6789E7C644A210736CFFC9CA8E0C /* Headers */,
+				4AAC2D313A8F798A90E9D6E9BD22A6C8 /* Sources */,
+				F4E73467E7C244F0C775BF0EDF219085 /* Frameworks */,
+				B638FA0853E103C8B8122FB1B883BA3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC3BFF35F4592128D29DAB9C0FE4B2B7 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZenTimer";
 			productName = "Pods-ZenTimer";
@@ -145,17 +271,25 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F879DE1C22E7EBAE664C0AE4ABB2C368 /* Products */;
+			productRefGroup = A65142A349A2DD754A0BCA667227ACCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				092BBAE106FF2FFA56F415EFB1EDBC41 /* paper-onboarding */,
 				BAC183C017833009944525D40706027D /* Pods-ZenTimer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4602CB6DDCDA8FEDD32F8F7A65A1CCAE /* Resources */ = {
+		9F304C62837AB904FCB12E99521A80D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B638FA0853E103C8B8122FB1B883BA3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -165,20 +299,122 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A2DA39EC655B5784784D7A864C7931BB /* Sources */ = {
+		28B14E019345581A4A106E50E54F7A35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A644199BB378F6F085D1F3A1648EA411 /* Pods-ZenTimer-dummy.m in Sources */,
+				8E4E8665231216670E0DD1DE32224812 /* Configuring.swift in Sources */,
+				EBA796C399BD028C7BDE122FD28B24FE /* ConstraintsHelper.swift in Sources */,
+				1D8BE755A684FC132E1C0D62AD35A56A /* FillAnimationView.swift in Sources */,
+				B2CE4FC5C310FC8F7FF6B91362C6D513 /* GestureControl.swift in Sources */,
+				07F30B15B1E9FD878007C41ED8B8CCFA /* OnboardingContantViewItem.swift in Sources */,
+				4C615F57B763AA6170BBE5251567F140 /* OnboardingContentView.swift in Sources */,
+				4F17055D20B820F265F0C174C67CA94B /* PageContainer.swift in Sources */,
+				1E43AD13C988387C35D65D341FA2A8C8 /* PageView.swift in Sources */,
+				77F112403440A7419C4880CABD38A962 /* PageViewItem.swift in Sources */,
+				223F3449974BEA68231F1EA9C6E1FE8D /* paper-onboarding-dummy.m in Sources */,
+				2389208835126ADD6B969F7031EBFDCB /* PaperOnboarding.swift in Sources */,
+				F3513898978812B5DB65771F46CF7707 /* PaperOnboardingDataSource.swift in Sources */,
+				7D669CE134F23BB348238F83F58F94D5 /* PaperOnboardingDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AAC2D313A8F798A90E9D6E9BD22A6C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215DB0325BCFB9A6153B5C7C5595080B /* Pods-ZenTimer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EC3BFF35F4592128D29DAB9C0FE4B2B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "paper-onboarding";
+			target = 092BBAE106FF2FFA56F415EFB1EDBC41 /* paper-onboarding */;
+			targetProxy = 91BA5AF65F6A63494EB90868497D0030 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		3EF5A996B6C2C31060E047C72141D574 /* Release */ = {
+		11112A5F0C1977972DA20F08785A6227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C6DE4BC25362C9CD9105D9381CF23CE /* Pods-ZenTimer.release.xcconfig */;
+			baseConfigurationReference = 0E28449C0B8661200BEB36A28153BEDA /* paper-onboarding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/paper-onboarding/paper-onboarding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/paper-onboarding/paper-onboarding-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/paper-onboarding/paper-onboarding.modulemap";
+				PRODUCT_MODULE_NAME = paper_onboarding;
+				PRODUCT_NAME = paper_onboarding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		563B1E3CB4CD4C4FC55A6191B09523D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91EDDF0ED451B095BB67380100148D7 /* Pods-ZenTimer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70F62139D67CE3FAA571DD0D1F593EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39FF4D4BEED37E9B77245ED7FCCC6D5 /* Pods-ZenTimer.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -213,43 +449,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		7D32A9A6DB0B28B118A791D4C90D2AA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9229E6F69E74615F2512EC812BB27396 /* Pods-ZenTimer.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -375,6 +574,41 @@
 			};
 			name = Debug;
 		};
+		ADB88CB23582D7BEF198DCA1831C882F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E28449C0B8661200BEB36A28153BEDA /* paper-onboarding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/paper-onboarding/paper-onboarding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/paper-onboarding/paper-onboarding-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/paper-onboarding/paper-onboarding.modulemap";
+				PRODUCT_MODULE_NAME = paper_onboarding;
+				PRODUCT_NAME = paper_onboarding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -387,11 +621,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		877C7C8119F5FEB2EDFDB19FF14FE528 /* Build configuration list for PBXNativeTarget "Pods-ZenTimer" */ = {
+		48C7E89FDEF05A5AF769F4761495B519 /* Build configuration list for PBXNativeTarget "Pods-ZenTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D32A9A6DB0B28B118A791D4C90D2AA6 /* Debug */,
-				3EF5A996B6C2C31060E047C72141D574 /* Release */,
+				563B1E3CB4CD4C4FC55A6191B09523D3 /* Debug */,
+				70F62139D67CE3FAA571DD0D1F593EF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFFF71E528A02CBD2D7497ADC845C057 /* Build configuration list for PBXNativeTarget "paper-onboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB88CB23582D7BEF198DCA1831C882F /* Debug */,
+				11112A5F0C1977972DA20F08785A6227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

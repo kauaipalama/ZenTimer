@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BAC183C017833009944525D40706027D"
-               BuildableName = "Pods-ZenTimer.framework"
-               BlueprintName = "Pods-ZenTimer"
+               BlueprintIdentifier = "092BBAE106FF2FFA56F415EFB1EDBC41"
+               BuildableName = "paper-onboarding.framework"
+               BlueprintName = "paper-onboarding"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
