@@ -57,6 +57,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
                 self.onboardingView.layer.opacity = 0
                 self.skipButton.layer.opacity = 0
             }) { (_) in
+                UserDefaults.standard.set(true, forKey: "onboardingPresented")
                 self.performSegue(withIdentifier: "toSplashScreen", sender: nil)
             }
         }

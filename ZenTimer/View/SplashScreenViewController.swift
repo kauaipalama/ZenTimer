@@ -11,7 +11,7 @@ import AVFoundation
 import UserNotifications
 
 class SplashScreenViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logoLabel.layer.opacity = 0
@@ -26,18 +26,10 @@ class SplashScreenViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //add logic to go straight to onboarding instead of ... loading animation twice during onboarding flow
         super.viewWillAppear(true)
         animateLogo {
-//            if self.onboardingPresented == false || self.onboardingPresented == true {
-            if self.onboardingPresented == false {
-                self.performSegue(withIdentifier: "toOnboarding", sender: nil)
-                //Consider calling this at the end of onboarding when button is tapped.
-                UserDefaults.standard.set(true, forKey: "onboardingPresented")
-            } else {
-                self.animateViews {
-                    self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
-                }
+            self.animateViews {
+                self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
             }
         }
     }
