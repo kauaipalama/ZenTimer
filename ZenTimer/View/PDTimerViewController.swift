@@ -395,7 +395,7 @@ class PDTimerViewController: UIViewController {
     }
     
     @IBAction func increaseBreakLengthTapped(_ sender: Any) {
-        if pdTimer.breakLength < 60 {
+        if pdTimer.breakLength < 99 {
             pdTimer.breakLength += 1
             if pdTimer.workState == .onBreak {
                 timerLabel.text = "\(Int(pdTimer.breakLength)):00"
@@ -417,7 +417,7 @@ class PDTimerViewController: UIViewController {
     }
     
     @IBAction func increaseSessionLengthTapped(_ sender: Any) {
-        if pdTimer.workLength < 60 {
+        if pdTimer.workLength < 99 {
             pdTimer.workLength += 1
             if pdTimer.workState == .working {
                 timerLabel.text = "\(Int(pdTimer.workLength)):00"

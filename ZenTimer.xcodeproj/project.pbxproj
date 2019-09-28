@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
 		B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */; };
+		B4589CE02331D7DD007525F3 /* paper_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4589CDF2331D7DD007525F3 /* paper_onboarding.framework */; };
 		B46181252331AD82008D5BC2 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46181242331AD82008D5BC2 /* Onboarding.storyboard */; };
 		B46181272331ADB4008D5BC2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46181262331ADB4008D5BC2 /* OnboardingViewController.swift */; };
 		B497888723121067009AFF48 /* rainbow2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497888623121067009AFF48 /* rainbow2.wav */; };
@@ -38,6 +39,7 @@
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		B4589CDF2331D7DD007525F3 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46181242331AD82008D5BC2 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B46181262331ADB4008D5BC2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B497888623121067009AFF48 /* rainbow2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow2.wav; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4589CE02331D7DD007525F3 /* paper_onboarding.framework in Frameworks */,
 				B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */,
 				48779BAB34F7BC024554989F /* Pods_ZenTimer.framework in Frameworks */,
 			);
@@ -85,6 +88,7 @@
 		7BA769F9B4A4D1E1CAE2E0F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4589CDF2331D7DD007525F3 /* paper_onboarding.framework */,
 				B4E5E13E23064EA9000640D7 /* AVFoundation.framework */,
 				D4E9043E6BB911AF8827310B /* Pods_ZenTimer.framework */,
 			);
@@ -479,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QXP9H2CH3;
 				INFOPLIST_FILE = "$(SRCROOT)/ZenTimer/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QXP9H2CH3;
 				INFOPLIST_FILE = "$(SRCROOT)/ZenTimer/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

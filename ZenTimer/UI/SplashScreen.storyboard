@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FNh-VO-6TS">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FNh-VO-6TS">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,10 +32,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXD-kw-gcy" userLabel="Background Layer">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="0.30284026265144348" green="0.80357867479324341" blue="0.70421296358108521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00E-Ye-iCS" userLabel="Status Bar View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,7 +193,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.25882352939999997" green="0.7725490196" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="KHM-mB-lzr" firstAttribute="centerY" secondItem="0rI-oh-TCX" secondAttribute="centerY" id="H4P-2v-4Im"/>
                                                     <constraint firstItem="six-Bu-vsv" firstAttribute="top" secondItem="KHM-mB-lzr" secondAttribute="bottom" constant="-24" id="TVb-2e-3OS"/>
@@ -209,7 +203,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.7725490196" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0rI-oh-TCX" secondAttribute="trailing" constant="8" id="EOZ-wz-OZz"/>
                                             <constraint firstItem="0rI-oh-TCX" firstAttribute="height" secondItem="kZD-An-MPu" secondAttribute="height" multiplier="0.592" id="GEb-ZS-Um2"/>
@@ -272,18 +266,17 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6I-Je-5Ms" userLabel="Start / Stop Button">
                                 <rect key="frame" x="0.0" y="621" width="375" height="191"/>
-                                <color key="backgroundColor" red="0.25882352939999997" green="0.7725490196" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="TAP TO START">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.3204562883" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.34901960784313724" green="0.83529411764705885" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XZS-RL-iCS" firstAttribute="top" secondItem="00E-Ye-iCS" secondAttribute="bottom" id="0Sl-m2-77T"/>
                             <constraint firstItem="Y6I-Je-5Ms" firstAttribute="leading" secondItem="XZS-RL-iCS" secondAttribute="leading" id="211-il-nLu"/>
-                            <constraint firstItem="sXD-kw-gcy" firstAttribute="centerX" secondItem="G5M-eU-wZT" secondAttribute="centerX" id="4um-XZ-Ih8"/>
                             <constraint firstItem="hug-zl-eUm" firstAttribute="centerX" secondItem="G5M-eU-wZT" secondAttribute="centerX" id="6Yk-li-7lS"/>
                             <constraint firstItem="00E-Ye-iCS" firstAttribute="leading" secondItem="Ip9-f2-Z2Q" secondAttribute="leading" id="6oo-Jq-zkG"/>
                             <constraint firstItem="vtP-qH-P82" firstAttribute="top" secondItem="ORa-uG-cMj" secondAttribute="top" id="6yD-Yi-2Y9"/>
@@ -293,7 +286,6 @@
                             <constraint firstItem="Ip9-f2-Z2Q" firstAttribute="trailing" secondItem="ORa-uG-cMj" secondAttribute="trailing" id="DOf-tT-tQ6"/>
                             <constraint firstItem="XZS-RL-iCS" firstAttribute="trailing" secondItem="G5M-eU-wZT" secondAttribute="trailing" id="DbQ-nQ-DK1"/>
                             <constraint firstAttribute="bottom" secondItem="XZS-RL-iCS" secondAttribute="bottom" id="KJb-is-gfI"/>
-                            <constraint firstItem="sXD-kw-gcy" firstAttribute="height" secondItem="G5M-eU-wZT" secondAttribute="height" id="N7i-ju-vf5"/>
                             <constraint firstItem="Ip9-f2-Z2Q" firstAttribute="trailing" secondItem="00E-Ye-iCS" secondAttribute="trailing" id="Nla-pd-oH8"/>
                             <constraint firstItem="vtP-qH-P82" firstAttribute="leading" secondItem="Ip9-f2-Z2Q" secondAttribute="leading" id="PXO-hC-E5l"/>
                             <constraint firstItem="vtP-qH-P82" firstAttribute="trailing" secondItem="ORa-uG-cMj" secondAttribute="trailing" id="UoL-45-qaC"/>
@@ -312,8 +304,6 @@
                             <constraint firstItem="00E-Ye-iCS" firstAttribute="top" secondItem="G5M-eU-wZT" secondAttribute="top" id="o56-8w-RxX"/>
                             <constraint firstItem="Y6I-Je-5Ms" firstAttribute="bottom" secondItem="XZS-RL-iCS" secondAttribute="bottom" id="ojr-MU-kVV"/>
                             <constraint firstItem="Ip9-f2-Z2Q" firstAttribute="trailing" secondItem="vtP-qH-P82" secondAttribute="trailing" id="sV9-fD-kpd"/>
-                            <constraint firstItem="sXD-kw-gcy" firstAttribute="width" secondItem="G5M-eU-wZT" secondAttribute="width" id="wSc-B4-ZWN"/>
-                            <constraint firstItem="sXD-kw-gcy" firstAttribute="centerY" secondItem="G5M-eU-wZT" secondAttribute="centerY" id="yvD-cS-1a3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ip9-f2-Z2Q"/>
                     </view>

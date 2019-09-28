@@ -26,10 +26,13 @@ class SplashScreenViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //add logic to go straight to onboarding instead of ... loading animation twice during onboarding flow
         super.viewWillAppear(true)
         animateLogo {
+//            if self.onboardingPresented == false || self.onboardingPresented == true {
             if self.onboardingPresented == false {
                 self.performSegue(withIdentifier: "toOnboarding", sender: nil)
+                //Consider calling this at the end of onboarding when button is tapped.
                 UserDefaults.standard.set(true, forKey: "onboardingPresented")
             } else {
                 self.animateViews {
