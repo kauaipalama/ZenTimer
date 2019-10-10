@@ -507,11 +507,11 @@ class PDTimerViewController: UIViewController {
     // MARK: - Properties
     
     let pdTimer = PDTimerController.shared.pdTimer
-    var whiteNoisePlayer = AVAudioPlayer()
-    var preAlertSoundPlayer = AVAudioPlayer()
-    var alertSoundPlayer = AVAudioPlayer()
-    var startButtonSoundPlayer = AVAudioPlayer()
-    var pauseButtonSoundPlayer = AVAudioPlayer()
+    var whiteNoisePlayer: AVAudioPlayer!
+    var preAlertSoundPlayer: AVAudioPlayer!
+    var alertSoundPlayer: AVAudioPlayer!
+    var startButtonSoundPlayer: AVAudioPlayer!
+    var pauseButtonSoundPlayer: AVAudioPlayer!
     let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
     let notificationCenter = UNUserNotificationCenter.current()

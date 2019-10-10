@@ -95,7 +95,7 @@ class SplashScreenViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     var statusBarHidden = true
-    var logoSoundPlayer = AVAudioPlayer()
-    var whiteNoisePlayer = AVAudioPlayer()
+    var logoSoundPlayer: AVAudioPlayer!
+    var whiteNoisePlayer: AVAudioPlayer!
     var onboardingPresented = UserDefaults.standard.bool(forKey: "onboardingPresented")
 }
