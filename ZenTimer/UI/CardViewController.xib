@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="ZenTimer" customModuleProvider="target">
+            <connections>
+                <outlet property="handleView" destination="M3i-Gy-gO0" id="gfF-tG-NSa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-yo-r0u">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-Gy-gO0">
+                            <rect key="frame" x="192" y="15.5" width="30" height="5"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="Otm-f1-7bw"/>
+                                <constraint firstAttribute="height" constant="5" id="gj4-an-UGK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="0y5-bl-Wuk"/>
+                        <constraint firstItem="M3i-Gy-gO0" firstAttribute="centerX" secondItem="Vrb-yo-r0u" secondAttribute="centerX" id="CgQ-gt-B63"/>
+                        <constraint firstItem="M3i-Gy-gO0" firstAttribute="centerY" secondItem="Vrb-yo-r0u" secondAttribute="centerY" id="YAW-HX-jhJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vrb-yo-r0u" secondAttribute="trailing" id="9F5-IF-c4P"/>
+                <constraint firstItem="Vrb-yo-r0u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KGP-aw-zFE"/>
+                <constraint firstItem="Vrb-yo-r0u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kTH-6J-VYg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-20.289855072463769" y="150.66964285714286"/>
+        </view>
+    </objects>
+</document>

@@ -30,6 +30,8 @@
 		B4E5E14823089422000640D7 /* whiteNoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E14723089422000640D7 /* whiteNoise.mp3 */; };
 		B4E5E159230A2DCF000640D7 /* glass_DoneLoud.wav in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E157230A2DCF000640D7 /* glass_DoneLoud.wav */; };
 		B4E5E15D230A3091000640D7 /* rainbow1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E15B230A3090000640D7 /* rainbow1.wav */; };
+		B4F33E2C23529763004AD28C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F33E2A23529763004AD28C /* CardViewController.swift */; };
+		B4F33E2D23529763004AD28C /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F33E2B23529763004AD28C /* CardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		B4E5E14723089422000640D7 /* whiteNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whiteNoise.mp3; sourceTree = "<group>"; };
 		B4E5E157230A2DCF000640D7 /* glass_DoneLoud.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glass_DoneLoud.wav; sourceTree = "<group>"; };
 		B4E5E15B230A3090000640D7 /* rainbow1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow1.wav; sourceTree = "<group>"; };
+		B4F33E2A23529763004AD28C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		B4F33E2B23529763004AD28C /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		D4E9043E6BB911AF8827310B /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 				B46181242331AD82008D5BC2 /* Onboarding.storyboard */,
 				B497888A23122A6D009AFF48 /* SplashScreen.storyboard */,
 				B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */,
+				B4F33E2B23529763004AD28C /* CardViewController.xib */,
 				B4A34AA122FBD76200FB66DE /* Assets.xcassets */,
 			);
 			path = UI;
@@ -163,6 +168,7 @@
 				B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */,
 				B497888C23122B88009AFF48 /* SplashScreenViewController.swift */,
 				B46181262331ADB4008D5BC2 /* OnboardingViewController.swift */,
+				B4F33E2A23529763004AD28C /* CardViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 				B4E5E159230A2DCF000640D7 /* glass_DoneLoud.wav in Resources */,
 				B46181252331AD82008D5BC2 /* Onboarding.storyboard in Resources */,
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
+				B4F33E2D23529763004AD28C /* CardViewController.xib in Resources */,
 				B4E5E15D230A3091000640D7 /* rainbow1.wav in Resources */,
 				B497888723121067009AFF48 /* rainbow2.wav in Resources */,
 				B497889523171507009AFF48 /* rainbow3+glass_DoneLoud.wav in Resources */,
@@ -331,6 +338,7 @@
 				B497888D23122B88009AFF48 /* SplashScreenViewController.swift in Sources */,
 				B46181272331ADB4008D5BC2 /* OnboardingViewController.swift in Sources */,
 				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
+				B4F33E2C23529763004AD28C /* CardViewController.swift in Sources */,
 				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
 				B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */,

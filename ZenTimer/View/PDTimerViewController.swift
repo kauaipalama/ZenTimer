@@ -12,6 +12,13 @@ import UserNotifications
 
 class PDTimerViewController: UIViewController {
     
+    // MARK: - States
+    
+    enum CardState {
+        case expanded
+        case collapsed
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -62,6 +69,29 @@ class PDTimerViewController: UIViewController {
         } else if pdTimer.audioSettingsState == .soundOn {
             muteButton.alpha = 0.25
         }
+        setupCard()
+    }
+    
+    func setupCard() {
+        let paddingValue = UIApplication.shared.statusBarFrame.height + (self.view.frame.height * 0.07)
+        cardHeight = self.view.frame.height - paddingValue
+        visualEffectView = UIVisualEffectView()
+        visualEffectView.frame = CGRect(x: 0, y: paddingValue, width: self.view.frame.width, height: self.view.frame.height - paddingValue)
+        visualEffectView.isUserInteractionEnabled = false
+        self.view.addSubview(visualEffectView)
+        
+        cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        
+        addChild(cardViewController)
+        self.view.addSubview(cardViewController.view)
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
+        cardViewController.view.clipsToBounds = true
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognizer:)))
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
+        
+        cardViewController.handleView.addGestureRecognizer(tapGestureRecognizer)
+        cardViewController.handleView.addGestureRecognizer(panGestureRecognizer)
     }
     
     // MARK: - Private
@@ -206,6 +236,99 @@ class PDTimerViewController: UIViewController {
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = .greatestFiniteMagnitude
         startButton.layer.add(pulseAnimation, forKey: nil)
+    }
+    
+    @objc fileprivate func handleCardTap(recognizer: UIGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+        default:
+            break
+        }
+    }
+    
+    @objc fileprivate func handleCardPan(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            startInteractiveTransition(state: nextState, duration: 0.9)
+        case .changed:
+            let translation = recognizer.translation(in: self.cardViewController.handleView)
+            var fractionComplete = translation.y / cardHeight
+            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
+            updateInteractiveTransition(fractionCompleted: fractionComplete)
+        case .ended:
+            continueInteractiveTransition()
+        default:
+            break
+        }
+    }
+    
+    fileprivate func animateTransitionIfNeeded(state: CardState, duration: TimeInterval) {
+        if runningAnimations.isEmpty {
+            let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
+                case .collapsed:
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHandleAreaHeight
+                }
+            }
+            
+            frameAnimator.addCompletion { (_) in
+                self.cardVisible = !self.cardVisible
+                self.runningAnimations.removeAll()
+            }
+            
+            frameAnimator.startAnimation()
+            runningAnimations.append(frameAnimator)
+            
+            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.layer.cornerRadius = 12
+                case .collapsed:
+                    self.cardViewController.view.layer.cornerRadius = 0
+                }
+            }
+            
+            cornerRadiusAnimator.startAnimation()
+            runningAnimations.append(cornerRadiusAnimator)
+            
+            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+                switch state {
+                case .expanded:
+                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
+                case .collapsed:
+                    self.visualEffectView.effect = nil
+                }
+            }
+            
+            blurAnimator.startAnimation()
+            runningAnimations.append(blurAnimator)
+        }
+    }
+    
+    fileprivate func startInteractiveTransition(state: CardState, duration: TimeInterval) {
+        if runningAnimations.isEmpty {
+            animateTransitionIfNeeded(state: state, duration: duration)
+        }
+        
+        for animator in runningAnimations {
+            animator.pauseAnimation()
+            animationProgressWhenInterrupted = animator.fractionComplete
+        }
+    }
+    
+    fileprivate func updateInteractiveTransition(fractionCompleted: CGFloat) {
+        for animator in runningAnimations {
+            animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
+        }
+    }
+    
+    fileprivate func continueInteractiveTransition() {
+        for animator in runningAnimations {
+            animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+        }
     }
     
     
@@ -516,4 +639,19 @@ class PDTimerViewController: UIViewController {
     let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
     let notificationCenter = UNUserNotificationCenter.current()
     var permissionsPresented = UserDefaults.standard.bool(forKey: "permissionsPresented")
+    
+    var cardViewController: CardViewController!
+    var visualEffectView: UIVisualEffectView!
+    
+    var cardHeight: CGFloat = 0
+    let cardHandleAreaHeight: CGFloat = 36
+    
+    var cardVisible = false
+    
+    var nextState: CardState {
+        return cardVisible ? .collapsed : .expanded
+    }
+    
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted: CGFloat = 0
 }

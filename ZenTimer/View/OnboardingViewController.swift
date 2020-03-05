@@ -132,6 +132,15 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
                                    descriptionFont: descriptionFont)][index]
     }
     
+    @IBAction func skipButtonTapped(_ sender: Any) {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.onboardingView.layer.opacity = 0
+            self.skipButton.layer.opacity = 0
+        }) { (_) in
+            UserDefaults.standard.set(true, forKey: "onboardingPresented")
+            self.performSegue(withIdentifier: "toSplashScreen", sender: nil)
+        }
+    }
     
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var onboardingView: PaperOnboarding!
