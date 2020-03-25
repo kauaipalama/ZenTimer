@@ -35,7 +35,7 @@ class SplashScreenViewController: UIViewController {
     }
     
     override var prefersStatusBarHidden: Bool {
-        return statusBarHidden
+        return true
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {

@@ -41,3 +41,8 @@ enum ResetButtonState {
     case notTapped
     case tapped
 }
+
+enum CardViewState {
+    case expanded
+    case collapsed
+}

@@ -20,7 +20,6 @@ class PDTimerController {
     
     func setTimeRemaining() {
         if pdTimer.workState == .working {
-            //RESET 30 to 60 to make accurate. TEST PURPOSES ONLY
             pdTimer.timeRemaining = pdTimer.workLength * 60 - pdTimer.duration
         } else if pdTimer.workState == .onBreak {
             pdTimer.timeRemaining = pdTimer.breakLength * 60 - pdTimer.duration

@@ -12,13 +12,6 @@ import UserNotifications
 
 class PDTimerViewController: UIViewController {
     
-    // MARK: - States
-    
-    enum CardState {
-        case expanded
-        case collapsed
-    }
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -26,6 +19,13 @@ class PDTimerViewController: UIViewController {
         addObservers()
         PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.5) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
         setupUI()
     }
     
@@ -45,6 +45,10 @@ class PDTimerViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
     }
     
     // MARK: - Views
@@ -84,7 +88,7 @@ class PDTimerViewController: UIViewController {
         
         addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
-        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: cardHeight)
         cardViewController.view.clipsToBounds = true
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognizer:)))
@@ -139,19 +143,19 @@ class PDTimerViewController: UIViewController {
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self?.present(alert, animated: true, completion: nil)
                     }
-
-                        PDTimerController.shared.toggleWorkState()
-                        self?.pdTimer.timerState = .ready
-                        PDTimerController.shared.toggleMessage()
-                        self?.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
-                        PDTimerController.shared.setTimeRemaining()
-                        self?.timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
-                        PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
-                            self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
-                        }
+                    
+                    PDTimerController.shared.toggleWorkState()
+                    self?.pdTimer.timerState = .ready
+                    PDTimerController.shared.toggleMessage()
+                    self?.messageLabel.text = PDTimerController.shared.pdTimer.timerMessage
+                    PDTimerController.shared.setTimeRemaining()
+                    self?.timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
+                    PDTimerController.shared.toggleStartButtonLabelMessage { [weak self] in
+                        self?.startButton.setTitle(PDTimerController.shared.pdTimer.startButtonMessage, for: .normal)
+                    }
                     PDTimerController.shared.scheduleAlarmNotification()
                     self?.whiteNoisePlayer.volume = 0
-
+                    
                 }
             })
             self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
@@ -241,7 +245,8 @@ class PDTimerViewController: UIViewController {
     @objc fileprivate func handleCardTap(recognizer: UIGestureRecognizer) {
         switch recognizer.state {
         case .ended:
-            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+            animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
+            self.infoButton.alpha = 0.25
         default:
             break
         }
@@ -250,7 +255,8 @@ class PDTimerViewController: UIViewController {
     @objc fileprivate func handleCardPan(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .began:
-            startInteractiveTransition(state: nextState, duration: 0.9)
+            startInteractiveTransition(state: nextCardState, duration: 0.9)
+            self.infoButton.alpha = 0.25
         case .changed:
             let translation = recognizer.translation(in: self.cardViewController.handleView)
             var fractionComplete = translation.y / cardHeight
@@ -263,14 +269,14 @@ class PDTimerViewController: UIViewController {
         }
     }
     
-    fileprivate func animateTransitionIfNeeded(state: CardState, duration: TimeInterval) {
+    fileprivate func animateTransitionIfNeeded(state: CardViewState, duration: TimeInterval) {
         if runningAnimations.isEmpty {
             let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
                 case .expanded:
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
                 case .collapsed:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHandleAreaHeight
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height
                 }
             }
             
@@ -308,7 +314,7 @@ class PDTimerViewController: UIViewController {
         }
     }
     
-    fileprivate func startInteractiveTransition(state: CardState, duration: TimeInterval) {
+    fileprivate func startInteractiveTransition(state: CardViewState, duration: TimeInterval) {
         if runningAnimations.isEmpty {
             animateTransitionIfNeeded(state: state, duration: duration)
         }
@@ -415,6 +421,11 @@ class PDTimerViewController: UIViewController {
             resetButton.alpha = 0.25
             resetView.alpha = 0
         }
+        
+        if cardVisible == true {
+            animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
+            infoButton.alpha = 0.25
+        }
     }
     
     @IBAction func tapToResetButtonTapped(_ sender: Any) {
@@ -440,6 +451,41 @@ class PDTimerViewController: UIViewController {
         resetView.alpha = 0
         pdTimer.resetButtonState = .notTapped
         addReversedPulseAnimation()
+    }
+    
+    @IBAction func infoButtonTapped(_ sender: Any) {
+        if nextCardState == .expanded {
+            infoButton.alpha = 100
+        } else if nextCardState == .collapsed {
+            infoButton.alpha = 0.25
+        }
+        animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
+        
+        if pdTimer.settingsMenuState == .open {
+            pdTimer.settingsMenuState = .closed
+            for button in topContainerButtons {
+                button.isEnabled = true
+                button.alpha = 100
+            }
+            for label in topContainerLabels {
+                label.isHidden = false
+            }
+            settingsButton.alpha = 0.25
+            settingsView.alpha = 0
+        }
+        
+        if pdTimer.resetButtonState == .tapped {
+            pdTimer.resetButtonState = .notTapped
+            for button in topContainerButtons {
+                button.isEnabled = true
+                button.alpha = 100
+            }
+            for label in topContainerLabels {
+                label.isHidden = false
+            }
+            resetButton.alpha = 0.25
+            resetView.alpha = 0
+        }
     }
     
     @IBAction func muteButtonTapped(_ sender: Any) {
@@ -484,6 +530,11 @@ class PDTimerViewController: UIViewController {
             }
             settingsButton.alpha = 0.25
             settingsView.alpha = 0
+        }
+        
+        if cardVisible == true {
+            animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
+            infoButton.alpha = 0.25
         }
     }
     
@@ -614,6 +665,7 @@ class PDTimerViewController: UIViewController {
     // MARK: - IBObjects
     
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var breakLengthLabel: UILabel!
@@ -648,7 +700,7 @@ class PDTimerViewController: UIViewController {
     
     var cardVisible = false
     
-    var nextState: CardState {
+    var nextCardState: CardViewState {
         return cardVisible ? .collapsed : .expanded
     }
     
