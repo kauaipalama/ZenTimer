@@ -6,6 +6,8 @@
 //  Copyright © 2019 Kainoa Palama. All rights reserved.
 //
 
+//Need to adjust layout of cardViewController. Needs additional height to include safe area when expanded. Check setupCard and animateTransitionIfNeeded functions. Also adjust size of contentView in storyboard.
+
 import UIKit
 import AVFoundation
 import UserNotifications
@@ -23,7 +25,7 @@ class PDTimerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.25) {
             self.setNeedsStatusBarAppearanceUpdate()
         }
         setupUI()
