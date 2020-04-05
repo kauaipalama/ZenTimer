@@ -35,7 +35,11 @@ class SplashScreenViewController: UIViewController {
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return statusBarHidden
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
@@ -59,16 +63,16 @@ class SplashScreenViewController: UIViewController {
     func animateViews(completionHandler: @escaping () -> Void) {
         whiteNoisePlayer.prepareToPlay()
         whiteNoisePlayer.play()
-        self.statusBarHidden = false
-        UIView.animate(withDuration: 02.25, animations: {
-            self.setNeedsStatusBarAppearanceUpdate()
-        })
         UIView.animate(withDuration: 2.25, animations: {
             self.timerLabel.layer.opacity = 1
             self.overlayImageView.layer.opacity = 0.6
             self.topContainerView.layer.opacity = 1
             self.statusBarView.layer.opacity = 1
         }, completion: { (_) in
+            self.statusBarHidden = false
+            UIView.animate(withDuration: 1.75, animations: {
+                self.setNeedsStatusBarAppearanceUpdate()
+            })
             completionHandler()
         })
     }
