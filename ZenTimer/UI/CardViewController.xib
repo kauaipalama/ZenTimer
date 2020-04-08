@@ -51,7 +51,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="907"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-d4-gdg" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2244"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2116.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the Pomodoro Technique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-xR-4kp">
                                     <rect key="frame" x="8" y="4" width="398" height="20.5"/>
@@ -61,13 +61,13 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmp-LR-LIl">
                                     <rect key="frame" x="8" y="29" width="398" height="702.5"/>
-                                    <mutableString key="text">Quartz is based on the “Pomodoro Technique” developed by Francesco Cirillo in the late 1980’s. He named the technique after the tomato-shaped kitchen timer he used during his years as a university student to track his work.  He suggested to divide a task or activity into incremented sessions. Then set a timer and work soley on the task at hand, with intense focus, avoiding any distractions.  Once the timer runs out, the session is complete and the user takes a short break. Every four sessions, the user then takes an extended break for one round. This cycle is repeated until the task/activity is complete.  The technique benefits the user two fold in that it works effectively to increase productivity, while simultaneously lowering stress. Breaking down larger tasks into smaller commitments, catering to our naturally short attention spans, while allowing the mind to rest and process information in between sessions.
+                                    <string key="text">Quartz is based on the “Pomodoro Technique” developed by Francesco Cirillo in the late 1980’s. He named the technique after the tomato-shaped kitchen timer he used to track his work during his years as a university student.  He suggested to divide a task or activity into incremented sessions. Then set a timer and work soley on the task at hand, with intense focus, avoiding any distractions.  Once the timer runs out, the session is complete and the user takes a short break. Every four sessions, the user then takes an extended break for one round. This cycle is repeated until the task/activity is complete.  The technique benefits the user two fold in that it works effectively to increase productivity, while simultaneously lowering stress. Breaking down larger tasks into smaller commitments, catering to our naturally short attention spans, while allowing the mind to rest and process information in between sessions.
 
 Other benefits associated with the Pomodoro Technique are;
 -Improved cognitive ability
 -More time spent in the “flow state”
--Higher attention spans and reduced mental fatigue.
--Increased ability to hyper-focus on command.</mutableString>
+-Higher attention spans -Reduced mental fatigue.
+-Increased ability to hyper-focus on command</string>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -149,17 +149,11 @@ Other benefits associated with the Pomodoro Technique are;
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the next step?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-Sc-daA">
-                                    <rect key="frame" x="8" y="1876.5" width="398" height="21"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVs-d6-U8M">
-                                    <rect key="frame" x="8" y="1902" width="398" height="196.5"/>
-                                    <string key="text">Task management. How improved task management from the technique will allow you to focus in on the tasks that bring you the greatest outcome. If your goal is this, then do that. Not everything deserves equal attention. Pay attention.
-
-For more information about the Pomodoro Technique, visit the author’s website at https://francescocirillo.com</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information about the Pomodoro Technique, visit the author’s website.  https://francescocirillo.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVs-d6-U8M">
+                                    <rect key="frame" x="8" y="1884.5" width="398" height="86.5"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                                    </accessibility>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -168,6 +162,7 @@ For more information about the Pomodoro Technique, visit the author’s website 
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="QVs-d6-U8M" secondAttribute="trailing" constant="8" id="0vA-Ag-peY"/>
+                                <constraint firstItem="QVs-d6-U8M" firstAttribute="top" secondItem="iuX-Jw-tVJ" secondAttribute="bottom" constant="16" id="5ZO-Qv-C3e"/>
                                 <constraint firstAttribute="trailing" secondItem="ukl-FM-cNx" secondAttribute="trailing" constant="8" id="5ls-5L-2dZ"/>
                                 <constraint firstAttribute="trailing" secondItem="QM2-Xo-5DF" secondAttribute="trailing" constant="8" id="7u9-ge-0WL"/>
                                 <constraint firstItem="unV-RJ-gLt" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="9Ok-rW-kku"/>
@@ -175,7 +170,6 @@ For more information about the Pomodoro Technique, visit the author’s website 
                                 <constraint firstAttribute="trailing" secondItem="iuX-Jw-tVJ" secondAttribute="trailing" constant="8" id="AL5-Ch-rFj"/>
                                 <constraint firstAttribute="trailing" secondItem="yPJ-EP-eee" secondAttribute="trailing" constant="8" id="AjV-Tc-TR5"/>
                                 <constraint firstItem="ukl-FM-cNx" firstAttribute="top" secondItem="Wmp-LR-LIl" secondAttribute="bottom" constant="12" id="BlZ-wj-11o"/>
-                                <constraint firstItem="ytc-Sc-daA" firstAttribute="top" secondItem="iuX-Jw-tVJ" secondAttribute="bottom" constant="8" id="Blb-la-A9M"/>
                                 <constraint firstItem="ukl-FM-cNx" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="FMO-37-hYH"/>
                                 <constraint firstAttribute="trailing" secondItem="vHD-xt-DIy" secondAttribute="trailing" constant="8" id="Hs4-vw-dNX"/>
                                 <constraint firstItem="QM2-Xo-5DF" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="JDf-AY-ZVN"/>
@@ -195,7 +189,6 @@ For more information about the Pomodoro Technique, visit the author’s website 
                                 <constraint firstItem="yPJ-EP-eee" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="bRQ-g4-35U"/>
                                 <constraint firstItem="QVs-d6-U8M" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="cHk-cT-Bn2"/>
                                 <constraint firstItem="AuL-8z-kK8" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="cVD-nW-wRu"/>
-                                <constraint firstItem="ytc-Sc-daA" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="d8F-H0-NQr"/>
                                 <constraint firstItem="yPJ-EP-eee" firstAttribute="top" secondItem="beQ-xd-4LM" secondAttribute="bottom" constant="4.5" id="e3n-ic-hec"/>
                                 <constraint firstAttribute="trailing" secondItem="ihl-HX-VE8" secondAttribute="trailing" constant="8" id="eTQ-ci-joq"/>
                                 <constraint firstAttribute="trailing" secondItem="hIu-7E-E4B" secondAttribute="trailing" constant="8" id="g9J-4M-EQU"/>
@@ -205,14 +198,12 @@ For more information about the Pomodoro Technique, visit the author’s website 
                                 <constraint firstItem="QM2-Xo-5DF" firstAttribute="top" secondItem="unV-RJ-gLt" secondAttribute="bottom" constant="4.5" id="le2-VV-Jxt"/>
                                 <constraint firstItem="wHA-kf-m80" firstAttribute="top" secondItem="AuL-8z-kK8" secondAttribute="bottom" constant="4.5" id="ouM-Gf-Kb9"/>
                                 <constraint firstItem="vHD-xt-DIy" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="pWX-QS-4Gy"/>
-                                <constraint firstItem="QVs-d6-U8M" firstAttribute="top" secondItem="ytc-Sc-daA" secondAttribute="bottom" constant="4.5" id="pib-m9-XtX"/>
                                 <constraint firstItem="ihl-HX-VE8" firstAttribute="top" secondItem="wHA-kf-m80" secondAttribute="bottom" constant="16" id="sAR-i2-6lh"/>
                                 <constraint firstAttribute="trailing" secondItem="Wmp-LR-LIl" secondAttribute="trailing" constant="8" id="sKW-AK-oIk"/>
                                 <constraint firstItem="Wmp-LR-LIl" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="t18-ad-3CW"/>
                                 <constraint firstItem="hIu-7E-E4B" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="tcx-Ws-tY1"/>
                                 <constraint firstItem="vHD-xt-DIy" firstAttribute="top" secondItem="cVX-nZ-jdc" secondAttribute="bottom" constant="4.5" id="ulN-qA-RrB"/>
                                 <constraint firstAttribute="trailing" secondItem="unV-RJ-gLt" secondAttribute="trailing" constant="8" id="wda-yG-dcx"/>
-                                <constraint firstAttribute="trailing" secondItem="ytc-Sc-daA" secondAttribute="trailing" constant="8" id="xhK-pZ-rFX"/>
                                 <constraint firstAttribute="bottom" secondItem="QVs-d6-U8M" secondAttribute="bottom" constant="145.5" id="yOo-Kg-Saw"/>
                                 <constraint firstItem="cVX-nZ-jdc" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="yqw-hn-gha"/>
                                 <constraint firstItem="beQ-xd-4LM" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="yu9-Lq-Elr"/>
