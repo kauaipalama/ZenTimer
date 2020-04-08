@@ -8,12 +8,14 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+class CardViewController: UIViewController, CardViewDelegate {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         footerTextView.textContainerInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         footerTextView.textContainer.lineFragmentPadding = 0
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -22,6 +24,10 @@ class CardViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.25) {
             self.scrollView.flashScrollIndicators()
         }
+    }
+    
+    func displayScrollIndicator() {
+        scrollView.flashScrollIndicators()
     }
     
     @IBOutlet weak var scrollView: UIScrollView!

@@ -12,6 +12,10 @@ import UIKit
 import AVFoundation
 import UserNotifications
 
+protocol CardViewDelegate {
+    func displayScrollIndicator()
+}
+
 class PDTimerViewController: UIViewController {
     
     // MARK: - Lifecycle
@@ -84,6 +88,7 @@ class PDTimerViewController: UIViewController {
         self.view.addSubview(visualEffectView)
         
         cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        cardViewDelegate = cardViewController
         
         addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
@@ -281,6 +286,9 @@ class PDTimerViewController: UIViewController {
             
             frameAnimator.addCompletion { (_) in
                 self.cardVisible = !self.cardVisible
+                if self.cardVisible == true {
+                    self.cardViewDelegate.displayScrollIndicator()
+                }
                 self.runningAnimations.removeAll()
             }
             
@@ -692,6 +700,7 @@ class PDTimerViewController: UIViewController {
     var permissionsPresented = UserDefaults.standard.bool(forKey: "permissionsPresented")
     
     var cardViewController: CardViewController!
+    var cardViewDelegate: CardViewDelegate!
     var visualEffectView: UIVisualEffectView!
     
     var cardHeight: CGFloat = 0
