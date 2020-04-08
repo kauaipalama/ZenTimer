@@ -16,6 +16,15 @@ class CardViewController: UIViewController {
         footerTextView.textContainer.lineFragmentPadding = 0
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //This doesnts work when trying to flash the scrollIndicator after the view has loaded and animated. MAybe consider using a delegate to fire the method.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.25) {
+            self.scrollView.flashScrollIndicators()
+        }
+    }
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var handleView: UIView!
     @IBOutlet weak var footerTextView: UITextView!
 }
