@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="ZenTimer" customModuleProvider="target">
             <connections>
+                <outlet property="footerTextView" destination="MwY-9D-AJd" id="yFE-19-Edz"/>
                 <outlet property="handleView" destination="M3i-Gy-gO0" id="gfF-tG-NSa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -51,7 +52,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="907"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-d4-gdg" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2116.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2111"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the Pomodoro Technique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-xR-4kp">
                                     <rect key="frame" x="8" y="4" width="398" height="20.5"/>
@@ -148,21 +149,23 @@ Other benefits associated with the Pomodoro Technique are;
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <string key="userLabel">Take some time to breathe deeply, meditate, or go outside. Get away from your work. If you can’t leave, stand up or do some office chair exercise routines. The idea is to do something totally unrelated to the task at hand, while also enjoying the moment. Reflect and relish in your accomplishments, write them down! Drink some water, or if you really must, have a snack or a sugary drink.</string>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information about the Pomodoro Technique, visit the author’s website.  https://francescocirillo.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVs-d6-U8M">
-                                    <rect key="frame" x="8" y="1884.5" width="398" height="86.5"/>
-                                    <accessibility key="accessibilityConfiguration">
-                                        <accessibilityTraits key="traits" link="YES" staticText="YES"/>
-                                    </accessibility>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="For more information about the Pomodoro Technique, visit the author’s website.  https://francescocirillo.com" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-9D-AJd">
+                                    <rect key="frame" x="8" y="1884.5" width="398" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="TM1-fH-8Tf"/>
+                                    </constraints>
+                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                </textView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="QVs-d6-U8M" secondAttribute="trailing" constant="8" id="0vA-Ag-peY"/>
-                                <constraint firstItem="QVs-d6-U8M" firstAttribute="top" secondItem="iuX-Jw-tVJ" secondAttribute="bottom" constant="16" id="5ZO-Qv-C3e"/>
+                                <constraint firstAttribute="trailing" secondItem="MwY-9D-AJd" secondAttribute="trailing" constant="8" id="5bJ-HD-CT8"/>
                                 <constraint firstAttribute="trailing" secondItem="ukl-FM-cNx" secondAttribute="trailing" constant="8" id="5ls-5L-2dZ"/>
                                 <constraint firstAttribute="trailing" secondItem="QM2-Xo-5DF" secondAttribute="trailing" constant="8" id="7u9-ge-0WL"/>
                                 <constraint firstItem="unV-RJ-gLt" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="9Ok-rW-kku"/>
@@ -186,12 +189,13 @@ Other benefits associated with the Pomodoro Technique are;
                                 <constraint firstItem="AuL-8z-kK8" firstAttribute="top" secondItem="QM2-Xo-5DF" secondAttribute="bottom" constant="16" id="Xpm-zT-pwi"/>
                                 <constraint firstItem="ihl-HX-VE8" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="Yrx-lh-946"/>
                                 <constraint firstItem="Wmp-LR-LIl" firstAttribute="top" secondItem="z4A-xR-4kp" secondAttribute="bottom" constant="4.5" id="aN2-wI-gbE"/>
+                                <constraint firstAttribute="bottom" secondItem="MwY-9D-AJd" secondAttribute="bottom" constant="98.5" id="abm-Mb-a94"/>
                                 <constraint firstItem="yPJ-EP-eee" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="bRQ-g4-35U"/>
-                                <constraint firstItem="QVs-d6-U8M" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="cHk-cT-Bn2"/>
                                 <constraint firstItem="AuL-8z-kK8" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="cVD-nW-wRu"/>
                                 <constraint firstItem="yPJ-EP-eee" firstAttribute="top" secondItem="beQ-xd-4LM" secondAttribute="bottom" constant="4.5" id="e3n-ic-hec"/>
                                 <constraint firstAttribute="trailing" secondItem="ihl-HX-VE8" secondAttribute="trailing" constant="8" id="eTQ-ci-joq"/>
                                 <constraint firstAttribute="trailing" secondItem="hIu-7E-E4B" secondAttribute="trailing" constant="8" id="g9J-4M-EQU"/>
+                                <constraint firstItem="MwY-9D-AJd" firstAttribute="top" secondItem="iuX-Jw-tVJ" secondAttribute="bottom" constant="16" id="hBh-OG-IAw"/>
                                 <constraint firstItem="z4A-xR-4kp" firstAttribute="top" secondItem="kLY-d4-gdg" secondAttribute="top" constant="4" id="hY6-3f-ig5"/>
                                 <constraint firstItem="iuX-Jw-tVJ" firstAttribute="top" secondItem="ihl-HX-VE8" secondAttribute="bottom" constant="4.5" id="hdG-bC-cgn"/>
                                 <constraint firstItem="beQ-xd-4LM" firstAttribute="top" secondItem="hIu-7E-E4B" secondAttribute="bottom" constant="16" id="jRY-ex-kIP"/>
@@ -202,9 +206,9 @@ Other benefits associated with the Pomodoro Technique are;
                                 <constraint firstAttribute="trailing" secondItem="Wmp-LR-LIl" secondAttribute="trailing" constant="8" id="sKW-AK-oIk"/>
                                 <constraint firstItem="Wmp-LR-LIl" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="t18-ad-3CW"/>
                                 <constraint firstItem="hIu-7E-E4B" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="tcx-Ws-tY1"/>
+                                <constraint firstItem="MwY-9D-AJd" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="uXk-OK-lxf"/>
                                 <constraint firstItem="vHD-xt-DIy" firstAttribute="top" secondItem="cVX-nZ-jdc" secondAttribute="bottom" constant="4.5" id="ulN-qA-RrB"/>
                                 <constraint firstAttribute="trailing" secondItem="unV-RJ-gLt" secondAttribute="trailing" constant="8" id="wda-yG-dcx"/>
-                                <constraint firstAttribute="bottom" secondItem="QVs-d6-U8M" secondAttribute="bottom" constant="145.5" id="yOo-Kg-Saw"/>
                                 <constraint firstItem="cVX-nZ-jdc" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="yqw-hn-gha"/>
                                 <constraint firstItem="beQ-xd-4LM" firstAttribute="leading" secondItem="kLY-d4-gdg" secondAttribute="leading" constant="8" id="yu9-Lq-Elr"/>
                             </constraints>
