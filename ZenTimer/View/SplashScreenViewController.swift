@@ -12,16 +12,10 @@ import UserNotifications
 
 class SplashScreenViewController: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoLabel.layer.opacity = 0
-        topContainerView.layer.opacity = 0
-        overlayImageView.layer.opacity = 0
-        timerLabel.layer.opacity = 0
-        timerMessage.layer.opacity = 0
-        startButton.layer.opacity = 0
-        statusBarView.layer.opacity = 0
-        overlayImageView.layer.compositingFilter = "overlayBlendMode"
+        setupViews()
         setupAudio()
     }
     
@@ -44,6 +38,17 @@ class SplashScreenViewController: UIViewController {
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return .fade
+    }
+    
+    func setupViews() {
+        logoLabel.layer.opacity = 0
+        topContainerView.layer.opacity = 0
+        overlayImageView.layer.opacity = 0
+        timerLabel.layer.opacity = 0
+        timerMessage.layer.opacity = 0
+        startButton.layer.opacity = 0
+        statusBarView.layer.opacity = 0
+        overlayImageView.layer.compositingFilter = "overlayBlendMode"
     }
     
     func animateLogo(completionHandler: @escaping () -> Void) {
