@@ -75,7 +75,7 @@ class SplashScreenViewController: UIViewController {
             self.statusBarView.layer.opacity = 1
         }, completion: { (_) in
             self.statusBarHidden = false
-            UIView.animate(withDuration: 1.125, animations: {
+            UIView.animate(withDuration: 1.1, animations: {
                 self.setNeedsStatusBarAppearanceUpdate()
             })
             completionHandler()

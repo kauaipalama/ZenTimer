@@ -65,8 +65,8 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
     
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
         let backgroundColor = UIColor(red: 89.0/255.0, green: 213.0/255.0, blue: 193.0/255.0, alpha: 1.0)
-        let titleFont = UIFont.systemFont(ofSize: 24, weight: .medium)
-        let descriptionFont = UIFont.systemFont(ofSize: 18, weight: .medium)
+        let titleFont = UIFont.preferredFont(forTextStyle: .headline)
+        let descriptionFont = UIFont.preferredFont(forTextStyle: .body)
         return [OnboardingItemInfo(informationImage: UIImage(named: "logo")!,
                                    title: "Thank you for purchasing Quartz: Timer",
                                    description: "Divide a task into managable chunks, seperated by short breaks. Increase productivity, reduce stress, get better results. Modeled after the 'Pomodoro Technique'.",

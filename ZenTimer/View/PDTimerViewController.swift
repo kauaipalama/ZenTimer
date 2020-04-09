@@ -286,10 +286,10 @@ class PDTimerViewController: UIViewController {
             
             frameAnimator.addCompletion { (_) in
                 self.cardVisible = !self.cardVisible
+                self.runningAnimations.removeAll()
                 if self.cardVisible == true {
                     self.cardViewDelegate.displayScrollIndicator()
                 }
-                self.runningAnimations.removeAll()
             }
             
             frameAnimator.startAnimation()

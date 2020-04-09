@@ -53,7 +53,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="907"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-d4-gdg" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2092.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2070.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the Pomodoro Technique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-xR-4kp">
                                     <rect key="frame" x="8" y="8" width="398" height="20.5"/>
@@ -81,71 +81,71 @@ Other benefits associated with the Pomodoro Technique are:
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIu-7E-E4B">
-                                    <rect key="frame" x="8" y="776.5" width="398" height="218.5"/>
-                                    <string key="text">Our app is designed around ease-of-use, comfort and reliability. The timer is set to your designated break and session lengths, and switches between both modes, automatically. Listen to the soothing sounds of the wind and ocean, or tap the mute button and go without. We also use notifications to alert you if your phone is locked, or if the app is running in the background. Finally, if your phone rings, we pause the timer for you and resume once you hang up.</string>
+                                    <rect key="frame" x="8" y="776.5" width="398" height="196.5"/>
+                                    <string key="text">Our app is designed around ease-of-use, comfort and reliability. The timer switches between session and break lengths automatically. Listen to the soothing sounds of the wind and ocean, or tap the mute button and go without. We also use notifications to alert you if your phone is locked, or if the app is running in the background. Finally, if your phone rings, we pause the timer for you and resume once you hang up.</string>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Pick a task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beQ-xd-4LM">
-                                    <rect key="frame" x="8" y="1013" width="398" height="20.5"/>
+                                    <rect key="frame" x="8" y="991" width="398" height="20.5"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The task you choose is going to be the sole direction of your focus and productivity." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPJ-EP-eee">
-                                    <rect key="frame" x="8" y="1051.5" width="398" height="42.5"/>
+                                    <rect key="frame" x="8" y="1029.5" width="398" height="42.5"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2: Set the timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVX-nZ-jdc">
-                                    <rect key="frame" x="8" y="1112" width="398" height="21"/>
+                                    <rect key="frame" x="8" y="1090" width="398" height="21"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHD-xt-DIy">
-                                    <rect key="frame" x="8" y="1151" width="398" height="196.5"/>
+                                    <rect key="frame" x="8" y="1129" width="398" height="196.5"/>
                                     <string key="text">We suggest a session length of 25 minutes, and a break length of 5 minutes. After 3 rounds, increase the break length to 20 to 30 minutes for one round.  Be sure to set the session and break lengths before starting the timer, as you are unable to change them once the timer is running. The maximum length is 99 minutes. Tap the bottom of the screen to start the timer.</string>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3: Focus until the timer goes off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unV-RJ-gLt">
-                                    <rect key="frame" x="8" y="1365.5" width="398" height="21"/>
+                                    <rect key="frame" x="8" y="1343.5" width="398" height="21"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM2-Xo-5DF">
-                                    <rect key="frame" x="8" y="1404.5" width="398" height="108.5"/>
+                                    <rect key="frame" x="8" y="1382.5" width="398" height="108.5"/>
                                     <string key="text">During a session, try to stay focused on the individual task at hand; do not multitask. If something comes up, write a note, take a message and/or inform any parties that you will get back to them after completing your session.</string>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 4: Take a short break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuL-8z-kK8">
-                                    <rect key="frame" x="8" y="1531" width="398" height="21"/>
+                                    <rect key="frame" x="8" y="1509" width="398" height="21"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHA-kf-m80">
-                                    <rect key="frame" x="8" y="1570" width="398" height="86.5"/>
+                                    <rect key="frame" x="8" y="1548" width="398" height="86.5"/>
                                     <string key="text">When the timer goes off it's time for a break. Use this time to reinvigorate the mind and body, allowing yourself to fully unwind and relax. Don't forget to adjust your break lengths, as suggested in Step 2.</string>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What should I be doing during my breaks?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihl-HX-VE8">
-                                    <rect key="frame" x="8" y="1674.5" width="398" height="21"/>
+                                    <rect key="frame" x="8" y="1652.5" width="398" height="21"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-Jw-tVJ">
-                                    <rect key="frame" x="8" y="1713.5" width="398" height="152.5"/>
+                                    <rect key="frame" x="8" y="1691.5" width="398" height="152.5"/>
                                     <string key="text">Take some time to breathe deeply, meditate, or go outside. Get away from your work. If you can’t leave, stand up and stretch. The idea is to do something totally unrelated to the task at hand, while also enjoying the moment. Reflect and relish in your accomplishments; write them down! Drink some water or have a snack. </string>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
@@ -153,7 +153,7 @@ Other benefits associated with the Pomodoro Technique are:
                                     <string key="userLabel">Take some time to breathe deeply, meditate, or go outside. Get away from your work. If you can’t leave, stand up or do some office chair exercise routines. The idea is to do something totally unrelated to the task at hand, while also enjoying the moment. Reflect and relish in your accomplishments, write them down! Drink some water, or if you really must, have a snack or a sugary drink.</string>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="For more information about the Pomodoro Technique, visit the author’s website.  https://francescocirillo.com" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-9D-AJd">
-                                    <rect key="frame" x="8" y="1890" width="398" height="104"/>
+                                    <rect key="frame" x="8" y="1868" width="398" height="104"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
