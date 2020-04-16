@@ -25,6 +25,8 @@
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
 		B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */; };
+		B4B005C62446AF78000C06F4 /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B005C52446AF78000C06F4 /* ReviewController.swift */; };
+		B4B005C82447EAB3000C06F4 /* AlarmNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B005C72447EAB3000C06F4 /* AlarmNotificationDelegate.swift */; };
 		B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */; };
 		B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E5E13E23064EA9000640D7 /* AVFoundation.framework */; };
 		B4E5E14823089422000640D7 /* whiteNoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4E5E14723089422000640D7 /* whiteNoise.mp3 */; };
@@ -56,6 +58,8 @@
 		B4A34AA122FBD76200FB66DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A34AA422FBD76200FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4A34AA622FBD76200FB66DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B005C52446AF78000C06F4 /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
+		B4B005C72447EAB3000C06F4 /* AlarmNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNotificationDelegate.swift; sourceTree = "<group>"; };
 		B4C6985A22FCAA7A0088DA5C /* PDTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerViewController.swift; sourceTree = "<group>"; };
 		B4E5E13E23064EA9000640D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B4E5E14723089422000640D7 /* whiteNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whiteNoise.mp3; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B448109F22FFCA2A0092E4F0 /* States.swift */,
+				B4B005C72447EAB3000C06F4 /* AlarmNotificationDelegate.swift */,
 				B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */,
 			);
 			path = Helpers;
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B448109D22FFC93A0092E4F0 /* PDTimerController.swift */,
+				B4B005C52446AF78000C06F4 /* ReviewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,12 +342,14 @@
 				B44810A422FFDA3E0092E4F0 /* DoubleExtension.swift in Sources */,
 				B44810A022FFCA2A0092E4F0 /* States.swift in Sources */,
 				B497888D23122B88009AFF48 /* SplashScreenViewController.swift in Sources */,
+				B4B005C62446AF78000C06F4 /* ReviewController.swift in Sources */,
 				B46181272331ADB4008D5BC2 /* OnboardingViewController.swift in Sources */,
 				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
 				B4F33E2C23529763004AD28C /* CardViewController.swift in Sources */,
 				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
 				B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */,
+				B4B005C82447EAB3000C06F4 /* AlarmNotificationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

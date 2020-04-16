@@ -6,8 +6,6 @@
 //  Copyright © 2019 Kainoa Palama. All rights reserved.
 //
 
-//Need to adjust layout of cardViewController. Needs additional height to include safe area when expanded. Check setupCard and animateTransitionIfNeeded functions. Also adjust size of contentView in storyboard.
-
 import UIKit
 import AVFoundation
 import UserNotifications
@@ -132,19 +130,22 @@ class PDTimerViewController: UIViewController {
                     if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOn {
                         self?.alertSoundPlayer.prepareToPlay()
                         self?.alertSoundPlayer.play()
+                        ReviewController.shared.requestReview()
                     } else if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOff {
                         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                        var message: String {
+                        var title: String {
                             var string = ""
                             if self?.pdTimer.workState == .onBreak {
-                                string = "Break Completed"
+                                string = "Break Complete"
                             } else if self?.pdTimer.workState == .working {
-                                string = "Session Completed"
+                                string = "Session Complete"
                             }
                             return string
                         }
-                        let alert = UIAlertController(title: "message", message: nil, preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                            ReviewController.shared.requestReview()
+                        }))
                         self?.present(alert, animated: true, completion: nil)
                     }
                     
@@ -159,7 +160,6 @@ class PDTimerViewController: UIViewController {
                     }
                     PDTimerController.shared.scheduleAlarmNotification()
                     self?.whiteNoisePlayer.volume = 0
-                    
                 }
             })
             self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)

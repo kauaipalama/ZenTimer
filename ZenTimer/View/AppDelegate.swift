@@ -11,12 +11,14 @@ import UserNotifications
 import AVFoundation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-    //Removed notificationCenter instance var
+    let notificationDelegate = AlarmNotificationDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = notificationDelegate
         let onboardingPresented = UserDefaults.standard.bool(forKey: "onboardingPresented")
         let onboardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
         let splashScreenStoryboard = UIStoryboard(name: "SplashScreen", bundle: nil)
