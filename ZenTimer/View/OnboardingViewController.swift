@@ -69,7 +69,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
         let descriptionFont = UIFont.preferredFont(forTextStyle: .body)
         return [OnboardingItemInfo(informationImage: UIImage(named: "logo")!,
                                    title: "Thank you for purchasing Quartz: Timer",
-                                   description: "Divide a task into managable chunks, separated by short breaks. Increase productivity, reduce stress, get better results. Modeled after the 'Pomodoro Technique'.",
+                                   description: "Break down large tasks into smaller commitments. Increase productivity, reduce stress!. Modeled after the 'Pomodoro Technique'.",
                                    pageIcon: UIImage(),
                                    color: backgroundColor,
                                    titleColor: UIColor.white,
@@ -78,7 +78,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
                                    descriptionFont: descriptionFont),
                 OnboardingItemInfo(informationImage: UIImage(named: "customTimer")!,
                                    title: "Custom Break/Session Lengths",
-                                   description: "We recommend a session length of 25 minutes and a break length of 5 minutes. After 3 or 4 sessions, consider increasing break length to 15-20 minutes for one round.",
+                                   description: "We recommend a session length of 25 minutes and a break length of 5 minutes. After 3 sessions, consider increasing your break length to 15-20 minutes for one round.",
                                    pageIcon: UIImage(),
                                    color: backgroundColor,
                                    titleColor: UIColor.white,
