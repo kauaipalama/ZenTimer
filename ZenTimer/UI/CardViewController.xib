@@ -53,7 +53,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="907"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-d4-gdg" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2070.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2158.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the Pomodoro Technique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-xR-4kp">
                                     <rect key="frame" x="8" y="8" width="398" height="20.5"/>
@@ -152,9 +152,14 @@ Other benefits associated with the Pomodoro Technique are:
                                     <nil key="highlightedColor"/>
                                     <string key="userLabel">Take some time to breathe deeply, meditate, or go outside. Get away from your work. If you can’t leave, stand up or do some office chair exercise routines. The idea is to do something totally unrelated to the task at hand, while also enjoying the moment. Reflect and relish in your accomplishments, write them down! Drink some water, or if you really must, have a snack or a sugary drink.</string>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="For more information about the Pomodoro Technique, visit the author’s website.  https://francescocirillo.com" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-9D-AJd">
-                                    <rect key="frame" x="8" y="1868" width="398" height="104"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-9D-AJd">
+                                    <rect key="frame" x="8" y="1868" width="398" height="192"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <string key="text">For more information about the Pomodoro Technique, visit the author’s website.  https://francescocirillo.com
+
+Questions? Feedback? Send us an email!
+
+quartztimerapp@gmail.com</string>
                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
