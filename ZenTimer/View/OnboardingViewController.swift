@@ -69,7 +69,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
         let descriptionFont = UIFont.preferredFont(forTextStyle: .body)
         return [OnboardingItemInfo(informationImage: UIImage(named: "logo")!,
                                    title: "Thank you for purchasing Quartz: Timer",
-                                   description: "Break down large tasks into smaller commitments. Increase productivity, reduce stress!. Modeled after the 'Pomodoro Technique'.",
+                                   description: "Break down large tasks into smaller commitments. Increase productivity, reduce stress! Modeled after the 'Pomodoro Technique'.",
                                    pageIcon: UIImage(),
                                    color: backgroundColor,
                                    titleColor: UIColor.white,
