@@ -11,14 +11,14 @@
         <!--Timer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PDTimerViewController" customModule="ZenTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="PDTimerViewController" customModule="ZenTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2c-Eg-lgD" userLabel="Status Bar View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TMu-bf-qLY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
@@ -294,12 +294,17 @@
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44I-O4-P2g"/>
                                 </connections>
                             </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twm-xq-Nj7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.83529411760000005" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bwK-GH-Ygx" firstAttribute="top" secondItem="2Mq-ys-8fa" secondAttribute="bottom" id="0EV-Ll-2aN"/>
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="trailing" secondItem="TMu-bf-qLY" secondAttribute="trailing" id="0aD-s2-THN"/>
                             <constraint firstItem="bwK-GH-Ygx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1xK-JX-hEG"/>
+                            <constraint firstItem="twm-xq-Nj7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Tk-1F-QRU"/>
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="leading" secondItem="TMu-bf-qLY" secondAttribute="leading" id="79x-P0-55c"/>
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2351" id="7Rm-tL-dJu"/>
                             <constraint firstItem="FPV-Gb-Y0U" firstAttribute="bottom" secondItem="bwK-GH-Ygx" secondAttribute="bottom" id="BPd-51-DCW"/>
@@ -307,12 +312,14 @@
                             <constraint firstItem="X2c-Eg-lgD" firstAttribute="bottom" secondItem="TMu-bf-qLY" secondAttribute="top" id="F3M-RI-Piq"/>
                             <constraint firstItem="FPV-Gb-Y0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FTG-jN-rHy"/>
                             <constraint firstAttribute="bottom" secondItem="TMu-bf-qLY" secondAttribute="bottom" id="FTO-wE-OOG"/>
+                            <constraint firstItem="twm-xq-Nj7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="GPS-7g-P03"/>
                             <constraint firstItem="cD9-8X-dWS" firstAttribute="width" secondItem="TMu-bf-qLY" secondAttribute="width" multiplier="0.505" id="GTe-A3-L3H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bwK-GH-Ygx" secondAttribute="trailing" id="JhR-cc-093"/>
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="bottom" secondItem="TMu-bf-qLY" secondAttribute="bottom" id="KI9-UN-oVV"/>
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="top" secondItem="u1Q-mh-Hms" secondAttribute="bottom" id="KMG-s7-lWj"/>
                             <constraint firstItem="bwK-GH-Ygx" firstAttribute="bottom" secondItem="HLN-46-qEU" secondAttribute="bottom" id="Kb1-ZL-HKC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPV-Gb-Y0U" secondAttribute="trailing" id="Px7-bs-bdX"/>
+                            <constraint firstItem="twm-xq-Nj7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rp8-1F-EWT"/>
                             <constraint firstItem="TMu-bf-qLY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TfO-45-dnO"/>
                             <constraint firstItem="TMu-bf-qLY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="UH0-R4-0EM"/>
                             <constraint firstItem="FPV-Gb-Y0U" firstAttribute="trailing" secondItem="bwK-GH-Ygx" secondAttribute="trailing" id="YuR-Um-1ec"/>
@@ -323,6 +330,7 @@
                             <constraint firstItem="FPV-Gb-Y0U" firstAttribute="top" secondItem="bwK-GH-Ygx" secondAttribute="top" id="gNT-pH-x1y"/>
                             <constraint firstItem="TMu-bf-qLY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lWZ-Mi-SiS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="cD9-8X-dWS" secondAttribute="leading" id="p4M-XX-rY8"/>
+                            <constraint firstItem="twm-xq-Nj7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qBR-Ag-6f9"/>
                             <constraint firstItem="X2c-Eg-lgD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x3K-Pm-nO8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -339,6 +347,7 @@
                         <outlet property="sessionLengthLabel" destination="8Wv-QD-mdh" id="0ZZ-3u-gLS"/>
                         <outlet property="settingsButton" destination="2Mq-ys-8fa" id="r53-Rv-UfW"/>
                         <outlet property="settingsView" destination="FPV-Gb-Y0U" id="2mQ-eR-moK"/>
+                        <outlet property="splashMaskView" destination="twm-xq-Nj7" id="n9Y-51-9EI"/>
                         <outlet property="startButton" destination="lHI-Ie-IrW" id="Pmc-l2-H5g"/>
                         <outlet property="timerLabel" destination="Djm-bq-Uac" id="RtM-uW-4AU"/>
                         <outletCollection property="topContainerButtons" destination="JBo-gJ-Qhc" collectionClass="NSMutableArray" id="ICX-5Q-1pu"/>

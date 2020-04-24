@@ -23,6 +23,7 @@ class PDTimerViewController: UIViewController {
         addObservers()
         PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
+        splashMaskView.alpha = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +33,7 @@ class PDTimerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        transitionSplashMaskView()
         addPulseAnimation()
         UIView.animate(withDuration: 1, delay: 1, options: .curveLinear, animations: {
             self.messageLabel.layer.opacity = 1
@@ -48,11 +50,23 @@ class PDTimerViewController: UIViewController {
         }
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return statusBarHidden
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
     
     // MARK: - Views
+    
+    func transitionSplashMaskView() {
+        UIView.animate(withDuration: 1.75) {
+            self.splashMaskView.alpha = 0
+            self.statusBarHidden = false
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
     
     func setupUI(){
         resetView.alpha = 0
@@ -685,6 +699,7 @@ class PDTimerViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var splashMaskView: UIView!
     
     // MARK: - Properties
     
@@ -698,6 +713,7 @@ class PDTimerViewController: UIViewController {
     let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
     let notificationCenter = UNUserNotificationCenter.current()
     var permissionsPresented = UserDefaults.standard.bool(forKey: "permissionsPresented")
+    var statusBarHidden = true
     
     var cardViewController: CardViewController!
     var cardViewDelegate: CardViewDelegate!

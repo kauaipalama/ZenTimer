@@ -22,9 +22,9 @@ class SplashScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         animateLogo {
-            self.animateViews {
-                self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
-            }
+            self.whiteNoisePlayer.prepareToPlay()
+            self.whiteNoisePlayer.play()
+            self.performSegue(withIdentifier: "toMainStoryboard", sender: nil)
         }
     }
     
@@ -33,7 +33,7 @@ class SplashScreenViewController: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
@@ -42,13 +42,6 @@ class SplashScreenViewController: UIViewController {
     
     func setupViews() {
         logoLabel.layer.opacity = 0
-        topContainerView.layer.opacity = 0
-        overlayImageView.layer.opacity = 0
-        timerLabel.layer.opacity = 0
-        timerMessage.layer.opacity = 0
-        startButton.layer.opacity = 0
-        statusBarView.layer.opacity = 0
-        overlayImageView.layer.compositingFilter = "overlayBlendMode"
     }
     
     func animateLogo(completionHandler: @escaping () -> Void) {
@@ -65,23 +58,6 @@ class SplashScreenViewController: UIViewController {
         }
     }
     
-    func animateViews(completionHandler: @escaping () -> Void) {
-        whiteNoisePlayer.prepareToPlay()
-        whiteNoisePlayer.play()
-        UIView.animate(withDuration: 2.25, animations: {
-            self.timerLabel.layer.opacity = 1
-            self.overlayImageView.layer.opacity = 0.6
-            self.topContainerView.layer.opacity = 1
-            self.statusBarView.layer.opacity = 1
-        }, completion: { (_) in
-            self.statusBarHidden = false
-            UIView.animate(withDuration: 1.1, animations: {
-                self.setNeedsStatusBarAppearanceUpdate()
-            })
-            completionHandler()
-        })
-    }
-    
     func setupAudio() {
         if let whiteNoiseFilePath = Bundle.main.path(forResource: "whiteNoise_transition", ofType: "wav") {
             let url = URL(fileURLWithPath: whiteNoiseFilePath)
@@ -95,13 +71,7 @@ class SplashScreenViewController: UIViewController {
         whiteNoisePlayer.numberOfLoops = 0
     }
     
-    @IBOutlet weak var timerMessage: UILabel!
     @IBOutlet weak var logoLabel: UILabel!
-    @IBOutlet weak var overlayImageView: UIImageView!
-    @IBOutlet weak var topContainerView: UIView!
-    @IBOutlet weak var statusBarView: UIView!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var timerLabel: UILabel!
     
     var statusBarHidden = true
     var logoSoundPlayer: AVAudioPlayer!
