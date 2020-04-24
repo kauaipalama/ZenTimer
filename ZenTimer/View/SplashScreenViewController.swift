@@ -33,11 +33,11 @@ class SplashScreenViewController: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return .fade
+        return .none
     }
     
     func setupViews() {

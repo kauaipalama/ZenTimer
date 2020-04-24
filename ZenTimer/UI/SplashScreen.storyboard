@@ -19,7 +19,6 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="Acz-vJ-6Sf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhy-ak-SHZ" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="splashScreen" id="FNh-VO-6TS" customClass="SplashScreenViewController" customModule="ZenTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G5M-eU-wZT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -27,7 +26,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00E-Ye-iCS" userLabel="Status Bar View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.12941411137580872" green="0.12940755486488342" blue="0.12941199541091919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XZS-RL-iCS">
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
@@ -265,7 +264,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="9Ib-28-HM9" userLabel="Overlay">
-                                <rect key="frame" x="0.0" y="44" width="174.66666666666666" height="484"/>
+                                <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="484"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6I-Je-5Ms" userLabel="Start / Stop Button">
                                 <rect key="frame" x="0.0" y="621" width="375" height="191"/>
@@ -284,7 +283,7 @@
                             <constraint firstItem="00E-Ye-iCS" firstAttribute="leading" secondItem="Ip9-f2-Z2Q" secondAttribute="leading" id="6oo-Jq-zkG"/>
                             <constraint firstItem="vtP-qH-P82" firstAttribute="top" secondItem="ORa-uG-cMj" secondAttribute="top" id="6yD-Yi-2Y9"/>
                             <constraint firstItem="hug-zl-eUm" firstAttribute="centerY" secondItem="G5M-eU-wZT" secondAttribute="centerY" id="7YO-t7-VZg"/>
-                            <constraint firstItem="9Ib-28-HM9" firstAttribute="top" secondItem="XZS-RL-iCS" secondAttribute="top" id="8ZL-UH-UGa"/>
+                            <constraint firstItem="9Ib-28-HM9" firstAttribute="top" secondItem="G5M-eU-wZT" secondAttribute="top" id="8ZL-UH-UGa"/>
                             <constraint firstItem="Y6I-Je-5Ms" firstAttribute="top" secondItem="0rI-oh-TCX" secondAttribute="bottom" id="9Nl-O5-ifq"/>
                             <constraint firstItem="Ip9-f2-Z2Q" firstAttribute="trailing" secondItem="ORa-uG-cMj" secondAttribute="trailing" id="DOf-tT-tQ6"/>
                             <constraint firstItem="XZS-RL-iCS" firstAttribute="trailing" secondItem="G5M-eU-wZT" secondAttribute="trailing" id="DbQ-nQ-DK1"/>
@@ -300,7 +299,7 @@
                             <constraint firstItem="ORa-uG-cMj" firstAttribute="leading" secondItem="Ip9-f2-Z2Q" secondAttribute="leading" id="cib-Qk-mkS"/>
                             <constraint firstItem="Ip9-f2-Z2Q" firstAttribute="leading" secondItem="9Ib-28-HM9" secondAttribute="leading" id="dcd-3i-e73"/>
                             <constraint firstItem="Y6I-Je-5Ms" firstAttribute="trailing" secondItem="XZS-RL-iCS" secondAttribute="trailing" id="egq-T0-97D"/>
-                            <constraint firstItem="9Ib-28-HM9" firstAttribute="width" secondItem="XZS-RL-iCS" secondAttribute="width" multiplier="0.466" id="k78-gn-cJy"/>
+                            <constraint firstItem="9Ib-28-HM9" firstAttribute="width" secondItem="XZS-RL-iCS" secondAttribute="width" multiplier="0.505" id="k78-gn-cJy"/>
                             <constraint firstItem="9Ib-28-HM9" firstAttribute="height" secondItem="XZS-RL-iCS" secondAttribute="height" multiplier="0.63" id="kQK-xk-mYZ"/>
                             <constraint firstItem="XZS-RL-iCS" firstAttribute="top" secondItem="Ip9-f2-Z2Q" secondAttribute="top" id="lnV-JF-XGA"/>
                             <constraint firstItem="vtP-qH-P82" firstAttribute="bottom" secondItem="ORa-uG-cMj" secondAttribute="bottom" id="m9M-05-MtW"/>
@@ -322,6 +321,7 @@
                         <segue destination="0oz-Nc-Ol5" kind="presentation" identifier="toMainStoryboard" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="TaA-6h-368"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhy-ak-SHZ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-276" y="457"/>
         </scene>
