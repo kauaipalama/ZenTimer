@@ -78,6 +78,8 @@ class PDTimerViewController: UIViewController {
         } else if pdTimer.audioSettingsState == .soundOn {
             muteButton.alpha = 0.25
         }
+        sessionLengthLabel.text = Constants.sessionLengthLabel
+        breakLengthLabel.text = Constants.breakLengthLabel
         pdTimer.timerState = .ready
         PDTimerController.shared.setTimeRemaining()
         timerLabel.text = String(Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining))
@@ -92,10 +94,10 @@ class PDTimerViewController: UIViewController {
     }
     
     func setupCard() {
-        let paddingValue = UIApplication.shared.statusBarFrame.height + (self.view.frame.height * 0.07)
+        let paddingValue = self.view.frame.height * 0.07
         cardHeight = self.view.frame.height - paddingValue
         visualEffectView = UIVisualEffectView()
-        visualEffectView.frame = CGRect(x: 0, y: paddingValue, width: self.view.frame.width, height: self.view.frame.height - paddingValue)
+        visualEffectView.frame = CGRect(x: 0, y: statusBarView.frame.height, width: self.view.frame.width, height: self.view.frame.height)
         visualEffectView.isUserInteractionEnabled = false
         self.view.addSubview(visualEffectView)
         
@@ -584,7 +586,7 @@ class PDTimerViewController: UIViewController {
             if pdTimer.workState == .onBreak {
                 timerLabel.text = "\(Int(pdTimer.breakLength)):00"
             }
-            breakLengthLabel.text = String(Int(pdTimer.breakLength))
+            breakLengthValueLabel.text = String(Int(pdTimer.breakLength))
         }
         AudioServicesPlaySystemSound(1105)
     }
@@ -595,7 +597,7 @@ class PDTimerViewController: UIViewController {
             if pdTimer.workState == .onBreak {
                 timerLabel.text = "\(Int(pdTimer.breakLength)):00"
             }
-            breakLengthLabel.text = String(Int(pdTimer.breakLength))
+            breakLengthValueLabel.text = String(Int(pdTimer.breakLength))
             AudioServicesPlaySystemSound(1105)
         }
     }
@@ -606,7 +608,7 @@ class PDTimerViewController: UIViewController {
             if pdTimer.workState == .working {
                 timerLabel.text = "\(Int(pdTimer.workLength)):00"
             }
-            sessionLengthLabel.text = String(Int(pdTimer.workLength))
+            sessionLengthValueLabel.text = String(Int(pdTimer.workLength))
         }
         AudioServicesPlaySystemSound(1105)
     }
@@ -617,7 +619,7 @@ class PDTimerViewController: UIViewController {
             if pdTimer.workState == .working {
                 timerLabel.text = "\(Int(pdTimer.workLength)):00"
             }
-            sessionLengthLabel.text = String(Int(pdTimer.workLength))
+            sessionLengthValueLabel.text = String(Int(pdTimer.workLength))
         }
         AudioServicesPlaySystemSound(1105)
     }
@@ -689,6 +691,8 @@ class PDTimerViewController: UIViewController {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
+    @IBOutlet weak var breakLengthValueLabel: UILabel!
+    @IBOutlet weak var sessionLengthValueLabel: UILabel!
     @IBOutlet weak var breakLengthLabel: UILabel!
     @IBOutlet weak var sessionLengthLabel: UILabel!
     @IBOutlet var topContainerButtons: [UIButton]!
@@ -700,6 +704,7 @@ class PDTimerViewController: UIViewController {
     @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var splashMaskView: UIView!
+    @IBOutlet weak var statusBarView: UIView!
     
     // MARK: - Properties
     
