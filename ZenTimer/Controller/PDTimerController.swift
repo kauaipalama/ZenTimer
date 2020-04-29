@@ -33,19 +33,19 @@ class PDTimerController {
     func toggleMessage() {
         if pdTimer.workState == .working {
             if pdTimer.timerState == .ready {
-                pdTimer.timerMessage = "ready"
+                pdTimer.timerMessage = Constants.ready
             } else if pdTimer.timerState == .running {
-                pdTimer.timerMessage = "until your next break"
+                pdTimer.timerMessage = Constants.untilNextBreak
             } else if pdTimer.timerState == .paused {
-                pdTimer.timerMessage = "paused"
+                pdTimer.timerMessage = Constants.paused
             } else if pdTimer.timerState == .finished {
                 pdTimer.timerMessage = ""
             }
         } else if pdTimer.workState == .onBreak {
             if pdTimer.timerState == .ready {
-                pdTimer.timerMessage = "ready"
+                pdTimer.timerMessage = Constants.ready
             } else if pdTimer.timerState == .running {
-                pdTimer.timerMessage = "until your next session"
+                pdTimer.timerMessage = Constants.untilNextSession
             } else if pdTimer.timerState == .finished {
                 pdTimer.timerMessage = ""
             }
@@ -54,9 +54,9 @@ class PDTimerController {
     
     func toggleStartButtonLabelMessage(completion: () -> Void) {
         if pdTimer.timerState == .ready || pdTimer.timerState == .paused || pdTimer.timerState == .finished || pdTimer.timerState == .interrupted {
-            pdTimer.startButtonMessage = "TAP TO START"
+            pdTimer.startButtonMessage = Constants.tapToStart
         } else if pdTimer.timerState == .running {
-            pdTimer.startButtonMessage = "TAP TO PAUSE"
+            pdTimer.startButtonMessage = Constants.tapToPause
         }
         completion()
     }
@@ -112,13 +112,13 @@ class PDTimerController {
         var bodyString: String  {
             var string = ""
             if pdTimer.workState == .onBreak {
-                string = "Time for a break!"
+                string = Constants.timeForABreak
             } else if pdTimer.workState == .working{
-                string = "Break time's over!"
+                string = Constants.breakTimeIsOver
             }
             return string
         }
-        content.title = "Alarm"
+        content.title = Constants.notificationTitle
         content.body = bodyString
         content.sound = UNNotificationSound(named: UNNotificationSoundName("rainbow3+glass_DoneLoud.wav"))
         content.badge = 1
@@ -160,5 +160,5 @@ class PDTimerController {
     let defaults = UserDefaults.standard
     let notificationCenter = UNUserNotificationCenter.current()
     var soundOn = true
-    var pdTimer = PDTimer(resetButtonState: .notTapped,settingsMenuState: .closed, audioSettingsState: .soundOn, workLength: 25, breakLength: 5, timer: Timer(), duration: 0, timeRemaining: 0, timerState: .ready, workState: .working, timerMessage: "", timerMessageState: .readyMessage, startButtonMessage: "TAP TO START")
+    var pdTimer = PDTimer(resetButtonState: .notTapped,settingsMenuState: .closed, audioSettingsState: .soundOn, workLength: 25, breakLength: 5, timer: Timer(), duration: 0, timeRemaining: 0, timerState: .ready, workState: .working, timerMessage: "", timerMessageState: .readyMessage, startButtonMessage: Constants.tapToStart)
 }

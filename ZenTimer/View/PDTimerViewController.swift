@@ -150,14 +150,14 @@ class PDTimerViewController: UIViewController {
                         var title: String {
                             var string = ""
                             if self?.pdTimer.workState == .onBreak {
-                                string = "Break Complete"
+                                string = Constants.breakComplete
                             } else if self?.pdTimer.workState == .working {
-                                string = "Session Complete"
+                                string = Constants.sessionComplete
                             }
                             return string
                         }
                         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                        alert.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { (_) in
                             ReviewController.shared.requestReview()
                         }))
                         self?.present(alert, animated: true, completion: nil)

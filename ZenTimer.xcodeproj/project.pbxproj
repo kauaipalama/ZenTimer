@@ -21,6 +21,7 @@
 		B497889123163ABD009AFF48 /* whiteNoise_transition.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497889023163ABD009AFF48 /* whiteNoise_transition.wav */; };
 		B49788932316F646009AFF48 /* rainbow3.wav in Resources */ = {isa = PBXBuildFile; fileRef = B49788922316F646009AFF48 /* rainbow3.wav */; };
 		B497889523171507009AFF48 /* rainbow3+glass_DoneLoud.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497889423171507009AFF48 /* rainbow3+glass_DoneLoud.wav */; };
+		B49811E02458E5D800501D92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49811DF2458E5D800501D92 /* Constants.swift */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		B497889023163ABD009AFF48 /* whiteNoise_transition.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whiteNoise_transition.wav; sourceTree = "<group>"; };
 		B49788922316F646009AFF48 /* rainbow3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow3.wav; sourceTree = "<group>"; };
 		B497889423171507009AFF48 /* rainbow3+glass_DoneLoud.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "rainbow3+glass_DoneLoud.wav"; sourceTree = "<group>"; };
+		B49811DF2458E5D800501D92 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				B448109F22FFCA2A0092E4F0 /* States.swift */,
 				B4B005C72447EAB3000C06F4 /* AlarmNotificationDelegate.swift */,
 				B44810A322FFDA3E0092E4F0 /* DoubleExtension.swift */,
+				B49811DF2458E5D800501D92 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
 				B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */,
 				B4B005C82447EAB3000C06F4 /* AlarmNotificationDelegate.swift in Sources */,
+				B49811E02458E5D800501D92 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
