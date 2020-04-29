@@ -42,6 +42,7 @@ class SplashScreenViewController: UIViewController {
     
     func setupViews() {
         logoLabel.layer.opacity = 0
+        logoLabel.text = Constants.quartzLogo
     }
     
     func animateLogo(completionHandler: @escaping () -> Void) {

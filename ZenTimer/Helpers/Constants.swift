@@ -10,6 +10,8 @@ import Foundation
 
 struct Constants {
     
+    static let quartzLogo: String = "quartz"
+    
     static let breakComplete: String = "Break Complete"
     static let sessionComplete: String = "Session Complete"
     static let ok: String = "OK"
