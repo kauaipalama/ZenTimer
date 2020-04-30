@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="169.5"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-gD-tjy">
-                                                <rect key="frame" x="249" y="24.5" width="30" height="30"/>
+                                                <rect key="frame" x="249" y="25" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="mEh-86-Q8q"/>
                                                     <constraint firstAttribute="height" constant="30" id="pra-jt-HW6"/>
@@ -38,7 +38,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MO-oM-gNn">
-                                                <rect key="frame" x="292" y="24.5" width="30" height="30"/>
+                                                <rect key="frame" x="292" y="23" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="5Qd-fU-Y0K"/>
                                                     <constraint firstAttribute="width" constant="30" id="G4n-z4-vye"/>
@@ -49,7 +49,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-ag-0d1" userLabel="Audio Button">
-                                                <rect key="frame" x="334" y="24.5" width="30" height="30"/>
+                                                <rect key="frame" x="334" y="23" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="ZqL-m6-nhJ"/>
@@ -61,7 +61,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mq-ys-8fa" userLabel="Settings Button">
-                                                <rect key="frame" x="368" y="24.5" width="30" height="30"/>
+                                                <rect key="frame" x="368" y="23" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="AIE-4T-gx1"/>
@@ -180,12 +180,12 @@
                                             <constraint firstItem="iP8-G9-HgX" firstAttribute="centerX" secondItem="HLN-46-qEU" secondAttribute="centerX" id="9s3-Yf-Nop"/>
                                             <constraint firstItem="9MO-oM-gNn" firstAttribute="leading" secondItem="sgd-gD-tjy" secondAttribute="trailing" constant="13" id="HKp-pS-CjL"/>
                                             <constraint firstAttribute="trailing" secondItem="2Mq-ys-8fa" secondAttribute="trailing" constant="16" id="HS0-jF-8bR"/>
-                                            <constraint firstItem="9MO-oM-gNn" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.465" id="I25-gE-tJn"/>
+                                            <constraint firstItem="9MO-oM-gNn" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.45" id="I25-gE-tJn"/>
                                             <constraint firstItem="2Mq-ys-8fa" firstAttribute="leading" secondItem="ekY-ag-0d1" secondAttribute="trailing" constant="4" id="KhP-nf-Cv9"/>
-                                            <constraint firstItem="sgd-gD-tjy" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.465" id="Y3i-gj-a7x"/>
+                                            <constraint firstItem="sgd-gD-tjy" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.47" id="Y3i-gj-a7x"/>
                                             <constraint firstItem="ekY-ag-0d1" firstAttribute="leading" secondItem="9MO-oM-gNn" secondAttribute="trailing" constant="12" id="cxw-Sq-RDV"/>
-                                            <constraint firstItem="2Mq-ys-8fa" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.465" id="ekO-wf-yCn"/>
-                                            <constraint firstItem="ekY-ag-0d1" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.465" id="hff-Rl-z78"/>
+                                            <constraint firstItem="2Mq-ys-8fa" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.45" id="ekO-wf-yCn"/>
+                                            <constraint firstItem="ekY-ag-0d1" firstAttribute="centerY" secondItem="HLN-46-qEU" secondAttribute="centerY" multiplier="0.45" id="hff-Rl-z78"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98L-RN-ait" userLabel="Bottom Container">
@@ -235,10 +235,10 @@
                                 </constraints>
                             </stackView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-GH-Ygx" userLabel="Reset Container">
-                                <rect key="frame" x="0.0" y="98.5" width="414" height="115"/>
+                                <rect key="frame" x="0.0" y="97" width="414" height="116.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWZ-Vr-3kR">
-                                        <rect key="frame" x="0.0" y="0.0" width="397" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="116.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="TAP TO RESET">
@@ -258,10 +258,10 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPV-Gb-Y0U" userLabel="Settings Container">
-                                <rect key="frame" x="0.0" y="98.5" width="414" height="115"/>
+                                <rect key="frame" x="0.0" y="97" width="414" height="116.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Si-FQ-qcE">
-                                        <rect key="frame" x="0.0" y="0.0" width="397" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="116.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="TAP FOR SETTINGS">
@@ -337,21 +337,18 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="breakLengthLabel" destination="FVT-0J-ubX" id="Mdm-q3-ElW"/>
-                        <outlet property="breakLengthValueLabel" destination="P1v-sV-gqu" id="FUz-2u-Vqu"/>
+                        <outlet property="breakLengthLabel" destination="P1v-sV-gqu" id="FUz-2u-Vqu"/>
                         <outlet property="infoButton" destination="9MO-oM-gNn" id="PgD-di-cIl"/>
                         <outlet property="messageLabel" destination="fBK-kv-XuM" id="SRU-eA-ubO"/>
                         <outlet property="muteButton" destination="ekY-ag-0d1" id="E2l-Gw-fNd"/>
                         <outlet property="overlayView" destination="cD9-8X-dWS" id="kD1-gI-T81"/>
                         <outlet property="resetButton" destination="sgd-gD-tjy" id="zFM-nc-F6l"/>
                         <outlet property="resetView" destination="bwK-GH-Ygx" id="lwY-gy-ShR"/>
-                        <outlet property="sessionLengthLabel" destination="Mmc-Uh-TNm" id="wid-UD-S6i"/>
-                        <outlet property="sessionLengthValueLabel" destination="8Wv-QD-mdh" id="0ZZ-3u-gLS"/>
+                        <outlet property="sessionLengthLabel" destination="8Wv-QD-mdh" id="0ZZ-3u-gLS"/>
                         <outlet property="settingsButton" destination="2Mq-ys-8fa" id="r53-Rv-UfW"/>
                         <outlet property="settingsView" destination="FPV-Gb-Y0U" id="2mQ-eR-moK"/>
                         <outlet property="splashMaskView" destination="twm-xq-Nj7" id="n9Y-51-9EI"/>
                         <outlet property="startButton" destination="lHI-Ie-IrW" id="Pmc-l2-H5g"/>
-                        <outlet property="statusBarView" destination="X2c-Eg-lgD" id="psk-j9-IwY"/>
                         <outlet property="timerLabel" destination="Djm-bq-Uac" id="RtM-uW-4AU"/>
                         <outletCollection property="topContainerButtons" destination="JBo-gJ-Qhc" collectionClass="NSMutableArray" id="ICX-5Q-1pu"/>
                         <outletCollection property="topContainerButtons" destination="tZc-ao-3CP" collectionClass="NSMutableArray" id="6va-9r-uAa"/>
