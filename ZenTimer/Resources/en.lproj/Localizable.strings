@@ -1,0 +1,95 @@
+/* 
+  Localizable.strings
+  ZenTimer
+
+  Created by Kainoa Palama on 5/1/20.
+  Copyright © 2020 Kainoa Palama. All rights reserved.
+*/
+
+"quartzLogo" = "quartz";
+
+"breakComplete" = "Break Complete";
+
+"sessionComplete" = "Session Complete";
+
+"ok" = "OK";
+
+"onboardingSlide1Title" = "Thank you for purchasing Quartz: Timer";
+
+"onboardingSlide1Description" = "Break down large tasks into smaller commitments. Increase productivity, reduce stress! Modeled after the “Pomodoro Technique”.";
+
+"onboardingSlide2Title" = "Custom Break/Session Lengths";
+
+"onboardingSlide2Description" = "We recommend a session length of 25 minutes and a break length of 5 minutes. After 3 sessions, consider increasing your break length to 15-20 minutes for one round.";
+
+"onboardingSlide3Title" = "White Noise";
+
+"onboardingSlide3Description" = "Sounds of wind and sea, beautifully mixed. Designed to reduce background noise while instilling a sense of calm and serenity.";
+
+"onboardingSlide4Title" = "Runs from Lock Screen";
+
+"onboardingSlide4Description" = "Runs in the background without interruptions. Automatically adjusts volume for phone calls, notifications and audio from other applications.";
+
+"onboardingSlide5Title" = "Notifications";
+
+"onboardingSlide5Description" = "Receive a notification upon timer completion, when the application is running in the background.";
+
+"onboardingSlide6Title" = "Swipe to Begin >>>";
+
+"onboardingSlide6Description" = "If you enjoy Quartz: Timer, feel free to leave us a review in the App Store! Thank you.";
+
+"sessionLengthLabel" = "SESSION LENGTH";
+
+"breakLengthLabel" = "BREAK LENGTH";
+
+"ready" = "ready";
+
+"untilNextBreak" = "until your next break";
+
+"paused" = "paused";
+
+"untilNextSession" = "until your next session";
+
+"tapToStart" = "TAP TO START";
+
+"tapToPause" = "TAP TO PAUSE";
+
+"tapForSettings" = "TAP FOR SETTINGS";
+
+"tapToReset" = "TAP TO RESET";
+
+"timeForABreak" = "Time for a break!";
+
+"breakTimeIsOver" = "Break time's over!";
+
+"notificationTitle" = "Alarm";
+
+"about_Title" = "About the Pomodoro Technique";
+
+"about_Description" = "Quartz is based on the “Pomodoro Technique” developed by Francesco Cirillo in the late 1980’s. He named the technique after the tomato-shaped kitchen timer he used to track his work during his years as a university student.\n\nHe suggested to divide a task or activity into incremented sessions. Set a timer and work solely on the task at hand, with intense focus, avoiding any distractions.\n\nOnce the timer runs out, the session is complete and the user takes a short break. Every 3 sessions, the user then takes an extended break for one round. This cycle is repeated until the task/activity is complete.\n\nThe technique benefits the user two fold in that it works effectively to increase productivity, while simultaneously lowering stress. Breaking down larger tasks into smaller commitments, catering to our naturally short attention spans, while allowing the mind to rest and process information in between sessions.\n\nOther benefits associated with the Pomodoro Technique are:\n-Improved cognitive ability\n-More time spent in the “flow state”\n-Greater attention span\n-Reduced mental fatigue\n-Increased ability to hyper-focus on command";
+
+"why_Title" = "Why use Quartz? Its simple!";
+
+"why_Description" = "Our app is designed around ease-of-use, comfort and reliability. The timer switches between session and break lengths automatically. Listen to the soothing sounds of the wind and ocean, or tap the mute button and go without. We also use notifications to alert you if your phone is locked, or if the app is running in the background. Finally, if your phone rings, we pause the timer for you and resume once you hang up.";
+
+"step1_Title" = "Step 1: Pick a task";
+
+"step1_Description" = "The task you choose is going to be the sole direction of your focus and productivity.";
+
+"step2_Title" = "Step 2: Set the timer";
+
+"step2_Description" = "We suggest a session length of 25 minutes, and a break length of 5 minutes. After 3 rounds, increase the break length to 20 to 30 minutes for one round.\n\nBe sure to set the session and break lengths before starting the timer, as you are unable to change them once the timer is running. The maximum length is 99 minutes. Tap the bottom of the screen to start the timer.";
+
+"step3_Title" = "Step 3: Focus until the timer goes off";
+
+"step3_Description" = "During a session, try to stay focused on the individual task at hand; do not multitask. If something comes up, write a note, take a message and/or inform any parties that you will get back to them after completing your session.";
+
+"step4_Title" = "Step 4: Take a short break";
+
+"step4_Description" = "When the timer goes off it's time for a break. Use this time to reinvigorate the mind and body, allowing yourself to fully unwind and relax. Don't forget to adjust your break lengths, as suggested in Step 2.";
+
+"whatToDo_Title" = "What should I be doing during my breaks?";
+
+"whatToDo_Description" = "Take some time to breathe deeply, meditate, or go outside. Get away from your work. If you can’t leave, stand up and stretch. The idea is to do something totally unrelated to the task at hand, while also enjoying the moment. Reflect and relish in your accomplishments; write them down! Drink some water or have a snack.";
+
+"footerText" = "For more information about the Pomodoro Technique, visit the author’s website.\n\nhttps://francescocirillo.com\n\nQuestions? Feedback? Send us an email!\n\nquartztimerapp@gmail.com";

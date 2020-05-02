@@ -22,6 +22,7 @@
 		B49788932316F646009AFF48 /* rainbow3.wav in Resources */ = {isa = PBXBuildFile; fileRef = B49788922316F646009AFF48 /* rainbow3.wav */; };
 		B497889523171507009AFF48 /* rainbow3+glass_DoneLoud.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497889423171507009AFF48 /* rainbow3+glass_DoneLoud.wav */; };
 		B49811E02458E5D800501D92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49811DF2458E5D800501D92 /* Constants.swift */; };
+		B498122D245D034E00501D92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B498122F245D034E00501D92 /* Localizable.strings */; };
 		B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */; };
 		B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A34A9E22FBD76100FB66DE /* Main.storyboard */; };
 		B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A34AA122FBD76200FB66DE /* Assets.xcassets */; };
@@ -54,6 +55,8 @@
 		B49788922316F646009AFF48 /* rainbow3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow3.wav; sourceTree = "<group>"; };
 		B497889423171507009AFF48 /* rainbow3+glass_DoneLoud.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "rainbow3+glass_DoneLoud.wav"; sourceTree = "<group>"; };
 		B49811DF2458E5D800501D92 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B498122E245D034E00501D92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B4981230245D035200501D92 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B4A34A9722FBD76100FB66DE /* ZenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A34A9A22FBD76100FB66DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A34A9F22FBD76100FB66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A34AA622FBD76200FB66DE /* Info.plist */,
+				B498122F245D034E00501D92 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -281,6 +285,7 @@
 				B4E5E14823089422000640D7 /* whiteNoise.mp3 in Resources */,
 				B497888B23122A6D009AFF48 /* SplashScreen.storyboard in Resources */,
 				B4E5E159230A2DCF000640D7 /* glass_DoneLoud.wav in Resources */,
+				B498122D245D034E00501D92 /* Localizable.strings in Resources */,
 				B46181252331AD82008D5BC2 /* Onboarding.storyboard in Resources */,
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
 				B4F33E2D23529763004AD28C /* CardViewController.xib in Resources */,
@@ -361,6 +366,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B498122F245D034E00501D92 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B498122E245D034E00501D92 /* en */,
+				B4981230245D035200501D92 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B4A34A9E22FBD76100FB66DE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

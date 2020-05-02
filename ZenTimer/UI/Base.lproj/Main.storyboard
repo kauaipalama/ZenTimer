@@ -234,10 +234,10 @@
                                 </constraints>
                             </stackView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-GH-Ygx" userLabel="Reset Container">
-                                <rect key="frame" x="0.0" y="180.5" width="414" height="33"/>
+                                <rect key="frame" x="0.0" y="99.5" width="414" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWZ-Vr-3kR">
-                                        <rect key="frame" x="0.0" y="0.0" width="397" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="114"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="TAP TO RESET">
@@ -257,10 +257,10 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPV-Gb-Y0U" userLabel="Settings Container">
-                                <rect key="frame" x="0.0" y="180.5" width="414" height="33"/>
+                                <rect key="frame" x="0.0" y="99.5" width="414" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Si-FQ-qcE">
-                                        <rect key="frame" x="0.0" y="0.0" width="397" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="114"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="TAP FOR SETTINGS">
@@ -316,6 +316,7 @@
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="bottom" secondItem="TMu-bf-qLY" secondAttribute="bottom" id="KI9-UN-oVV"/>
                             <constraint firstItem="lHI-Ie-IrW" firstAttribute="top" secondItem="u1Q-mh-Hms" secondAttribute="bottom" id="KMG-s7-lWj"/>
                             <constraint firstItem="bwK-GH-Ygx" firstAttribute="bottom" secondItem="HLN-46-qEU" secondAttribute="bottom" id="Kb1-ZL-HKC"/>
+                            <constraint firstItem="bwK-GH-Ygx" firstAttribute="centerY" secondItem="wsF-2N-utI" secondAttribute="centerY" id="PJk-EF-aaJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPV-Gb-Y0U" secondAttribute="trailing" id="Px7-bs-bdX"/>
                             <constraint firstItem="twm-xq-Nj7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rp8-1F-EWT"/>
                             <constraint firstItem="TMu-bf-qLY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TfO-45-dnO"/>
@@ -350,6 +351,8 @@
                         <outlet property="splashMaskView" destination="twm-xq-Nj7" id="n9Y-51-9EI"/>
                         <outlet property="startButton" destination="lHI-Ie-IrW" id="Pmc-l2-H5g"/>
                         <outlet property="statusBarView" destination="X2c-Eg-lgD" id="Idw-o7-ljC"/>
+                        <outlet property="tapForSettingsButton" destination="8Si-FQ-qcE" id="fag-TF-ec0"/>
+                        <outlet property="tapToResetButton" destination="EWZ-Vr-3kR" id="ccK-BN-Jof"/>
                         <outlet property="timerLabel" destination="Djm-bq-Uac" id="RtM-uW-4AU"/>
                         <outletCollection property="topContainerButtons" destination="JBo-gJ-Qhc" collectionClass="NSMutableArray" id="ICX-5Q-1pu"/>
                         <outletCollection property="topContainerButtons" destination="tZc-ao-3CP" collectionClass="NSMutableArray" id="6va-9r-uAa"/>

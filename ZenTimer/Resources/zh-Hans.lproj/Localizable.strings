@@ -2,55 +2,94 @@
   Localizable.strings
   ZenTimer
 
-  Created by Kainoa Palama on 4/28/20.
+  Created by Kainoa Palama on 5/1/20.
   Copyright © 2020 Kainoa Palama. All rights reserved.
 */
-"quartzLogo" = "石英"
 
-"breakComplete" = "突破完成"
-"sessionComplete" = "会议完成"
-"ok" = "OK"
+"quartzLogo" = "石英";
 
-"onboardingSlide1Title" = "感谢您购买Quartz：Timer"
-"onboardingSlide1Description" = "将大型任务分解为较小的承诺。 提高生产力，减轻压力！ 以“ Pomodoro技术”为蓝本。"
-"onboardingSlide2Title" = "自定义间隔/会话长度"
-"onboardingSlide2Description" = "我们建议会话时间为25分钟，休息时间为5分钟。 经过3次训练后，请考虑将您的休息时间延长至15-20分钟，持续一轮。"
-"onboardingSlide3Title" = "白噪声"
-"onboardingSlide3Description" = "风和海的声音，美妙地混合在一起。 旨在减少背景噪音，同时灌输镇定和宁静的感觉。"
-"onboardingSlide4Title" = "从锁定屏幕运行"
-"onboardingSlide4Description" = "在后台运行而不会受到干扰。 自动调整来自其他应用程序的电话，通知和音频的音量。"
-"onboardingSlide5Title" = "通知事项"
-"onboardingSlide5Description" = "当应用程序在后台运行时，在计时器完成时收到通知。"
-"onboardingSlide6Title" = "滑动即可开始>>>"
-"onboardingSlide6Description" = "如果您喜欢Quartz：Timer，请随时在App Store中给我们留下评论！ 谢谢。"
+"breakComplete" = "突破完成";
 
-"sessionLengthLabel" = "会话时长"
-"breakLengthLabel" = "休息时间"
+"sessionComplete" = "会议完成";
 
-"ready" = "准备"
-"untilNextBreak" = "直到您下一次休息"
-"paused" = "已暂停"
-"untilNextSession" = "直到您的下一个会话"
+"ok" = "好";
 
-"tapToStart" = "点击开始"
-"tapToPause" = "暂停"
+"onboardingSlide1Title" = "感谢您购买Quartz：Timer";
 
-"timeForABreak" = "休息时间！"
-"breakTimeIsOver" = "休息时间结束了！"
-"notificationTitle" = "报警"
+"onboardingSlide1Description" = "将大型任务分解为较小的承诺。 提高生产力，减轻压力！ 以“ Pomodoro技术”为蓝本。";
 
-"about_Title" = "关于番茄技术"
-"about_Description" = "石英基于Francesco Cirillo在1980年代后期开发的“ Pomodoro技术”。他以番茄形状的厨房计时器命名该技术，因为他是大学生时用来跟踪工作的。\n \n他建议将一项任务或活动分成多个会话。设置一个计时器并专注于手头的任务，集中精力，避免分心。\n \n一旦计时器用完，会话就完成了，用户会稍事休息。每3个会话，用户将延长休息一轮。重复此循环，直到任务/活动完成。\n \n该技术使用户受益匪浅，因为它有效地提高了生产率，同时降低了压力。将较大的任务分解成较小的承诺，以适应我们自然而然的注意力不足，同时让头脑在两次会议之间休息和处理信息。\n \n与番茄疗法相关的其他好处包括：\n认知能力得到了改善\n-在“流动状态”中花费更多的时间\n-更大的注意力跨度\n-减少了精神疲劳\n-增强了对命令的高度专注能力"
-"why_Title" = "为什么要使用石英？ 这很简单！"
-"why_Description" = "我们的应用程序围绕易用性，舒适性和可靠性而设计。 计时器自动在会话长度和中断长度之间切换。 聆听风和海洋的舒缓声音，或轻按静音按钮，然后不听。 如果您的手机已锁定，或者应用程序在后台运行，我们也会使用通知来提醒您。 最后，如果您的电话响了，我们会为您暂停计时器，并在您挂断电话后恢复计时。"
-"step1_Title" = "步骤1：选择一项任务"
-"step1_Description" = "您选择的任务将成为您专注和提高生产力的唯一方向。"
-"step2_Title" = "步骤2：设定计时器"
-"step2_Description" = "我们建议会议时长为25分钟，休息时间为5分钟。 3回合后，将中断长度增加一轮至20至30分钟。\n \n请确保在启动计时器之前设置会话和中断长度，因为一旦计时器运行就无法更改它们。 最长为99分钟。 点击屏幕底部以启动计时器。"
-"step3_Title" = "步骤3：集中精力直到计时器关闭"
-"step3_Description" = "在会议中，尽量专注于手头的个别任务； 不要多任务。 如果出现问题，请写笔记，留言和/或通知任何一方您可以在完成会话后与他们联系。"
-"step4_Title" = "步骤4：短暂休息"
-"step4_Description" = "计时器关闭后，该休息一下了。 利用这段时间来振兴身心，让自己充分放松和放松。 别忘了按照步骤2的建议调整休息时间。"
-"whatToDo_Title" = "休息期间我该怎么办？"
-"whatToDo_Description" = "花一些时间深呼吸，沉思或出门。 摆脱工作。 如果你不能离开，站起来伸展一下。 这个想法是做一些与手头任务无关的事情，同时也要享受这一刻。 反映和欣赏您的成就； 记下来！ 喝点水或吃点零食。"
-"footerText" = "有关Pomodoro技术的更多信息，请访问作者的网站。\n \ nhttps：//francescocirillo.com \n \ n有问题吗？ 反馈？ 给我们发送电子邮件！\n \nquartztimerapp@gmail.com"
+"onboardingSlide2Title" = "自定义间隔/会话长度";
+
+"onboardingSlide2Description" = "我们建议会话时间为25分钟，休息时间为5分钟。 经过3次训练后，请考虑将您的休息时间延长至15-20分钟，持续一轮。";
+
+"onboardingSlide3Title" = "白噪声";
+
+"onboardingSlide3Description" = "风和海的声音，美妙地混合在一起。 旨在减少背景噪音，同时灌输镇定和宁静的感觉。";
+
+"onboardingSlide4Title" = "从锁定屏幕运行";
+
+"onboardingSlide4Description" = "在后台运行而不会受到干扰。 自动调整来自其他应用程序的电话，通知和音频的音量。";
+
+"onboardingSlide5Title" = "通知事项";
+
+"onboardingSlide5Description" = "当应用程序在后台运行时，在计时器完成时收到通知。";
+
+"onboardingSlide6Title" = "滑动即可开始>>>";
+
+"onboardingSlide6Description" = "如果您喜欢Quartz：Timer，请随时在App Store中给我们留下评论！ 谢谢。";
+
+"sessionLengthLabel" = "会话时长";
+
+"breakLengthLabel" = "休息时间";
+
+"ready" = "准备";
+
+"untilNextBreak" = "直到您下一次休息";
+
+"paused" = "已暂停";
+
+"untilNextSession" = "直到您的下一个会话";
+
+"tapToStart" = "点击开始";
+
+"tapToPause" = "暂停";
+
+"tapForSettings" = "点按设置";
+
+"tapToReset" = "点击重置";
+
+"timeForABreak" = "休息时间！";
+
+"breakTimeIsOver" = "休息时间结束了！";
+
+"notificationTitle" = "报警";
+
+"about_Title" = "关于番茄技术";
+
+"about_Description" = "石英基于Francesco Cirillo在1980年代后期开发的“ Pomodoro技术”。他以番茄形状的厨房计时器命名该技术，因为他是大学生时用来跟踪工作的。\n\n他建议将一项任务或活动分成多个会话。设置一个计时器并专注于手头的任务，集中精力，避免分心。\n\n一旦计时器用完，会话就完成了，用户会稍事休息。每3个会话，用户将延长休息一轮。重复此循环，直到任务/活动完成。\n\n该技术使用户受益匪浅，因为它有效地提高了生产率，同时降低了压力。将较大的任务分解成较小的承诺，以适应我们自然而然的注意力不足，同时让头脑在两次会议之间休息和处理信息。\n\n与番茄疗法相关的其他好处包括：\n认知能力得到了改善\n-在“流动状态”中花费更多的时间\n-更大的注意力跨度\n-减少了精神疲劳\n-增强了对命令的高度专注能力";
+
+"why_Title" = "为什么要使用石英？ 这很简单！";
+
+"why_Description" = "我们的应用程序围绕易用性，舒适性和可靠性而设计。 计时器自动在会话长度和中断长度之间切换。 聆听风和海洋的舒缓声音，或轻按静音按钮，然后不听。 如果您的手机已锁定，或者应用程序在后台运行，我们也会使用通知来提醒您。 最后，如果您的电话响了，我们会为您暂停计时器，并在您挂断电话后恢复计时。";
+
+"step1_Title" = "步骤1：选择一项任务";
+
+"step1_Description" = "您选择的任务将成为您专注和提高生产力的唯一方向。";
+
+"step2_Title" = "步骤2：设定计时器";
+
+"step2_Description" = "我们建议会议时长为25分钟，休息时间为5分钟。 3回合后，将中断长度增加一轮至20至30分钟。\n\n请确保在启动计时器之前设置会话和中断长度，因为一旦计时器运行就无法更改它们。 最长为99分钟。 点击屏幕底部以启动计时器。";
+
+"step3_Title" = "步骤3：集中精力直到计时器关闭";
+
+"step3_Description" = "在会议中，尽量专注于手头的个别任务； 不要多任务。 如果出现问题，请写笔记，留言和/或通知任何一方您可以在完成会话后与他们联系。";
+
+"step4_Title" = "步骤4：短暂休息";
+
+"step4_Description" = "计时器关闭后，该休息一下了。 利用这段时间来振兴身心，让自己充分放松和放松。 别忘了按照步骤2的建议调整休息时间。";
+
+"whatToDo_Title" = "休息期间我该怎么办？";
+
+"whatToDo_Description" = "花一些时间深呼吸，沉思或出门。 摆脱工作。 如果你不能离开，站起来伸展一下。 这个想法是做一些与手头任务无关的事情，同时也要享受这一刻。 反映和欣赏您的成就； 记下来！ 喝点水或吃点零食。";
+
+"footerText" = "有关Pomodoro技术的更多信息，请访问作者的网站。\n\nhttps://francescocirillo.com \n\n有问题吗？ 反馈？ 给我们发送电子邮件！\n\nquartztimerapp@gmail.com";

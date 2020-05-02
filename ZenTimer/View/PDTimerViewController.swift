@@ -90,6 +90,9 @@ class PDTimerViewController: UIViewController {
         } else if pdTimer.audioSettingsState == .soundOn {
             muteButton.alpha = 0.25
         }
+        startButton.setTitle(Constants.tapToStart, for: .normal)
+        tapToResetButton.setTitle(Constants.tapToReset, for: .normal)
+        tapForSettingsButton.setTitle(Constants.tapForSettings, for: .normal)
         setupCard()
     }
     
@@ -688,8 +691,10 @@ class PDTimerViewController: UIViewController {
     // MARK: - IBObjects
     
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var tapToResetButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var tapForSettingsButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var breakLengthValueLabel: UILabel!
     @IBOutlet weak var sessionLengthValueLabel: UILabel!
