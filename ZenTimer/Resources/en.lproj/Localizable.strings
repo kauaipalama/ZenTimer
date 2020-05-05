@@ -14,7 +14,7 @@
 
 "ok" = "OK";
 
-"onboardingSlide1Title" = "Thank you for purchasing Quartz: Timer";
+"onboardingSlide1Title" = "Thank you for purchasing Quartz";
 
 "onboardingSlide1Description" = "Break down large tasks into smaller commitments. Increase productivity, reduce stress! Modeled after the “Pomodoro Technique”.";
 
@@ -36,7 +36,7 @@
 
 "onboardingSlide6Title" = "Swipe to Begin >>>";
 
-"onboardingSlide6Description" = "If you enjoy Quartz: Timer, feel free to leave us a review in the App Store! Thank you.";
+"onboardingSlide6Description" = "If you enjoy Quartz, feel free to leave us a review in the App Store! Thank you.";
 
 "sessionLengthLabel" = "SESSION LENGTH";
 

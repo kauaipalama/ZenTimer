@@ -6,7 +6,6 @@
   Copyright © 2020 Kainoa Palama. All rights reserved.
 */
 
-//
 "quartzLogo" = "石英";
 
 "breakComplete" = "突破完成";
@@ -15,13 +14,13 @@
 
 "ok" = "好";
 
-"onboardingSlide1Title" = "感谢您购买Quartz：Timer";
+"onboardingSlide1Title" = "感谢您购买Quartz";
 
 "onboardingSlide1Description" = "将大型任务分解为较小的承诺。 提高生产力，减轻压力！ 以“ Pomodoro技术”为蓝本。";
 
 "onboardingSlide2Title" = "自定义间隔/会话长度";
 
-"onboardingSlide2Description" = "我们建议会话时间为25分钟，休息时间为5分钟。 经过3次训练后，请考虑将您的休息时间延长至15-20分钟，持续一轮。";
+"onboardingSlide2Description" = "我们建议会话时间为25分钟，休息时间为5分钟。 3节后，请考虑将您的休息时间延长至15-20分钟，持续一轮。";
 
 "onboardingSlide3Title" = "白噪声";
 
@@ -37,7 +36,7 @@
 
 "onboardingSlide6Title" = "滑动即可开始>>>";
 
-"onboardingSlide6Description" = "如果您喜欢Quartz：Timer，请随时在App Store中给我们留下评论！ 谢谢。";
+"onboardingSlide6Description" = "如果您喜欢Quartz，请随时在App Store中给我们留下评论！ 谢谢。";
 
 "sessionLengthLabel" = "会话时长";
 
