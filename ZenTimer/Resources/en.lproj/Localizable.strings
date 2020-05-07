@@ -68,7 +68,7 @@
 
 "about_Description" = "Quartz is based on the “Pomodoro Technique” developed by Francesco Cirillo in the late 1980’s. He named the technique after the tomato-shaped kitchen timer he used to track his work during his years as a university student.\n\nHe suggested to divide a task or activity into incremented sessions. Set a timer and work solely on the task at hand, with intense focus, avoiding any distractions.\n\nOnce the timer runs out, the session is complete and the user takes a short break. Every 3 sessions, the user then takes an extended break for one round. This cycle is repeated until the task/activity is complete.\n\nThe technique benefits the user two fold in that it works effectively to increase productivity, while simultaneously lowering stress. Breaking down larger tasks into smaller commitments, catering to our naturally short attention spans, while allowing the mind to rest and process information in between sessions.\n\nOther benefits associated with the Pomodoro Technique are:\n-Improved cognitive ability\n-More time spent in the “flow state”\n-Greater attention span\n-Reduced mental fatigue\n-Increased ability to hyper-focus on command";
 
-"why_Title" = "Why use Quartz? Its simple!";
+"why_Title" = "Why use Quartz? It's simple!";
 
 "why_Description" = "Our app is designed around ease-of-use, comfort and reliability. The timer switches between session and break lengths automatically. Listen to the soothing sounds of the wind and ocean, or tap the mute button and go without. We also use notifications to alert you if your phone is locked, or if the app is running in the background. Finally, if your phone rings, we pause the timer for you and resume once you hang up.";
 
