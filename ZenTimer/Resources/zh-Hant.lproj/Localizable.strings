@@ -1,0 +1,95 @@
+/* 
+  Localizable.strings
+  ZenTimer
+
+  Created by Kainoa Palama on 5/1/20.
+  Copyright © 2020 Kainoa Palama. All rights reserved.
+*/
+
+"quartzLogo" = "石英";
+
+"breakComplete" = "休息完成";
+
+"sessionComplete" = "工作完成";
+
+"ok" = "好的";
+
+"onboardingSlide1Title" = "感謝您購買石英";
+
+"onboardingSlide1Description" = "將大型任務分解為較小的承諾。提高生產力，減輕壓力！基於番茄工作法。";
+
+"onboardingSlide2Title" = "自定義休息時間/工作時間";
+
+"onboardingSlide2Description" = "我們建議工作時間為25分鐘，休息時間為5分鐘。 3輪後，考慮將您的休息時間增加到15-20分鐘一輪。";
+
+"onboardingSlide3Title" = "白噪聲";
+
+"onboardingSlide3Description" = "風和海的聲音，美妙地混合在一起。旨在減少背景噪音，同時灌輸鎮定和寧靜的感覺。";
+
+"onboardingSlide4Title" = "從鎖定屏幕運行";
+
+"onboardingSlide4Description" = "在後台運行而不會受到干擾。 自動調整來自其他應用程序的電話，通知和音頻的音量。";
+
+"onboardingSlide5Title" = "通知";
+
+"onboardingSlide5Description" = "我們建議工作時間為25分鐘，休息時間為5分鐘。 3輪後，考慮將您的休息時間增加到15-20分鐘一輪。";
+
+"onboardingSlide6Title" = "滑動即可開始>>>";
+
+"onboardingSlide6Description" = "如果您喜歡Quartz，請隨時在App Store中給我們留下評論！謝謝。";
+
+"sessionLengthLabel" = "工作長度";
+
+"breakLengthLabel" = "靜止長度";
+
+"ready" = "準備";
+
+"untilNextBreak" = "直到下一次休息";
+
+"paused" = "已暫停";
+
+"untilNextSession" = "直到工作開始";
+
+"tapToStart" = "觸摸這裡開始";
+
+"tapToPause" = "觸摸此處暫停";
+
+"tapForSettings" = "觸摸以轉到設置";
+
+"tapToReset" = "摸來復位定時器";
+
+"timeForABreak" = "時間休息！";
+
+"breakTimeIsOver" = "休息時間結束了！";
+
+"notificationTitle" = "鬧鈴";
+
+"about_Title" = "關於番茄工作法";
+
+"about_Description" = "石英是基於弗朗切斯科奇里洛在1980年代後期開發的番茄工作法。他稱，他用在他年作為一個大學生來跟踪他的工作番茄形廚房定時器後的技術。 \n\n他建議瓜分一個大的任務或活動，手頭上的任務設置一個計時器和單獨的工作，沒有分心。 \n\n一旦報警聲，工作會話完成，用戶將短暫休息。每3個回合，用戶將延長休息時間進行一輪。重複這個循環，直到任務/活動完成。 \n\n番茄工作法，有利於用戶有效地提高生產效率，同時降低壓力。打破大任務分解成更小的承諾，迎合了我們的注意力持續時間短， 同時讓大腦在休息時間休息並處理信息。 \n\n與番茄工作法相關的其他好處是：\n-提高認知能力\n-在“流動狀態”下花費的時間更多\n-注意力跨度更大\n-減少心理疲勞\ n-專注能力增強";
+
+"why_Title" = "為什麼要使用Quartz？很簡單！";
+
+"why_Description" = "石英易於使用，舒適可靠。會話和斷裂長度之間的計時器自動切換。聆聽風和海洋的舒緩聲音，或觸摸靜音按鈕沉默。如果您的手機已鎖定，或者應用程序在後台運行，我們也會使用通知來提醒您。最後，如果你的手機響了，我們暫停計時器你，一旦你掛斷恢復。";
+
+"step1_Title" = "步驟1：選擇一項任務";
+
+"step1_Description" = "您選擇的任務將成為您專注和提高生產力的唯一方向。";
+
+"step2_Title" = "步驟2：設定計時器";
+
+"step2_Description" = "我們建議工作時間為25分鐘，休息時間為5分鐘。經過3個回合，增加休息時間為一個回合20至30分鐘。 \n\n一定要設置工作，並啟動定時器之前休息時間， 您無法一旦定時器運行改變它們。的最大長度為99分鐘。觸摸屏幕底部以啟動計時器。";
+
+"step3_Title" = "第3步：焦點，直到警報響起";
+
+"step3_Description" = "工作時，盡量留專注於手頭的工作; 不要多任務。如果中斷，寫一張紙條，拿一個消息和/或通知任何一方，你會完成你的工作後返回給他們。";
+
+"step4_Title" = "步驟4：短暫休息";
+
+"step4_Description" = "警報響起時，該休息一下了。利用這段時間休息，讓自己徹底放鬆。不要忘記按照步驟2中的建議調整休息時間。";
+
+"whatToDo_Title" = "我應該在我的休息在做什麼？";
+
+"whatToDo_Description" = "花一些時間來深呼吸，冥想，或到外面去。走開你的工作。如果你不能離開，站起來伸展一下。做一些與手頭任務無關的事情， 享受的時刻。反思自己的成就； 把它們寫下來！喝一些水或吃小點心。";
+
+"footerText" = "有關番茄工作法的更多信息，請訪問作者的網站\n\nhttps://francescocirillo.com\n\n有什麼問題嗎？有意見嗎？給我們發送電子郵件！ \n\nquartztimerapp@gmail.com";
