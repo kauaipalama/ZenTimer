@@ -29,6 +29,8 @@ struct Constants {
     static let onboardingSlide6Title: String = NSLocalizedString("onboardingSlide6Title", comment: "")
     static let onboardingSlide6Description: String = NSLocalizedString("onboardingSlide6Description", comment: "")
     
+    static let skip: String = NSLocalizedString("skip", comment: "")
+    
     static let sessionLengthLabel: String = NSLocalizedString("sessionLengthLabel", comment: "")
     static let breakLengthLabel: String = NSLocalizedString("breakLengthLabel", comment: "")
     

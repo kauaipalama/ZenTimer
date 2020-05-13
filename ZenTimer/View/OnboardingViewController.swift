@@ -14,6 +14,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
     override func viewDidLoad() {
         super.viewDidLoad()
         skipButton.layer.opacity = 0
+        skipButton.setTitle(Constants.skip, for: .normal)
         onboardingView.layer.opacity = 0
         onboardingView.dataSource = self
         onboardingView.delegate = self
