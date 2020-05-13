@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48779BAB34F7BC024554989F /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E9043E6BB911AF8827310B /* Pods_ZenTimer.framework */; };
+		B41F50AA246CBCD400D9C699 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B41F50AC246CBCD400D9C699 /* InfoPlist.strings */; };
 		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
 		B44810A022FFCA2A0092E4F0 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109F22FFCA2A0092E4F0 /* States.swift */; };
@@ -43,6 +44,9 @@
 		929736DEC96B0FDC10990B48 /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
 		B41F50A62468F53800D9C699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B41F50A72468F5A100D9C699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B41F50AB246CBCD400D9C699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B41F50AD246CBCD600D9C699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B41F50AE246CBD0400D9C699 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B448109B22FFC9270092E4F0 /* PDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimer.swift; sourceTree = "<group>"; };
 		B448109D22FFC93A0092E4F0 /* PDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDTimerController.swift; sourceTree = "<group>"; };
 		B448109F22FFCA2A0092E4F0 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				B4A34AA622FBD76200FB66DE /* Info.plist */,
 				B498122F245D034E00501D92 /* Localizable.strings */,
+				B41F50AC246CBCD400D9C699 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				B497888B23122A6D009AFF48 /* SplashScreen.storyboard in Resources */,
 				B4E5E159230A2DCF000640D7 /* glass_DoneLoud.wav in Resources */,
 				B498122D245D034E00501D92 /* Localizable.strings in Resources */,
+				B41F50AA246CBCD400D9C699 /* InfoPlist.strings in Resources */,
 				B46181252331AD82008D5BC2 /* Onboarding.storyboard in Resources */,
 				B4A34AA522FBD76200FB66DE /* LaunchScreen.storyboard in Resources */,
 				B4F33E2D23529763004AD28C /* CardViewController.xib in Resources */,
@@ -368,6 +374,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B41F50AC246CBCD400D9C699 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B41F50AB246CBCD400D9C699 /* zh-Hans */,
+				B41F50AD246CBCD600D9C699 /* zh-Hant */,
+				B41F50AE246CBD0400D9C699 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		B498122F245D034E00501D92 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

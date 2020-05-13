@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  ZenTimer
+
+  Created by Kainoa Palama on 5/13/20.
+  Copyright © 2020 Kainoa Palama. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Quartz";
+"CFBundleName" = "Quartz";
