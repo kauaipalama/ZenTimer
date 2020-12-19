@@ -13,6 +13,7 @@ provides-dynamic-lookup:
 - "createLabel"
 - "createTitleLabel"
 - "descriptionBottomConstraint"
+- "descriptionCenterConstraint"
 - "descriptionLabel"
 - "imageView"
 - "informationImageHeightConstraint"
@@ -45,6 +46,7 @@ depends-top-level:
 - !private "createLabel"
 - !private "createTitleLabel"
 - !private "descriptionBottomConstraint"
+- !private "descriptionCenterConstraint"
 - !private "fatalError"
 - !private "informationImageHeightConstraint"
 - !private "informationImageWidthConstraint"
@@ -83,6 +85,7 @@ depends-member:
 - ["So15CALayerDelegateP", "createLabel"]
 - ["So15CALayerDelegateP", "createTitleLabel"]
 - ["So15CALayerDelegateP", "descriptionBottomConstraint"]
+- ["So15CALayerDelegateP", "descriptionCenterConstraint"]
 - ["So15CALayerDelegateP", "descriptionLabel"]
 - !private ["So15CALayerDelegateP", "fatalError"]
 - !private ["So15CALayerDelegateP", "font"]
@@ -117,6 +120,7 @@ depends-member:
 - !private ["s7CVarArgP", "createLabel"]
 - !private ["s7CVarArgP", "createTitleLabel"]
 - !private ["s7CVarArgP", "descriptionBottomConstraint"]
+- !private ["s7CVarArgP", "descriptionCenterConstraint"]
 - !private ["s7CVarArgP", "descriptionLabel"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "font"]
@@ -157,6 +161,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "createLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "createTitleLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "descriptionBottomConstraint"]
+- !private ["s28CustomDebugStringConvertibleP", "descriptionCenterConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "descriptionLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "font"]
@@ -194,6 +199,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "createLabel"]
 - !private ["s23CustomStringConvertibleP", "createTitleLabel"]
 - !private ["s23CustomStringConvertibleP", "descriptionBottomConstraint"]
+- !private ["s23CustomStringConvertibleP", "descriptionCenterConstraint"]
 - !private ["s23CustomStringConvertibleP", "descriptionLabel"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "font"]
@@ -237,6 +243,7 @@ depends-member:
 - !private ["SQ", "createLabel"]
 - !private ["SQ", "createTitleLabel"]
 - !private ["SQ", "descriptionBottomConstraint"]
+- !private ["SQ", "descriptionCenterConstraint"]
 - !private ["SQ", "descriptionLabel"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "font"]
@@ -346,6 +353,7 @@ depends-member:
 - !private ["SH", "createLabel"]
 - !private ["SH", "createTitleLabel"]
 - !private ["SH", "descriptionBottomConstraint"]
+- !private ["SH", "descriptionCenterConstraint"]
 - !private ["SH", "descriptionLabel"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "font"]
@@ -389,6 +397,7 @@ depends-member:
 - ["So8NSCodingP", "createLabel"]
 - ["So8NSCodingP", "createTitleLabel"]
 - ["So8NSCodingP", "descriptionBottomConstraint"]
+- ["So8NSCodingP", "descriptionCenterConstraint"]
 - ["So8NSCodingP", "descriptionLabel"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "font"]
@@ -434,6 +443,7 @@ depends-member:
 - ["So8NSObjectC", "createLabel"]
 - ["So8NSObjectC", "createTitleLabel"]
 - ["So8NSObjectC", "descriptionBottomConstraint"]
+- ["So8NSObjectC", "descriptionCenterConstraint"]
 - ["So8NSObjectC", "descriptionLabel"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "font"]
@@ -473,6 +483,7 @@ depends-member:
 - ["So8NSObjectP", "createLabel"]
 - ["So8NSObjectP", "createTitleLabel"]
 - ["So8NSObjectP", "descriptionBottomConstraint"]
+- ["So8NSObjectP", "descriptionCenterConstraint"]
 - ["So8NSObjectP", "descriptionLabel"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "font"]
@@ -513,6 +524,7 @@ depends-member:
 - !private ["16paper_onboarding25OnboardingContentViewItemC", "createTitleLabel"]
 - ["16paper_onboarding25OnboardingContentViewItemC", "deinit"]
 - ["16paper_onboarding25OnboardingContentViewItemC", "descriptionBottomConstraint"]
+- ["16paper_onboarding25OnboardingContentViewItemC", "descriptionCenterConstraint"]
 - ["16paper_onboarding25OnboardingContentViewItemC", "descriptionLabel"]
 - !private ["16paper_onboarding25OnboardingContentViewItemC", "fatalError"]
 - ["16paper_onboarding25OnboardingContentViewItemC", "imageView"]
@@ -569,6 +581,7 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "createLabel"]
 - ["So29UIAccessibilityIdentificationP", "createTitleLabel"]
 - ["So29UIAccessibilityIdentificationP", "descriptionBottomConstraint"]
+- ["So29UIAccessibilityIdentificationP", "descriptionCenterConstraint"]
 - ["So29UIAccessibilityIdentificationP", "descriptionLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "fatalError"]
 - !private ["So29UIAccessibilityIdentificationP", "font"]
@@ -603,6 +616,7 @@ depends-member:
 - ["So12UIAppearanceP", "createLabel"]
 - ["So12UIAppearanceP", "createTitleLabel"]
 - ["So12UIAppearanceP", "descriptionBottomConstraint"]
+- ["So12UIAppearanceP", "descriptionCenterConstraint"]
 - ["So12UIAppearanceP", "descriptionLabel"]
 - !private ["So12UIAppearanceP", "fatalError"]
 - !private ["So12UIAppearanceP", "font"]
@@ -637,6 +651,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "createLabel"]
 - ["So21UIAppearanceContainerP", "createTitleLabel"]
 - ["So21UIAppearanceContainerP", "descriptionBottomConstraint"]
+- ["So21UIAppearanceContainerP", "descriptionCenterConstraint"]
 - ["So21UIAppearanceContainerP", "descriptionLabel"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
 - !private ["So21UIAppearanceContainerP", "font"]
@@ -680,6 +695,7 @@ depends-member:
 - ["So17UICoordinateSpaceP", "createLabel"]
 - ["So17UICoordinateSpaceP", "createTitleLabel"]
 - ["So17UICoordinateSpaceP", "descriptionBottomConstraint"]
+- ["So17UICoordinateSpaceP", "descriptionCenterConstraint"]
 - ["So17UICoordinateSpaceP", "descriptionLabel"]
 - !private ["So17UICoordinateSpaceP", "fatalError"]
 - !private ["So17UICoordinateSpaceP", "font"]
@@ -714,6 +730,7 @@ depends-member:
 - ["So13UIDynamicItemP", "createLabel"]
 - ["So13UIDynamicItemP", "createTitleLabel"]
 - ["So13UIDynamicItemP", "descriptionBottomConstraint"]
+- ["So13UIDynamicItemP", "descriptionCenterConstraint"]
 - ["So13UIDynamicItemP", "descriptionLabel"]
 - !private ["So13UIDynamicItemP", "fatalError"]
 - !private ["So13UIDynamicItemP", "font"]
@@ -748,6 +765,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "createLabel"]
 - ["So18UIFocusEnvironmentP", "createTitleLabel"]
 - ["So18UIFocusEnvironmentP", "descriptionBottomConstraint"]
+- ["So18UIFocusEnvironmentP", "descriptionCenterConstraint"]
 - ["So18UIFocusEnvironmentP", "descriptionLabel"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
 - !private ["So18UIFocusEnvironmentP", "font"]
@@ -782,6 +800,7 @@ depends-member:
 - ["So11UIFocusItemP", "createLabel"]
 - ["So11UIFocusItemP", "createTitleLabel"]
 - ["So11UIFocusItemP", "descriptionBottomConstraint"]
+- ["So11UIFocusItemP", "descriptionCenterConstraint"]
 - ["So11UIFocusItemP", "descriptionLabel"]
 - !private ["So11UIFocusItemP", "fatalError"]
 - !private ["So11UIFocusItemP", "font"]
@@ -816,6 +835,7 @@ depends-member:
 - ["So20UIFocusItemContainerP", "createLabel"]
 - ["So20UIFocusItemContainerP", "createTitleLabel"]
 - ["So20UIFocusItemContainerP", "descriptionBottomConstraint"]
+- ["So20UIFocusItemContainerP", "descriptionCenterConstraint"]
 - ["So20UIFocusItemContainerP", "descriptionLabel"]
 - !private ["So20UIFocusItemContainerP", "fatalError"]
 - !private ["So20UIFocusItemContainerP", "font"]
@@ -861,6 +881,7 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "createLabel"]
 - ["So24UILargeContentViewerItemP", "createTitleLabel"]
 - ["So24UILargeContentViewerItemP", "descriptionBottomConstraint"]
+- ["So24UILargeContentViewerItemP", "descriptionCenterConstraint"]
 - ["So24UILargeContentViewerItemP", "descriptionLabel"]
 - !private ["So24UILargeContentViewerItemP", "fatalError"]
 - !private ["So24UILargeContentViewerItemP", "font"]
@@ -895,6 +916,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "createLabel"]
 - ["So30UIPasteConfigurationSupportingP", "createTitleLabel"]
 - ["So30UIPasteConfigurationSupportingP", "descriptionBottomConstraint"]
+- ["So30UIPasteConfigurationSupportingP", "descriptionCenterConstraint"]
 - ["So30UIPasteConfigurationSupportingP", "descriptionLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "font"]
@@ -929,6 +951,7 @@ depends-member:
 - ["So11UIResponderC", "createLabel"]
 - ["So11UIResponderC", "createTitleLabel"]
 - ["So11UIResponderC", "descriptionBottomConstraint"]
+- ["So11UIResponderC", "descriptionCenterConstraint"]
 - ["So11UIResponderC", "descriptionLabel"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "font"]
@@ -963,6 +986,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "createLabel"]
 - ["So30UIResponderStandardEditActionsP", "createTitleLabel"]
 - ["So30UIResponderStandardEditActionsP", "descriptionBottomConstraint"]
+- ["So30UIResponderStandardEditActionsP", "descriptionCenterConstraint"]
 - ["So30UIResponderStandardEditActionsP", "descriptionLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "font"]
@@ -997,6 +1021,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "createLabel"]
 - ["So18UITraitEnvironmentP", "createTitleLabel"]
 - ["So18UITraitEnvironmentP", "descriptionBottomConstraint"]
+- ["So18UITraitEnvironmentP", "descriptionCenterConstraint"]
 - ["So18UITraitEnvironmentP", "descriptionLabel"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
 - !private ["So18UITraitEnvironmentP", "font"]
@@ -1031,6 +1056,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "createLabel"]
 - ["So23UIUserActivityRestoringP", "createTitleLabel"]
 - ["So23UIUserActivityRestoringP", "descriptionBottomConstraint"]
+- ["So23UIUserActivityRestoringP", "descriptionCenterConstraint"]
 - ["So23UIUserActivityRestoringP", "descriptionLabel"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "font"]
@@ -1065,6 +1091,7 @@ depends-member:
 - ["So6UIViewC", "createLabel"]
 - ["So6UIViewC", "createTitleLabel"]
 - ["So6UIViewC", "descriptionBottomConstraint"]
+- ["So6UIViewC", "descriptionCenterConstraint"]
 - ["So6UIViewC", "descriptionLabel"]
 - !private ["So6UIViewC", "fatalError"]
 - !private ["So6UIViewC", "font"]
@@ -1106,6 +1133,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createTitleLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "descriptionBottomConstraint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "descriptionCenterConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "descriptionLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
@@ -1139,6 +1167,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "createLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "createTitleLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "descriptionBottomConstraint"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "descriptionCenterConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "descriptionLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "font"]
@@ -1173,6 +1202,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "createLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "createTitleLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "descriptionBottomConstraint"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "descriptionCenterConstraint"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "descriptionLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fatalError"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "font"]
@@ -1298,4 +1328,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f600e4eaa7e5182bfa1340dae97b7de7"
+interface-hash: "f7ba0ad3744013c5d27a600ab364787c"
