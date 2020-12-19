@@ -1,0 +1,16 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "125e9e3fd7e8169e0d429bb3672ef91b"
+build_time: [1608409944, 903888000]
+inputs:
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Helpers/DoubleExtension.swift": [1565500170, 1173937]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Helpers/States.swift": [1584995475, 680822199]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/View/SplashScreenViewController.swift": [1588365942, 453782361]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Controller/ReviewController.swift": [1587014849, 878874225]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/View/OnboardingViewController.swift": [1608360274, 505817472]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/View/PDTimerViewController.swift": [1608360274, 506885403]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/View/CardViewController.swift": [1588126396, 88244373]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Model/PDTimer.swift": [1584995433, 810331510]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/View/AppDelegate.swift": [1587688148, 851884961]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Controller/PDTimerController.swift": [1588385336, 612692320]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Helpers/AlarmNotificationDelegate.swift": [1587003957, 461127626]
+  "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Helpers/Constants.swift": [1608360274, 496297225]

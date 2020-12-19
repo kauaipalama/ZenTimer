@@ -1,0 +1,174 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WorkState"
+- "TimerState"
+- "TimerMessageState"
+- "SettingsMenuState"
+- "AudioSettingsState"
+- "ResetButtonState"
+- "CardViewState"
+provides-nominal:
+- "8ZenTimer9WorkStateO"
+- "8ZenTimer0B5StateO"
+- "8ZenTimer0B12MessageStateO"
+- "8ZenTimer17SettingsMenuStateO"
+- "8ZenTimer18AudioSettingsStateO"
+- "8ZenTimer16ResetButtonStateO"
+- "8ZenTimer13CardViewStateO"
+provides-member:
+- ["8ZenTimer9WorkStateO", ""]
+- ["8ZenTimer0B5StateO", ""]
+- ["8ZenTimer0B12MessageStateO", ""]
+- ["8ZenTimer17SettingsMenuStateO", ""]
+- ["8ZenTimer18AudioSettingsStateO", ""]
+- ["8ZenTimer16ResetButtonStateO", ""]
+- ["8ZenTimer13CardViewStateO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AudioSettingsState"
+- "CardViewState"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "ResetButtonState"
+- "SettingsMenuState"
+- "TimerMessageState"
+- "TimerState"
+- "WorkState"
+depends-member:
+- ["8ZenTimer18AudioSettingsStateO", "=="]
+- ["8ZenTimer18AudioSettingsStateO", ""]
+- ["8ZenTimer18AudioSettingsStateO", "__derived_enum_equals"]
+- ["8ZenTimer18AudioSettingsStateO", "_rawHashValue"]
+- ["8ZenTimer18AudioSettingsStateO", "hash"]
+- ["8ZenTimer18AudioSettingsStateO", "hashValue"]
+- ["8ZenTimer18AudioSettingsStateO", "soundOff"]
+- ["8ZenTimer18AudioSettingsStateO", "soundOn"]
+- ["8ZenTimer13CardViewStateO", "=="]
+- ["8ZenTimer13CardViewStateO", ""]
+- ["8ZenTimer13CardViewStateO", "__derived_enum_equals"]
+- ["8ZenTimer13CardViewStateO", "_rawHashValue"]
+- ["8ZenTimer13CardViewStateO", "collapsed"]
+- ["8ZenTimer13CardViewStateO", "expanded"]
+- ["8ZenTimer13CardViewStateO", "hash"]
+- ["8ZenTimer13CardViewStateO", "hashValue"]
+- ["SQ", "=="]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["s6HasherV", "combine"]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectP", ""]
+- ["8ZenTimer16ResetButtonStateO", "=="]
+- ["8ZenTimer16ResetButtonStateO", ""]
+- ["8ZenTimer16ResetButtonStateO", "__derived_enum_equals"]
+- ["8ZenTimer16ResetButtonStateO", "_rawHashValue"]
+- ["8ZenTimer16ResetButtonStateO", "hash"]
+- ["8ZenTimer16ResetButtonStateO", "hashValue"]
+- ["8ZenTimer16ResetButtonStateO", "notTapped"]
+- ["8ZenTimer16ResetButtonStateO", "tapped"]
+- ["8ZenTimer17SettingsMenuStateO", "=="]
+- ["8ZenTimer17SettingsMenuStateO", ""]
+- ["8ZenTimer17SettingsMenuStateO", "__derived_enum_equals"]
+- ["8ZenTimer17SettingsMenuStateO", "_rawHashValue"]
+- ["8ZenTimer17SettingsMenuStateO", "closed"]
+- ["8ZenTimer17SettingsMenuStateO", "hash"]
+- ["8ZenTimer17SettingsMenuStateO", "hashValue"]
+- ["8ZenTimer17SettingsMenuStateO", "open"]
+- ["8ZenTimer0B12MessageStateO", "=="]
+- ["8ZenTimer0B12MessageStateO", ""]
+- ["8ZenTimer0B12MessageStateO", "__derived_enum_equals"]
+- ["8ZenTimer0B12MessageStateO", "_rawHashValue"]
+- ["8ZenTimer0B12MessageStateO", "finishedMessage"]
+- ["8ZenTimer0B12MessageStateO", "hash"]
+- ["8ZenTimer0B12MessageStateO", "hashValue"]
+- ["8ZenTimer0B12MessageStateO", "readyMessage"]
+- ["8ZenTimer0B12MessageStateO", "runningMessage"]
+- ["8ZenTimer0B5StateO", "=="]
+- ["8ZenTimer0B5StateO", ""]
+- ["8ZenTimer0B5StateO", "__derived_enum_equals"]
+- ["8ZenTimer0B5StateO", "_rawHashValue"]
+- ["8ZenTimer0B5StateO", "finished"]
+- ["8ZenTimer0B5StateO", "hash"]
+- ["8ZenTimer0B5StateO", "hashValue"]
+- ["8ZenTimer0B5StateO", "interrupted"]
+- ["8ZenTimer0B5StateO", "paused"]
+- ["8ZenTimer0B5StateO", "ready"]
+- ["8ZenTimer0B5StateO", "running"]
+- ["8ZenTimer9WorkStateO", "=="]
+- ["8ZenTimer9WorkStateO", ""]
+- ["8ZenTimer9WorkStateO", "__derived_enum_equals"]
+- ["8ZenTimer9WorkStateO", "_rawHashValue"]
+- ["8ZenTimer9WorkStateO", "hash"]
+- ["8ZenTimer9WorkStateO", "hashValue"]
+- ["8ZenTimer9WorkStateO", "onBreak"]
+- ["8ZenTimer9WorkStateO", "working"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+depends-nominal:
+- "8ZenTimer18AudioSettingsStateO"
+- "8ZenTimer13CardViewStateO"
+- "SQ"
+- "SH"
+- !private "s6HasherV"
+- "So8NSCodingP"
+- "So8NSObjectP"
+- "8ZenTimer16ResetButtonStateO"
+- "8ZenTimer17SettingsMenuStateO"
+- "8ZenTimer0B12MessageStateO"
+- "8ZenTimer0B5StateO"
+- "8ZenTimer9WorkStateO"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphoneos/paper-onboarding/paper_onboarding.framework/Modules/paper_onboarding.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphoneos/paper-onboarding/paper_onboarding.framework/Headers/paper-onboarding-umbrella.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphoneos/paper-onboarding/paper_onboarding.framework/Headers/paper_onboarding-Swift.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphoneos/paper-onboarding/paper_onboarding.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "762a8573d4824e8b461c34bcc3753b83"

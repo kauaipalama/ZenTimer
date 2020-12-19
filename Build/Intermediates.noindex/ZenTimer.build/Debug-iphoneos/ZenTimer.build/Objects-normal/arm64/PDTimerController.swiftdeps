@@ -1,0 +1,606 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PDTimerController"
+provides-nominal:
+- "8ZenTimer17PDTimerControllerC"
+provides-member:
+- ["8ZenTimer17PDTimerControllerC", ""]
+provides-dynamic-lookup:
+- "checkTimer"
+- "convertTimeRemainingToString"
+- "defaults"
+- "fireAlarm"
+- "loadFromPersistentStore"
+- "notificationCenter"
+- "pdTimer"
+- "reset"
+- "saveToPersistentStore"
+- "scheduleAlarmNotification"
+- "setTimeRemaining"
+- "shared"
+- "soundOn"
+- "stop"
+- "toggleMessage"
+- "toggleStartButtonLabelMessage"
+- "toggleWorkState"
+depends-top-level:
+- !private "&&"
+- !private "*"
+- !private "-"
+- !private "<"
+- "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Constants"
+- !private "Double"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "PDTimer"
+- "PDTimerController"
+- "String"
+- "StringLiteralType"
+- "TimeInterval"
+- "Timer"
+- !private "UNMutableNotificationContent"
+- !private "UNNotificationRequest"
+- !private "UNNotificationSound"
+- !private "UNNotificationSoundName"
+- !private "UNTimeIntervalNotificationTrigger"
+- "UNUserNotificationCenter"
+- "UserDefaults"
+- "Void"
+- !private "defaults"
+- !private "fireAlarm"
+- !private "notificationCenter"
+- !private "pdTimer"
+- "print"
+- !private "setTimeRemaining"
+- !private "soundOn"
+- !private "toggleMessage"
+- !private "||"
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["s18AdditiveArithmeticP", "secondsToMinutesAndSeconds"]
+- !private ["8ZenTimer18AudioSettingsStateO", "soundOff"]
+- ["8ZenTimer18AudioSettingsStateO", "soundOn"]
+- ["SK", ""]
+- !private ["SB", "init"]
+- !private ["SB", "secondsToMinutesAndSeconds"]
+- !private ["Sb", "toggle"]
+- !private ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "add"]
+- !private ["s7CVarArgP", "authorizationStatus"]
+- !private ["s7CVarArgP", "badge"]
+- !private ["s7CVarArgP", "body"]
+- ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "getNotificationSettings"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "invalidate"]
+- !private ["s7CVarArgP", "object"]
+- !private ["s7CVarArgP", "secondsToMinutesAndSeconds"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "sound"]
+- ["s7CVarArgP", "standard"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "toggle"]
+- ["Sl", ""]
+- ["SL", ""]
+- !private ["SL", "init"]
+- !private ["SL", "secondsToMinutesAndSeconds"]
+- !private ["8ZenTimer9ConstantsV", "breakTimeIsOver"]
+- !private ["8ZenTimer9ConstantsV", "notificationTitle"]
+- !private ["8ZenTimer9ConstantsV", "paused"]
+- !private ["8ZenTimer9ConstantsV", "ready"]
+- !private ["8ZenTimer9ConstantsV", "tapToPause"]
+- ["8ZenTimer9ConstantsV", "tapToStart"]
+- !private ["8ZenTimer9ConstantsV", "timeForABreak"]
+- !private ["8ZenTimer9ConstantsV", "untilNextBreak"]
+- !private ["8ZenTimer9ConstantsV", "untilNextSession"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
+- !private ["s28CustomDebugStringConvertibleP", "authorizationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "badge"]
+- !private ["s28CustomDebugStringConvertibleP", "body"]
+- ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "getNotificationSettings"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "invalidate"]
+- !private ["s28CustomDebugStringConvertibleP", "object"]
+- !private ["s28CustomDebugStringConvertibleP", "secondsToMinutesAndSeconds"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "sound"]
+- ["s28CustomDebugStringConvertibleP", "standard"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "secondsToMinutesAndSeconds"]
+- !private ["s17CustomReflectableP", "toggle"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "add"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "authorizationStatus"]
+- !private ["s23CustomStringConvertibleP", "badge"]
+- !private ["s23CustomStringConvertibleP", "body"]
+- ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "getNotificationSettings"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "invalidate"]
+- !private ["s23CustomStringConvertibleP", "object"]
+- !private ["s23CustomStringConvertibleP", "secondsToMinutesAndSeconds"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "sound"]
+- ["s23CustomStringConvertibleP", "standard"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "toggle"]
+- !private ["Se", "init"]
+- !private ["Se", "secondsToMinutesAndSeconds"]
+- !private ["Se", "toggle"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["Sd", "init"]
+- !private ["Sd", "secondsToMinutesAndSeconds"]
+- !private ["SE", "init"]
+- !private ["SE", "secondsToMinutesAndSeconds"]
+- !private ["SE", "toggle"]
+- !private ["SQ", "=="]
+- !private ["SQ", "RawValue"]
+- ["SQ", ""]
+- !private ["SQ", "add"]
+- !private ["SQ", "authorizationStatus"]
+- !private ["SQ", "authorized"]
+- !private ["SQ", "badge"]
+- !private ["SQ", "body"]
+- ["SQ", "closed"]
+- ["SQ", "current"]
+- !private ["SQ", "finished"]
+- !private ["SQ", "getNotificationSettings"]
+- ["SQ", "init"]
+- !private ["SQ", "interrupted"]
+- !private ["SQ", "invalidate"]
+- ["SQ", "notTapped"]
+- !private ["SQ", "object"]
+- !private ["SQ", "onBreak"]
+- !private ["SQ", "paused"]
+- ["SQ", "ready"]
+- ["SQ", "readyMessage"]
+- !private ["SQ", "running"]
+- !private ["SQ", "secondsToMinutesAndSeconds"]
+- !private ["SQ", "set"]
+- !private ["SQ", "sound"]
+- !private ["SQ", "soundOff"]
+- ["SQ", "soundOn"]
+- ["SQ", "standard"]
+- !private ["SQ", "title"]
+- !private ["SQ", "toggle"]
+- ["SQ", "working"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s27ExpressibleByBooleanLiteralP", "toggle"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "secondsToMinutesAndSeconds"]
+- !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "secondsToMinutesAndSeconds"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
+- !private ["SF", "init"]
+- !private ["SF", "secondsToMinutesAndSeconds"]
+- !private ["SH", "=="]
+- !private ["SH", "RawValue"]
+- ["SH", ""]
+- !private ["SH", "add"]
+- !private ["SH", "authorizationStatus"]
+- !private ["SH", "authorized"]
+- !private ["SH", "badge"]
+- !private ["SH", "body"]
+- ["SH", "closed"]
+- ["SH", "current"]
+- !private ["SH", "finished"]
+- !private ["SH", "getNotificationSettings"]
+- ["SH", "init"]
+- !private ["SH", "interrupted"]
+- !private ["SH", "invalidate"]
+- ["SH", "notTapped"]
+- !private ["SH", "object"]
+- !private ["SH", "onBreak"]
+- !private ["SH", "paused"]
+- ["SH", "ready"]
+- ["SH", "readyMessage"]
+- !private ["SH", "running"]
+- !private ["SH", "secondsToMinutesAndSeconds"]
+- !private ["SH", "set"]
+- !private ["SH", "sound"]
+- !private ["SH", "soundOff"]
+- ["SH", "soundOn"]
+- ["SH", "standard"]
+- !private ["SH", "title"]
+- !private ["SH", "toggle"]
+- ["SH", "working"]
+- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "secondsToMinutesAndSeconds"]
+- !private ["s25LosslessStringConvertibleP", "toggle"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "authorizationStatus"]
+- !private ["So8NSCodingP", "badge"]
+- !private ["So8NSCodingP", "body"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "sound"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So8NSCodingP", "triggerWithTimeInterval"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "authorizationStatus"]
+- !private ["So9NSCopyingP", "badge"]
+- !private ["So9NSCopyingP", "body"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "sound"]
+- !private ["So9NSCopyingP", "title"]
+- !private ["So9NSCopyingP", "triggerWithTimeInterval"]
+- !private ["So16NSMutableCopyingP", ""]
+- !private ["So16NSMutableCopyingP", "badge"]
+- !private ["So16NSMutableCopyingP", "body"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "sound"]
+- !private ["So16NSMutableCopyingP", "title"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "add"]
+- !private ["So8NSObjectC", "addNotificationRequest"]
+- !private ["So8NSObjectC", "authorizationStatus"]
+- !private ["So8NSObjectC", "badge"]
+- !private ["So8NSObjectC", "body"]
+- ["So8NSObjectC", "current"]
+- ["So8NSObjectC", "currentNotificationCenter"]
+- !private ["So8NSObjectC", "getNotificationSettings"]
+- !private ["So8NSObjectC", "getNotificationSettingsWithCompletionHandler"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "invalidate"]
+- !private ["So8NSObjectC", "object"]
+- !private ["So8NSObjectC", "objectForKey"]
+- !private ["So8NSObjectC", "requestWithIdentifier"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "setBool"]
+- !private ["So8NSObjectC", "setDouble"]
+- !private ["So8NSObjectC", "setFloat"]
+- !private ["So8NSObjectC", "setInteger"]
+- !private ["So8NSObjectC", "setObject"]
+- !private ["So8NSObjectC", "setURL"]
+- !private ["So8NSObjectC", "sound"]
+- !private ["So8NSObjectC", "soundNamed"]
+- ["So8NSObjectC", "standard"]
+- ["So8NSObjectC", "timerWithTimeInterval"]
+- !private ["So8NSObjectC", "title"]
+- !private ["So8NSObjectC", "triggerWithTimeInterval"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "add"]
+- !private ["So8NSObjectP", "addNotificationRequest"]
+- !private ["So8NSObjectP", "authorizationStatus"]
+- !private ["So8NSObjectP", "badge"]
+- !private ["So8NSObjectP", "body"]
+- ["So8NSObjectP", "current"]
+- ["So8NSObjectP", "currentNotificationCenter"]
+- !private ["So8NSObjectP", "getNotificationSettings"]
+- !private ["So8NSObjectP", "getNotificationSettingsWithCompletionHandler"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "invalidate"]
+- !private ["So8NSObjectP", "object"]
+- !private ["So8NSObjectP", "objectForKey"]
+- !private ["So8NSObjectP", "requestWithIdentifier"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "setBool"]
+- !private ["So8NSObjectP", "setDouble"]
+- !private ["So8NSObjectP", "setFloat"]
+- !private ["So8NSObjectP", "setInteger"]
+- !private ["So8NSObjectP", "setObject"]
+- !private ["So8NSObjectP", "setURL"]
+- !private ["So8NSObjectP", "sound"]
+- !private ["So8NSObjectP", "soundNamed"]
+- ["So8NSObjectP", "standard"]
+- ["So8NSObjectP", "timerWithTimeInterval"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "triggerWithTimeInterval"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "authorizationStatus"]
+- !private ["So14NSSecureCodingP", "badge"]
+- !private ["So14NSSecureCodingP", "body"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "sound"]
+- !private ["So14NSSecureCodingP", "title"]
+- !private ["So14NSSecureCodingP", "triggerWithTimeInterval"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["Sj", "secondsToMinutesAndSeconds"]
+- !private ["8ZenTimer7PDTimerC", "audioSettingsState"]
+- !private ["8ZenTimer7PDTimerC", "breakLength"]
+- !private ["8ZenTimer7PDTimerC", "duration"]
+- ["8ZenTimer7PDTimerC", "init"]
+- !private ["8ZenTimer7PDTimerC", "startButtonMessage"]
+- !private ["8ZenTimer7PDTimerC", "timeRemaining"]
+- !private ["8ZenTimer7PDTimerC", "timer"]
+- !private ["8ZenTimer7PDTimerC", "timerMessage"]
+- !private ["8ZenTimer7PDTimerC", "timerState"]
+- !private ["8ZenTimer7PDTimerC", "workLength"]
+- !private ["8ZenTimer7PDTimerC", "workState"]
+- !private ["8ZenTimer17PDTimerControllerC", "Bool"]
+- ["8ZenTimer17PDTimerControllerC", "Constants"]
+- !private ["8ZenTimer17PDTimerControllerC", "Double"]
+- ["8ZenTimer17PDTimerControllerC", "PDTimer"]
+- ["8ZenTimer17PDTimerControllerC", "PDTimerController"]
+- ["8ZenTimer17PDTimerControllerC", "String"]
+- ["8ZenTimer17PDTimerControllerC", "TimeInterval"]
+- ["8ZenTimer17PDTimerControllerC", "Timer"]
+- !private ["8ZenTimer17PDTimerControllerC", "UNMutableNotificationContent"]
+- !private ["8ZenTimer17PDTimerControllerC", "UNNotificationRequest"]
+- !private ["8ZenTimer17PDTimerControllerC", "UNNotificationSound"]
+- !private ["8ZenTimer17PDTimerControllerC", "UNNotificationSoundName"]
+- !private ["8ZenTimer17PDTimerControllerC", "UNTimeIntervalNotificationTrigger"]
+- ["8ZenTimer17PDTimerControllerC", "UNUserNotificationCenter"]
+- ["8ZenTimer17PDTimerControllerC", "UserDefaults"]
+- ["8ZenTimer17PDTimerControllerC", "Void"]
+- ["8ZenTimer17PDTimerControllerC", "checkTimer"]
+- ["8ZenTimer17PDTimerControllerC", "convertTimeRemainingToString"]
+- ["8ZenTimer17PDTimerControllerC", "defaults"]
+- ["8ZenTimer17PDTimerControllerC", "deinit"]
+- ["8ZenTimer17PDTimerControllerC", "fireAlarm"]
+- ["8ZenTimer17PDTimerControllerC", "init"]
+- ["8ZenTimer17PDTimerControllerC", "loadFromPersistentStore"]
+- ["8ZenTimer17PDTimerControllerC", "notificationCenter"]
+- ["8ZenTimer17PDTimerControllerC", "pdTimer"]
+- !private ["8ZenTimer17PDTimerControllerC", "print"]
+- ["8ZenTimer17PDTimerControllerC", "reset"]
+- ["8ZenTimer17PDTimerControllerC", "saveToPersistentStore"]
+- ["8ZenTimer17PDTimerControllerC", "scheduleAlarmNotification"]
+- ["8ZenTimer17PDTimerControllerC", "setTimeRemaining"]
+- ["8ZenTimer17PDTimerControllerC", "shared"]
+- ["8ZenTimer17PDTimerControllerC", "soundOn"]
+- ["8ZenTimer17PDTimerControllerC", "stop"]
+- ["8ZenTimer17PDTimerControllerC", "toggleMessage"]
+- ["8ZenTimer17PDTimerControllerC", "toggleStartButtonLabelMessage"]
+- ["8ZenTimer17PDTimerControllerC", "toggleWorkState"]
+- !private ["SY", "=="]
+- !private ["SY", "RawValue"]
+- !private ["SY", ""]
+- !private ["SY", "authorized"]
+- !private ["SY", "init"]
+- ["8ZenTimer16ResetButtonStateO", "notTapped"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["s10SIMDScalarP", "secondsToMinutesAndSeconds"]
+- ["ST", ""]
+- ["8ZenTimer17SettingsMenuStateO", "closed"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s13SignedNumericP", "secondsToMinutesAndSeconds"]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["Sx", "secondsToMinutesAndSeconds"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "secondsToMinutesAndSeconds"]
+- ["So7NSTimerC", "init"]
+- !private ["So7NSTimerC", "invalidate"]
+- ["8ZenTimer0B12MessageStateO", "readyMessage"]
+- !private ["8ZenTimer0B5StateO", ""]
+- !private ["8ZenTimer0B5StateO", "finished"]
+- !private ["8ZenTimer0B5StateO", "interrupted"]
+- !private ["8ZenTimer0B5StateO", "paused"]
+- ["8ZenTimer0B5StateO", "ready"]
+- !private ["8ZenTimer0B5StateO", "running"]
+- !private ["So21UNAuthorizationStatusV", "=="]
+- !private ["So21UNAuthorizationStatusV", "RawValue"]
+- !private ["So21UNAuthorizationStatusV", "authorized"]
+- !private ["So28UNMutableNotificationContentC", "badge"]
+- !private ["So28UNMutableNotificationContentC", "body"]
+- !private ["So28UNMutableNotificationContentC", "init"]
+- !private ["So28UNMutableNotificationContentC", "sound"]
+- !private ["So28UNMutableNotificationContentC", "title"]
+- ["So21UNNotificationContentC", ""]
+- !private ["So21UNNotificationContentC", "badge"]
+- !private ["So21UNNotificationContentC", "body"]
+- !private ["So21UNNotificationContentC", "init"]
+- !private ["So21UNNotificationContentC", "sound"]
+- !private ["So21UNNotificationContentC", "title"]
+- !private ["So21UNNotificationRequestC", "init"]
+- !private ["So22UNNotificationSettingsC", "authorizationStatus"]
+- !private ["So19UNNotificationSoundC", "init"]
+- !private ["So23UNNotificationSoundNamea", "RawValue"]
+- !private ["So23UNNotificationSoundNamea", "init"]
+- ["So21UNNotificationTriggerC", ""]
+- !private ["So21UNNotificationTriggerC", "init"]
+- !private ["So21UNNotificationTriggerC", "triggerWithTimeInterval"]
+- !private ["So33UNTimeIntervalNotificationTriggerC", "init"]
+- !private ["So24UNUserNotificationCenterC", "add"]
+- ["So24UNUserNotificationCenterC", "current"]
+- !private ["So24UNUserNotificationCenterC", "getNotificationSettings"]
+- !private ["So14NSUserDefaultsC", "object"]
+- !private ["So14NSUserDefaultsC", "set"]
+- ["So14NSUserDefaultsC", "standard"]
+- !private ["8ZenTimer9WorkStateO", ""]
+- !private ["8ZenTimer9WorkStateO", "onBreak"]
+- ["8ZenTimer9WorkStateO", "working"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s15_CVarArgAlignedP", "secondsToMinutesAndSeconds"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "secondsToMinutesAndSeconds"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "secondsToMinutesAndSeconds"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "toggle"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "toggle"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "secondsToMinutesAndSeconds"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "secondsToMinutesAndSeconds"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "RawValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "secondsToMinutesAndSeconds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authorizationStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "badge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "body"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getNotificationSettings"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "invalidate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "object"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sound"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "add"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authorizationStatus"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "badge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "body"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "current"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getNotificationSettings"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "invalidate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "object"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sound"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "title"]
+- !private ["s21_ObjectiveCBridgeableP", "RawValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "secondsToMinutesAndSeconds"]
+- !private ["s21_ObjectiveCBridgeableP", "toggle"]
+- !private ["s20_SwiftNewtypeWrapperP", "RawValue"]
+- !private ["s20_SwiftNewtypeWrapperP", "init"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "8ZenTimer18AudioSettingsStateO"
+- "SK"
+- !private "SB"
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "8ZenTimer9ConstantsV"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "Sd"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sj"
+- "8ZenTimer7PDTimerC"
+- "8ZenTimer17PDTimerControllerC"
+- !private "SY"
+- "8ZenTimer16ResetButtonStateO"
+- !private "s10SIMDScalarP"
+- "ST"
+- "8ZenTimer17SettingsMenuStateO"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s27StringInterpolationProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So7NSTimerC"
+- "8ZenTimer0B12MessageStateO"
+- "8ZenTimer0B5StateO"
+- !private "So21UNAuthorizationStatusV"
+- !private "So28UNMutableNotificationContentC"
+- "So21UNNotificationContentC"
+- !private "So21UNNotificationRequestC"
+- !private "So22UNNotificationSettingsC"
+- !private "So19UNNotificationSoundC"
+- !private "So23UNNotificationSoundNamea"
+- "So21UNNotificationTriggerC"
+- !private "So33UNTimeIntervalNotificationTriggerC"
+- "So24UNUserNotificationCenterC"
+- "So14NSUserDefaultsC"
+- "8ZenTimer9WorkStateO"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "7480be2ff37ece75e8b1064bb5a5c637"

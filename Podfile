@@ -7,5 +7,6 @@ target 'ZenTimer' do
 
   # Pods for ZenTimer
   pod 'paper-onboarding'
+  pod 'Google-Mobile-Ads-SDK'
 
 end
