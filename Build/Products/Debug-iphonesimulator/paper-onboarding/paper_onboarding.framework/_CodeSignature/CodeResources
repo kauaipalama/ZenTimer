@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LBhntuddESIXt3le3CuhNb5TEYE=
+		BHnwLbzUVyJNlOPp6GCZagzyvT0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -22,33 +22,37 @@
 		</data>
 		<key>Modules/paper_onboarding.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		KqAsQH5gaNDG0Lu1tyD1+FuXrNQ=
+		gkGYJEXhWebnUt8CJfqPQ2qj6Ew=
 		</data>
 		<key>Modules/paper_onboarding.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		KqAsQH5gaNDG0Lu1tyD1+FuXrNQ=
+		gkGYJEXhWebnUt8CJfqPQ2qj6Ew=
 		</data>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ccCqeC4VaqPBhE0AqswBArdjf1g=
+		1omSuO1bUyd35kjnh6ovQNP8ZLo=
 		</data>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zFwanIv58pMFq+W8qEWyK1+37Ts=
+		wNvippd3yjL1QKArsfUeJEFFPaY=
 		</data>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		ccCqeC4VaqPBhE0AqswBArdjf1g=
+		1omSuO1bUyd35kjnh6ovQNP8ZLo=
 		</data>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		zFwanIv58pMFq+W8qEWyK1+37Ts=
+		wNvippd3yjL1QKArsfUeJEFFPaY=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/paper-onboarding-umbrella.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			zhZfQm77ylfbiTf0LRIGj59dPq4=
+			</data>
 			<key>hash2</key>
 			<data>
 			XdMeqVgQM9MvMRx4qbyy9F+0Z1qnd3sejIw3ZDS28jY=
@@ -56,6 +60,10 @@
 		</dict>
 		<key>Headers/paper_onboarding-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			6/KF5jr6tZgp/ek++7Sf71HLqnc=
+			</data>
 			<key>hash2</key>
 			<data>
 			DsRiP+OZVePhsPo22ULkaPAhcc8DQkVQxILAS2txBaA=
@@ -63,6 +71,10 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			6lbB5MZX4FQ3Zy55Cn2dke8yuEc=
+			</data>
 			<key>hash2</key>
 			<data>
 			poBl/YyKv1VuCH4WTdVrqQxrMM+huHHBlta9bptkERE=
@@ -70,44 +82,68 @@
 		</dict>
 		<key>Modules/paper_onboarding.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			gkGYJEXhWebnUt8CJfqPQ2qj6Ew=
+			</data>
 			<key>hash2</key>
 			<data>
-			dKuXU/Z+TjbTYQ3G/u0a9TxHMx0bzXJOvVWp4Z1K44k=
+			5G2svby2CsIcuv61q1bgcdeSIZ0y/F5kINNPjLD14Ic=
 			</data>
 		</dict>
 		<key>Modules/paper_onboarding.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			gkGYJEXhWebnUt8CJfqPQ2qj6Ew=
+			</data>
 			<key>hash2</key>
 			<data>
-			dKuXU/Z+TjbTYQ3G/u0a9TxHMx0bzXJOvVWp4Z1K44k=
+			5G2svby2CsIcuv61q1bgcdeSIZ0y/F5kINNPjLD14Ic=
 			</data>
 		</dict>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			1omSuO1bUyd35kjnh6ovQNP8ZLo=
+			</data>
 			<key>hash2</key>
 			<data>
-			/lN2VCifWTCXJo4AlEqiJvsHZQB+nYsrlZe815J2Ti4=
+			hfTIbajaI/gjnQev3KxrMD9Qqrr+7ZH1imWx056pTl0=
 			</data>
 		</dict>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			wNvippd3yjL1QKArsfUeJEFFPaY=
+			</data>
 			<key>hash2</key>
 			<data>
-			YOY9/Iw836s07YOUy2L7BzSUMtRhYZtNiFZOdySHem4=
+			txKTB2w2L1SlyTR5kFtJcf0HHDVMpMa1TPoSaSeVVU4=
 			</data>
 		</dict>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			1omSuO1bUyd35kjnh6ovQNP8ZLo=
+			</data>
 			<key>hash2</key>
 			<data>
-			/lN2VCifWTCXJo4AlEqiJvsHZQB+nYsrlZe815J2Ti4=
+			hfTIbajaI/gjnQev3KxrMD9Qqrr+7ZH1imWx056pTl0=
 			</data>
 		</dict>
 		<key>Modules/paper_onboarding.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			wNvippd3yjL1QKArsfUeJEFFPaY=
+			</data>
 			<key>hash2</key>
 			<data>
-			YOY9/Iw836s07YOUy2L7BzSUMtRhYZtNiFZOdySHem4=
+			txKTB2w2L1SlyTR5kFtJcf0HHDVMpMa1TPoSaSeVVU4=
 			</data>
 		</dict>
 	</dict>

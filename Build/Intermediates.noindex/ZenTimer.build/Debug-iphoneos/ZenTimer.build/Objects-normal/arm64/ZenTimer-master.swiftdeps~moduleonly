@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
 options: "125e9e3fd7e8169e0d429bb3672ef91b"
-build_time: [1608413059, 566361000]
+build_time: [1608414113, 765407000]
 inputs:
   "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Helpers/DoubleExtension.swift": [1565500170, 1173937]
   "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/ZenTimer/Helpers/States.swift": [1584995475, 680822199]
