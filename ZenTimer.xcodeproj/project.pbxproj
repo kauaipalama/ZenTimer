@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780C72FC9C55BDCC70C5F8C5 /* Pods_ZenTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60555D051DCECD51BE45EA88 /* Pods_ZenTimer.framework */; };
 		B41F50AA246CBCD400D9C699 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B41F50AC246CBCD400D9C699 /* InfoPlist.strings */; };
 		B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109B22FFC9270092E4F0 /* PDTimer.swift */; };
 		B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448109D22FFC93A0092E4F0 /* PDTimerController.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60555D051DCECD51BE45EA88 /* Pods_ZenTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B61AEA2555CCB32E3D0AF4E /* Pods-ZenTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.release.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.release.xcconfig"; sourceTree = "<group>"; };
 		B41F50A62468F53800D9C699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B41F50A72468F5A100D9C699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B41F50AB246CBCD400D9C699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		B4E5E15B230A3090000640D7 /* rainbow1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow1.wav; sourceTree = "<group>"; };
 		B4F33E2A23529763004AD28C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B4F33E2B23529763004AD28C /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		B90FA3A6D7220CA0FF9DF587 /* Pods-ZenTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTimer.debug.xcconfig"; path = "Target Support Files/Pods-ZenTimer/Pods-ZenTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			files = (
 				B4589CE02331D7DD007525F3 /* paper_onboarding.framework in Frameworks */,
 				B4E5E13F23064EAA000640D7 /* AVFoundation.framework in Frameworks */,
+				780C72FC9C55BDCC70C5F8C5 /* Pods_ZenTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,8 @@
 		7613DA346EBC135F9317AF04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				B90FA3A6D7220CA0FF9DF587 /* Pods-ZenTimer.debug.xcconfig */,
+				6B61AEA2555CCB32E3D0AF4E /* Pods-ZenTimer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 			children = (
 				B4589CDF2331D7DD007525F3 /* paper_onboarding.framework */,
 				B4E5E13E23064EA9000640D7 /* AVFoundation.framework */,
+				60555D051DCECD51BE45EA88 /* Pods_ZenTimer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4A34AA922FBD76200FB66DE /* Build configuration list for PBXNativeTarget "ZenTimer" */;
 			buildPhases = (
+				A82FB1D689F85811563D06EB /* [CP] Check Pods Manifest.lock */,
 				B4A34A9322FBD76100FB66DE /* Sources */,
 				B4A34A9422FBD76100FB66DE /* Frameworks */,
 				B4A34A9522FBD76100FB66DE /* Resources */,
+				A7A9D94BFD327639276B5A1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +308,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7A9D94BFD327639276B5A1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZenTimer/Pods-ZenTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A82FB1D689F85811563D06EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZenTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4A34A9322FBD76100FB66DE /* Sources */ = {
@@ -481,6 +533,7 @@
 		};
 		B4A34AAA22FBD76200FB66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90FA3A6D7220CA0FF9DF587 /* Pods-ZenTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +555,7 @@
 		};
 		B4A34AAB22FBD76200FB66DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B61AEA2555CCB32E3D0AF4E /* Pods-ZenTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
