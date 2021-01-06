@@ -13,8 +13,7 @@ class AdController: NSObject, GADInterstitialDelegate {
     
     private override init() {}
     static let shared = AdController()
-    
-    var interstitial: GADInterstitial!
+    private var interstitial: GADInterstitial!
     
     func initializeInterstitalAd() {
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
@@ -23,13 +22,14 @@ class AdController: NSObject, GADInterstitialDelegate {
         interstitial.load(request)
     }
     
-    //Add logic to show ads with a slight delay to allow audiofile to play. 
     func presentInterstitialAd(rootViewController: UIViewController) {
-        if interstitial.isReady {
-            //Show ad
-            interstitial.present(fromRootViewController: rootViewController)
-        } else {
-            //Dont show ad
+        guard PDTimerController.shared.pdTimer.workState == .working else {return}
+        if interstitial.isReady && ReviewController.shared.eligibleForReviewRequest == false {
+            UIApplication.shared.beginIgnoringInteractionEvents()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+                interstitial.present(fromRootViewController: rootViewController)
+                UIApplication.shared.endIgnoringInteractionEvents()
+            }
         }
     }
     

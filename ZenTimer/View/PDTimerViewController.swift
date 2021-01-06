@@ -149,12 +149,11 @@ class PDTimerViewController: UIViewController {
                             button.alpha = 100
                         }
                     }
-                    //Application is running in the foreground with sound on. Play sound, check if user is eligible for a request for App Store review, if review is not requested, check to see if user is eligible for interstitial ad presentation
                     if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOn {
                         self?.alertSoundPlayer.prepareToPlay()
                         self?.alertSoundPlayer.play()
                         ReviewController.shared.requestReview()
-                    //Application is running in the foreground with sound off. Display alert, after user action check if user is eligible for a request for App Store review, if review is not requested, check to see if user is eligible for interstitial ad presentation
+                        AdController.shared.presentInterstitialAd(rootViewController: self!)
                     } else if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOff {
                         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                         var title: String {
@@ -169,6 +168,7 @@ class PDTimerViewController: UIViewController {
                         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { (_) in
                             ReviewController.shared.requestReview()
+                            AdController.shared.presentInterstitialAd(rootViewController: self!)
                         }))
                         self?.present(alert, animated: true, completion: nil)
                     }
@@ -184,11 +184,6 @@ class PDTimerViewController: UIViewController {
                     }
                     PDTimerController.shared.scheduleAlarmNotification()
                     self?.whiteNoisePlayer.volume = 0
-                    //PResent ad logic herr? What about when sound is off and alert is presented?
-                    //Present Ad every other break if review has not been requested. Fix force cast
-                    if self?.pdTimer.workState == .onBreak {
-                        AdController.shared.presentInterstitialAd(rootViewController: self!)
-                    }
                 }
             })
             self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)

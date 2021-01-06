@@ -36,18 +36,18 @@ class ReviewController {
         return Calendar.current.date(byAdding: .day, value: -7, to: Date())!
     }
     
-    private var oneHundredTwentyThreeDaysLater: Date {
-        return Calendar.current.date(byAdding: .day, value: -365, to: Date())!
+    private var oneHundredTwentyThreeDaysAgo: Date {
+        return Calendar.current.date(byAdding: .day, value: -123, to: Date())!
     }
     
-    private var shouldRequestReview: Bool {
+    var eligibleForReviewRequest: Bool {
         if initialLaunch == nil {
             initialLaunch = Date()
             return false
         } else if let initialLaunch = self.initialLaunch, initialLaunch < oneWeekAgo && numberOfRequests < 1 {
             numberOfRequests += 1
             return true
-        } else if let initialLaunch = self.initialLaunch, initialLaunch < oneHundredTwentyThreeDaysLater && numberOfRequests < 2 {
+        } else if let initialLaunch = self.initialLaunch, initialLaunch < oneHundredTwentyThreeDaysAgo && numberOfRequests < 2 {
             numberOfRequests += 1
             return true
         }
@@ -55,9 +55,12 @@ class ReviewController {
     }
     
     func requestReview() {
-        guard  shouldRequestReview else {return}
+        guard PDTimerController.shared.pdTimer.workState == .working else {return}
+        guard eligibleForReviewRequest else {return}
+        UIApplication.shared.beginIgnoringInteractionEvents()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             SKStoreReviewController.requestReview()
+            UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
 }
