@@ -56,15 +56,8 @@ class ReviewController {
     
     func requestReview() {
         guard  shouldRequestReview else {return}
-        if PDTimerController.shared.pdTimer.audioSettingsState == .soundOff {
-            DispatchQueue.main.async {
-                SKStoreReviewController.requestReview()
-            }
-        } else if PDTimerController.shared.pdTimer.audioSettingsState == .soundOn {
-            //FIX this. Read comments in AlarmNotificationDelegate
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                SKStoreReviewController.requestReview()
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            SKStoreReviewController.requestReview()
         }
     }
 }
