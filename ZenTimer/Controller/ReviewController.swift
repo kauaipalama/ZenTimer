@@ -61,6 +61,7 @@ class ReviewController {
                 SKStoreReviewController.requestReview()
             }
         } else if PDTimerController.shared.pdTimer.audioSettingsState == .soundOn {
+            //FIX this. Read comments in AlarmNotificationDelegate
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 SKStoreReviewController.requestReview()
             }

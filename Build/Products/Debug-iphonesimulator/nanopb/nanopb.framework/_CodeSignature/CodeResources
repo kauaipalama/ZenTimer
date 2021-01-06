@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BNkmz/U98IHVty6Qd6YZsivtfPk=
+		mZgH9mumcP7dc6p2sXsG1cab6Y8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -37,10 +37,6 @@
 	<dict>
 		<key>Headers/nanopb-umbrella.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3AHKVvUiwH5st6WulWFEieJUQMI=
-			</data>
 			<key>hash2</key>
 			<data>
 			ua0swQdCw9NqdpzW1vnyfp6Sep7qcaFrByRxT8BolY0=
@@ -48,10 +44,6 @@
 		</dict>
 		<key>Headers/pb.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			az8iWOkZacekqg3N1rQF6ugIfTA=
-			</data>
 			<key>hash2</key>
 			<data>
 			lLB3CA75JLYHM+Tov6hodGTwuSY25M7QrmgAgivj6wY=
@@ -59,10 +51,6 @@
 		</dict>
 		<key>Headers/pb_common.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			AdSOtv4HeHxYwkFyKB6MbxGs1Ns=
-			</data>
 			<key>hash2</key>
 			<data>
 			PtDnUYzSxgTyYx84uo0xGdqu6zxbOcttuWjKVAMtdUE=
@@ -70,10 +58,6 @@
 		</dict>
 		<key>Headers/pb_decode.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			71k8w9HgFHTP3y98V/i9ExE9UYU=
-			</data>
 			<key>hash2</key>
 			<data>
 			rf5T82EuZcRWFPEpIm6LAN3nzI8c9+0y61h2WYpbKJQ=
@@ -81,10 +65,6 @@
 		</dict>
 		<key>Headers/pb_encode.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6/gafH6qX9WyvTK0TqL9Dpy3Qys=
-			</data>
 			<key>hash2</key>
 			<data>
 			J5QP7VKFBpKH/6nLRdy2Oc1TFbCenMNCROzTx2Di2T4=
@@ -92,10 +72,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VE0n+HvVm7YDki/SnnYSYzJdaOE=
-			</data>
 			<key>hash2</key>
 			<data>
 			964ewTQFnBAQHHPXRiTBEL9kMV+4JU4sMGWXVlK03/s=

@@ -149,10 +149,12 @@ class PDTimerViewController: UIViewController {
                             button.alpha = 100
                         }
                     }
+                    //Application is running in the foreground with sound on. Play sound, check if user is eligible for a request for App Store review, if review is not requested, check to see if user is eligible for interstitial ad presentation
                     if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOn {
                         self?.alertSoundPlayer.prepareToPlay()
                         self?.alertSoundPlayer.play()
                         ReviewController.shared.requestReview()
+                    //Application is running in the foreground with sound off. Display alert, after user action check if user is eligible for a request for App Store review, if review is not requested, check to see if user is eligible for interstitial ad presentation
                     } else if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOff {
                         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                         var title: String {
