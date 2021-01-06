@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import UserNotifications
+import GoogleMobileAds
 
 protocol CardViewDelegate {
     func displayScrollIndicator()
@@ -24,6 +25,8 @@ class PDTimerViewController: UIViewController {
         PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
         splashMaskView.alpha = 1
+        //Queue up Ad
+        AdController.shared.initializeInterstitalAd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -179,6 +182,11 @@ class PDTimerViewController: UIViewController {
                     }
                     PDTimerController.shared.scheduleAlarmNotification()
                     self?.whiteNoisePlayer.volume = 0
+                    //PResent ad logic herr? What about when sound is off and alert is presented?
+                    //Present Ad every other break if review has not been requested. Fix force cast
+                    if self?.pdTimer.workState == .onBreak {
+                        AdController.shared.presentInterstitialAd(rootViewController: self!)
+                    }
                 }
             })
             self.timerLabel.text = Double().secondsToMinutesAndSeconds(timeInterval: PDTimerController.shared.pdTimer.timeRemaining)
@@ -374,8 +382,8 @@ class PDTimerViewController: UIViewController {
     
     @objc func handleInterruption(_ notification: Notification) {
         guard let info = notification.userInfo,
-            let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
-            let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
+              let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
         if type == .began {
             if pdTimer.timerState == .running {
                 PDTimerController.shared.stop()
@@ -740,4 +748,7 @@ class PDTimerViewController: UIViewController {
     
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted: CGFloat = 0
+    
+    var interstitial: GADInterstitial!
+    let request = GADRequest()
 }

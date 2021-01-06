@@ -33,6 +33,7 @@ provides-dynamic-lookup:
 - "increaseSessionLengthTapped"
 - "infoButton"
 - "infoButtonTapped"
+- "interstitial"
 - "messageLabel"
 - "muteButton"
 - "muteButtonTapped"
@@ -48,6 +49,7 @@ provides-dynamic-lookup:
 - "pulseAnimation"
 - "reloadPulseAnimation"
 - "removePulseAnimation"
+- "request"
 - "resetButton"
 - "resetButtonTapped"
 - "resetView"
@@ -99,6 +101,7 @@ depends-top-level:
 - !private "AVAudioSession"
 - !private "AVAudioSessionInterruptionOptionKey"
 - !private "AVAudioSessionInterruptionTypeKey"
+- "AdController"
 - !private "Array"
 - "AssignmentPrecedence"
 - "AudioServicesPlayAlertSound"
@@ -119,6 +122,8 @@ depends-top-level:
 - "Constants"
 - "Double"
 - "FloatLiteralType"
+- "GADInterstitial"
+- "GADRequest"
 - !private "Int"
 - "IntegerLiteralType"
 - !private "NSNumber"
@@ -224,6 +229,9 @@ depends-member:
 - !private ["So14AVAudioSessionC", "InterruptionType"]
 - !private ["So14AVAudioSessionC", "interruptionNotification"]
 - !private ["So14AVAudioSessionC", "sharedInstance"]
+- !private ["8ZenTimer12AdControllerC", "initializeInterstitalAd"]
+- !private ["8ZenTimer12AdControllerC", "presentInterstitialAd"]
+- !private ["8ZenTimer12AdControllerC", "shared"]
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "greatestFiniteMagnitude"]
 - !private ["s18AdditiveArithmeticP", "init"]
@@ -281,6 +289,7 @@ depends-member:
 - !private ["So7CALayerC", "cornerRadius"]
 - ["So7CALayerC", "opacity"]
 - !private ["So7CALayerC", "removeAllAnimations"]
+- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "alpha"]
@@ -328,6 +337,7 @@ depends-member:
 - !private ["s7CVarArgP", "AVAudioSession"]
 - !private ["s7CVarArgP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["s7CVarArgP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["s7CVarArgP", "AdController"]
 - !private ["s7CVarArgP", "AudioServicesPlayAlertSound"]
 - !private ["s7CVarArgP", "AudioServicesPlaySystemSound"]
 - !private ["s7CVarArgP", "Bundle"]
@@ -339,6 +349,7 @@ depends-member:
 - !private ["s7CVarArgP", "CardViewController"]
 - !private ["s7CVarArgP", "Constants"]
 - !private ["s7CVarArgP", "Double"]
+- ["s7CVarArgP", "GADRequest"]
 - !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "InterruptionOptions"]
 - !private ["s7CVarArgP", "InterruptionType"]
@@ -416,6 +427,7 @@ depends-member:
 - !private ["s7CVarArgP", "infoButton"]
 - !private ["s7CVarArgP", "infoButtonTapped"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "initializeInterstitalAd"]
 - !private ["s7CVarArgP", "interruptionNotification"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isEnabled"]
@@ -445,6 +457,7 @@ depends-member:
 - !private ["s7CVarArgP", "prepare"]
 - !private ["s7CVarArgP", "prepareToPlay"]
 - !private ["s7CVarArgP", "present"]
+- !private ["s7CVarArgP", "presentInterstitialAd"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "pulseAnimation"]
 - !private ["s7CVarArgP", "reloadPulseAnimation"]
@@ -522,7 +535,7 @@ depends-member:
 - !private ["Sl", "isEmpty"]
 - !private ["Sl", "removeAll"]
 - !private ["Sl", "subscript"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["SL", "greatestFiniteMagnitude"]
 - !private ["SL", "init"]
 - !private ["SL", "secondsToMinutesAndSeconds"]
@@ -542,6 +555,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "AVAudioSession"]
 - !private ["s28CustomDebugStringConvertibleP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["s28CustomDebugStringConvertibleP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["s28CustomDebugStringConvertibleP", "AdController"]
 - !private ["s28CustomDebugStringConvertibleP", "AudioServicesPlayAlertSound"]
 - !private ["s28CustomDebugStringConvertibleP", "AudioServicesPlaySystemSound"]
 - !private ["s28CustomDebugStringConvertibleP", "Bundle"]
@@ -553,6 +567,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "CardViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "Constants"]
 - !private ["s28CustomDebugStringConvertibleP", "Double"]
+- ["s28CustomDebugStringConvertibleP", "GADRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "InterruptionOptions"]
 - !private ["s28CustomDebugStringConvertibleP", "InterruptionType"]
@@ -633,6 +648,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "infoButton"]
 - !private ["s28CustomDebugStringConvertibleP", "infoButtonTapped"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "initializeInterstitalAd"]
 - !private ["s28CustomDebugStringConvertibleP", "interruptionNotification"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isEnabled"]
@@ -664,6 +680,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "prepare"]
 - !private ["s28CustomDebugStringConvertibleP", "prepareToPlay"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
+- !private ["s28CustomDebugStringConvertibleP", "presentInterstitialAd"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "pulseAnimation"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadPulseAnimation"]
@@ -771,6 +788,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "AVAudioSession"]
 - !private ["s23CustomStringConvertibleP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["s23CustomStringConvertibleP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["s23CustomStringConvertibleP", "AdController"]
 - !private ["s23CustomStringConvertibleP", "AudioServicesPlayAlertSound"]
 - !private ["s23CustomStringConvertibleP", "AudioServicesPlaySystemSound"]
 - !private ["s23CustomStringConvertibleP", "Bundle"]
@@ -783,6 +801,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "Constants"]
 - !private ["s23CustomStringConvertibleP", "Double"]
 - !private ["s23CustomStringConvertibleP", "Element"]
+- ["s23CustomStringConvertibleP", "GADRequest"]
 - !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "InterruptionOptions"]
 - !private ["s23CustomStringConvertibleP", "InterruptionType"]
@@ -862,6 +881,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "infoButton"]
 - !private ["s23CustomStringConvertibleP", "infoButtonTapped"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "initializeInterstitalAd"]
 - !private ["s23CustomStringConvertibleP", "interruptionNotification"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isEnabled"]
@@ -891,6 +911,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "prepare"]
 - !private ["s23CustomStringConvertibleP", "prepareToPlay"]
 - !private ["s23CustomStringConvertibleP", "present"]
+- !private ["s23CustomStringConvertibleP", "presentInterstitialAd"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "pulseAnimation"]
 - !private ["s23CustomStringConvertibleP", "reloadPulseAnimation"]
@@ -1039,6 +1060,7 @@ depends-member:
 - !private ["SQ", "AVAudioSession"]
 - !private ["SQ", "AVAudioSessionInterruptionOptionKey"]
 - !private ["SQ", "AVAudioSessionInterruptionTypeKey"]
+- !private ["SQ", "AdController"]
 - !private ["SQ", "ArrayLiteralElement"]
 - !private ["SQ", "AudioServicesPlayAlertSound"]
 - !private ["SQ", "AudioServicesPlaySystemSound"]
@@ -1052,6 +1074,7 @@ depends-member:
 - !private ["SQ", "Constants"]
 - !private ["SQ", "Double"]
 - !private ["SQ", "Element"]
+- ["SQ", "GADRequest"]
 - !private ["SQ", "Int"]
 - !private ["SQ", "InterruptionOptions"]
 - !private ["SQ", "InterruptionType"]
@@ -1146,6 +1169,7 @@ depends-member:
 - !private ["SQ", "infoButton"]
 - !private ["SQ", "infoButtonTapped"]
 - ["SQ", "init"]
+- !private ["SQ", "initializeInterstitalAd"]
 - !private ["SQ", "interrupted"]
 - !private ["SQ", "interruptionNotification"]
 - !private ["SQ", "isEmpty"]
@@ -1183,6 +1207,7 @@ depends-member:
 - !private ["SQ", "prepare"]
 - !private ["SQ", "prepareToPlay"]
 - !private ["SQ", "present"]
+- !private ["SQ", "presentInterstitialAd"]
 - !private ["SQ", "print"]
 - !private ["SQ", "pulseAnimation"]
 - !private ["SQ", "ready"]
@@ -1271,7 +1296,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "sound"]
 - !private ["s27ExpressibleByBooleanLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -1309,11 +1334,11 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "volume"]
 - !private ["s23ExpressibleByNilLiteralP", "working"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["So21UIImpactFeedbackStyleV", "light"]
 - !private ["s17FixedWidthIntegerP", "init"]
@@ -1372,11 +1397,16 @@ depends-member:
 - !private ["SF", "truncatingRemainder"]
 - !private ["SF", "ulp"]
 - !private ["SF", "ulpOfOne"]
+- ["So23GADInterstitialDelegateP", "initializeInterstitalAd"]
+- !private ["So23GADInterstitialDelegateP", "presentInterstitialAd"]
+- !private ["So23GADInterstitialDelegateP", "shared"]
+- ["So10GADRequestC", "init"]
 - !private ["SH", "=="]
 - !private ["SH", "AVAudioPlayer"]
 - !private ["SH", "AVAudioSession"]
 - !private ["SH", "AVAudioSessionInterruptionOptionKey"]
 - !private ["SH", "AVAudioSessionInterruptionTypeKey"]
+- !private ["SH", "AdController"]
 - !private ["SH", "AudioServicesPlayAlertSound"]
 - !private ["SH", "AudioServicesPlaySystemSound"]
 - !private ["SH", "Bundle"]
@@ -1388,6 +1418,7 @@ depends-member:
 - !private ["SH", "CardViewController"]
 - !private ["SH", "Constants"]
 - !private ["SH", "Double"]
+- ["SH", "GADRequest"]
 - !private ["SH", "Int"]
 - !private ["SH", "InterruptionOptions"]
 - !private ["SH", "InterruptionType"]
@@ -1478,6 +1509,7 @@ depends-member:
 - !private ["SH", "infoButton"]
 - !private ["SH", "infoButtonTapped"]
 - ["SH", "init"]
+- !private ["SH", "initializeInterstitalAd"]
 - !private ["SH", "interrupted"]
 - !private ["SH", "interruptionNotification"]
 - !private ["SH", "isEmpty"]
@@ -1513,6 +1545,7 @@ depends-member:
 - !private ["SH", "prepare"]
 - !private ["SH", "prepareToPlay"]
 - !private ["SH", "present"]
+- !private ["SH", "presentInterstitialAd"]
 - !private ["SH", "print"]
 - !private ["SH", "pulseAnimation"]
 - !private ["SH", "ready"]
@@ -1593,7 +1626,7 @@ depends-member:
 - !private ["So30AVAudioSessionInterruptionTypeV", "ended"]
 - !private ["So30AVAudioSessionInterruptionTypeV", "init"]
 - !private ["s25LosslessStringConvertibleP", "Element"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "greatestFiniteMagnitude"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "secondsToMinutesAndSeconds"]
@@ -1611,8 +1644,10 @@ depends-member:
 - !private ["So8NSCodingP", "AVAudioSession"]
 - !private ["So8NSCodingP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So8NSCodingP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So8NSCodingP", "AdController"]
 - !private ["So8NSCodingP", "AudioServicesPlayAlertSound"]
 - !private ["So8NSCodingP", "AudioServicesPlaySystemSound"]
+- ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "Bundle"]
 - ["So8NSCodingP", "CABasicAnimation"]
 - ["So8NSCodingP", "CALayer"]
@@ -1625,6 +1660,8 @@ depends-member:
 - ["So8NSCodingP", "CardViewState"]
 - !private ["So8NSCodingP", "Constants"]
 - !private ["So8NSCodingP", "Double"]
+- ["So8NSCodingP", "GADInterstitial"]
+- ["So8NSCodingP", "GADRequest"]
 - !private ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "NSNumber"]
 - ["So8NSCodingP", "Notification"]
@@ -1638,6 +1675,7 @@ depends-member:
 - !private ["So8NSCodingP", "UIAlertController"]
 - !private ["So8NSCodingP", "UIApplication"]
 - !private ["So8NSCodingP", "UIBlurEffect"]
+- ["So8NSCodingP", "UIButton"]
 - ["So8NSCodingP", "UIGestureRecognizer"]
 - ["So8NSCodingP", "UIImageView"]
 - ["So8NSCodingP", "UIImpactFeedbackGenerator"]
@@ -1645,7 +1683,7 @@ depends-member:
 - ["So8NSCodingP", "UIPanGestureRecognizer"]
 - ["So8NSCodingP", "UIStatusBarStyle"]
 - !private ["So8NSCodingP", "UITapGestureRecognizer"]
-- !private ["So8NSCodingP", "UIView"]
+- ["So8NSCodingP", "UIView"]
 - ["So8NSCodingP", "UIViewPropertyAnimator"]
 - ["So8NSCodingP", "UIVisualEffectView"]
 - !private ["So8NSCodingP", "UInt"]
@@ -1698,6 +1736,7 @@ depends-member:
 - ["So8NSCodingP", "infoButton"]
 - ["So8NSCodingP", "infoButtonTapped"]
 - ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "interstitial"]
 - !private ["So8NSCodingP", "isEnabled"]
 - !private ["So8NSCodingP", "isHidden"]
 - !private ["So8NSCodingP", "isUserInteractionEnabled"]
@@ -1738,6 +1777,7 @@ depends-member:
 - !private ["So8NSCodingP", "removeAllAnimations"]
 - ["So8NSCodingP", "removePulseAnimation"]
 - !private ["So8NSCodingP", "repeatCount"]
+- ["So8NSCodingP", "request"]
 - ["So8NSCodingP", "resetButton"]
 - ["So8NSCodingP", "resetButtonTapped"]
 - ["So8NSCodingP", "resetView"]
@@ -1812,8 +1852,10 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "AVAudioSession"]
 - !private ["So26NSExtensionRequestHandlingP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So26NSExtensionRequestHandlingP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So26NSExtensionRequestHandlingP", "AdController"]
 - !private ["So26NSExtensionRequestHandlingP", "AudioServicesPlayAlertSound"]
 - !private ["So26NSExtensionRequestHandlingP", "AudioServicesPlaySystemSound"]
+- ["So26NSExtensionRequestHandlingP", "Bool"]
 - !private ["So26NSExtensionRequestHandlingP", "Bundle"]
 - ["So26NSExtensionRequestHandlingP", "CABasicAnimation"]
 - ["So26NSExtensionRequestHandlingP", "CALayer"]
@@ -1826,6 +1868,8 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "CardViewState"]
 - !private ["So26NSExtensionRequestHandlingP", "Constants"]
 - !private ["So26NSExtensionRequestHandlingP", "Double"]
+- ["So26NSExtensionRequestHandlingP", "GADInterstitial"]
+- ["So26NSExtensionRequestHandlingP", "GADRequest"]
 - !private ["So26NSExtensionRequestHandlingP", "Int"]
 - !private ["So26NSExtensionRequestHandlingP", "NSNumber"]
 - ["So26NSExtensionRequestHandlingP", "Notification"]
@@ -1839,6 +1883,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
 - !private ["So26NSExtensionRequestHandlingP", "UIApplication"]
 - !private ["So26NSExtensionRequestHandlingP", "UIBlurEffect"]
+- ["So26NSExtensionRequestHandlingP", "UIButton"]
 - ["So26NSExtensionRequestHandlingP", "UIGestureRecognizer"]
 - ["So26NSExtensionRequestHandlingP", "UIImageView"]
 - ["So26NSExtensionRequestHandlingP", "UIImpactFeedbackGenerator"]
@@ -1846,7 +1891,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIPanGestureRecognizer"]
 - ["So26NSExtensionRequestHandlingP", "UIStatusBarStyle"]
 - !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
-- !private ["So26NSExtensionRequestHandlingP", "UIView"]
+- ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", "UIViewPropertyAnimator"]
 - ["So26NSExtensionRequestHandlingP", "UIVisualEffectView"]
 - !private ["So26NSExtensionRequestHandlingP", "UInt"]
@@ -1884,6 +1929,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "infoButton"]
 - ["So26NSExtensionRequestHandlingP", "infoButtonTapped"]
 - ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "interstitial"]
 - !private ["So26NSExtensionRequestHandlingP", "kSystemSoundID_Vibrate"]
 - ["So26NSExtensionRequestHandlingP", "messageLabel"]
 - ["So26NSExtensionRequestHandlingP", "muteButton"]
@@ -1902,6 +1948,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "pulseAnimation"]
 - ["So26NSExtensionRequestHandlingP", "reloadPulseAnimation"]
 - ["So26NSExtensionRequestHandlingP", "removePulseAnimation"]
+- ["So26NSExtensionRequestHandlingP", "request"]
 - ["So26NSExtensionRequestHandlingP", "resetButton"]
 - ["So26NSExtensionRequestHandlingP", "resetButtonTapped"]
 - ["So26NSExtensionRequestHandlingP", "resetView"]
@@ -1943,6 +1990,7 @@ depends-member:
 - !private ["So8NSObjectC", "AVAudioSession"]
 - !private ["So8NSObjectC", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So8NSObjectC", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So8NSObjectC", "AdController"]
 - !private ["So8NSObjectC", "AudioServicesPlayAlertSound"]
 - !private ["So8NSObjectC", "AudioServicesPlaySystemSound"]
 - ["So8NSObjectC", "Bool"]
@@ -1958,6 +2006,8 @@ depends-member:
 - ["So8NSObjectC", "CardViewState"]
 - !private ["So8NSObjectC", "Constants"]
 - !private ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "GADInterstitial"]
+- ["So8NSObjectC", "GADRequest"]
 - !private ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "InterruptionOptions"]
 - !private ["So8NSObjectC", "InterruptionType"]
@@ -2009,6 +2059,7 @@ depends-member:
 - !private ["So8NSObjectC", "alpha"]
 - !private ["So8NSObjectC", "animate"]
 - ["So8NSObjectC", "animateTransitionIfNeeded"]
+- !private ["So8NSObjectC", "animateWithDuration"]
 - ["So8NSObjectC", "animation"]
 - ["So8NSObjectC", "animationProgressWhenInterrupted"]
 - ["So8NSObjectC", "animationWithKeyPath"]
@@ -2058,7 +2109,9 @@ depends-member:
 - ["So8NSObjectC", "infoButton"]
 - ["So8NSObjectC", "infoButtonTapped"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "initializeInterstitalAd"]
 - !private ["So8NSObjectC", "interruptionNotification"]
+- ["So8NSObjectC", "interstitial"]
 - !private ["So8NSObjectC", "isEnabled"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "isUserInteractionEnabled"]
@@ -2107,6 +2160,7 @@ depends-member:
 - !private ["So8NSObjectC", "prepare"]
 - !private ["So8NSObjectC", "prepareToPlay"]
 - !private ["So8NSObjectC", "present"]
+- !private ["So8NSObjectC", "presentInterstitialAd"]
 - !private ["So8NSObjectC", "presentViewController"]
 - !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "pulseAnimation"]
@@ -2114,6 +2168,7 @@ depends-member:
 - !private ["So8NSObjectC", "removeAllAnimations"]
 - ["So8NSObjectC", "removePulseAnimation"]
 - !private ["So8NSObjectC", "repeatCount"]
+- ["So8NSObjectC", "request"]
 - !private ["So8NSObjectC", "requestAuthorization"]
 - !private ["So8NSObjectC", "requestAuthorizationWithOptions"]
 - ["So8NSObjectC", "resetButton"]
@@ -2126,8 +2181,14 @@ depends-member:
 - ["So8NSObjectC", "sessionLengthLabel"]
 - ["So8NSObjectC", "sessionLengthValueLabel"]
 - !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "setBool"]
+- !private ["So8NSObjectC", "setDouble"]
+- !private ["So8NSObjectC", "setFloat"]
+- !private ["So8NSObjectC", "setInteger"]
 - !private ["So8NSObjectC", "setNeedsStatusBarAppearanceUpdate"]
+- !private ["So8NSObjectC", "setObject"]
 - !private ["So8NSObjectC", "setTitle"]
+- !private ["So8NSObjectC", "setURL"]
 - ["So8NSObjectC", "setUpAudio"]
 - !private ["So8NSObjectC", "setVolume"]
 - ["So8NSObjectC", "settingsButton"]
@@ -2190,8 +2251,10 @@ depends-member:
 - !private ["So8NSObjectP", "AVAudioSession"]
 - !private ["So8NSObjectP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So8NSObjectP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So8NSObjectP", "AdController"]
 - !private ["So8NSObjectP", "AudioServicesPlayAlertSound"]
 - !private ["So8NSObjectP", "AudioServicesPlaySystemSound"]
+- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "Bundle"]
 - ["So8NSObjectP", "CABasicAnimation"]
 - ["So8NSObjectP", "CALayer"]
@@ -2204,6 +2267,8 @@ depends-member:
 - ["So8NSObjectP", "CardViewState"]
 - !private ["So8NSObjectP", "Constants"]
 - !private ["So8NSObjectP", "Double"]
+- ["So8NSObjectP", "GADInterstitial"]
+- ["So8NSObjectP", "GADRequest"]
 - !private ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "InterruptionOptions"]
 - !private ["So8NSObjectP", "InterruptionType"]
@@ -2219,6 +2284,7 @@ depends-member:
 - !private ["So8NSObjectP", "UIAlertController"]
 - !private ["So8NSObjectP", "UIApplication"]
 - !private ["So8NSObjectP", "UIBlurEffect"]
+- ["So8NSObjectP", "UIButton"]
 - ["So8NSObjectP", "UIGestureRecognizer"]
 - ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UIImpactFeedbackGenerator"]
@@ -2226,7 +2292,7 @@ depends-member:
 - ["So8NSObjectP", "UIPanGestureRecognizer"]
 - ["So8NSObjectP", "UIStatusBarStyle"]
 - !private ["So8NSObjectP", "UITapGestureRecognizer"]
-- !private ["So8NSObjectP", "UIView"]
+- ["So8NSObjectP", "UIView"]
 - ["So8NSObjectP", "UIViewPropertyAnimator"]
 - ["So8NSObjectP", "UIVisualEffectView"]
 - !private ["So8NSObjectP", "UInt"]
@@ -2254,6 +2320,7 @@ depends-member:
 - !private ["So8NSObjectP", "alpha"]
 - !private ["So8NSObjectP", "animate"]
 - ["So8NSObjectP", "animateTransitionIfNeeded"]
+- !private ["So8NSObjectP", "animateWithDuration"]
 - ["So8NSObjectP", "animation"]
 - ["So8NSObjectP", "animationProgressWhenInterrupted"]
 - ["So8NSObjectP", "animationWithKeyPath"]
@@ -2303,7 +2370,9 @@ depends-member:
 - ["So8NSObjectP", "infoButton"]
 - ["So8NSObjectP", "infoButtonTapped"]
 - ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "initializeInterstitalAd"]
 - !private ["So8NSObjectP", "interruptionNotification"]
+- ["So8NSObjectP", "interstitial"]
 - !private ["So8NSObjectP", "isEnabled"]
 - !private ["So8NSObjectP", "isHidden"]
 - !private ["So8NSObjectP", "isUserInteractionEnabled"]
@@ -2352,6 +2421,7 @@ depends-member:
 - !private ["So8NSObjectP", "prepare"]
 - !private ["So8NSObjectP", "prepareToPlay"]
 - !private ["So8NSObjectP", "present"]
+- !private ["So8NSObjectP", "presentInterstitialAd"]
 - !private ["So8NSObjectP", "presentViewController"]
 - !private ["So8NSObjectP", "print"]
 - ["So8NSObjectP", "pulseAnimation"]
@@ -2359,6 +2429,7 @@ depends-member:
 - !private ["So8NSObjectP", "removeAllAnimations"]
 - ["So8NSObjectP", "removePulseAnimation"]
 - !private ["So8NSObjectP", "repeatCount"]
+- ["So8NSObjectP", "request"]
 - !private ["So8NSObjectP", "requestAuthorization"]
 - !private ["So8NSObjectP", "requestAuthorizationWithOptions"]
 - ["So8NSObjectP", "resetButton"]
@@ -2371,8 +2442,14 @@ depends-member:
 - ["So8NSObjectP", "sessionLengthLabel"]
 - ["So8NSObjectP", "sessionLengthValueLabel"]
 - !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "setBool"]
+- !private ["So8NSObjectP", "setDouble"]
+- !private ["So8NSObjectP", "setFloat"]
+- !private ["So8NSObjectP", "setInteger"]
 - !private ["So8NSObjectP", "setNeedsStatusBarAppearanceUpdate"]
+- !private ["So8NSObjectP", "setObject"]
 - !private ["So8NSObjectP", "setTitle"]
+- !private ["So8NSObjectP", "setURL"]
 - ["So8NSObjectP", "setUpAudio"]
 - !private ["So8NSObjectP", "setVolume"]
 - ["So8NSObjectP", "settingsButton"]
@@ -2552,6 +2629,7 @@ depends-member:
 - !private ["8ZenTimer21PDTimerViewControllerC", "AVAudioSession"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "AVAudioSessionInterruptionOptionKey"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "AVAudioSessionInterruptionTypeKey"]
+- !private ["8ZenTimer21PDTimerViewControllerC", "AdController"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "AudioServicesPlayAlertSound"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "AudioServicesPlaySystemSound"]
 - ["8ZenTimer21PDTimerViewControllerC", "Bool"]
@@ -2567,6 +2645,8 @@ depends-member:
 - ["8ZenTimer21PDTimerViewControllerC", "CardViewState"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "Constants"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "Double"]
+- ["8ZenTimer21PDTimerViewControllerC", "GADInterstitial"]
+- ["8ZenTimer21PDTimerViewControllerC", "GADRequest"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "Int"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "NSNumber"]
 - ["8ZenTimer21PDTimerViewControllerC", "Notification"]
@@ -2624,6 +2704,7 @@ depends-member:
 - ["8ZenTimer21PDTimerViewControllerC", "infoButton"]
 - ["8ZenTimer21PDTimerViewControllerC", "infoButtonTapped"]
 - ["8ZenTimer21PDTimerViewControllerC", "init"]
+- ["8ZenTimer21PDTimerViewControllerC", "interstitial"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "kSystemSoundID_Vibrate"]
 - ["8ZenTimer21PDTimerViewControllerC", "messageLabel"]
 - ["8ZenTimer21PDTimerViewControllerC", "muteButton"]
@@ -2642,6 +2723,7 @@ depends-member:
 - ["8ZenTimer21PDTimerViewControllerC", "pulseAnimation"]
 - ["8ZenTimer21PDTimerViewControllerC", "reloadPulseAnimation"]
 - ["8ZenTimer21PDTimerViewControllerC", "removePulseAnimation"]
+- ["8ZenTimer21PDTimerViewControllerC", "request"]
 - ["8ZenTimer21PDTimerViewControllerC", "resetButton"]
 - ["8ZenTimer21PDTimerViewControllerC", "resetButtonTapped"]
 - ["8ZenTimer21PDTimerViewControllerC", "resetView"]
@@ -2768,11 +2850,11 @@ depends-member:
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So17UIBlurEffectStyleV", "dark"]
 - !private ["So18UIAlertActionStyleV", "default"]
-- !private ["s16TextOutputStreamP", ""]
+- ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "greatestFiniteMagnitude"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "secondsToMinutesAndSeconds"]
@@ -2788,6 +2870,7 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isHidden"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitle"]
+- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addGestureRecognizer"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "alpha"]
@@ -2805,6 +2888,7 @@ depends-member:
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
+- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addGestureRecognizer"]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "alpha"]
@@ -2823,8 +2907,10 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "AVAudioSession"]
 - !private ["So21UIAppearanceContainerP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So21UIAppearanceContainerP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So21UIAppearanceContainerP", "AdController"]
 - !private ["So21UIAppearanceContainerP", "AudioServicesPlayAlertSound"]
 - !private ["So21UIAppearanceContainerP", "AudioServicesPlaySystemSound"]
+- ["So21UIAppearanceContainerP", "Bool"]
 - !private ["So21UIAppearanceContainerP", "Bundle"]
 - ["So21UIAppearanceContainerP", "CABasicAnimation"]
 - ["So21UIAppearanceContainerP", "CALayer"]
@@ -2837,6 +2923,8 @@ depends-member:
 - ["So21UIAppearanceContainerP", "CardViewState"]
 - !private ["So21UIAppearanceContainerP", "Constants"]
 - !private ["So21UIAppearanceContainerP", "Double"]
+- ["So21UIAppearanceContainerP", "GADInterstitial"]
+- ["So21UIAppearanceContainerP", "GADRequest"]
 - !private ["So21UIAppearanceContainerP", "Int"]
 - !private ["So21UIAppearanceContainerP", "NSNumber"]
 - ["So21UIAppearanceContainerP", "Notification"]
@@ -2850,6 +2938,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIAlertController"]
 - !private ["So21UIAppearanceContainerP", "UIApplication"]
 - !private ["So21UIAppearanceContainerP", "UIBlurEffect"]
+- ["So21UIAppearanceContainerP", "UIButton"]
 - ["So21UIAppearanceContainerP", "UIGestureRecognizer"]
 - ["So21UIAppearanceContainerP", "UIImageView"]
 - ["So21UIAppearanceContainerP", "UIImpactFeedbackGenerator"]
@@ -2857,7 +2946,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIPanGestureRecognizer"]
 - ["So21UIAppearanceContainerP", "UIStatusBarStyle"]
 - !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
-- !private ["So21UIAppearanceContainerP", "UIView"]
+- ["So21UIAppearanceContainerP", "UIView"]
 - ["So21UIAppearanceContainerP", "UIViewPropertyAnimator"]
 - ["So21UIAppearanceContainerP", "UIVisualEffectView"]
 - !private ["So21UIAppearanceContainerP", "UInt"]
@@ -2902,6 +2991,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "infoButton"]
 - ["So21UIAppearanceContainerP", "infoButtonTapped"]
 - ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "interstitial"]
 - !private ["So21UIAppearanceContainerP", "isEnabled"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "isUserInteractionEnabled"]
@@ -2924,6 +3014,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "pulseAnimation"]
 - ["So21UIAppearanceContainerP", "reloadPulseAnimation"]
 - ["So21UIAppearanceContainerP", "removePulseAnimation"]
+- ["So21UIAppearanceContainerP", "request"]
 - ["So21UIAppearanceContainerP", "resetButton"]
 - ["So21UIAppearanceContainerP", "resetButtonTapped"]
 - ["So21UIAppearanceContainerP", "resetView"]
@@ -2979,8 +3070,10 @@ depends-member:
 - !private ["So18UIContentContainerP", "AVAudioSession"]
 - !private ["So18UIContentContainerP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So18UIContentContainerP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So18UIContentContainerP", "AdController"]
 - !private ["So18UIContentContainerP", "AudioServicesPlayAlertSound"]
 - !private ["So18UIContentContainerP", "AudioServicesPlaySystemSound"]
+- ["So18UIContentContainerP", "Bool"]
 - !private ["So18UIContentContainerP", "Bundle"]
 - ["So18UIContentContainerP", "CABasicAnimation"]
 - ["So18UIContentContainerP", "CALayer"]
@@ -2993,6 +3086,8 @@ depends-member:
 - ["So18UIContentContainerP", "CardViewState"]
 - !private ["So18UIContentContainerP", "Constants"]
 - !private ["So18UIContentContainerP", "Double"]
+- ["So18UIContentContainerP", "GADInterstitial"]
+- ["So18UIContentContainerP", "GADRequest"]
 - !private ["So18UIContentContainerP", "Int"]
 - !private ["So18UIContentContainerP", "NSNumber"]
 - ["So18UIContentContainerP", "Notification"]
@@ -3006,6 +3101,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIAlertController"]
 - !private ["So18UIContentContainerP", "UIApplication"]
 - !private ["So18UIContentContainerP", "UIBlurEffect"]
+- ["So18UIContentContainerP", "UIButton"]
 - ["So18UIContentContainerP", "UIGestureRecognizer"]
 - ["So18UIContentContainerP", "UIImageView"]
 - ["So18UIContentContainerP", "UIImpactFeedbackGenerator"]
@@ -3013,7 +3109,7 @@ depends-member:
 - ["So18UIContentContainerP", "UIPanGestureRecognizer"]
 - ["So18UIContentContainerP", "UIStatusBarStyle"]
 - !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
-- !private ["So18UIContentContainerP", "UIView"]
+- ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", "UIViewPropertyAnimator"]
 - ["So18UIContentContainerP", "UIVisualEffectView"]
 - !private ["So18UIContentContainerP", "UInt"]
@@ -3051,6 +3147,7 @@ depends-member:
 - ["So18UIContentContainerP", "infoButton"]
 - ["So18UIContentContainerP", "infoButtonTapped"]
 - ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "interstitial"]
 - !private ["So18UIContentContainerP", "kSystemSoundID_Vibrate"]
 - ["So18UIContentContainerP", "messageLabel"]
 - ["So18UIContentContainerP", "muteButton"]
@@ -3069,6 +3166,7 @@ depends-member:
 - ["So18UIContentContainerP", "pulseAnimation"]
 - ["So18UIContentContainerP", "reloadPulseAnimation"]
 - ["So18UIContentContainerP", "removePulseAnimation"]
+- ["So18UIContentContainerP", "request"]
 - ["So18UIContentContainerP", "resetButton"]
 - ["So18UIContentContainerP", "resetButtonTapped"]
 - ["So18UIContentContainerP", "resetView"]
@@ -3119,6 +3217,7 @@ depends-member:
 - !private ["So9UIControlC", "isHidden"]
 - !private ["So9UIControlC", "layer"]
 - !private ["So9UIControlC", "setTitle"]
+- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addGestureRecognizer"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "alpha"]
@@ -3133,6 +3232,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "layer"]
 - !private ["So17UICoordinateSpaceP", "setTitle"]
 - !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addGestureRecognizer"]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "alpha"]
@@ -3156,8 +3256,10 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "AVAudioSession"]
 - !private ["So18UIFocusEnvironmentP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So18UIFocusEnvironmentP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So18UIFocusEnvironmentP", "AdController"]
 - !private ["So18UIFocusEnvironmentP", "AudioServicesPlayAlertSound"]
 - !private ["So18UIFocusEnvironmentP", "AudioServicesPlaySystemSound"]
+- ["So18UIFocusEnvironmentP", "Bool"]
 - !private ["So18UIFocusEnvironmentP", "Bundle"]
 - ["So18UIFocusEnvironmentP", "CABasicAnimation"]
 - ["So18UIFocusEnvironmentP", "CALayer"]
@@ -3170,6 +3272,8 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "CardViewState"]
 - !private ["So18UIFocusEnvironmentP", "Constants"]
 - !private ["So18UIFocusEnvironmentP", "Double"]
+- ["So18UIFocusEnvironmentP", "GADInterstitial"]
+- ["So18UIFocusEnvironmentP", "GADRequest"]
 - !private ["So18UIFocusEnvironmentP", "Int"]
 - !private ["So18UIFocusEnvironmentP", "NSNumber"]
 - ["So18UIFocusEnvironmentP", "Notification"]
@@ -3183,6 +3287,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UIAlertController"]
 - !private ["So18UIFocusEnvironmentP", "UIApplication"]
 - !private ["So18UIFocusEnvironmentP", "UIBlurEffect"]
+- ["So18UIFocusEnvironmentP", "UIButton"]
 - ["So18UIFocusEnvironmentP", "UIGestureRecognizer"]
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - ["So18UIFocusEnvironmentP", "UIImpactFeedbackGenerator"]
@@ -3190,7 +3295,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIPanGestureRecognizer"]
 - ["So18UIFocusEnvironmentP", "UIStatusBarStyle"]
 - !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
-- !private ["So18UIFocusEnvironmentP", "UIView"]
+- ["So18UIFocusEnvironmentP", "UIView"]
 - ["So18UIFocusEnvironmentP", "UIViewPropertyAnimator"]
 - ["So18UIFocusEnvironmentP", "UIVisualEffectView"]
 - !private ["So18UIFocusEnvironmentP", "UInt"]
@@ -3235,6 +3340,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "infoButton"]
 - ["So18UIFocusEnvironmentP", "infoButtonTapped"]
 - ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "interstitial"]
 - !private ["So18UIFocusEnvironmentP", "isEnabled"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "isUserInteractionEnabled"]
@@ -3257,6 +3363,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "pulseAnimation"]
 - ["So18UIFocusEnvironmentP", "reloadPulseAnimation"]
 - ["So18UIFocusEnvironmentP", "removePulseAnimation"]
+- ["So18UIFocusEnvironmentP", "request"]
 - ["So18UIFocusEnvironmentP", "resetButton"]
 - ["So18UIFocusEnvironmentP", "resetButtonTapped"]
 - ["So18UIFocusEnvironmentP", "resetView"]
@@ -3295,6 +3402,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "viewWillAppear"]
 - ["So18UIFocusEnvironmentP", "visualEffectView"]
 - ["So18UIFocusEnvironmentP", "whiteNoisePlayer"]
+- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addGestureRecognizer"]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "alpha"]
@@ -3309,6 +3417,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "layer"]
 - !private ["So11UIFocusItemP", "setTitle"]
 - !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addGestureRecognizer"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
 - !private ["So20UIFocusItemContainerP", "alpha"]
@@ -3335,6 +3444,7 @@ depends-member:
 - !private ["So7UILabelC", "isHidden"]
 - !private ["So7UILabelC", "layer"]
 - !private ["So7UILabelC", "text"]
+- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addGestureRecognizer"]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "alpha"]
@@ -3356,8 +3466,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "AVAudioSession"]
 - !private ["So30UIPasteConfigurationSupportingP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So30UIPasteConfigurationSupportingP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So30UIPasteConfigurationSupportingP", "AdController"]
 - !private ["So30UIPasteConfigurationSupportingP", "AudioServicesPlayAlertSound"]
 - !private ["So30UIPasteConfigurationSupportingP", "AudioServicesPlaySystemSound"]
+- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "Bundle"]
 - ["So30UIPasteConfigurationSupportingP", "CABasicAnimation"]
 - ["So30UIPasteConfigurationSupportingP", "CALayer"]
@@ -3370,6 +3482,8 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "CardViewState"]
 - !private ["So30UIPasteConfigurationSupportingP", "Constants"]
 - !private ["So30UIPasteConfigurationSupportingP", "Double"]
+- ["So30UIPasteConfigurationSupportingP", "GADInterstitial"]
+- ["So30UIPasteConfigurationSupportingP", "GADRequest"]
 - !private ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSNumber"]
 - ["So30UIPasteConfigurationSupportingP", "Notification"]
@@ -3383,6 +3497,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIBlurEffect"]
+- ["So30UIPasteConfigurationSupportingP", "UIButton"]
 - ["So30UIPasteConfigurationSupportingP", "UIGestureRecognizer"]
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UIImpactFeedbackGenerator"]
@@ -3390,7 +3505,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIPanGestureRecognizer"]
 - ["So30UIPasteConfigurationSupportingP", "UIStatusBarStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
-- !private ["So30UIPasteConfigurationSupportingP", "UIView"]
+- ["So30UIPasteConfigurationSupportingP", "UIView"]
 - ["So30UIPasteConfigurationSupportingP", "UIViewPropertyAnimator"]
 - ["So30UIPasteConfigurationSupportingP", "UIVisualEffectView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UInt"]
@@ -3412,6 +3527,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "alpha"]
 - !private ["So30UIPasteConfigurationSupportingP", "animate"]
 - ["So30UIPasteConfigurationSupportingP", "animateTransitionIfNeeded"]
+- !private ["So30UIPasteConfigurationSupportingP", "animateWithDuration"]
 - ["So30UIPasteConfigurationSupportingP", "animationProgressWhenInterrupted"]
 - !private ["So30UIPasteConfigurationSupportingP", "applicationState"]
 - ["So30UIPasteConfigurationSupportingP", "breakLengthLabel"]
@@ -3441,6 +3557,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "infoButton"]
 - ["So30UIPasteConfigurationSupportingP", "infoButtonTapped"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "interstitial"]
 - !private ["So30UIPasteConfigurationSupportingP", "isEnabled"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "isUserInteractionEnabled"]
@@ -3467,6 +3584,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "pulseAnimation"]
 - ["So30UIPasteConfigurationSupportingP", "reloadPulseAnimation"]
 - ["So30UIPasteConfigurationSupportingP", "removePulseAnimation"]
+- ["So30UIPasteConfigurationSupportingP", "request"]
 - ["So30UIPasteConfigurationSupportingP", "resetButton"]
 - ["So30UIPasteConfigurationSupportingP", "resetButtonTapped"]
 - ["So30UIPasteConfigurationSupportingP", "resetView"]
@@ -3510,6 +3628,7 @@ depends-member:
 - !private ["So11UIResponderC", "AVAudioSession"]
 - !private ["So11UIResponderC", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So11UIResponderC", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So11UIResponderC", "AdController"]
 - !private ["So11UIResponderC", "AudioServicesPlayAlertSound"]
 - !private ["So11UIResponderC", "AudioServicesPlaySystemSound"]
 - ["So11UIResponderC", "Bool"]
@@ -3525,6 +3644,8 @@ depends-member:
 - ["So11UIResponderC", "CardViewState"]
 - !private ["So11UIResponderC", "Constants"]
 - !private ["So11UIResponderC", "Double"]
+- ["So11UIResponderC", "GADInterstitial"]
+- ["So11UIResponderC", "GADRequest"]
 - !private ["So11UIResponderC", "Int"]
 - !private ["So11UIResponderC", "NSNumber"]
 - ["So11UIResponderC", "Notification"]
@@ -3568,6 +3689,7 @@ depends-member:
 - !private ["So11UIResponderC", "alpha"]
 - !private ["So11UIResponderC", "animate"]
 - ["So11UIResponderC", "animateTransitionIfNeeded"]
+- !private ["So11UIResponderC", "animateWithDuration"]
 - ["So11UIResponderC", "animationProgressWhenInterrupted"]
 - !private ["So11UIResponderC", "applicationState"]
 - ["So11UIResponderC", "breakLengthLabel"]
@@ -3597,6 +3719,7 @@ depends-member:
 - ["So11UIResponderC", "infoButton"]
 - ["So11UIResponderC", "infoButtonTapped"]
 - ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "interstitial"]
 - !private ["So11UIResponderC", "isEnabled"]
 - !private ["So11UIResponderC", "isHidden"]
 - !private ["So11UIResponderC", "isUserInteractionEnabled"]
@@ -3623,6 +3746,7 @@ depends-member:
 - ["So11UIResponderC", "pulseAnimation"]
 - ["So11UIResponderC", "reloadPulseAnimation"]
 - ["So11UIResponderC", "removePulseAnimation"]
+- ["So11UIResponderC", "request"]
 - ["So11UIResponderC", "resetButton"]
 - ["So11UIResponderC", "resetButtonTapped"]
 - ["So11UIResponderC", "resetView"]
@@ -3666,8 +3790,10 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "AVAudioSession"]
 - !private ["So30UIResponderStandardEditActionsP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So30UIResponderStandardEditActionsP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So30UIResponderStandardEditActionsP", "AdController"]
 - !private ["So30UIResponderStandardEditActionsP", "AudioServicesPlayAlertSound"]
 - !private ["So30UIResponderStandardEditActionsP", "AudioServicesPlaySystemSound"]
+- ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "Bundle"]
 - ["So30UIResponderStandardEditActionsP", "CABasicAnimation"]
 - ["So30UIResponderStandardEditActionsP", "CALayer"]
@@ -3680,6 +3806,8 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "CardViewState"]
 - !private ["So30UIResponderStandardEditActionsP", "Constants"]
 - !private ["So30UIResponderStandardEditActionsP", "Double"]
+- ["So30UIResponderStandardEditActionsP", "GADInterstitial"]
+- ["So30UIResponderStandardEditActionsP", "GADRequest"]
 - !private ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "NSNumber"]
 - ["So30UIResponderStandardEditActionsP", "Notification"]
@@ -3693,6 +3821,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - !private ["So30UIResponderStandardEditActionsP", "UIBlurEffect"]
+- ["So30UIResponderStandardEditActionsP", "UIButton"]
 - ["So30UIResponderStandardEditActionsP", "UIGestureRecognizer"]
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UIImpactFeedbackGenerator"]
@@ -3700,7 +3829,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIPanGestureRecognizer"]
 - ["So30UIResponderStandardEditActionsP", "UIStatusBarStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
-- !private ["So30UIResponderStandardEditActionsP", "UIView"]
+- ["So30UIResponderStandardEditActionsP", "UIView"]
 - ["So30UIResponderStandardEditActionsP", "UIViewPropertyAnimator"]
 - ["So30UIResponderStandardEditActionsP", "UIVisualEffectView"]
 - !private ["So30UIResponderStandardEditActionsP", "UInt"]
@@ -3722,6 +3851,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "alpha"]
 - !private ["So30UIResponderStandardEditActionsP", "animate"]
 - ["So30UIResponderStandardEditActionsP", "animateTransitionIfNeeded"]
+- !private ["So30UIResponderStandardEditActionsP", "animateWithDuration"]
 - ["So30UIResponderStandardEditActionsP", "animationProgressWhenInterrupted"]
 - !private ["So30UIResponderStandardEditActionsP", "applicationState"]
 - ["So30UIResponderStandardEditActionsP", "breakLengthLabel"]
@@ -3751,6 +3881,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "infoButton"]
 - ["So30UIResponderStandardEditActionsP", "infoButtonTapped"]
 - ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "interstitial"]
 - !private ["So30UIResponderStandardEditActionsP", "isEnabled"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "isUserInteractionEnabled"]
@@ -3777,6 +3908,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "pulseAnimation"]
 - ["So30UIResponderStandardEditActionsP", "reloadPulseAnimation"]
 - ["So30UIResponderStandardEditActionsP", "removePulseAnimation"]
+- ["So30UIResponderStandardEditActionsP", "request"]
 - ["So30UIResponderStandardEditActionsP", "resetButton"]
 - ["So30UIResponderStandardEditActionsP", "resetButtonTapped"]
 - ["So30UIResponderStandardEditActionsP", "resetView"]
@@ -3827,8 +3959,10 @@ depends-member:
 - !private ["So16UIStateRestoringP", "AVAudioSession"]
 - !private ["So16UIStateRestoringP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So16UIStateRestoringP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So16UIStateRestoringP", "AdController"]
 - !private ["So16UIStateRestoringP", "AudioServicesPlayAlertSound"]
 - !private ["So16UIStateRestoringP", "AudioServicesPlaySystemSound"]
+- ["So16UIStateRestoringP", "Bool"]
 - !private ["So16UIStateRestoringP", "Bundle"]
 - ["So16UIStateRestoringP", "CABasicAnimation"]
 - ["So16UIStateRestoringP", "CALayer"]
@@ -3841,6 +3975,8 @@ depends-member:
 - ["So16UIStateRestoringP", "CardViewState"]
 - !private ["So16UIStateRestoringP", "Constants"]
 - !private ["So16UIStateRestoringP", "Double"]
+- ["So16UIStateRestoringP", "GADInterstitial"]
+- ["So16UIStateRestoringP", "GADRequest"]
 - !private ["So16UIStateRestoringP", "Int"]
 - !private ["So16UIStateRestoringP", "NSNumber"]
 - ["So16UIStateRestoringP", "Notification"]
@@ -3854,6 +3990,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIAlertController"]
 - !private ["So16UIStateRestoringP", "UIApplication"]
 - !private ["So16UIStateRestoringP", "UIBlurEffect"]
+- ["So16UIStateRestoringP", "UIButton"]
 - ["So16UIStateRestoringP", "UIGestureRecognizer"]
 - ["So16UIStateRestoringP", "UIImageView"]
 - ["So16UIStateRestoringP", "UIImpactFeedbackGenerator"]
@@ -3861,7 +3998,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UIPanGestureRecognizer"]
 - ["So16UIStateRestoringP", "UIStatusBarStyle"]
 - !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
-- !private ["So16UIStateRestoringP", "UIView"]
+- ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", "UIViewPropertyAnimator"]
 - ["So16UIStateRestoringP", "UIVisualEffectView"]
 - !private ["So16UIStateRestoringP", "UInt"]
@@ -3899,6 +4036,7 @@ depends-member:
 - ["So16UIStateRestoringP", "infoButton"]
 - ["So16UIStateRestoringP", "infoButtonTapped"]
 - ["So16UIStateRestoringP", "init"]
+- ["So16UIStateRestoringP", "interstitial"]
 - !private ["So16UIStateRestoringP", "kSystemSoundID_Vibrate"]
 - ["So16UIStateRestoringP", "messageLabel"]
 - ["So16UIStateRestoringP", "muteButton"]
@@ -3917,6 +4055,7 @@ depends-member:
 - ["So16UIStateRestoringP", "pulseAnimation"]
 - ["So16UIStateRestoringP", "reloadPulseAnimation"]
 - ["So16UIStateRestoringP", "removePulseAnimation"]
+- ["So16UIStateRestoringP", "request"]
 - ["So16UIStateRestoringP", "resetButton"]
 - ["So16UIStateRestoringP", "resetButtonTapped"]
 - ["So16UIStateRestoringP", "resetView"]
@@ -3959,8 +4098,10 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "AVAudioSession"]
 - !private ["So18UITraitEnvironmentP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So18UITraitEnvironmentP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So18UITraitEnvironmentP", "AdController"]
 - !private ["So18UITraitEnvironmentP", "AudioServicesPlayAlertSound"]
 - !private ["So18UITraitEnvironmentP", "AudioServicesPlaySystemSound"]
+- ["So18UITraitEnvironmentP", "Bool"]
 - !private ["So18UITraitEnvironmentP", "Bundle"]
 - ["So18UITraitEnvironmentP", "CABasicAnimation"]
 - ["So18UITraitEnvironmentP", "CALayer"]
@@ -3973,6 +4114,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "CardViewState"]
 - !private ["So18UITraitEnvironmentP", "Constants"]
 - !private ["So18UITraitEnvironmentP", "Double"]
+- ["So18UITraitEnvironmentP", "GADInterstitial"]
+- ["So18UITraitEnvironmentP", "GADRequest"]
 - !private ["So18UITraitEnvironmentP", "Int"]
 - !private ["So18UITraitEnvironmentP", "NSNumber"]
 - ["So18UITraitEnvironmentP", "Notification"]
@@ -3986,6 +4129,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIAlertController"]
 - !private ["So18UITraitEnvironmentP", "UIApplication"]
 - !private ["So18UITraitEnvironmentP", "UIBlurEffect"]
+- ["So18UITraitEnvironmentP", "UIButton"]
 - ["So18UITraitEnvironmentP", "UIGestureRecognizer"]
 - ["So18UITraitEnvironmentP", "UIImageView"]
 - ["So18UITraitEnvironmentP", "UIImpactFeedbackGenerator"]
@@ -3993,7 +4137,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIPanGestureRecognizer"]
 - ["So18UITraitEnvironmentP", "UIStatusBarStyle"]
 - !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
-- !private ["So18UITraitEnvironmentP", "UIView"]
+- ["So18UITraitEnvironmentP", "UIView"]
 - ["So18UITraitEnvironmentP", "UIViewPropertyAnimator"]
 - ["So18UITraitEnvironmentP", "UIVisualEffectView"]
 - !private ["So18UITraitEnvironmentP", "UInt"]
@@ -4038,6 +4182,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "infoButton"]
 - ["So18UITraitEnvironmentP", "infoButtonTapped"]
 - ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", "interstitial"]
 - !private ["So18UITraitEnvironmentP", "isEnabled"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "isUserInteractionEnabled"]
@@ -4060,6 +4205,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "pulseAnimation"]
 - ["So18UITraitEnvironmentP", "reloadPulseAnimation"]
 - ["So18UITraitEnvironmentP", "removePulseAnimation"]
+- ["So18UITraitEnvironmentP", "request"]
 - ["So18UITraitEnvironmentP", "resetButton"]
 - ["So18UITraitEnvironmentP", "resetButtonTapped"]
 - ["So18UITraitEnvironmentP", "resetView"]
@@ -4102,8 +4248,10 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "AVAudioSession"]
 - !private ["So23UIUserActivityRestoringP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So23UIUserActivityRestoringP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So23UIUserActivityRestoringP", "AdController"]
 - !private ["So23UIUserActivityRestoringP", "AudioServicesPlayAlertSound"]
 - !private ["So23UIUserActivityRestoringP", "AudioServicesPlaySystemSound"]
+- ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "Bundle"]
 - ["So23UIUserActivityRestoringP", "CABasicAnimation"]
 - ["So23UIUserActivityRestoringP", "CALayer"]
@@ -4116,6 +4264,8 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "CardViewState"]
 - !private ["So23UIUserActivityRestoringP", "Constants"]
 - !private ["So23UIUserActivityRestoringP", "Double"]
+- ["So23UIUserActivityRestoringP", "GADInterstitial"]
+- ["So23UIUserActivityRestoringP", "GADRequest"]
 - !private ["So23UIUserActivityRestoringP", "Int"]
 - !private ["So23UIUserActivityRestoringP", "NSNumber"]
 - ["So23UIUserActivityRestoringP", "Notification"]
@@ -4129,6 +4279,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
 - !private ["So23UIUserActivityRestoringP", "UIBlurEffect"]
+- ["So23UIUserActivityRestoringP", "UIButton"]
 - ["So23UIUserActivityRestoringP", "UIGestureRecognizer"]
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - ["So23UIUserActivityRestoringP", "UIImpactFeedbackGenerator"]
@@ -4136,7 +4287,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UIPanGestureRecognizer"]
 - ["So23UIUserActivityRestoringP", "UIStatusBarStyle"]
 - !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
-- !private ["So23UIUserActivityRestoringP", "UIView"]
+- ["So23UIUserActivityRestoringP", "UIView"]
 - ["So23UIUserActivityRestoringP", "UIViewPropertyAnimator"]
 - ["So23UIUserActivityRestoringP", "UIVisualEffectView"]
 - !private ["So23UIUserActivityRestoringP", "UInt"]
@@ -4158,6 +4309,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "alpha"]
 - !private ["So23UIUserActivityRestoringP", "animate"]
 - ["So23UIUserActivityRestoringP", "animateTransitionIfNeeded"]
+- !private ["So23UIUserActivityRestoringP", "animateWithDuration"]
 - ["So23UIUserActivityRestoringP", "animationProgressWhenInterrupted"]
 - !private ["So23UIUserActivityRestoringP", "applicationState"]
 - ["So23UIUserActivityRestoringP", "breakLengthLabel"]
@@ -4187,6 +4339,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "infoButton"]
 - ["So23UIUserActivityRestoringP", "infoButtonTapped"]
 - ["So23UIUserActivityRestoringP", "init"]
+- ["So23UIUserActivityRestoringP", "interstitial"]
 - !private ["So23UIUserActivityRestoringP", "isEnabled"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
 - !private ["So23UIUserActivityRestoringP", "isUserInteractionEnabled"]
@@ -4213,6 +4366,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "pulseAnimation"]
 - ["So23UIUserActivityRestoringP", "reloadPulseAnimation"]
 - ["So23UIUserActivityRestoringP", "removePulseAnimation"]
+- ["So23UIUserActivityRestoringP", "request"]
 - ["So23UIUserActivityRestoringP", "resetButton"]
 - ["So23UIUserActivityRestoringP", "resetButtonTapped"]
 - ["So23UIUserActivityRestoringP", "resetView"]
@@ -4278,6 +4432,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "AVAudioSession"]
 - !private ["So16UIViewControllerC", "AVAudioSessionInterruptionOptionKey"]
 - !private ["So16UIViewControllerC", "AVAudioSessionInterruptionTypeKey"]
+- !private ["So16UIViewControllerC", "AdController"]
 - !private ["So16UIViewControllerC", "AudioServicesPlayAlertSound"]
 - !private ["So16UIViewControllerC", "AudioServicesPlaySystemSound"]
 - ["So16UIViewControllerC", "Bool"]
@@ -4293,6 +4448,8 @@ depends-member:
 - ["So16UIViewControllerC", "CardViewState"]
 - !private ["So16UIViewControllerC", "Constants"]
 - !private ["So16UIViewControllerC", "Double"]
+- ["So16UIViewControllerC", "GADInterstitial"]
+- ["So16UIViewControllerC", "GADRequest"]
 - !private ["So16UIViewControllerC", "Int"]
 - !private ["So16UIViewControllerC", "NSNumber"]
 - ["So16UIViewControllerC", "Notification"]
@@ -4352,6 +4509,7 @@ depends-member:
 - ["So16UIViewControllerC", "infoButton"]
 - ["So16UIViewControllerC", "infoButtonTapped"]
 - ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "interstitial"]
 - !private ["So16UIViewControllerC", "kSystemSoundID_Vibrate"]
 - ["So16UIViewControllerC", "messageLabel"]
 - ["So16UIViewControllerC", "muteButton"]
@@ -4370,6 +4528,7 @@ depends-member:
 - ["So16UIViewControllerC", "pulseAnimation"]
 - ["So16UIViewControllerC", "reloadPulseAnimation"]
 - ["So16UIViewControllerC", "removePulseAnimation"]
+- ["So16UIViewControllerC", "request"]
 - ["So16UIViewControllerC", "resetButton"]
 - ["So16UIViewControllerC", "resetButtonTapped"]
 - ["So16UIViewControllerC", "resetView"]
@@ -4462,7 +4621,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "removeAll"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "greatestFiniteMagnitude"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
@@ -4471,7 +4630,7 @@ depends-member:
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "secondsToMinutesAndSeconds"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s19_HasContiguousBytesP", "append"]
@@ -4491,6 +4650,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AVAudioSession"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AdController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AudioServicesPlayAlertSound"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AudioServicesPlaySystemSound"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Bundle"]
@@ -4502,6 +4662,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CardViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "GADRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "InterruptionOptions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "InterruptionType"]
@@ -4577,6 +4738,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "infoButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "infoButtonTapped"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "initializeInterstitalAd"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "interruptionNotification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEnabled"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
@@ -4605,6 +4767,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "prepare"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "prepareToPlay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "presentInterstitialAd"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pulseAnimation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadPulseAnimation"]
@@ -4666,6 +4829,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AVAudioSession"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AVAudioSessionInterruptionOptionKey"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AVAudioSessionInterruptionTypeKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AdController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AudioServicesPlayAlertSound"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AudioServicesPlaySystemSound"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Bundle"]
@@ -4677,6 +4841,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CardViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "GADRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "InterruptionOptions"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "InterruptionType"]
@@ -4752,6 +4917,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "infoButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "infoButtonTapped"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "initializeInterstitalAd"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "interruptionNotification"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEnabled"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isHidden"]
@@ -4780,6 +4946,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "prepare"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "prepareToPlay"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentInterstitialAd"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pulseAnimation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "reloadPulseAnimation"]
@@ -4899,6 +5066,7 @@ depends-member:
 depends-nominal:
 - !private "So13AVAudioPlayerC"
 - !private "So14AVAudioSessionC"
+- !private "8ZenTimer12AdControllerC"
 - !private "s18AdditiveArithmeticP"
 - !private "So20UIViewAnimationCurveV"
 - !private "So22UIViewAnimationOptionsV"
@@ -4924,7 +5092,7 @@ depends-nominal:
 - "8ZenTimer16CardViewDelegateP"
 - !private "8ZenTimer13CardViewStateO"
 - "Sl"
-- !private "SL"
+- "SL"
 - !private "8ZenTimer9ConstantsV"
 - "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
@@ -4940,22 +5108,24 @@ depends-nominal:
 - "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - "So21UIImpactFeedbackStyleV"
 - !private "s17FixedWidthIntegerP"
 - !private "Sf"
 - !private "SF"
+- "So23GADInterstitialDelegateP"
+- "So10GADRequestC"
 - "SH"
 - !private "Si"
 - !private "So33AVAudioSessionInterruptionOptionsV"
 - !private "So30AVAudioSessionInterruptionTypeV"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "SM"
 - "10Foundation19MutableDataProtocolP"
@@ -4997,8 +5167,8 @@ depends-nominal:
 - !private "So22UIAlertControllerStyleV"
 - !private "So17UIBlurEffectStyleV"
 - !private "So18UIAlertActionStyleV"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So7NSTimerC"
 - !private "8ZenTimer0B5StateO"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -5053,11 +5223,11 @@ depends-nominal:
 - !private "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s34_ExpressibleByFileReferenceLiteralP"
 - "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
@@ -5090,9 +5260,119 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/paper-onboarding/paper_onboarding.framework/Headers/paper-onboarding-umbrella.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdMetadata.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardedAdBeta.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInterstitialAdBeta.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GAMInterstitialAdBeta.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAppEventDelegateBeta.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardedAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationRewardedAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeCustomTemplateAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADUnifiedNativeAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediatedUnifiedNativeAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationNativeAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventNativeAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardedInterstitialAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationInterstitialAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInstreamAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAppOpenAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardBasedVideoAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationBannerAd.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdReward.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediatedUnifiedNativeAdNotificationSource.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAdImage.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADUnifiedNativeAd+CustomClickGesture.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInAppPurchase.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardedAdMetadataDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardedAdDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAdDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADUnifiedNativeAdDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventNativeAdDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRewardBasedVideoAdDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInAppPurchaseDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdSizeDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADUnifiedNativeAdUnconfirmedClickDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInterstitialDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventInterstitialDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdLoaderDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAudioVideoManagerDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADVideoControllerDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventBannerDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADFullScreenContentDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdEventDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAppEventDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeExpressAdViewDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADBannerViewDelegate.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdValue.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdSize.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdSize.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADUnifiedNativeAd+ConfirmationClick.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInterstitial.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/DFPInterstitial.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventInterstitial.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMAdNetworkAdapterProtocol.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMRewardBasedVideoAdNetworkAdapterProtocol.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMAdNetworkConnectorProtocol.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMRewardBasedVideoAdNetworkConnectorProtocol.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAdImage+Mediation.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdConfiguration.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationServerConfiguration.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRequestConfiguration.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADMuteThisAdReason.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADResponseInfo.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADMediaAspectRatio.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADVersionNumber.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdLoader.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAudioVideoManager.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADVideoController.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADDebugOptionsViewController.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventBanner.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/RTBMediation/GADRTBAdapter.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdapter.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADPresentationError.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRequestError.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADExtras.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdNetworkExtras.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventExtras.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADMobileAds.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdLoaderAdTypes.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMEnums.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAdViewAdOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADDelayedAdRenderingOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADServerSideVerificationOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADVideoOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAdMediaAdLoaderOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeAdImageAdLoaderOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADMultipleAdsAdLoaderOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeMuteThisAdLoaderOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/DFPBannerViewOptions.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADUnifiedNativeAdAssetIdentifiers.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventParameters.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/RTBMediation/GADRTBRequestParameters.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInitializationStatus.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdFormat.h"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/paper-onboarding/paper_onboarding.framework/Headers/paper_onboarding-Swift.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADDisplayAdMeasurement.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADMediaContent.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADRequest.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/DFPRequest.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdRequest.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADDynamicHeightSearchRequest.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADCustomEventRequest.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADMediaView.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADInstreamAdView.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADNativeExpressAdView.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADBannerView.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/DFPBannerView.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADSearchBannerView.h"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdChoicesView.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/paper-onboarding/paper_onboarding.framework/Modules/module.modulemap"
+- "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
@@ -5114,4 +5394,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b645551a46f240a4be766a3a25d77379"
+interface-hash: "0c3b8c8eecf42757224e0d4a0860c696"

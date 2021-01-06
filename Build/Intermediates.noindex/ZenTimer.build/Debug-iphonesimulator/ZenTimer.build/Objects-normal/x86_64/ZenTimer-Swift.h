@@ -189,6 +189,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import Foundation;
+@import GoogleMobileAds;
 @import ObjectiveC;
 @import UIKit;
 @import UserNotifications;
@@ -208,6 +209,28 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ZenTimer",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class GADInterstitial;
+@class GADRequestError;
+
+SWIFT_CLASS("_TtC8ZenTimer12AdController")
+@interface AdController : NSObject <GADInterstitialDelegate>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Tells the delegate an ad request succeeded.
+- (void)interstitialDidReceiveAd:(GADInterstitial * _Nonnull)ad;
+/// Tells the delegate an ad request failed.
+- (void)interstitial:(GADInterstitial * _Nonnull)ad didFailToReceiveAdWithError:(GADRequestError * _Nonnull)error;
+/// Tells the delegate that an interstitial will be presented.
+- (void)interstitialWillPresentScreen:(GADInterstitial * _Nonnull)ad;
+/// Tells the delegate the interstitial is to be animated off the screen.
+- (void)interstitialWillDismissScreen:(GADInterstitial * _Nonnull)ad;
+/// Tells the delegate the interstitial had been animated off the screen.
+- (void)interstitialDidDismissScreen:(GADInterstitial * _Nonnull)ad;
+/// Tells the delegate that a user click will open another app
+/// (such as the App Store), backgrounding the current app.
+- (void)interstitialWillLeaveApplication:(GADInterstitial * _Nonnull)ad;
+@end
 
 @class UNUserNotificationCenter;
 @class UNNotificationResponse;
