@@ -12,6 +12,7 @@ provides-dynamic-lookup:
 - "oneHundredTwentyThreeDaysAgo"
 - "oneWeekAgo"
 - "requestReview"
+- "reviewInProgress"
 - "shared"
 depends-top-level:
 - !private "&&"
@@ -21,7 +22,7 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
+- "BooleanLiteralType"
 - !private "Calendar"
 - "CastingPrecedence"
 - "Date"
@@ -40,6 +41,7 @@ depends-top-level:
 - !private "numberOfRequests"
 - !private "oneHundredTwentyThreeDaysAgo"
 - !private "oneWeekAgo"
+- "reviewInProgress"
 depends-member:
 - !private ["SK", ""]
 - !private ["s7CVarArgP", "asyncAfter"]
@@ -221,13 +223,14 @@ depends-member:
 - !private ["8ZenTimer16ReviewControllerC", "UIApplication"]
 - !private ["8ZenTimer16ReviewControllerC", "UserDefaults"]
 - ["8ZenTimer16ReviewControllerC", "deinit"]
-- ["8ZenTimer16ReviewControllerC", "eligibleForReviewRequest"]
+- !private ["8ZenTimer16ReviewControllerC", "eligibleForReviewRequest"]
 - ["8ZenTimer16ReviewControllerC", "init"]
 - !private ["8ZenTimer16ReviewControllerC", "initialLaunch"]
 - !private ["8ZenTimer16ReviewControllerC", "numberOfRequests"]
 - !private ["8ZenTimer16ReviewControllerC", "oneHundredTwentyThreeDaysAgo"]
 - !private ["8ZenTimer16ReviewControllerC", "oneWeekAgo"]
 - ["8ZenTimer16ReviewControllerC", "requestReview"]
+- ["8ZenTimer16ReviewControllerC", "reviewInProgress"]
 - ["8ZenTimer16ReviewControllerC", "shared"]
 - !private ["So23SKStoreReviewControllerC", "requestReview"]
 - !private ["7Combine9SchedulerP", "asyncAfter"]
@@ -262,8 +265,9 @@ depends-member:
 - !private ["8ZenTimer9WorkStateO", ""]
 - !private ["8ZenTimer9WorkStateO", "working"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
@@ -337,8 +341,9 @@ depends-nominal:
 - !private "So14NSUserDefaultsC"
 - !private "8ZenTimer9WorkStateO"
 - !private "s30_CustomPlaygroundQuickLookableP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
@@ -502,4 +507,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "ae23bb4d31f80d815bea731ef5cfb40f"
+interface-hash: "5567660ec41442f71fb9ed4deedae02d"

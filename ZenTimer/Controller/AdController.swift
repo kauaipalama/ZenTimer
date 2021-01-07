@@ -23,8 +23,9 @@ class AdController: NSObject, GADInterstitialDelegate {
     }
     
     func presentInterstitialAd(rootViewController: UIViewController) {
+        guard ReviewController.shared.reviewInProgress == false else {return}
         guard PDTimerController.shared.pdTimer.workState == .working else {return}
-        if interstitial.isReady && ReviewController.shared.eligibleForReviewRequest == false {
+        if interstitial.isReady {
             UIApplication.shared.beginIgnoringInteractionEvents()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
                 interstitial.present(fromRootViewController: rootViewController)
