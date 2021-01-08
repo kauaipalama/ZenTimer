@@ -16,6 +16,8 @@
 		B4589CE02331D7DD007525F3 /* paper_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4589CDF2331D7DD007525F3 /* paper_onboarding.framework */; };
 		B46181252331AD82008D5BC2 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46181242331AD82008D5BC2 /* Onboarding.storyboard */; };
 		B46181272331ADB4008D5BC2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46181262331ADB4008D5BC2 /* OnboardingViewController.swift */; };
+		B474ED3225A6DBE000981634 /* SettingsCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B474ED3125A6DBE000981634 /* SettingsCardViewController.xib */; };
+		B474ED3625A7EFAD00981634 /* SettingsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B474ED3525A7EFAD00981634 /* SettingsCardViewController.swift */; };
 		B497888723121067009AFF48 /* rainbow2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B497888623121067009AFF48 /* rainbow2.wav */; };
 		B497888B23122A6D009AFF48 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B497888A23122A6D009AFF48 /* SplashScreen.storyboard */; };
 		B497888D23122B88009AFF48 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497888C23122B88009AFF48 /* SplashScreenViewController.swift */; };
@@ -55,6 +57,8 @@
 		B4589CDF2331D7DD007525F3 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46181242331AD82008D5BC2 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B46181262331ADB4008D5BC2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B474ED3125A6DBE000981634 /* SettingsCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCardViewController.xib; sourceTree = "<group>"; };
+		B474ED3525A7EFAD00981634 /* SettingsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCardViewController.swift; sourceTree = "<group>"; };
 		B497888623121067009AFF48 /* rainbow2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainbow2.wav; sourceTree = "<group>"; };
 		B497888A23122A6D009AFF48 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		B497888C23122B88009AFF48 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				B497888A23122A6D009AFF48 /* SplashScreen.storyboard */,
 				B4A34AA322FBD76200FB66DE /* LaunchScreen.storyboard */,
 				B4F33E2B23529763004AD28C /* CardViewController.xib */,
+				B474ED3125A6DBE000981634 /* SettingsCardViewController.xib */,
 				B4A34AA122FBD76200FB66DE /* Assets.xcassets */,
 			);
 			path = UI;
@@ -189,6 +194,7 @@
 				B497888C23122B88009AFF48 /* SplashScreenViewController.swift */,
 				B46181262331ADB4008D5BC2 /* OnboardingViewController.swift */,
 				B4F33E2A23529763004AD28C /* CardViewController.swift */,
+				B474ED3525A7EFAD00981634 /* SettingsCardViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				B497889523171507009AFF48 /* rainbow3+glass_DoneLoud.wav in Resources */,
 				B4A34AA222FBD76200FB66DE /* Assets.xcassets in Resources */,
 				B497889123163ABD009AFF48 /* whiteNoise_transition.wav in Resources */,
+				B474ED3225A6DBE000981634 /* SettingsCardViewController.xib in Resources */,
 				B49788932316F646009AFF48 /* rainbow3.wav in Resources */,
 				B4A34AA022FBD76100FB66DE /* Main.storyboard in Resources */,
 			);
@@ -368,6 +375,7 @@
 				B4C6985B22FCAA7A0088DA5C /* PDTimerViewController.swift in Sources */,
 				B4F33E2C23529763004AD28C /* CardViewController.swift in Sources */,
 				B448109C22FFC9270092E4F0 /* PDTimer.swift in Sources */,
+				B474ED3625A7EFAD00981634 /* SettingsCardViewController.swift in Sources */,
 				B4A34A9B22FBD76100FB66DE /* AppDelegate.swift in Sources */,
 				B448109E22FFC93A0092E4F0 /* PDTimerController.swift in Sources */,
 				B4B005C82447EAB3000C06F4 /* AlarmNotificationDelegate.swift in Sources */,

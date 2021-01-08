@@ -18,7 +18,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/DuP-su-8XZ-view-FsW-hy-OzK.nib</key>
 		<data>
-		Syy+wLo5VYhFzBrMmdw98E56pEw=
+		BtyHJ2mmYPnm1mW3VNMifTdGU0E=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-DuP-su-8XZ.nib</key>
 		<data>
-		J0a2ImSy8Q9C0k4ZJhyEfBvS/jo=
+		oVX86hgWmvxrJGQ2ajy8pWV8j94=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		xYse+GUycDXVCHLLYbE7pLYxUF0=
+		QAmzXGWOtr21wq3CRs4jUDqtHs8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -38,15 +38,15 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		pipBw5nXrR1OOD4K/6FGfLel8CY=
+		n1r0HVnCI/1zaEw5o67Sh1zvogw=
 		</data>
 		<key>CardViewController.nib</key>
 		<data>
-		I6QAxVlgHZGtfJfdGixiOTx6HwA=
+		zXpYQe86CGtW2N/jnUdajciP6Tc=
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-		+B1XfFC6v78z4ZQWbzx/xP1EqTs=
+		qSjwK+MR98G9Y7Ii9b9K4J/pL/o=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		5Uft6Ue+fJWz4z4AdkYE7F3cZLs=
+		awh9ctKAvbkoBbXoj/+u8BSa/X0=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-		teNDK725RGPQT6RqUno0V0er8i8=
+		P7MaFVY0blcWSdbYvE34Jxu5lpg=
 		</data>
 		<key>Frameworks/paper_onboarding.framework/Info.plist</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Frameworks/paper_onboarding.framework/paper_onboarding</key>
 		<data>
-		+7NzcH7MFk5zYT66H7GO9Rqn8hM=
+		PchIn1XxbIqUEZOhEL0CPmqRxuI=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Onboarding.storyboardc/Bgu-F2-Bx2-view-Xcv-pZ-rfQ.nib</key>
 		<data>
-		4B74+wcLgHMRNIPCR3JIMq8fRxQ=
+		nw+HrqOhQCASlbCJZXY+sSxEM8A=
 		</data>
 		<key>Onboarding.storyboardc/Info.plist</key>
 		<data>
@@ -170,19 +170,23 @@
 		</data>
 		<key>Onboarding.storyboardc/UIViewController-aM5-hq-EVj.nib</key>
 		<data>
-		1Zn+NSD8TS3mSsrUxgpknZiIJHg=
+		vb1XRCPGYgnsY9YeByqCEcaCrcU=
 		</data>
 		<key>Onboarding.storyboardc/onboarding.nib</key>
 		<data>
-		x2ytTiMhzeoH+nl5XgibUP+FAHU=
+		3JyK99hXfy/5GVap0tavXN18yhU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>SettingsCardViewController.nib</key>
+		<data>
+		a/iaa+CshRAOQBNKr7V6Vkanj00=
+		</data>
 		<key>SplashScreen.storyboardc/FNh-VO-6TS-view-G5M-eU-wZT.nib</key>
 		<data>
-		ZOHkGY65dYG/E13EEIP4Mqkkflc=
+		C9/J+LWnyMHkVI6tTd2VtZZ8IHU=
 		</data>
 		<key>SplashScreen.storyboardc/Info.plist</key>
 		<data>
@@ -190,11 +194,11 @@
 		</data>
 		<key>SplashScreen.storyboardc/UIViewController-0oz-Nc-Ol5.nib</key>
 		<data>
-		0JlANZOGj2vuzacz/5Eg/MHDwqs=
+		WcW8F70Ozl6b/UsOPejMDSwLTrM=
 		</data>
 		<key>SplashScreen.storyboardc/splashScreen.nib</key>
 		<data>
-		hYH8U5/xuNGg8GQ8M8pIk/CJKoA=
+		29JjCDsiVeX5w00fm4Jm2UJEH4A=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -306,7 +310,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1WTQP7+kc4gU2hRBtzLsNnLUe3QOxO6BpiyCQFk/WiM=
+			3fJdB252LVYYRq2z+NPw96gH9Vms7/rjJdHWoSiKU7M=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -320,14 +324,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rguaarNjc+7EWupm0YYdAk/1b7xBjwRXezpdtrKwqIk=
+			63fjHi4pxy9q/aLo9+/xSSR6ENXIxZbOwW0YfzihppQ=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qD/H2RAzfSiibcAsXkoPRocbRC7U7zukHNtxLNX3tbE=
+			5Q6R0GiEDUJkoL5t5IgW2jPX4kgGwf5JrPfMfgSTHXo=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -341,21 +345,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wZyXS22K9SmbMQlOPois5wiLXxucMZ+LPpSEYI1aHd8=
+			RyVHcvzQvi0kveDfpaDSN/V9Kz6phZGR7YO7prHeiyg=
 			</data>
 		</dict>
 		<key>CardViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vt9DKx1INUn7Y+smMHuDVhCZZMh16W/wREHvhmr5Tko=
+			Xvh5frkDwrNLx8GDtjYWUXNqRTOhKSxUXGvUMz61x/0=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bwKzH2fu7o9AMsCWSZ6UnjCWsaJAGJGvcJ2DKpf7gow=
+			BC4OdIT6uqe8QAuVay8/us159XwEH/Yo7tQT+A7JURY=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -376,7 +380,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q+NDmDq1g8D2rIwGM5hYkkoI5CHNlgQ3ZbfNVovsdYk=
+			WQdaqSVKmSkL0ba0LhKpjZKHpxdiXf+klZxZ7YLtH8g=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -523,7 +527,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z1IG4t60brX6/92sGFFoU0rwQT74JDTIjjcgK6B1buE=
+			qNkcm17otecNs6YYRwbRmtrPCewkm8af4cUWotIpLNU=
 			</data>
 		</dict>
 		<key>Frameworks/paper_onboarding.framework/Info.plist</key>
@@ -544,14 +548,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GgphCRDu2c9HjPSWSF0hWioGsMpTH0FEO6FX3vgAD1E=
+			eN/XVbhuK0lfxtteCvQUlmln2BMwuxH9hLbQNs8HZnE=
 			</data>
 		</dict>
 		<key>Onboarding.storyboardc/Bgu-F2-Bx2-view-Xcv-pZ-rfQ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7fvmtZz5teMnzQi15dnUfrCC/iM7atUyzpaxgMqKD7Q=
+			7C4Tf8Z6X5524Mf+StCWC/nPlr0WSA/jH7rRQMCfW3o=
 			</data>
 		</dict>
 		<key>Onboarding.storyboardc/Info.plist</key>
@@ -565,21 +569,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			riIjUcSldLUzNVGISGHqcYVCHqmkvAej90zRauXrp7c=
+			D2PGqEh5D0XpKdJjfPKj4AFr98UCXdAfaEyAXnGAytE=
 			</data>
 		</dict>
 		<key>Onboarding.storyboardc/onboarding.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NUe5tYUlDjTQ/Cg+pAKGzrowfL2BPHsVxhoLYuL58lg=
+			3UD+tgS+RGcpAvKd8TRI7gYxNhubWf5MMbJDBHVvQb8=
+			</data>
+		</dict>
+		<key>SettingsCardViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cZUO0R15RzRXYOxWJ9L6flq+uYtDTbUwdrpS0Mcm3z0=
 			</data>
 		</dict>
 		<key>SplashScreen.storyboardc/FNh-VO-6TS-view-G5M-eU-wZT.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6ZDGZ+MzP2xX/hbC3lxGTJISOr7LNUof92Xjc8jNmOQ=
+			K6rwrf/PrYBV3hR3HHCLJGmKZJ7x+B0qvtjVt4RhyVk=
 			</data>
 		</dict>
 		<key>SplashScreen.storyboardc/Info.plist</key>
@@ -593,14 +604,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F+zHrO1/H5GZ/qDrTbYmNB6yfcRtMTiew6cEimGDMk8=
+			Ak5phNk9DJCVkZ4cBFPbDVxvhIpcXMPJypZsGZns7S8=
 			</data>
 		</dict>
 		<key>SplashScreen.storyboardc/splashScreen.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N0+cR/q5RiXJPOQc7hqd8Z1K/6SVIZC+5ShB+UQXs/U=
+			Ohg9FNm6lV9n1GsSZk3v7aqVs08m1T7ykL8Aak3oYpk=
 			</data>
 		</dict>
 		<key>en.lproj/InfoPlist.strings</key>

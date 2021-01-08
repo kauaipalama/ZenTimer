@@ -241,8 +241,6 @@ depends-member:
 - !private ["So13UIApplicationC", "beginIgnoringInteractionEvents"]
 - !private ["So13UIApplicationC", "endIgnoringInteractionEvents"]
 - !private ["So13UIApplicationC", "shared"]
-- !private ["So18UIFocusEnvironmentP", ""]
-- !private ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "beginIgnoringInteractionEvents"]
 - !private ["So30UIPasteConfigurationSupportingP", "endIgnoringInteractionEvents"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
@@ -250,11 +248,9 @@ depends-member:
 - !private ["So11UIResponderC", "beginIgnoringInteractionEvents"]
 - !private ["So11UIResponderC", "endIgnoringInteractionEvents"]
 - !private ["So11UIResponderC", "shared"]
-- !private ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "beginIgnoringInteractionEvents"]
 - !private ["So30UIResponderStandardEditActionsP", "endIgnoringInteractionEvents"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
-- !private ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "beginIgnoringInteractionEvents"]
 - !private ["So23UIUserActivityRestoringP", "endIgnoringInteractionEvents"]
 - !private ["So23UIUserActivityRestoringP", "shared"]
@@ -333,7 +329,6 @@ depends-nominal:
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So13UIApplicationC"
-- !private "So18UIFocusEnvironmentP"
 - !private "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - !private "So30UIResponderStandardEditActionsP"

@@ -18,7 +18,6 @@ class CardViewController: UIViewController, CardViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //This doesnts work when trying to flash the scrollIndicator after the view has loaded and animated. MAybe consider using a delegate to fire the method.
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.25) {
             self.scrollView.flashScrollIndicators()
         }

@@ -347,6 +347,31 @@ SWIFT_CLASS("_TtC8ZenTimer21PDTimerViewController")
 @end
 
 
+SWIFT_CLASS("_TtC8ZenTimer26SettingsCardViewController")
+@interface SettingsCardViewController : UIViewController
+- (void)viewDidLoad;
+- (IBAction)toggleDynamicBackgroundSwitched:(id _Nonnull)sender;
+- (IBAction)toggleNotificationsSwitched:(id _Nonnull)sender;
+- (IBAction)togglePersonalizedAdsSwitched:(id _Nonnull)sender;
+- (IBAction)goToDeviceSettingsButtonTapped:(id _Nonnull)sender;
+- (IBAction)purchaseRemoveAdsButtonTapped:(id _Nonnull)sender;
+- (IBAction)restoreAllPurchasesButtonTapped:(id _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified handleView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified Section1Label;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dynamicBackgroundLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dynamicBackgroundLabel2;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified notificationsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified notificationsLabel2;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified personalizedAdsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified personalizedAdLabel2;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified section2Label;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified removeAdsLabel1;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified removeAdsLabel2;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8ZenTimer26SplashScreenViewController")
 @interface SplashScreenViewController : UIViewController
 - (void)viewDidLoad;
