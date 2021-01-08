@@ -78,5 +78,5 @@ struct Constants {
     static let removeAdsSettingDescription: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
     static let restoreAllPurchases: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
     static let goToDeviceSettings: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
-    static let removeAds: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let removeAdsPrice: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
 }
