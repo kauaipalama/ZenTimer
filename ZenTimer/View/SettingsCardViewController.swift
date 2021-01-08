@@ -60,4 +60,5 @@ class SettingsCardViewController: UIViewController, CardViewDelegate {
     @IBOutlet weak var removeAdsLabel1: UILabel!
     @IBOutlet weak var removeAdsLabel2: UILabel!
     @IBOutlet weak var restoreAllPurchasesButton: UIButton!
+    @IBOutlet weak var removeAdsButton: UIButton!
 }

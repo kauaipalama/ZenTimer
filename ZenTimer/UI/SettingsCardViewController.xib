@@ -20,6 +20,7 @@
                 <outlet property="notificationsLabel2" destination="gre-lN-xk2" id="ZSC-xO-VfQ"/>
                 <outlet property="personalizedAdLabel2" destination="wuv-kZ-0BF" id="JnI-aW-7v5"/>
                 <outlet property="personalizedAdsLabel" destination="q07-CP-OVw" id="Jiu-Xt-vLs"/>
+                <outlet property="removeAdsButton" destination="R92-ca-kZs" id="nwf-dG-hpI"/>
                 <outlet property="removeAdsLabel1" destination="lCW-xR-fwX" id="P7h-oa-VKU"/>
                 <outlet property="removeAdsLabel2" destination="Dyx-PQ-d7a" id="nIT-Ms-bGA"/>
                 <outlet property="restoreAllPurchasesButton" destination="yp8-DH-GCe" id="jts-ku-Juk"/>
@@ -174,7 +175,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="In3-LR-BJB">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="80.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Ads Forever" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCW-xR-fwX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCW-xR-fwX">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
