@@ -95,3 +95,20 @@
 "whatToDo_Description" = "花一些時間來深呼吸，冥想，或到外面去。走開你的工作。如果你不能離開，站起來伸展一下。做一些與手頭任務無關的事情， 享受的時刻。反思自己的成就； 把它們寫下來！喝一些水或吃小點心。";
 
 "footerText" = "有關番茄工作法的更多信息，請訪問作者的網站\n\nhttps://francescocirillo.com\n\n有什麼問題嗎？有意見嗎？給我們發送電子郵件！ \n\nquartztimerapp@gmail.com";
+
+"settings" = "Settings"
+"dynamicBackground" = "Dynamic Background"
+"dynamicBackgroundSettingDescription" = "Turn off dynamic background to preserve battery life."
+"notifications" = "Notifications"
+"notificationsSettingDescription" = "Toggle notifications."
+"personalizedAds" = "Personalized Ads"
+"personalizedAdsSettingDescription" = "Ads help support our business. Turn on personalized ads to give permission to show ads that are more relevant to you."
+"inAppPurchases" = "In-App Purchases"
+"removeAds" = "Remove Ads"
+"removeAdsSettingDescription" = "No subscription required! One payment for a lifetime ad-free experience."
+"restoreAllPurchases" = "Restore All Purchases"
+"goToDeviceSettings" = "Go To Device Settings"
+// vvv Get from StoreKit? vvv
+"removeAdsPrice" = "???"
+// vvv For change in button state after in app purchase is made vvv
+"purchased" = "Purchased"

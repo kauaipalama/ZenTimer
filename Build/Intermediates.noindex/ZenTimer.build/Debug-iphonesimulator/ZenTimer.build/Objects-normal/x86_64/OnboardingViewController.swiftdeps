@@ -45,7 +45,7 @@ depends-top-level:
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["Sa", "subscript"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "subscript"]
 - !private ["So7CALayerC", "opacity"]
 - !private ["So15CALayerDelegateP", ""]
@@ -95,9 +95,9 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidAppear"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "white"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "subscript"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["8ZenTimer9ConstantsV", "onboardingSlide1Description"]
 - !private ["8ZenTimer9ConstantsV", "onboardingSlide1Title"]
 - !private ["8ZenTimer9ConstantsV", "onboardingSlide2Description"]
@@ -256,7 +256,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
@@ -267,9 +267,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "isEnabled"]
 - !private ["s23ExpressibleByNilLiteralP", "layer"]
 - !private ["s23ExpressibleByNilLiteralP", "setTitle"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - !private ["16paper_onboarding22GestureControlDelegateP", "currentIndex"]
 - !private ["16paper_onboarding22GestureControlDelegateP", "dataSource"]
@@ -315,7 +315,7 @@ depends-member:
 - !private ["SH", "viewDidAppear"]
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "white"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["SM", ""]
 - !private ["SM", "subscript"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
@@ -641,15 +641,15 @@ depends-member:
 - !private ["SY", "body"]
 - !private ["SY", "headline"]
 - !private ["SY", "normal"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s13SignedNumericP", ""]
 - !private ["So14UIControlStateV", "normal"]
 - !private ["Sx", ""]
-- !private ["s16TextOutputStreamP", ""]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["So15UIFontTextStylea", "body"]
 - !private ["So15UIFontTextStylea", "headline"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isEnabled"]
@@ -1108,11 +1108,11 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
@@ -1216,13 +1216,13 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "Sa"
-- !private "SK"
+- "SK"
 - !private "So7CALayerC"
 - !private "So15CALayerDelegateP"
 - !private "So13CAMediaTimingP"
 - "s7CVarArgP"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - !private "8ZenTimer9ConstantsV"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
@@ -1233,17 +1233,17 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - !private "16paper_onboarding22GestureControlDelegateP"
 - "SH"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
@@ -1266,13 +1266,13 @@ depends-nominal:
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
-- !private "ST"
+- "ST"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"
 - !private "So14UIControlStateV"
 - !private "Sx"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So15UIFontTextStylea"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
@@ -1305,11 +1305,11 @@ depends-nominal:
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - !private "s19_HasContiguousBytesP"

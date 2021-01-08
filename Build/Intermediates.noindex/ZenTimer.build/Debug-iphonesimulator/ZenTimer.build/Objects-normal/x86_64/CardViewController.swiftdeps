@@ -62,7 +62,8 @@ depends-top-level:
 - !private "whyLabel2"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
-- !private ["SK", ""]
+- ["SK", ""]
+- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "flashScrollIndicators"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "textContainer"]
@@ -154,8 +155,8 @@ depends-member:
 - !private ["8ZenTimer16CardViewDelegateP", "whatToDoLabel2"]
 - !private ["8ZenTimer16CardViewDelegateP", "whyLabel1"]
 - !private ["8ZenTimer16CardViewDelegateP", "whyLabel2"]
-- !private ["Sl", ""]
-- !private ["SL", ""]
+- ["Sl", ""]
+- ["SL", ""]
 - !private ["SL", "now"]
 - !private ["8ZenTimer9ConstantsV", "about_Description"]
 - !private ["8ZenTimer9ConstantsV", "about_Title"]
@@ -289,7 +290,7 @@ depends-member:
 - !private ["SQ", "whatToDoLabel2"]
 - !private ["SQ", "whyLabel1"]
 - !private ["SQ", "whyLabel2"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
@@ -298,9 +299,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "text"]
 - !private ["s23ExpressibleByNilLiteralP", "textContainer"]
 - !private ["s23ExpressibleByNilLiteralP", "textContainerInset"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - !private ["SH", "Constants"]
 - !private ["SH", "DispatchQueue"]
@@ -333,12 +334,15 @@ depends-member:
 - !private ["SH", "whatToDoLabel2"]
 - !private ["SH", "whyLabel1"]
 - !private ["SH", "whyLabel2"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
+- ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "Constants"]
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "UIEdgeInsets"]
+- ["So8NSCodingP", "UILabel"]
 - ["So8NSCodingP", "UIScrollView"]
 - ["So8NSCodingP", "UITextView"]
+- ["So8NSCodingP", "UIView"]
 - ["So8NSCodingP", ""]
 - ["So8NSCodingP", "aboutLabel1"]
 - ["So8NSCodingP", "aboutLabel2"]
@@ -367,11 +371,14 @@ depends-member:
 - ["So8NSCodingP", "whatToDoLabel2"]
 - ["So8NSCodingP", "whyLabel1"]
 - ["So8NSCodingP", "whyLabel2"]
+- ["So26NSExtensionRequestHandlingP", "Bool"]
 - !private ["So26NSExtensionRequestHandlingP", "Constants"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "UIEdgeInsets"]
+- ["So26NSExtensionRequestHandlingP", "UILabel"]
 - ["So26NSExtensionRequestHandlingP", "UIScrollView"]
 - ["So26NSExtensionRequestHandlingP", "UITextView"]
+- ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - ["So26NSExtensionRequestHandlingP", "aboutLabel1"]
 - ["So26NSExtensionRequestHandlingP", "aboutLabel2"]
@@ -438,11 +445,14 @@ depends-member:
 - ["So8NSObjectC", "whatToDoLabel2"]
 - ["So8NSObjectC", "whyLabel1"]
 - ["So8NSObjectC", "whyLabel2"]
+- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "Constants"]
 - !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "UIEdgeInsets"]
+- ["So8NSObjectP", "UILabel"]
 - ["So8NSObjectP", "UIScrollView"]
 - ["So8NSObjectP", "UITextView"]
+- ["So8NSObjectP", "UIView"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "aboutLabel1"]
 - ["So8NSObjectP", "aboutLabel2"]
@@ -497,24 +507,29 @@ depends-member:
 - !private ["Sq", "textContainerInset"]
 - !private ["7Combine9SchedulerP", "asyncAfter"]
 - !private ["7Combine9SchedulerP", "main"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["s13SignedNumericP", ""]
 - !private ["Sx", ""]
-- !private ["s16TextOutputStreamP", ""]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
+- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "flashScrollIndicators"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "textContainer"]
 - !private ["So29UIAccessibilityIdentificationP", "textContainerInset"]
+- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "flashScrollIndicators"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "textContainer"]
 - !private ["So12UIAppearanceP", "textContainerInset"]
+- ["So21UIAppearanceContainerP", "Bool"]
 - !private ["So21UIAppearanceContainerP", "Constants"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "UIEdgeInsets"]
+- ["So21UIAppearanceContainerP", "UILabel"]
 - ["So21UIAppearanceContainerP", "UIScrollView"]
 - ["So21UIAppearanceContainerP", "UITextView"]
+- ["So21UIAppearanceContainerP", "UIView"]
 - ["So21UIAppearanceContainerP", ""]
 - ["So21UIAppearanceContainerP", "aboutLabel1"]
 - ["So21UIAppearanceContainerP", "aboutLabel2"]
@@ -542,11 +557,14 @@ depends-member:
 - ["So21UIAppearanceContainerP", "whatToDoLabel2"]
 - ["So21UIAppearanceContainerP", "whyLabel1"]
 - ["So21UIAppearanceContainerP", "whyLabel2"]
+- ["So18UIContentContainerP", "Bool"]
 - !private ["So18UIContentContainerP", "Constants"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "UIEdgeInsets"]
+- ["So18UIContentContainerP", "UILabel"]
 - ["So18UIContentContainerP", "UIScrollView"]
 - ["So18UIContentContainerP", "UITextView"]
+- ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", ""]
 - ["So18UIContentContainerP", "aboutLabel1"]
 - ["So18UIContentContainerP", "aboutLabel2"]
@@ -573,20 +591,25 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textContainer"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textContainerInset"]
+- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "flashScrollIndicators"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "textContainer"]
 - !private ["So17UICoordinateSpaceP", "textContainerInset"]
+- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "flashScrollIndicators"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "textContainer"]
 - !private ["So13UIDynamicItemP", "textContainerInset"]
 - !private ["So12UIEdgeInsetsV", "init"]
+- ["So18UIFocusEnvironmentP", "Bool"]
 - !private ["So18UIFocusEnvironmentP", "Constants"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "UIEdgeInsets"]
+- ["So18UIFocusEnvironmentP", "UILabel"]
 - ["So18UIFocusEnvironmentP", "UIScrollView"]
 - ["So18UIFocusEnvironmentP", "UITextView"]
+- ["So18UIFocusEnvironmentP", "UIView"]
 - ["So18UIFocusEnvironmentP", ""]
 - ["So18UIFocusEnvironmentP", "aboutLabel1"]
 - ["So18UIFocusEnvironmentP", "aboutLabel2"]
@@ -614,6 +637,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "whatToDoLabel2"]
 - ["So18UIFocusEnvironmentP", "whyLabel1"]
 - ["So18UIFocusEnvironmentP", "whyLabel2"]
+- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "flashScrollIndicators"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textContainer"]
@@ -633,15 +657,19 @@ depends-member:
 - !private ["So10UIKeyInputP", "textContainer"]
 - !private ["So10UIKeyInputP", "textContainerInset"]
 - !private ["So7UILabelC", "text"]
+- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "flashScrollIndicators"]
 - !private ["So24UILargeContentViewerItemP", "text"]
 - !private ["So24UILargeContentViewerItemP", "textContainer"]
 - !private ["So24UILargeContentViewerItemP", "textContainerInset"]
+- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "Constants"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIEdgeInsets"]
+- ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - ["So30UIPasteConfigurationSupportingP", "UIScrollView"]
 - ["So30UIPasteConfigurationSupportingP", "UITextView"]
+- ["So30UIPasteConfigurationSupportingP", "UIView"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So30UIPasteConfigurationSupportingP", "aboutLabel1"]
 - ["So30UIPasteConfigurationSupportingP", "aboutLabel2"]
@@ -704,11 +732,14 @@ depends-member:
 - ["So11UIResponderC", "whatToDoLabel2"]
 - ["So11UIResponderC", "whyLabel1"]
 - ["So11UIResponderC", "whyLabel2"]
+- ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "Constants"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "UIEdgeInsets"]
+- ["So30UIResponderStandardEditActionsP", "UILabel"]
 - ["So30UIResponderStandardEditActionsP", "UIScrollView"]
 - ["So30UIResponderStandardEditActionsP", "UITextView"]
+- ["So30UIResponderStandardEditActionsP", "UIView"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So30UIResponderStandardEditActionsP", "aboutLabel1"]
 - ["So30UIResponderStandardEditActionsP", "aboutLabel2"]
@@ -741,11 +772,14 @@ depends-member:
 - !private ["So12UIScrollViewC", "text"]
 - !private ["So12UIScrollViewC", "textContainer"]
 - !private ["So12UIScrollViewC", "textContainerInset"]
+- ["So16UIStateRestoringP", "Bool"]
 - !private ["So16UIStateRestoringP", "Constants"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "UIEdgeInsets"]
+- ["So16UIStateRestoringP", "UILabel"]
 - ["So16UIStateRestoringP", "UIScrollView"]
 - ["So16UIStateRestoringP", "UITextView"]
+- ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", ""]
 - ["So16UIStateRestoringP", "aboutLabel1"]
 - ["So16UIStateRestoringP", "aboutLabel2"]
@@ -790,11 +824,14 @@ depends-member:
 - !private ["So10UITextViewC", "text"]
 - !private ["So10UITextViewC", "textContainer"]
 - !private ["So10UITextViewC", "textContainerInset"]
+- ["So18UITraitEnvironmentP", "Bool"]
 - !private ["So18UITraitEnvironmentP", "Constants"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "UIEdgeInsets"]
+- ["So18UITraitEnvironmentP", "UILabel"]
 - ["So18UITraitEnvironmentP", "UIScrollView"]
 - ["So18UITraitEnvironmentP", "UITextView"]
+- ["So18UITraitEnvironmentP", "UIView"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So18UITraitEnvironmentP", "aboutLabel1"]
 - ["So18UITraitEnvironmentP", "aboutLabel2"]
@@ -822,11 +859,14 @@ depends-member:
 - ["So18UITraitEnvironmentP", "whatToDoLabel2"]
 - ["So18UITraitEnvironmentP", "whyLabel1"]
 - ["So18UITraitEnvironmentP", "whyLabel2"]
+- ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "Constants"]
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - !private ["So23UIUserActivityRestoringP", "UIEdgeInsets"]
+- ["So23UIUserActivityRestoringP", "UILabel"]
 - ["So23UIUserActivityRestoringP", "UIScrollView"]
 - ["So23UIUserActivityRestoringP", "UITextView"]
+- ["So23UIUserActivityRestoringP", "UIView"]
 - ["So23UIUserActivityRestoringP", ""]
 - ["So23UIUserActivityRestoringP", "aboutLabel1"]
 - ["So23UIUserActivityRestoringP", "aboutLabel2"]
@@ -890,10 +930,10 @@ depends-member:
 - ["So16UIViewControllerC", "whatToDoLabel2"]
 - ["So16UIViewControllerC", "whyLabel1"]
 - ["So16UIViewControllerC", "whyLabel2"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIEdgeInsets"]
@@ -967,13 +1007,13 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textContainerInset"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- !private "SK"
+- "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "8ZenTimer18CardViewControllerC"
 - "8ZenTimer16CardViewDelegateP"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - !private "8ZenTimer9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -984,16 +1024,16 @@ depends-nominal:
 - !private "8Dispatch0A4TimeV"
 - !private "SE"
 - "SQ"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
@@ -1005,11 +1045,11 @@ depends-nominal:
 - "So9OS_objectC"
 - !private "Sq"
 - !private "7Combine9SchedulerP"
-- !private "ST"
+- "ST"
 - !private "s13SignedNumericP"
 - !private "Sx"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -1040,10 +1080,10 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"

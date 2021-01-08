@@ -96,19 +96,19 @@
 
 "footerText" = "For more information about the Pomodoro Technique, visit the author’s website.\n\nhttps://francescocirillo.com\n\nQuestions? Feedback? Send us an email!\n\nquartztimerapp@gmail.com";
 
-"settings" = ""
-"dynamicBackground" = ""
-"dynamicBackgroundSettingDescription" = ""
-"notifications" = ""
-"notificationsSettingDescription" = ""
-"personalizedAds" = ""
-"personalizedAdsSettingDescription" = ""
-"inAppPurchases" = ""
-"inAppPurchasesSettingDescription" = ""
-"removeAds" = ""
-"removeAdsSettingDescription" = ""
-"restoreAllPurchases" = ""
-"goToDeviceSettings" = ""
-"removeAdsPrice" = ""
-//For change in button state after in app purchase is made
-"purchased" = ""
+"settings" = "Settings"
+"dynamicBackground" = "Dynamic Background"
+"dynamicBackgroundSettingDescription" = "Turn off dynamic background to preserve battery life."
+"notifications" = "Notifications"
+"notificationsSettingDescription" = "Toggle notifications."
+"personalizedAds" = "Personalized Ads"
+"personalizedAdsSettingDescription" = "Ads help support our business. Turn on personalized ads to give permission to show ads that are more relevant to you."
+"inAppPurchases" = "In-App Purchases"
+"removeAds" = "Remove Ads"
+"removeAdsSettingDescription" = "No subscription required! One payment for a lifetime ad-free experience."
+"restoreAllPurchases" = "Restore All Purchases"
+"goToDeviceSettings" = "Go To Device Settings"
+// vvv Get from StoreKit? vvv
+"removeAdsPrice" = "???"
+// vvv For change in button state after in app purchase is made vvv
+"purchased" = "Purchased"
