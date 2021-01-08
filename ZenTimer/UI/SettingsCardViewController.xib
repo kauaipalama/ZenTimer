@@ -11,17 +11,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsCardViewController" customModule="ZenTimer" customModuleProvider="target">
             <connections>
-                <outlet property="Section1Label" destination="j2s-Mz-Y95" id="y4l-wY-e2L"/>
                 <outlet property="dynamicBackgroundLabel" destination="rxP-up-TkD" id="DEY-SW-LjU"/>
                 <outlet property="dynamicBackgroundLabel2" destination="bTj-cA-rU3" id="vWX-IL-LOm"/>
+                <outlet property="goToDeviceSettingsButton" destination="HVb-Fg-xwB" id="qqe-8r-gJw"/>
                 <outlet property="handleView" destination="9o1-TF-qDB" id="xD0-ab-jHv"/>
+                <outlet property="inAppPurchasesLabel" destination="snh-FL-lhD" id="bmQ-KE-u5s"/>
                 <outlet property="notificationsLabel" destination="Axh-Cl-Z4a" id="l9C-3W-qf7"/>
                 <outlet property="notificationsLabel2" destination="gre-lN-xk2" id="ZSC-xO-VfQ"/>
                 <outlet property="personalizedAdLabel2" destination="wuv-kZ-0BF" id="JnI-aW-7v5"/>
                 <outlet property="personalizedAdsLabel" destination="q07-CP-OVw" id="Jiu-Xt-vLs"/>
                 <outlet property="removeAdsLabel1" destination="lCW-xR-fwX" id="P7h-oa-VKU"/>
                 <outlet property="removeAdsLabel2" destination="Dyx-PQ-d7a" id="nIT-Ms-bGA"/>
-                <outlet property="section2Label" destination="snh-FL-lhD" id="bmQ-KE-u5s"/>
+                <outlet property="restoreAllPurchasesButton" destination="yp8-DH-GCe" id="jts-ku-Juk"/>
+                <outlet property="settingLabel" destination="j2s-Mz-Y95" id="y4l-wY-e2L"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -202,6 +204,7 @@
                                     <rect key="frame" x="132.5" y="567" width="149" height="30"/>
                                     <state key="normal" title="Restore All Purchases"/>
                                     <connections>
+                                        <action selector="restoreAllPurchasesButton:" destination="-1" eventType="touchUpInside" id="LEJ-Yh-0AW"/>
                                         <action selector="restoreAllPurchasesButtonTapped:" destination="-1" eventType="touchUpInside" id="T3U-1x-47t"/>
                                     </connections>
                                 </button>

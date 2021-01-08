@@ -63,4 +63,19 @@ struct Constants {
     static let whatToDo_Title: String = NSLocalizedString("whatToDo_Title", comment: "")
     static let whatToDo_Description: String = NSLocalizedString("whatToDo_Description", comment: "")
     static let footerText: String = NSLocalizedString("footerText", comment: "")
+    
+    
+    static let settings: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let dynamicBackground: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let dynamicBackgroundSettingDescription: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let notifications: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let notificationsSettingDescription: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let personalizedAds: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let personalizedAdsSettingDescription: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let inAppPurchases: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let inAppPurchasesSettingDescription: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let removeAds: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let removeAdsSettingDescription: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let restoreAllPurchases: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+    static let goToDeviceSettings: String = NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
 }
