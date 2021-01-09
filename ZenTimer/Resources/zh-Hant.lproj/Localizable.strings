@@ -96,19 +96,19 @@
 
 "footerText" = "有關番茄工作法的更多信息，請訪問作者的網站\n\nhttps://francescocirillo.com\n\n有什麼問題嗎？有意見嗎？給我們發送電子郵件！ \n\nquartztimerapp@gmail.com";
 
-"settings" = "Settings"
-"dynamicBackground" = "Dynamic Background"
-"dynamicBackgroundSettingDescription" = "Turn off dynamic background to preserve battery life."
-"notifications" = "Notifications"
-"notificationsSettingDescription" = "Toggle notifications."
-"personalizedAds" = "Personalized Ads"
-"personalizedAdsSettingDescription" = "Ads help support our business. Turn on personalized ads to give permission to show ads that are more relevant to you."
-"inAppPurchases" = "In-App Purchases"
-"removeAds" = "Remove Ads"
-"removeAdsSettingDescription" = "No subscription required! One payment for a lifetime ad-free experience."
-"restoreAllPurchases" = "Restore All Purchases"
-"goToDeviceSettings" = "Go To Device Settings"
+"settings" = "設置"
+"dynamicBackground" = "動態背景"
+"dynamicBackgroundSettingDescription" = "關閉動態背景以延長電池壽命。"
+"notifications" = "推送通知"
+"notificationsSettingDescription" = "切換推送通知。"
+"personalizedAds" = "個性化廣告"
+"personalizedAdsSettingDescription" = "移動廣告有助於支持我們的業務。 啟用個性化廣告以授予展示與您更相關的廣告的權限。"
+"inAppPurchases" = "應用內購買"
+"removeAds" = "移除廣告"
+"removeAdsSettingDescription" = "無需訂閱！ 一次付款即可獲得終身無廣告體驗。"
+"restoreAllPurchases" = "恢復所有購買"
+"goToDeviceSettings" = "轉到設備設置"
 // vvv Get from StoreKit? vvv
 "removeAdsPrice" = "???"
 // vvv For change in button state after in app purchase is made vvv
-"purchased" = "Purchased"
+"purchased" = "已購買"
