@@ -24,7 +24,6 @@ depends-member:
 - ["8ZenTimer9ConstantsV", "footerText"]
 - ["8ZenTimer9ConstantsV", "goToDeviceSettings"]
 - ["8ZenTimer9ConstantsV", "inAppPurchases"]
-- ["8ZenTimer9ConstantsV", "inAppPurchasesSettingDescription"]
 - ["8ZenTimer9ConstantsV", "init"]
 - ["8ZenTimer9ConstantsV", "notificationTitle"]
 - ["8ZenTimer9ConstantsV", "notifications"]
@@ -45,6 +44,7 @@ depends-member:
 - ["8ZenTimer9ConstantsV", "paused"]
 - ["8ZenTimer9ConstantsV", "personalizedAds"]
 - ["8ZenTimer9ConstantsV", "personalizedAdsSettingDescription"]
+- ["8ZenTimer9ConstantsV", "purchased"]
 - ["8ZenTimer9ConstantsV", "quartzLogo"]
 - ["8ZenTimer9ConstantsV", "ready"]
 - ["8ZenTimer9ConstantsV", "removeAds"]
@@ -235,4 +235,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c95c15e7359b2a3f6c0192ce25a7eac1"
+interface-hash: "fa2c96e469500037743c6d08ebff3b1e"

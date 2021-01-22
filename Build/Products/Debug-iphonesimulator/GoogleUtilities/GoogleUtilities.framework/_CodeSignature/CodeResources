@@ -84,13 +84,21 @@
 		<data>
 		kqRN0S855mcEoeddcbC6llfp/j0=
 		</data>
+		<key>Headers/GULURLSessionDataResponse.h</key>
+		<data>
+		C7k2DFJRl4sOYxgFqiOpnGh1Xho=
+		</data>
 		<key>Headers/GoogleUtilities-umbrella.h</key>
 		<data>
-		8G7qsjXADRvOr9AJ+lirJkV9mJA=
+		s67rLG/G5JOmdYPYqAmrAKNt4dI=
+		</data>
+		<key>Headers/NSURLSession+GULPromises.h</key>
+		<data>
+		2BgzYjJd/EL8eHaeK39hhonnQHk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZeEiVa+2yjNbClhzo885ViPOGL4=
+		+TtgG+ewiYUNrXOwARxnb06OVnE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -239,11 +247,25 @@
 			nHEVLRZiAlaBzWwIgNfNZ9l61OpmGZSCbpSaKf3yIqs=
 			</data>
 		</dict>
+		<key>Headers/GULURLSessionDataResponse.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			n5k4qaKh2bYI2mwBIAa845pVXUSRxdfJfPyeZ/AIEyA=
+			</data>
+		</dict>
 		<key>Headers/GoogleUtilities-umbrella.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t25Jjq9Rsn8O+Is+d7JJfN9OAZTkXRZSNvA3xy5UkbE=
+			KWO14kDJgrtnNkOafbEwT5OrWp+zM1TcTRVnZZngz+8=
+			</data>
+		</dict>
+		<key>Headers/NSURLSession+GULPromises.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			biELhEMquN4g3AwZ15AIB3vcGg5AdJI//dTOZc4+/s8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -7,7 +7,7 @@ Copyright 2020 Google
 
 ## GoogleAppMeasurement
 
-Copyright 2020 Google
+Copyright 2021 Google
 
 ## GoogleUserMessagingPlatform
 
