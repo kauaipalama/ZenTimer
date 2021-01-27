@@ -326,7 +326,6 @@ SWIFT_CLASS("_TtC8ZenTimer21PDTimerViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified tapToResetButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified infoButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified settingsButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified tapForSettingsButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified muteButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified breakLengthValueLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified sessionLengthValueLabel;
@@ -335,7 +334,6 @@ SWIFT_CLASS("_TtC8ZenTimer21PDTimerViewController")
 @property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified topContainerButtons;
 @property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified topContainerLabels;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified resetView;
-@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified settingsView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified timerLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified messageLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified overlayView;

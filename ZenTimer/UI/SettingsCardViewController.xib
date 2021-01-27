@@ -25,6 +25,7 @@
                 <outlet property="removeAdsLabel2" destination="Dyx-PQ-d7a" id="nIT-Ms-bGA"/>
                 <outlet property="restoreAllPurchasesButton" destination="yp8-DH-GCe" id="jts-ku-Juk"/>
                 <outlet property="settingLabel" destination="j2s-Mz-Y95" id="y4l-wY-e2L"/>
+                <outlet property="view" destination="qRm-jt-Cwt" id="ODd-dY-256"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -35,19 +36,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUL-UR-L7D">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o1-TF-qDB">
-                            <rect key="frame" x="132" y="0.0" width="150" height="36"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="150" id="IEC-H1-FbA"/>
-                                <constraint firstAttribute="height" constant="36" id="jhE-ZX-cn1"/>
-                            </constraints>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waw-P3-7TL">
                             <rect key="frame" x="192" y="15.5" width="30" height="5"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="ZMy-ci-jpT"/>
                                 <constraint firstAttribute="height" constant="5" id="ZaC-Ph-mkY"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o1-TF-qDB">
+                            <rect key="frame" x="132" y="0.0" width="150" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="IEC-H1-FbA"/>
+                                <constraint firstAttribute="height" constant="36" id="jhE-ZX-cn1"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -194,7 +195,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="90" id="2US-By-Zrp"/>
                                             </constraints>
-                                            <state key="normal" title="$9.99"/>
+                                            <state key="normal" title="$19.99"/>
                                             <connections>
                                                 <action selector="purchaseRemoveAdsButtonTapped:" destination="-1" eventType="touchUpInside" id="oxw-2q-s2L"/>
                                             </connections>

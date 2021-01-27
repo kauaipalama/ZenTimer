@@ -25,7 +25,6 @@ class PDTimerViewController: UIViewController {
         PDTimerController.shared.loadFromPersistentStore()
         setUpAudio()
         splashMaskView.alpha = 1
-        //Queue up Ad
         AdController.shared.initializeInterstitalAd()
     }
     
@@ -73,7 +72,6 @@ class PDTimerViewController: UIViewController {
     
     func setupUI(){
         resetView.alpha = 0
-        settingsView.alpha = 0
         messageLabel.layer.opacity = 0
         overlayView.layer.compositingFilter = "overlayBlendMode"
         if pdTimer.audioSettingsState == .soundOff {
@@ -95,13 +93,13 @@ class PDTimerViewController: UIViewController {
         }
         startButton.setTitle(Constants.tapToStart, for: .normal)
         tapToResetButton.setTitle(Constants.tapToReset, for: .normal)
-        tapForSettingsButton.setTitle(Constants.tapForSettings, for: .normal)
         setupCard()
     }
     
     func setupCard() {
-        let paddingValue = self.view.frame.height * 0.07
-        cardHeight = self.view.frame.height - paddingValue
+        topPaddingValue = self.view.frame.height * 0.07
+        cardHeight = self.view.frame.height - topPaddingValue
+        
         visualEffectView = UIVisualEffectView()
         visualEffectView.frame = CGRect(x: 0, y: statusBarView.frame.height, width: self.view.frame.width, height: self.view.frame.height)
         visualEffectView.isUserInteractionEnabled = false
@@ -109,17 +107,26 @@ class PDTimerViewController: UIViewController {
         
         cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         cardViewDelegate = cardViewController
-        
+        settingsCardViewController = SettingsCardViewController(nibName: "SettingsCardViewController", bundle: nil)
+        settingsCardViewDelegate = settingsCardViewController
         addChild(cardViewController)
+        addChild(settingsCardViewController)
         self.view.addSubview(cardViewController.view)
+        self.view.addSubview(settingsCardViewController.view)
+        
         cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: cardHeight)
         cardViewController.view.clipsToBounds = true
+        let cardTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognizer:)))
+        let cardPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
+        cardViewController.handleView.addGestureRecognizer(cardTapGestureRecognizer)
+        cardViewController.handleView.addGestureRecognizer(cardPanGestureRecognizer)
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognizer:)))
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
-        
-        cardViewController.handleView.addGestureRecognizer(tapGestureRecognizer)
-        cardViewController.handleView.addGestureRecognizer(panGestureRecognizer)
+        settingsCardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: cardHeight)
+        settingsCardViewController.view.clipsToBounds = true
+        let settingsCardTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleSettingsCardTap(recognizer:)))
+        let settingsCardPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleSettingsCardPan(recognizer:)))
+        settingsCardViewController.handleView.addGestureRecognizer(settingsCardTapGestureRecognizer)
+        settingsCardViewController.handleView.addGestureRecognizer(settingsCardPanGestureRecognizer)
     }
     
     // MARK: - Private
@@ -273,7 +280,7 @@ class PDTimerViewController: UIViewController {
     @objc fileprivate func handleCardTap(recognizer: UIGestureRecognizer) {
         switch recognizer.state {
         case .ended:
-            animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
+            animateTransitionIfNeeded(cardViewController: cardViewController, state: nextCardState, duration: 0.9)
             self.infoButton.alpha = 0.25
         default:
             break
@@ -283,7 +290,7 @@ class PDTimerViewController: UIViewController {
     @objc fileprivate func handleCardPan(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .began:
-            startInteractiveTransition(state: nextCardState, duration: 0.9)
+            startInteractiveTransition(cardViewController: cardViewController, state: nextCardState, duration: 0.9)
             self.infoButton.alpha = 0.25
         case .changed:
             let translation = recognizer.translation(in: self.cardViewController.handleView)
@@ -297,22 +304,57 @@ class PDTimerViewController: UIViewController {
         }
     }
     
-    fileprivate func animateTransitionIfNeeded(state: CardViewState, duration: TimeInterval) {
+    @objc fileprivate func handleSettingsCardTap(recognizer: UIGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            animateTransitionIfNeeded(cardViewController: settingsCardViewController, state: nextSettingsCardState, duration: 0.9)
+            self.settingsButton.alpha = 0.25
+        default:
+            break
+        }
+    }
+    
+    @objc fileprivate func handleSettingsCardPan(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            startInteractiveTransition(cardViewController: settingsCardViewController, state: nextSettingsCardState, duration: 0.9)
+            self.settingsButton.alpha = 0.25
+        case .changed:
+            let translation = recognizer.translation(in: self.cardViewController.handleView)
+            var fractionComplete = translation.y / cardHeight
+            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
+            updateInteractiveTransition(fractionCompleted: fractionComplete)
+        case .ended:
+            continueInteractiveTransition()
+        default:
+            break
+        }
+    }
+    
+    fileprivate func animateTransitionIfNeeded(cardViewController: UIViewController, state: CardViewState, duration: TimeInterval) {
         if runningAnimations.isEmpty {
             let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
                 case .expanded:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
+                    cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
                 case .collapsed:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height
+                    cardViewController.view.frame.origin.y = self.view.frame.height
                 }
             }
             
             frameAnimator.addCompletion { (_) in
-                self.cardVisible = !self.cardVisible
+                if cardViewController == self.cardViewController {
+                    self.cardVisible = !self.cardVisible
+                } else if cardViewController == self.settingsCardViewController {
+                    self.settingsCardVisible = !self.settingsCardVisible
+                }
+                
                 self.runningAnimations.removeAll()
+                
                 if self.cardVisible == true {
                     self.cardViewDelegate.displayScrollIndicator()
+                } else if self.settingsCardVisible == true {
+                    self.settingsCardViewDelegate.displayScrollIndicator()
                 }
             }
             
@@ -322,9 +364,9 @@ class PDTimerViewController: UIViewController {
             let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
                 switch state {
                 case .expanded:
-                    self.cardViewController.view.layer.cornerRadius = 12
+                    cardViewController.view.layer.cornerRadius = 12
                 case .collapsed:
-                    self.cardViewController.view.layer.cornerRadius = 0
+                    cardViewController.view.layer.cornerRadius = 0
                 }
             }
             
@@ -334,6 +376,7 @@ class PDTimerViewController: UIViewController {
             let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
                 case .expanded:
+                    self.visualEffectView.isUserInteractionEnabled = false
                     self.visualEffectView.effect = UIBlurEffect(style: .dark)
                 case .collapsed:
                     self.visualEffectView.effect = nil
@@ -345,9 +388,9 @@ class PDTimerViewController: UIViewController {
         }
     }
     
-    fileprivate func startInteractiveTransition(state: CardViewState, duration: TimeInterval) {
+    fileprivate func startInteractiveTransition(cardViewController: UIViewController, state: CardViewState, duration: TimeInterval) {
         if runningAnimations.isEmpty {
-            animateTransitionIfNeeded(state: state, duration: duration)
+            animateTransitionIfNeeded(cardViewController: cardViewController, state: state, duration: duration)
         }
         
         for animator in runningAnimations {
@@ -423,9 +466,9 @@ class PDTimerViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func resetButtonTapped(_ sender: Any) {
+        
         if pdTimer.settingsMenuState == .open {
             settingsButton.alpha = 0.25
-            settingsView.alpha = 0
             pdTimer.settingsMenuState = .closed
         }
         
@@ -451,11 +494,6 @@ class PDTimerViewController: UIViewController {
             }
             resetButton.alpha = 0.25
             resetView.alpha = 0
-        }
-        
-        if cardVisible == true {
-            animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
-            infoButton.alpha = 0.25
         }
     }
     
@@ -485,37 +523,34 @@ class PDTimerViewController: UIViewController {
     }
     
     @IBAction func infoButtonTapped(_ sender: Any) {
-        if nextCardState == .expanded {
+        if self.settingsCardVisible == false {
             infoButton.alpha = 100
-        } else if nextCardState == .collapsed {
-            infoButton.alpha = 0.25
-        }
-        animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
-        
-        if pdTimer.settingsMenuState == .open {
-            pdTimer.settingsMenuState = .closed
-            for button in topContainerButtons {
-                button.isEnabled = true
-                button.alpha = 100
+            animateTransitionIfNeeded(cardViewController: cardViewController, state: nextCardState, duration: 0.9)
+            
+            if pdTimer.settingsMenuState == .open {
+                pdTimer.settingsMenuState = .closed
+                for button in topContainerButtons {
+                    button.isEnabled = true
+                    button.alpha = 100
+                }
+                for label in topContainerLabels {
+                    label.isHidden = false
+                }
+                settingsButton.alpha = 0.25
             }
-            for label in topContainerLabels {
-                label.isHidden = false
+            
+            if pdTimer.resetButtonState == .tapped {
+                pdTimer.resetButtonState = .notTapped
+                for button in topContainerButtons {
+                    button.isEnabled = true
+                    button.alpha = 100
+                }
+                for label in topContainerLabels {
+                    label.isHidden = false
+                }
+                resetButton.alpha = 0.25
+                resetView.alpha = 0
             }
-            settingsButton.alpha = 0.25
-            settingsView.alpha = 0
-        }
-        
-        if pdTimer.resetButtonState == .tapped {
-            pdTimer.resetButtonState = .notTapped
-            for button in topContainerButtons {
-                button.isEnabled = true
-                button.alpha = 100
-            }
-            for label in topContainerLabels {
-                label.isHidden = false
-            }
-            resetButton.alpha = 0.25
-            resetView.alpha = 0
         }
     }
     
@@ -533,39 +568,22 @@ class PDTimerViewController: UIViewController {
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
-        if pdTimer.resetButtonState == .tapped {
-            resetButton.alpha = 0.25
-            resetView.alpha = 0
-            pdTimer.resetButtonState = .notTapped
-        }
-        
-        if pdTimer.settingsMenuState == .closed {
-            pdTimer.settingsMenuState = .open
-            for button in topContainerButtons {
-                button.isEnabled = false
-                button.alpha = 0
-            }
-            for label in topContainerLabels {
-                label.isHidden = true
-            }
+        if self.cardVisible == false {
             settingsButton.alpha = 100
-            settingsView.alpha = 100
-        } else if pdTimer.settingsMenuState == .open {
-            pdTimer.settingsMenuState = .closed
-            for button in topContainerButtons {
-                button.isEnabled = true
-                button.alpha = 100
+            animateTransitionIfNeeded(cardViewController: settingsCardViewController, state: nextCardState, duration: 0.9)
+            
+            if pdTimer.resetButtonState == .tapped {
+                pdTimer.resetButtonState = .notTapped
+                for button in topContainerButtons {
+                    button.isEnabled = true
+                    button.alpha = 100
+                }
+                for label in topContainerLabels {
+                    label.isHidden = false
+                }
+                resetButton.alpha = 0.25
+                resetView.alpha = 0
             }
-            for label in topContainerLabels {
-                label.isHidden = false
-            }
-            settingsButton.alpha = 0.25
-            settingsView.alpha = 0
-        }
-        
-        if cardVisible == true {
-            animateTransitionIfNeeded(state: nextCardState, duration: 0.9)
-            infoButton.alpha = 0.25
         }
     }
     
@@ -583,7 +601,6 @@ class PDTimerViewController: UIViewController {
         for label in topContainerLabels {
             label.isHidden = false
         }
-        settingsView.alpha = 0
         settingsButton.alpha = 0.25
         pdTimer.settingsMenuState = .closed
     }
@@ -699,7 +716,6 @@ class PDTimerViewController: UIViewController {
     @IBOutlet weak var tapToResetButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var tapForSettingsButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var breakLengthValueLabel: UILabel!
     @IBOutlet weak var sessionLengthValueLabel: UILabel!
@@ -708,7 +724,6 @@ class PDTimerViewController: UIViewController {
     @IBOutlet var topContainerButtons: [UIButton]!
     @IBOutlet var topContainerLabels: [UILabel]!
     @IBOutlet weak var resetView: UIView!
-    @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var overlayView: UIImageView!
@@ -730,19 +745,26 @@ class PDTimerViewController: UIViewController {
     var permissionsPresented = UserDefaults.standard.bool(forKey: "permissionsPresented")
     var statusBarHidden = true
     
+    var cardHeight: CGFloat = 0
+    var topPaddingValue: CGFloat = 0
+    
     var cardViewController: CardViewController!
     var cardViewDelegate: CardViewDelegate!
-    var visualEffectView: UIVisualEffectView!
     
-    var cardHeight: CGFloat = 0
-    let cardHandleAreaHeight: CGFloat = 36
+    var settingsCardViewController: SettingsCardViewController!
+    var settingsCardViewDelegate: CardViewDelegate!
     
     var cardVisible = false
+    var settingsCardVisible = false
     
     var nextCardState: CardViewState {
         return cardVisible ? .collapsed : .expanded
     }
+    var nextSettingsCardState: CardViewState {
+        return settingsCardVisible ? .collapsed : .expanded
+    }
     
+    var visualEffectView: UIVisualEffectView!
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted: CGFloat = 0
     

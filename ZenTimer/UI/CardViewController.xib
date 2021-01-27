@@ -39,19 +39,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-yo-r0u">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-Gy-gO0">
-                            <rect key="frame" x="132" y="0.0" width="150" height="36"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="150" id="Otm-f1-7bw"/>
-                                <constraint firstAttribute="height" constant="36" id="gj4-an-UGK"/>
-                            </constraints>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-FA-Hfr">
                             <rect key="frame" x="192" y="15.5" width="30" height="5"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="Lmo-mp-6wz"/>
                                 <constraint firstAttribute="height" constant="5" id="xLf-oj-fLE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-Gy-gO0">
+                            <rect key="frame" x="132" y="0.0" width="150" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="Otm-f1-7bw"/>
+                                <constraint firstAttribute="height" constant="36" id="gj4-an-UGK"/>
                             </constraints>
                         </view>
                     </subviews>

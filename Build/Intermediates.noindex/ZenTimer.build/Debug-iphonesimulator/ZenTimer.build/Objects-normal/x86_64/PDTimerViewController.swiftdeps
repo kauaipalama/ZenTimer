@@ -17,7 +17,6 @@ provides-dynamic-lookup:
 - "animationProgressWhenInterrupted"
 - "breakLengthLabel"
 - "breakLengthValueLabel"
-- "cardHandleAreaHeight"
 - "cardHeight"
 - "cardViewController"
 - "cardViewDelegate"
@@ -28,6 +27,8 @@ provides-dynamic-lookup:
 - "handleCardPan"
 - "handleCardTap"
 - "handleInterruption"
+- "handleSettingsCardPan"
+- "handleSettingsCardTap"
 - "impactFeedbackGenerator"
 - "increaseBreakLengthTapped"
 - "increaseSessionLengthTapped"
@@ -38,6 +39,7 @@ provides-dynamic-lookup:
 - "muteButton"
 - "muteButtonTapped"
 - "nextCardState"
+- "nextSettingsCardState"
 - "notificationCenter"
 - "overlayView"
 - "pauseButtonSoundPlayer"
@@ -60,7 +62,9 @@ provides-dynamic-lookup:
 - "setUpAudio"
 - "settingsButton"
 - "settingsButtonTapped"
-- "settingsView"
+- "settingsCardViewController"
+- "settingsCardViewDelegate"
+- "settingsCardVisible"
 - "setupCard"
 - "setupUI"
 - "splashMaskView"
@@ -70,13 +74,13 @@ provides-dynamic-lookup:
 - "startInteractiveTransition"
 - "statusBarHidden"
 - "statusBarView"
-- "tapForSettingsButton"
 - "tapToResetButton"
 - "tapToResetButtonTapped"
 - "tapToTurnOffNotificationsButtonTapped"
 - "timerLabel"
 - "topContainerButtons"
 - "topContainerLabels"
+- "topPaddingValue"
 - "transitionSplashMaskView"
 - "updateInteractiveTransition"
 - "viewDidAppear"
@@ -132,6 +136,7 @@ depends-top-level:
 - "PDTimerController"
 - "PDTimerViewController"
 - "ReviewController"
+- "SettingsCardViewController"
 - "String"
 - "StringLiteralType"
 - "TernaryPrecedence"
@@ -175,12 +180,15 @@ depends-top-level:
 - !private "handleCardPan"
 - !private "handleCardTap"
 - !private "handleInterruption"
+- !private "handleSettingsCardPan"
+- !private "handleSettingsCardTap"
 - !private "impactFeedbackGenerator"
 - !private "infoButton"
 - "kSystemSoundID_Vibrate"
 - !private "messageLabel"
 - !private "muteButton"
 - !private "nextCardState"
+- !private "nextSettingsCardState"
 - !private "overlayView"
 - !private "pauseButtonSoundPlayer"
 - !private "pdTimer"
@@ -197,7 +205,9 @@ depends-top-level:
 - !private "sessionLengthValueLabel"
 - !private "setUpAudio"
 - !private "settingsButton"
-- !private "settingsView"
+- !private "settingsCardViewController"
+- !private "settingsCardViewDelegate"
+- !private "settingsCardVisible"
 - !private "setupCard"
 - !private "setupUI"
 - !private "splashMaskView"
@@ -206,11 +216,11 @@ depends-top-level:
 - !private "startInteractiveTransition"
 - !private "statusBarHidden"
 - !private "statusBarView"
-- !private "tapForSettingsButton"
 - !private "tapToResetButton"
 - !private "timerLabel"
 - !private "topContainerButtons"
 - !private "topContainerLabels"
+- !private "topPaddingValue"
 - !private "transitionSplashMaskView"
 - !private "updateInteractiveTransition"
 - !private "visualEffectView"
@@ -357,6 +367,7 @@ depends-member:
 - !private ["s7CVarArgP", "NotificationCenter"]
 - ["s7CVarArgP", "PDTimerController"]
 - !private ["s7CVarArgP", "ReviewController"]
+- !private ["s7CVarArgP", "SettingsCardViewController"]
 - !private ["s7CVarArgP", "String"]
 - !private ["s7CVarArgP", "Timer"]
 - !private ["s7CVarArgP", "UIAlertAction"]
@@ -419,6 +430,8 @@ depends-member:
 - !private ["s7CVarArgP", "handleCardPan"]
 - !private ["s7CVarArgP", "handleCardTap"]
 - !private ["s7CVarArgP", "handleInterruption"]
+- !private ["s7CVarArgP", "handleSettingsCardPan"]
+- !private ["s7CVarArgP", "handleSettingsCardTap"]
 - !private ["s7CVarArgP", "handleView"]
 - !private ["s7CVarArgP", "impactFeedbackGenerator"]
 - !private ["s7CVarArgP", "impactOccurred"]
@@ -440,6 +453,7 @@ depends-member:
 - !private ["s7CVarArgP", "muteButton"]
 - !private ["s7CVarArgP", "muteButtonTapped"]
 - !private ["s7CVarArgP", "nextCardState"]
+- !private ["s7CVarArgP", "nextSettingsCardState"]
 - !private ["s7CVarArgP", "notificationCenter"]
 - !private ["s7CVarArgP", "numberOfLoops"]
 - ["s7CVarArgP", "opacity"]
@@ -482,7 +496,9 @@ depends-member:
 - !private ["s7CVarArgP", "setVolume"]
 - !private ["s7CVarArgP", "settingsButton"]
 - !private ["s7CVarArgP", "settingsButtonTapped"]
-- !private ["s7CVarArgP", "settingsView"]
+- !private ["s7CVarArgP", "settingsCardViewController"]
+- !private ["s7CVarArgP", "settingsCardViewDelegate"]
+- !private ["s7CVarArgP", "settingsCardVisible"]
 - !private ["s7CVarArgP", "setupCard"]
 - !private ["s7CVarArgP", "setupUI"]
 - !private ["s7CVarArgP", "shared"]
@@ -499,7 +515,6 @@ depends-member:
 - !private ["s7CVarArgP", "statusBarView"]
 - !private ["s7CVarArgP", "stop"]
 - !private ["s7CVarArgP", "subscript"]
-- !private ["s7CVarArgP", "tapForSettingsButton"]
 - !private ["s7CVarArgP", "tapToResetButton"]
 - !private ["s7CVarArgP", "tapToResetButtonTapped"]
 - !private ["s7CVarArgP", "text"]
@@ -508,6 +523,7 @@ depends-member:
 - !private ["s7CVarArgP", "toValue"]
 - !private ["s7CVarArgP", "topContainerButtons"]
 - !private ["s7CVarArgP", "topContainerLabels"]
+- !private ["s7CVarArgP", "topPaddingValue"]
 - !private ["s7CVarArgP", "transitionSplashMaskView"]
 - !private ["s7CVarArgP", "translation"]
 - !private ["s7CVarArgP", "updateInteractiveTransition"]
@@ -526,7 +542,6 @@ depends-member:
 - !private ["8ZenTimer16CardViewDelegateP", "handleView"]
 - !private ["8ZenTimer16CardViewDelegateP", "init"]
 - !private ["8ZenTimer16CardViewDelegateP", "view"]
-- !private ["8ZenTimer13CardViewStateO", ""]
 - !private ["8ZenTimer13CardViewStateO", "collapsed"]
 - !private ["8ZenTimer13CardViewStateO", "expanded"]
 - ["Sl", ""]
@@ -544,7 +559,6 @@ depends-member:
 - !private ["8ZenTimer9ConstantsV", "ok"]
 - !private ["8ZenTimer9ConstantsV", "sessionComplete"]
 - !private ["8ZenTimer9ConstantsV", "sessionLengthLabel"]
-- !private ["8ZenTimer9ConstantsV", "tapForSettings"]
 - !private ["8ZenTimer9ConstantsV", "tapToReset"]
 - !private ["8ZenTimer9ConstantsV", "tapToStart"]
 - !private ["10Foundation15ContiguousBytesP", "append"]
@@ -575,6 +589,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
 - ["s28CustomDebugStringConvertibleP", "PDTimerController"]
 - !private ["s28CustomDebugStringConvertibleP", "ReviewController"]
+- !private ["s28CustomDebugStringConvertibleP", "SettingsCardViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
 - !private ["s28CustomDebugStringConvertibleP", "Timer"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
@@ -639,6 +654,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "handleCardPan"]
 - !private ["s28CustomDebugStringConvertibleP", "handleCardTap"]
 - !private ["s28CustomDebugStringConvertibleP", "handleInterruption"]
+- !private ["s28CustomDebugStringConvertibleP", "handleSettingsCardPan"]
+- !private ["s28CustomDebugStringConvertibleP", "handleSettingsCardTap"]
 - !private ["s28CustomDebugStringConvertibleP", "handleView"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "impactFeedbackGenerator"]
@@ -661,6 +678,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "muteButton"]
 - !private ["s28CustomDebugStringConvertibleP", "muteButtonTapped"]
 - !private ["s28CustomDebugStringConvertibleP", "nextCardState"]
+- !private ["s28CustomDebugStringConvertibleP", "nextSettingsCardState"]
 - !private ["s28CustomDebugStringConvertibleP", "notificationCenter"]
 - !private ["s28CustomDebugStringConvertibleP", "numberOfLoops"]
 - !private ["s28CustomDebugStringConvertibleP", "onBreak"]
@@ -705,7 +723,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "setVolume"]
 - !private ["s28CustomDebugStringConvertibleP", "settingsButton"]
 - !private ["s28CustomDebugStringConvertibleP", "settingsButtonTapped"]
-- !private ["s28CustomDebugStringConvertibleP", "settingsView"]
+- !private ["s28CustomDebugStringConvertibleP", "settingsCardViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "settingsCardViewDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "settingsCardVisible"]
 - !private ["s28CustomDebugStringConvertibleP", "setupCard"]
 - !private ["s28CustomDebugStringConvertibleP", "setupUI"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
@@ -724,7 +744,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "statusBarView"]
 - !private ["s28CustomDebugStringConvertibleP", "stop"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
-- !private ["s28CustomDebugStringConvertibleP", "tapForSettingsButton"]
 - !private ["s28CustomDebugStringConvertibleP", "tapToResetButton"]
 - !private ["s28CustomDebugStringConvertibleP", "tapToResetButtonTapped"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
@@ -733,6 +752,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "toValue"]
 - !private ["s28CustomDebugStringConvertibleP", "topContainerButtons"]
 - !private ["s28CustomDebugStringConvertibleP", "topContainerLabels"]
+- !private ["s28CustomDebugStringConvertibleP", "topPaddingValue"]
 - !private ["s28CustomDebugStringConvertibleP", "transitionSplashMaskView"]
 - !private ["s28CustomDebugStringConvertibleP", "translation"]
 - !private ["s28CustomDebugStringConvertibleP", "updateInteractiveTransition"]
@@ -809,6 +829,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "NotificationCenter"]
 - ["s23CustomStringConvertibleP", "PDTimerController"]
 - !private ["s23CustomStringConvertibleP", "ReviewController"]
+- !private ["s23CustomStringConvertibleP", "SettingsCardViewController"]
 - !private ["s23CustomStringConvertibleP", "String"]
 - !private ["s23CustomStringConvertibleP", "Timer"]
 - !private ["s23CustomStringConvertibleP", "UIAlertAction"]
@@ -873,6 +894,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "handleCardPan"]
 - !private ["s23CustomStringConvertibleP", "handleCardTap"]
 - !private ["s23CustomStringConvertibleP", "handleInterruption"]
+- !private ["s23CustomStringConvertibleP", "handleSettingsCardPan"]
+- !private ["s23CustomStringConvertibleP", "handleSettingsCardTap"]
 - !private ["s23CustomStringConvertibleP", "handleView"]
 - !private ["s23CustomStringConvertibleP", "impactFeedbackGenerator"]
 - !private ["s23CustomStringConvertibleP", "impactOccurred"]
@@ -894,6 +917,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "muteButton"]
 - !private ["s23CustomStringConvertibleP", "muteButtonTapped"]
 - !private ["s23CustomStringConvertibleP", "nextCardState"]
+- !private ["s23CustomStringConvertibleP", "nextSettingsCardState"]
 - !private ["s23CustomStringConvertibleP", "notificationCenter"]
 - !private ["s23CustomStringConvertibleP", "numberOfLoops"]
 - ["s23CustomStringConvertibleP", "opacity"]
@@ -936,7 +960,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setVolume"]
 - !private ["s23CustomStringConvertibleP", "settingsButton"]
 - !private ["s23CustomStringConvertibleP", "settingsButtonTapped"]
-- !private ["s23CustomStringConvertibleP", "settingsView"]
+- !private ["s23CustomStringConvertibleP", "settingsCardViewController"]
+- !private ["s23CustomStringConvertibleP", "settingsCardViewDelegate"]
+- !private ["s23CustomStringConvertibleP", "settingsCardVisible"]
 - !private ["s23CustomStringConvertibleP", "setupCard"]
 - !private ["s23CustomStringConvertibleP", "setupUI"]
 - !private ["s23CustomStringConvertibleP", "shared"]
@@ -953,7 +979,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "statusBarView"]
 - !private ["s23CustomStringConvertibleP", "stop"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "tapForSettingsButton"]
 - !private ["s23CustomStringConvertibleP", "tapToResetButton"]
 - !private ["s23CustomStringConvertibleP", "tapToResetButtonTapped"]
 - !private ["s23CustomStringConvertibleP", "text"]
@@ -962,6 +987,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "toValue"]
 - !private ["s23CustomStringConvertibleP", "topContainerButtons"]
 - !private ["s23CustomStringConvertibleP", "topContainerLabels"]
+- !private ["s23CustomStringConvertibleP", "topPaddingValue"]
 - !private ["s23CustomStringConvertibleP", "transitionSplashMaskView"]
 - !private ["s23CustomStringConvertibleP", "translation"]
 - !private ["s23CustomStringConvertibleP", "updateInteractiveTransition"]
@@ -1083,6 +1109,7 @@ depends-member:
 - ["SQ", "PDTimerController"]
 - !private ["SQ", "RawValue"]
 - !private ["SQ", "ReviewController"]
+- !private ["SQ", "SettingsCardViewController"]
 - !private ["SQ", "String"]
 - !private ["SQ", "Timer"]
 - !private ["SQ", "UIAlertAction"]
@@ -1160,6 +1187,8 @@ depends-member:
 - !private ["SQ", "handleCardPan"]
 - !private ["SQ", "handleCardTap"]
 - !private ["SQ", "handleInterruption"]
+- !private ["SQ", "handleSettingsCardPan"]
+- !private ["SQ", "handleSettingsCardTap"]
 - !private ["SQ", "handleView"]
 - !private ["SQ", "height"]
 - !private ["SQ", "impactFeedbackGenerator"]
@@ -1185,6 +1214,7 @@ depends-member:
 - !private ["SQ", "muteButton"]
 - !private ["SQ", "muteButtonTapped"]
 - !private ["SQ", "nextCardState"]
+- !private ["SQ", "nextSettingsCardState"]
 - !private ["SQ", "normal"]
 - !private ["SQ", "notTapped"]
 - !private ["SQ", "notificationCenter"]
@@ -1234,7 +1264,9 @@ depends-member:
 - !private ["SQ", "setVolume"]
 - !private ["SQ", "settingsButton"]
 - !private ["SQ", "settingsButtonTapped"]
-- !private ["SQ", "settingsView"]
+- !private ["SQ", "settingsCardViewController"]
+- !private ["SQ", "settingsCardViewDelegate"]
+- !private ["SQ", "settingsCardVisible"]
 - !private ["SQ", "setupCard"]
 - !private ["SQ", "setupUI"]
 - !private ["SQ", "shared"]
@@ -1255,7 +1287,6 @@ depends-member:
 - !private ["SQ", "statusBarView"]
 - !private ["SQ", "stop"]
 - !private ["SQ", "subscript"]
-- !private ["SQ", "tapForSettingsButton"]
 - !private ["SQ", "tapToResetButton"]
 - !private ["SQ", "tapToResetButtonTapped"]
 - !private ["SQ", "tapped"]
@@ -1265,6 +1296,7 @@ depends-member:
 - !private ["SQ", "toValue"]
 - !private ["SQ", "topContainerButtons"]
 - !private ["SQ", "topContainerLabels"]
+- !private ["SQ", "topPaddingValue"]
 - !private ["SQ", "transitionSplashMaskView"]
 - !private ["SQ", "translation"]
 - !private ["SQ", "updateInteractiveTransition"]
@@ -1427,6 +1459,7 @@ depends-member:
 - ["SH", "PDTimerController"]
 - !private ["SH", "RawValue"]
 - !private ["SH", "ReviewController"]
+- !private ["SH", "SettingsCardViewController"]
 - !private ["SH", "String"]
 - !private ["SH", "Timer"]
 - !private ["SH", "UIAlertAction"]
@@ -1501,6 +1534,8 @@ depends-member:
 - !private ["SH", "handleCardPan"]
 - !private ["SH", "handleCardTap"]
 - !private ["SH", "handleInterruption"]
+- !private ["SH", "handleSettingsCardPan"]
+- !private ["SH", "handleSettingsCardTap"]
 - !private ["SH", "handleView"]
 - !private ["SH", "impactFeedbackGenerator"]
 - !private ["SH", "impactOccurred"]
@@ -1525,6 +1560,7 @@ depends-member:
 - !private ["SH", "muteButton"]
 - !private ["SH", "muteButtonTapped"]
 - !private ["SH", "nextCardState"]
+- !private ["SH", "nextSettingsCardState"]
 - !private ["SH", "notTapped"]
 - !private ["SH", "notificationCenter"]
 - !private ["SH", "numberOfLoops"]
@@ -1572,7 +1608,9 @@ depends-member:
 - !private ["SH", "setVolume"]
 - !private ["SH", "settingsButton"]
 - !private ["SH", "settingsButtonTapped"]
-- !private ["SH", "settingsView"]
+- !private ["SH", "settingsCardViewController"]
+- !private ["SH", "settingsCardViewDelegate"]
+- !private ["SH", "settingsCardVisible"]
 - !private ["SH", "setupCard"]
 - !private ["SH", "setupUI"]
 - !private ["SH", "shared"]
@@ -1591,7 +1629,6 @@ depends-member:
 - !private ["SH", "statusBarView"]
 - !private ["SH", "stop"]
 - !private ["SH", "subscript"]
-- !private ["SH", "tapForSettingsButton"]
 - !private ["SH", "tapToResetButton"]
 - !private ["SH", "tapToResetButtonTapped"]
 - !private ["SH", "tapped"]
@@ -1601,6 +1638,7 @@ depends-member:
 - !private ["SH", "toValue"]
 - !private ["SH", "topContainerButtons"]
 - !private ["SH", "topContainerLabels"]
+- !private ["SH", "topPaddingValue"]
 - !private ["SH", "transitionSplashMaskView"]
 - !private ["SH", "translation"]
 - !private ["SH", "updateInteractiveTransition"]
@@ -1668,6 +1706,7 @@ depends-member:
 - !private ["So8NSCodingP", "NotificationCenter"]
 - ["So8NSCodingP", "PDTimerController"]
 - !private ["So8NSCodingP", "ReviewController"]
+- ["So8NSCodingP", "SettingsCardViewController"]
 - !private ["So8NSCodingP", "String"]
 - ["So8NSCodingP", "TimeInterval"]
 - !private ["So8NSCodingP", "Timer"]
@@ -1684,6 +1723,7 @@ depends-member:
 - ["So8NSCodingP", "UIStatusBarStyle"]
 - !private ["So8NSCodingP", "UITapGestureRecognizer"]
 - ["So8NSCodingP", "UIView"]
+- ["So8NSCodingP", "UIViewController"]
 - ["So8NSCodingP", "UIViewPropertyAnimator"]
 - ["So8NSCodingP", "UIVisualEffectView"]
 - !private ["So8NSCodingP", "UInt"]
@@ -1710,7 +1750,6 @@ depends-member:
 - !private ["So8NSCodingP", "autoreverses"]
 - ["So8NSCodingP", "breakLengthLabel"]
 - ["So8NSCodingP", "breakLengthValueLabel"]
-- ["So8NSCodingP", "cardHandleAreaHeight"]
 - ["So8NSCodingP", "cardHeight"]
 - ["So8NSCodingP", "cardViewController"]
 - ["So8NSCodingP", "cardViewDelegate"]
@@ -1729,6 +1768,8 @@ depends-member:
 - ["So8NSCodingP", "handleCardPan"]
 - ["So8NSCodingP", "handleCardTap"]
 - ["So8NSCodingP", "handleInterruption"]
+- ["So8NSCodingP", "handleSettingsCardPan"]
+- ["So8NSCodingP", "handleSettingsCardTap"]
 - !private ["So8NSCodingP", "handleView"]
 - ["So8NSCodingP", "impactFeedbackGenerator"]
 - ["So8NSCodingP", "increaseBreakLengthTapped"]
@@ -1746,6 +1787,7 @@ depends-member:
 - ["So8NSCodingP", "muteButton"]
 - ["So8NSCodingP", "muteButtonTapped"]
 - ["So8NSCodingP", "nextCardState"]
+- ["So8NSCodingP", "nextSettingsCardState"]
 - ["So8NSCodingP", "notificationCenter"]
 - !private ["So8NSCodingP", "numberWithBool"]
 - !private ["So8NSCodingP", "numberWithChar"]
@@ -1790,7 +1832,9 @@ depends-member:
 - ["So8NSCodingP", "setUpAudio"]
 - ["So8NSCodingP", "settingsButton"]
 - ["So8NSCodingP", "settingsButtonTapped"]
-- ["So8NSCodingP", "settingsView"]
+- ["So8NSCodingP", "settingsCardViewController"]
+- ["So8NSCodingP", "settingsCardViewDelegate"]
+- ["So8NSCodingP", "settingsCardVisible"]
 - ["So8NSCodingP", "setupCard"]
 - ["So8NSCodingP", "setupUI"]
 - ["So8NSCodingP", "splashMaskView"]
@@ -1800,7 +1844,6 @@ depends-member:
 - ["So8NSCodingP", "startInteractiveTransition"]
 - ["So8NSCodingP", "statusBarHidden"]
 - ["So8NSCodingP", "statusBarView"]
-- ["So8NSCodingP", "tapForSettingsButton"]
 - ["So8NSCodingP", "tapToResetButton"]
 - ["So8NSCodingP", "tapToResetButtonTapped"]
 - ["So8NSCodingP", "tapToTurnOffNotificationsButtonTapped"]
@@ -1810,6 +1853,7 @@ depends-member:
 - !private ["So8NSCodingP", "toValue"]
 - ["So8NSCodingP", "topContainerButtons"]
 - ["So8NSCodingP", "topContainerLabels"]
+- ["So8NSCodingP", "topPaddingValue"]
 - ["So8NSCodingP", "transitionSplashMaskView"]
 - ["So8NSCodingP", "updateInteractiveTransition"]
 - !private ["So8NSCodingP", "view"]
@@ -1876,6 +1920,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "NotificationCenter"]
 - ["So26NSExtensionRequestHandlingP", "PDTimerController"]
 - !private ["So26NSExtensionRequestHandlingP", "ReviewController"]
+- ["So26NSExtensionRequestHandlingP", "SettingsCardViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
 - ["So26NSExtensionRequestHandlingP", "TimeInterval"]
 - !private ["So26NSExtensionRequestHandlingP", "Timer"]
@@ -1892,6 +1937,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIStatusBarStyle"]
 - !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
 - ["So26NSExtensionRequestHandlingP", "UIView"]
+- ["So26NSExtensionRequestHandlingP", "UIViewController"]
 - ["So26NSExtensionRequestHandlingP", "UIViewPropertyAnimator"]
 - ["So26NSExtensionRequestHandlingP", "UIVisualEffectView"]
 - !private ["So26NSExtensionRequestHandlingP", "UInt"]
@@ -1911,7 +1957,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "animationProgressWhenInterrupted"]
 - ["So26NSExtensionRequestHandlingP", "breakLengthLabel"]
 - ["So26NSExtensionRequestHandlingP", "breakLengthValueLabel"]
-- ["So26NSExtensionRequestHandlingP", "cardHandleAreaHeight"]
 - ["So26NSExtensionRequestHandlingP", "cardHeight"]
 - ["So26NSExtensionRequestHandlingP", "cardViewController"]
 - ["So26NSExtensionRequestHandlingP", "cardViewDelegate"]
@@ -1922,6 +1967,8 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "handleCardPan"]
 - ["So26NSExtensionRequestHandlingP", "handleCardTap"]
 - ["So26NSExtensionRequestHandlingP", "handleInterruption"]
+- ["So26NSExtensionRequestHandlingP", "handleSettingsCardPan"]
+- ["So26NSExtensionRequestHandlingP", "handleSettingsCardTap"]
 - !private ["So26NSExtensionRequestHandlingP", "handleView"]
 - ["So26NSExtensionRequestHandlingP", "impactFeedbackGenerator"]
 - ["So26NSExtensionRequestHandlingP", "increaseBreakLengthTapped"]
@@ -1935,6 +1982,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "muteButton"]
 - ["So26NSExtensionRequestHandlingP", "muteButtonTapped"]
 - ["So26NSExtensionRequestHandlingP", "nextCardState"]
+- ["So26NSExtensionRequestHandlingP", "nextSettingsCardState"]
 - ["So26NSExtensionRequestHandlingP", "notificationCenter"]
 - ["So26NSExtensionRequestHandlingP", "overlayView"]
 - ["So26NSExtensionRequestHandlingP", "pauseButtonSoundPlayer"]
@@ -1960,7 +2008,9 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "setUpAudio"]
 - ["So26NSExtensionRequestHandlingP", "settingsButton"]
 - ["So26NSExtensionRequestHandlingP", "settingsButtonTapped"]
-- ["So26NSExtensionRequestHandlingP", "settingsView"]
+- ["So26NSExtensionRequestHandlingP", "settingsCardViewController"]
+- ["So26NSExtensionRequestHandlingP", "settingsCardViewDelegate"]
+- ["So26NSExtensionRequestHandlingP", "settingsCardVisible"]
 - ["So26NSExtensionRequestHandlingP", "setupCard"]
 - ["So26NSExtensionRequestHandlingP", "setupUI"]
 - ["So26NSExtensionRequestHandlingP", "splashMaskView"]
@@ -1970,13 +2020,13 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "startInteractiveTransition"]
 - ["So26NSExtensionRequestHandlingP", "statusBarHidden"]
 - ["So26NSExtensionRequestHandlingP", "statusBarView"]
-- ["So26NSExtensionRequestHandlingP", "tapForSettingsButton"]
 - ["So26NSExtensionRequestHandlingP", "tapToResetButton"]
 - ["So26NSExtensionRequestHandlingP", "tapToResetButtonTapped"]
 - ["So26NSExtensionRequestHandlingP", "tapToTurnOffNotificationsButtonTapped"]
 - ["So26NSExtensionRequestHandlingP", "timerLabel"]
 - ["So26NSExtensionRequestHandlingP", "topContainerButtons"]
 - ["So26NSExtensionRequestHandlingP", "topContainerLabels"]
+- ["So26NSExtensionRequestHandlingP", "topPaddingValue"]
 - ["So26NSExtensionRequestHandlingP", "transitionSplashMaskView"]
 - ["So26NSExtensionRequestHandlingP", "updateInteractiveTransition"]
 - !private ["So26NSExtensionRequestHandlingP", "view"]
@@ -2016,6 +2066,7 @@ depends-member:
 - !private ["So8NSObjectC", "NotificationCenter"]
 - ["So8NSObjectC", "PDTimerController"]
 - !private ["So8NSObjectC", "ReviewController"]
+- ["So8NSObjectC", "SettingsCardViewController"]
 - !private ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "TimeInterval"]
 - !private ["So8NSObjectC", "Timer"]
@@ -2032,6 +2083,7 @@ depends-member:
 - ["So8NSObjectC", "UIStatusBarStyle"]
 - !private ["So8NSObjectC", "UITapGestureRecognizer"]
 - ["So8NSObjectC", "UIView"]
+- ["So8NSObjectC", "UIViewController"]
 - ["So8NSObjectC", "UIViewPropertyAnimator"]
 - ["So8NSObjectC", "UIVisualEffectView"]
 - !private ["So8NSObjectC", "UInt"]
@@ -2070,7 +2122,6 @@ depends-member:
 - ["So8NSObjectC", "breakLengthLabel"]
 - ["So8NSObjectC", "breakLengthValueLabel"]
 - !private ["So8NSObjectC", "canOpenURL"]
-- ["So8NSObjectC", "cardHandleAreaHeight"]
 - ["So8NSObjectC", "cardHeight"]
 - ["So8NSObjectC", "cardViewController"]
 - ["So8NSObjectC", "cardViewDelegate"]
@@ -2100,6 +2151,8 @@ depends-member:
 - ["So8NSObjectC", "handleCardPan"]
 - ["So8NSObjectC", "handleCardTap"]
 - ["So8NSObjectC", "handleInterruption"]
+- ["So8NSObjectC", "handleSettingsCardPan"]
+- ["So8NSObjectC", "handleSettingsCardTap"]
 - !private ["So8NSObjectC", "handleView"]
 - ["So8NSObjectC", "impactFeedbackGenerator"]
 - !private ["So8NSObjectC", "impactOccurred"]
@@ -2122,6 +2175,7 @@ depends-member:
 - ["So8NSObjectC", "muteButton"]
 - ["So8NSObjectC", "muteButtonTapped"]
 - ["So8NSObjectC", "nextCardState"]
+- ["So8NSObjectC", "nextSettingsCardState"]
 - ["So8NSObjectC", "notificationCenter"]
 - !private ["So8NSObjectC", "numberOfLoops"]
 - !private ["So8NSObjectC", "numberWithBool"]
@@ -2193,7 +2247,9 @@ depends-member:
 - !private ["So8NSObjectC", "setVolume"]
 - ["So8NSObjectC", "settingsButton"]
 - ["So8NSObjectC", "settingsButtonTapped"]
-- ["So8NSObjectC", "settingsView"]
+- ["So8NSObjectC", "settingsCardViewController"]
+- ["So8NSObjectC", "settingsCardViewDelegate"]
+- ["So8NSObjectC", "settingsCardVisible"]
 - ["So8NSObjectC", "setupCard"]
 - ["So8NSObjectC", "setupUI"]
 - !private ["So8NSObjectC", "shared"]
@@ -2209,7 +2265,6 @@ depends-member:
 - ["So8NSObjectC", "statusBarHidden"]
 - ["So8NSObjectC", "statusBarView"]
 - !private ["So8NSObjectC", "stop"]
-- ["So8NSObjectC", "tapForSettingsButton"]
 - ["So8NSObjectC", "tapToResetButton"]
 - ["So8NSObjectC", "tapToResetButtonTapped"]
 - ["So8NSObjectC", "tapToTurnOffNotificationsButtonTapped"]
@@ -2219,6 +2274,7 @@ depends-member:
 - !private ["So8NSObjectC", "toValue"]
 - ["So8NSObjectC", "topContainerButtons"]
 - ["So8NSObjectC", "topContainerLabels"]
+- ["So8NSObjectC", "topPaddingValue"]
 - ["So8NSObjectC", "transitionSplashMaskView"]
 - !private ["So8NSObjectC", "translation"]
 - !private ["So8NSObjectC", "translationInView"]
@@ -2277,6 +2333,7 @@ depends-member:
 - !private ["So8NSObjectP", "NotificationCenter"]
 - ["So8NSObjectP", "PDTimerController"]
 - !private ["So8NSObjectP", "ReviewController"]
+- ["So8NSObjectP", "SettingsCardViewController"]
 - !private ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "TimeInterval"]
 - !private ["So8NSObjectP", "Timer"]
@@ -2293,6 +2350,7 @@ depends-member:
 - ["So8NSObjectP", "UIStatusBarStyle"]
 - !private ["So8NSObjectP", "UITapGestureRecognizer"]
 - ["So8NSObjectP", "UIView"]
+- ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", "UIViewPropertyAnimator"]
 - ["So8NSObjectP", "UIVisualEffectView"]
 - !private ["So8NSObjectP", "UInt"]
@@ -2331,7 +2389,6 @@ depends-member:
 - ["So8NSObjectP", "breakLengthLabel"]
 - ["So8NSObjectP", "breakLengthValueLabel"]
 - !private ["So8NSObjectP", "canOpenURL"]
-- ["So8NSObjectP", "cardHandleAreaHeight"]
 - ["So8NSObjectP", "cardHeight"]
 - ["So8NSObjectP", "cardViewController"]
 - ["So8NSObjectP", "cardViewDelegate"]
@@ -2361,6 +2418,8 @@ depends-member:
 - ["So8NSObjectP", "handleCardPan"]
 - ["So8NSObjectP", "handleCardTap"]
 - ["So8NSObjectP", "handleInterruption"]
+- ["So8NSObjectP", "handleSettingsCardPan"]
+- ["So8NSObjectP", "handleSettingsCardTap"]
 - !private ["So8NSObjectP", "handleView"]
 - ["So8NSObjectP", "impactFeedbackGenerator"]
 - !private ["So8NSObjectP", "impactOccurred"]
@@ -2383,6 +2442,7 @@ depends-member:
 - ["So8NSObjectP", "muteButton"]
 - ["So8NSObjectP", "muteButtonTapped"]
 - ["So8NSObjectP", "nextCardState"]
+- ["So8NSObjectP", "nextSettingsCardState"]
 - ["So8NSObjectP", "notificationCenter"]
 - !private ["So8NSObjectP", "numberOfLoops"]
 - !private ["So8NSObjectP", "numberWithBool"]
@@ -2454,7 +2514,9 @@ depends-member:
 - !private ["So8NSObjectP", "setVolume"]
 - ["So8NSObjectP", "settingsButton"]
 - ["So8NSObjectP", "settingsButtonTapped"]
-- ["So8NSObjectP", "settingsView"]
+- ["So8NSObjectP", "settingsCardViewController"]
+- ["So8NSObjectP", "settingsCardViewDelegate"]
+- ["So8NSObjectP", "settingsCardVisible"]
 - ["So8NSObjectP", "setupCard"]
 - ["So8NSObjectP", "setupUI"]
 - !private ["So8NSObjectP", "shared"]
@@ -2470,7 +2532,6 @@ depends-member:
 - ["So8NSObjectP", "statusBarHidden"]
 - ["So8NSObjectP", "statusBarView"]
 - !private ["So8NSObjectP", "stop"]
-- ["So8NSObjectP", "tapForSettingsButton"]
 - ["So8NSObjectP", "tapToResetButton"]
 - ["So8NSObjectP", "tapToResetButtonTapped"]
 - ["So8NSObjectP", "tapToTurnOffNotificationsButtonTapped"]
@@ -2480,6 +2541,7 @@ depends-member:
 - !private ["So8NSObjectP", "toValue"]
 - ["So8NSObjectP", "topContainerButtons"]
 - ["So8NSObjectP", "topContainerLabels"]
+- ["So8NSObjectP", "topPaddingValue"]
 - ["So8NSObjectP", "transitionSplashMaskView"]
 - !private ["So8NSObjectP", "translation"]
 - !private ["So8NSObjectP", "translationInView"]
@@ -2653,6 +2715,7 @@ depends-member:
 - !private ["8ZenTimer21PDTimerViewControllerC", "NotificationCenter"]
 - ["8ZenTimer21PDTimerViewControllerC", "PDTimerController"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "ReviewController"]
+- ["8ZenTimer21PDTimerViewControllerC", "SettingsCardViewController"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "String"]
 - ["8ZenTimer21PDTimerViewControllerC", "TimeInterval"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "Timer"]
@@ -2669,6 +2732,7 @@ depends-member:
 - ["8ZenTimer21PDTimerViewControllerC", "UIStatusBarStyle"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "UITapGestureRecognizer"]
 - ["8ZenTimer21PDTimerViewControllerC", "UIView"]
+- ["8ZenTimer21PDTimerViewControllerC", "UIViewController"]
 - ["8ZenTimer21PDTimerViewControllerC", "UIViewPropertyAnimator"]
 - ["8ZenTimer21PDTimerViewControllerC", "UIVisualEffectView"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "UInt"]
@@ -2686,7 +2750,6 @@ depends-member:
 - ["8ZenTimer21PDTimerViewControllerC", "animationProgressWhenInterrupted"]
 - ["8ZenTimer21PDTimerViewControllerC", "breakLengthLabel"]
 - ["8ZenTimer21PDTimerViewControllerC", "breakLengthValueLabel"]
-- ["8ZenTimer21PDTimerViewControllerC", "cardHandleAreaHeight"]
 - ["8ZenTimer21PDTimerViewControllerC", "cardHeight"]
 - ["8ZenTimer21PDTimerViewControllerC", "cardViewController"]
 - ["8ZenTimer21PDTimerViewControllerC", "cardViewDelegate"]
@@ -2698,6 +2761,8 @@ depends-member:
 - !private ["8ZenTimer21PDTimerViewControllerC", "handleCardPan"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "handleCardTap"]
 - ["8ZenTimer21PDTimerViewControllerC", "handleInterruption"]
+- !private ["8ZenTimer21PDTimerViewControllerC", "handleSettingsCardPan"]
+- !private ["8ZenTimer21PDTimerViewControllerC", "handleSettingsCardTap"]
 - ["8ZenTimer21PDTimerViewControllerC", "impactFeedbackGenerator"]
 - ["8ZenTimer21PDTimerViewControllerC", "increaseBreakLengthTapped"]
 - ["8ZenTimer21PDTimerViewControllerC", "increaseSessionLengthTapped"]
@@ -2710,6 +2775,7 @@ depends-member:
 - ["8ZenTimer21PDTimerViewControllerC", "muteButton"]
 - ["8ZenTimer21PDTimerViewControllerC", "muteButtonTapped"]
 - ["8ZenTimer21PDTimerViewControllerC", "nextCardState"]
+- ["8ZenTimer21PDTimerViewControllerC", "nextSettingsCardState"]
 - ["8ZenTimer21PDTimerViewControllerC", "notificationCenter"]
 - ["8ZenTimer21PDTimerViewControllerC", "overlayView"]
 - ["8ZenTimer21PDTimerViewControllerC", "pauseButtonSoundPlayer"]
@@ -2735,7 +2801,9 @@ depends-member:
 - !private ["8ZenTimer21PDTimerViewControllerC", "setUpAudio"]
 - ["8ZenTimer21PDTimerViewControllerC", "settingsButton"]
 - ["8ZenTimer21PDTimerViewControllerC", "settingsButtonTapped"]
-- ["8ZenTimer21PDTimerViewControllerC", "settingsView"]
+- ["8ZenTimer21PDTimerViewControllerC", "settingsCardViewController"]
+- ["8ZenTimer21PDTimerViewControllerC", "settingsCardViewDelegate"]
+- ["8ZenTimer21PDTimerViewControllerC", "settingsCardVisible"]
 - ["8ZenTimer21PDTimerViewControllerC", "setupCard"]
 - ["8ZenTimer21PDTimerViewControllerC", "setupUI"]
 - ["8ZenTimer21PDTimerViewControllerC", "splashMaskView"]
@@ -2745,13 +2813,13 @@ depends-member:
 - !private ["8ZenTimer21PDTimerViewControllerC", "startInteractiveTransition"]
 - ["8ZenTimer21PDTimerViewControllerC", "statusBarHidden"]
 - ["8ZenTimer21PDTimerViewControllerC", "statusBarView"]
-- ["8ZenTimer21PDTimerViewControllerC", "tapForSettingsButton"]
 - ["8ZenTimer21PDTimerViewControllerC", "tapToResetButton"]
 - ["8ZenTimer21PDTimerViewControllerC", "tapToResetButtonTapped"]
 - ["8ZenTimer21PDTimerViewControllerC", "tapToTurnOffNotificationsButtonTapped"]
 - ["8ZenTimer21PDTimerViewControllerC", "timerLabel"]
 - ["8ZenTimer21PDTimerViewControllerC", "topContainerButtons"]
 - ["8ZenTimer21PDTimerViewControllerC", "topContainerLabels"]
+- ["8ZenTimer21PDTimerViewControllerC", "topPaddingValue"]
 - ["8ZenTimer21PDTimerViewControllerC", "transitionSplashMaskView"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "updateInteractiveTransition"]
 - !private ["8ZenTimer21PDTimerViewControllerC", "view"]
@@ -2823,6 +2891,10 @@ depends-member:
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "shouldResume"]
 - !private ["s10SetAlgebraP", "sound"]
+- !private ["8ZenTimer26SettingsCardViewControllerC", ""]
+- !private ["8ZenTimer26SettingsCardViewControllerC", "handleView"]
+- !private ["8ZenTimer26SettingsCardViewControllerC", "init"]
+- !private ["8ZenTimer26SettingsCardViewControllerC", "view"]
 - !private ["8ZenTimer17SettingsMenuStateO", ""]
 - !private ["8ZenTimer17SettingsMenuStateO", "closed"]
 - !private ["8ZenTimer17SettingsMenuStateO", "open"]
@@ -2931,6 +3003,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "NotificationCenter"]
 - ["So21UIAppearanceContainerP", "PDTimerController"]
 - !private ["So21UIAppearanceContainerP", "ReviewController"]
+- ["So21UIAppearanceContainerP", "SettingsCardViewController"]
 - !private ["So21UIAppearanceContainerP", "String"]
 - ["So21UIAppearanceContainerP", "TimeInterval"]
 - !private ["So21UIAppearanceContainerP", "Timer"]
@@ -2947,6 +3020,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIStatusBarStyle"]
 - !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
 - ["So21UIAppearanceContainerP", "UIView"]
+- ["So21UIAppearanceContainerP", "UIViewController"]
 - ["So21UIAppearanceContainerP", "UIViewPropertyAnimator"]
 - ["So21UIAppearanceContainerP", "UIVisualEffectView"]
 - !private ["So21UIAppearanceContainerP", "UInt"]
@@ -2970,7 +3044,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "animationProgressWhenInterrupted"]
 - ["So21UIAppearanceContainerP", "breakLengthLabel"]
 - ["So21UIAppearanceContainerP", "breakLengthValueLabel"]
-- ["So21UIAppearanceContainerP", "cardHandleAreaHeight"]
 - ["So21UIAppearanceContainerP", "cardHeight"]
 - ["So21UIAppearanceContainerP", "cardViewController"]
 - ["So21UIAppearanceContainerP", "cardViewDelegate"]
@@ -2984,6 +3057,8 @@ depends-member:
 - ["So21UIAppearanceContainerP", "handleCardPan"]
 - ["So21UIAppearanceContainerP", "handleCardTap"]
 - ["So21UIAppearanceContainerP", "handleInterruption"]
+- ["So21UIAppearanceContainerP", "handleSettingsCardPan"]
+- ["So21UIAppearanceContainerP", "handleSettingsCardTap"]
 - !private ["So21UIAppearanceContainerP", "handleView"]
 - ["So21UIAppearanceContainerP", "impactFeedbackGenerator"]
 - ["So21UIAppearanceContainerP", "increaseBreakLengthTapped"]
@@ -3001,6 +3076,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "muteButton"]
 - ["So21UIAppearanceContainerP", "muteButtonTapped"]
 - ["So21UIAppearanceContainerP", "nextCardState"]
+- ["So21UIAppearanceContainerP", "nextSettingsCardState"]
 - ["So21UIAppearanceContainerP", "notificationCenter"]
 - ["So21UIAppearanceContainerP", "overlayView"]
 - ["So21UIAppearanceContainerP", "pauseButtonSoundPlayer"]
@@ -3027,7 +3103,9 @@ depends-member:
 - ["So21UIAppearanceContainerP", "setUpAudio"]
 - ["So21UIAppearanceContainerP", "settingsButton"]
 - ["So21UIAppearanceContainerP", "settingsButtonTapped"]
-- ["So21UIAppearanceContainerP", "settingsView"]
+- ["So21UIAppearanceContainerP", "settingsCardViewController"]
+- ["So21UIAppearanceContainerP", "settingsCardViewDelegate"]
+- ["So21UIAppearanceContainerP", "settingsCardVisible"]
 - ["So21UIAppearanceContainerP", "setupCard"]
 - ["So21UIAppearanceContainerP", "setupUI"]
 - ["So21UIAppearanceContainerP", "splashMaskView"]
@@ -3037,7 +3115,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "startInteractiveTransition"]
 - ["So21UIAppearanceContainerP", "statusBarHidden"]
 - ["So21UIAppearanceContainerP", "statusBarView"]
-- ["So21UIAppearanceContainerP", "tapForSettingsButton"]
 - ["So21UIAppearanceContainerP", "tapToResetButton"]
 - ["So21UIAppearanceContainerP", "tapToResetButtonTapped"]
 - ["So21UIAppearanceContainerP", "tapToTurnOffNotificationsButtonTapped"]
@@ -3045,6 +3122,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "timerLabel"]
 - ["So21UIAppearanceContainerP", "topContainerButtons"]
 - ["So21UIAppearanceContainerP", "topContainerLabels"]
+- ["So21UIAppearanceContainerP", "topPaddingValue"]
 - ["So21UIAppearanceContainerP", "transitionSplashMaskView"]
 - ["So21UIAppearanceContainerP", "updateInteractiveTransition"]
 - !private ["So21UIAppearanceContainerP", "view"]
@@ -3094,6 +3172,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "NotificationCenter"]
 - ["So18UIContentContainerP", "PDTimerController"]
 - !private ["So18UIContentContainerP", "ReviewController"]
+- ["So18UIContentContainerP", "SettingsCardViewController"]
 - !private ["So18UIContentContainerP", "String"]
 - ["So18UIContentContainerP", "TimeInterval"]
 - !private ["So18UIContentContainerP", "Timer"]
@@ -3110,6 +3189,7 @@ depends-member:
 - ["So18UIContentContainerP", "UIStatusBarStyle"]
 - !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
 - ["So18UIContentContainerP", "UIView"]
+- ["So18UIContentContainerP", "UIViewController"]
 - ["So18UIContentContainerP", "UIViewPropertyAnimator"]
 - ["So18UIContentContainerP", "UIVisualEffectView"]
 - !private ["So18UIContentContainerP", "UInt"]
@@ -3129,7 +3209,6 @@ depends-member:
 - ["So18UIContentContainerP", "animationProgressWhenInterrupted"]
 - ["So18UIContentContainerP", "breakLengthLabel"]
 - ["So18UIContentContainerP", "breakLengthValueLabel"]
-- ["So18UIContentContainerP", "cardHandleAreaHeight"]
 - ["So18UIContentContainerP", "cardHeight"]
 - ["So18UIContentContainerP", "cardViewController"]
 - ["So18UIContentContainerP", "cardViewDelegate"]
@@ -3140,6 +3219,8 @@ depends-member:
 - ["So18UIContentContainerP", "handleCardPan"]
 - ["So18UIContentContainerP", "handleCardTap"]
 - ["So18UIContentContainerP", "handleInterruption"]
+- ["So18UIContentContainerP", "handleSettingsCardPan"]
+- ["So18UIContentContainerP", "handleSettingsCardTap"]
 - !private ["So18UIContentContainerP", "handleView"]
 - ["So18UIContentContainerP", "impactFeedbackGenerator"]
 - ["So18UIContentContainerP", "increaseBreakLengthTapped"]
@@ -3153,6 +3234,7 @@ depends-member:
 - ["So18UIContentContainerP", "muteButton"]
 - ["So18UIContentContainerP", "muteButtonTapped"]
 - ["So18UIContentContainerP", "nextCardState"]
+- ["So18UIContentContainerP", "nextSettingsCardState"]
 - ["So18UIContentContainerP", "notificationCenter"]
 - ["So18UIContentContainerP", "overlayView"]
 - ["So18UIContentContainerP", "pauseButtonSoundPlayer"]
@@ -3178,7 +3260,9 @@ depends-member:
 - ["So18UIContentContainerP", "setUpAudio"]
 - ["So18UIContentContainerP", "settingsButton"]
 - ["So18UIContentContainerP", "settingsButtonTapped"]
-- ["So18UIContentContainerP", "settingsView"]
+- ["So18UIContentContainerP", "settingsCardViewController"]
+- ["So18UIContentContainerP", "settingsCardViewDelegate"]
+- ["So18UIContentContainerP", "settingsCardVisible"]
 - ["So18UIContentContainerP", "setupCard"]
 - ["So18UIContentContainerP", "setupUI"]
 - ["So18UIContentContainerP", "splashMaskView"]
@@ -3188,13 +3272,13 @@ depends-member:
 - ["So18UIContentContainerP", "startInteractiveTransition"]
 - ["So18UIContentContainerP", "statusBarHidden"]
 - ["So18UIContentContainerP", "statusBarView"]
-- ["So18UIContentContainerP", "tapForSettingsButton"]
 - ["So18UIContentContainerP", "tapToResetButton"]
 - ["So18UIContentContainerP", "tapToResetButtonTapped"]
 - ["So18UIContentContainerP", "tapToTurnOffNotificationsButtonTapped"]
 - ["So18UIContentContainerP", "timerLabel"]
 - ["So18UIContentContainerP", "topContainerButtons"]
 - ["So18UIContentContainerP", "topContainerLabels"]
+- ["So18UIContentContainerP", "topPaddingValue"]
 - ["So18UIContentContainerP", "transitionSplashMaskView"]
 - ["So18UIContentContainerP", "updateInteractiveTransition"]
 - !private ["So18UIContentContainerP", "view"]
@@ -3280,6 +3364,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "NotificationCenter"]
 - ["So18UIFocusEnvironmentP", "PDTimerController"]
 - !private ["So18UIFocusEnvironmentP", "ReviewController"]
+- ["So18UIFocusEnvironmentP", "SettingsCardViewController"]
 - !private ["So18UIFocusEnvironmentP", "String"]
 - ["So18UIFocusEnvironmentP", "TimeInterval"]
 - !private ["So18UIFocusEnvironmentP", "Timer"]
@@ -3296,6 +3381,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIStatusBarStyle"]
 - !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
 - ["So18UIFocusEnvironmentP", "UIView"]
+- ["So18UIFocusEnvironmentP", "UIViewController"]
 - ["So18UIFocusEnvironmentP", "UIViewPropertyAnimator"]
 - ["So18UIFocusEnvironmentP", "UIVisualEffectView"]
 - !private ["So18UIFocusEnvironmentP", "UInt"]
@@ -3319,7 +3405,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "animationProgressWhenInterrupted"]
 - ["So18UIFocusEnvironmentP", "breakLengthLabel"]
 - ["So18UIFocusEnvironmentP", "breakLengthValueLabel"]
-- ["So18UIFocusEnvironmentP", "cardHandleAreaHeight"]
 - ["So18UIFocusEnvironmentP", "cardHeight"]
 - ["So18UIFocusEnvironmentP", "cardViewController"]
 - ["So18UIFocusEnvironmentP", "cardViewDelegate"]
@@ -3333,6 +3418,8 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "handleCardPan"]
 - ["So18UIFocusEnvironmentP", "handleCardTap"]
 - ["So18UIFocusEnvironmentP", "handleInterruption"]
+- ["So18UIFocusEnvironmentP", "handleSettingsCardPan"]
+- ["So18UIFocusEnvironmentP", "handleSettingsCardTap"]
 - !private ["So18UIFocusEnvironmentP", "handleView"]
 - ["So18UIFocusEnvironmentP", "impactFeedbackGenerator"]
 - ["So18UIFocusEnvironmentP", "increaseBreakLengthTapped"]
@@ -3350,6 +3437,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "muteButton"]
 - ["So18UIFocusEnvironmentP", "muteButtonTapped"]
 - ["So18UIFocusEnvironmentP", "nextCardState"]
+- ["So18UIFocusEnvironmentP", "nextSettingsCardState"]
 - ["So18UIFocusEnvironmentP", "notificationCenter"]
 - ["So18UIFocusEnvironmentP", "overlayView"]
 - ["So18UIFocusEnvironmentP", "pauseButtonSoundPlayer"]
@@ -3376,7 +3464,9 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "setUpAudio"]
 - ["So18UIFocusEnvironmentP", "settingsButton"]
 - ["So18UIFocusEnvironmentP", "settingsButtonTapped"]
-- ["So18UIFocusEnvironmentP", "settingsView"]
+- ["So18UIFocusEnvironmentP", "settingsCardViewController"]
+- ["So18UIFocusEnvironmentP", "settingsCardViewDelegate"]
+- ["So18UIFocusEnvironmentP", "settingsCardVisible"]
 - ["So18UIFocusEnvironmentP", "setupCard"]
 - ["So18UIFocusEnvironmentP", "setupUI"]
 - ["So18UIFocusEnvironmentP", "splashMaskView"]
@@ -3386,7 +3476,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "startInteractiveTransition"]
 - ["So18UIFocusEnvironmentP", "statusBarHidden"]
 - ["So18UIFocusEnvironmentP", "statusBarView"]
-- ["So18UIFocusEnvironmentP", "tapForSettingsButton"]
 - ["So18UIFocusEnvironmentP", "tapToResetButton"]
 - ["So18UIFocusEnvironmentP", "tapToResetButtonTapped"]
 - ["So18UIFocusEnvironmentP", "tapToTurnOffNotificationsButtonTapped"]
@@ -3394,6 +3483,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "timerLabel"]
 - ["So18UIFocusEnvironmentP", "topContainerButtons"]
 - ["So18UIFocusEnvironmentP", "topContainerLabels"]
+- ["So18UIFocusEnvironmentP", "topPaddingValue"]
 - ["So18UIFocusEnvironmentP", "transitionSplashMaskView"]
 - ["So18UIFocusEnvironmentP", "updateInteractiveTransition"]
 - !private ["So18UIFocusEnvironmentP", "view"]
@@ -3490,6 +3580,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "NotificationCenter"]
 - ["So30UIPasteConfigurationSupportingP", "PDTimerController"]
 - !private ["So30UIPasteConfigurationSupportingP", "ReviewController"]
+- ["So30UIPasteConfigurationSupportingP", "SettingsCardViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
 - ["So30UIPasteConfigurationSupportingP", "TimeInterval"]
 - !private ["So30UIPasteConfigurationSupportingP", "Timer"]
@@ -3506,6 +3597,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIStatusBarStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
 - ["So30UIPasteConfigurationSupportingP", "UIView"]
+- ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - ["So30UIPasteConfigurationSupportingP", "UIViewPropertyAnimator"]
 - ["So30UIPasteConfigurationSupportingP", "UIVisualEffectView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UInt"]
@@ -3533,7 +3625,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "breakLengthLabel"]
 - ["So30UIPasteConfigurationSupportingP", "breakLengthValueLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "canOpenURL"]
-- ["So30UIPasteConfigurationSupportingP", "cardHandleAreaHeight"]
 - ["So30UIPasteConfigurationSupportingP", "cardHeight"]
 - ["So30UIPasteConfigurationSupportingP", "cardViewController"]
 - ["So30UIPasteConfigurationSupportingP", "cardViewDelegate"]
@@ -3550,6 +3641,8 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "handleCardPan"]
 - ["So30UIPasteConfigurationSupportingP", "handleCardTap"]
 - ["So30UIPasteConfigurationSupportingP", "handleInterruption"]
+- ["So30UIPasteConfigurationSupportingP", "handleSettingsCardPan"]
+- ["So30UIPasteConfigurationSupportingP", "handleSettingsCardTap"]
 - !private ["So30UIPasteConfigurationSupportingP", "handleView"]
 - ["So30UIPasteConfigurationSupportingP", "impactFeedbackGenerator"]
 - ["So30UIPasteConfigurationSupportingP", "increaseBreakLengthTapped"]
@@ -3567,6 +3660,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "muteButton"]
 - ["So30UIPasteConfigurationSupportingP", "muteButtonTapped"]
 - ["So30UIPasteConfigurationSupportingP", "nextCardState"]
+- ["So30UIPasteConfigurationSupportingP", "nextSettingsCardState"]
 - ["So30UIPasteConfigurationSupportingP", "notificationCenter"]
 - !private ["So30UIPasteConfigurationSupportingP", "open"]
 - !private ["So30UIPasteConfigurationSupportingP", "openSettingsURLString"]
@@ -3597,7 +3691,9 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "setUpAudio"]
 - ["So30UIPasteConfigurationSupportingP", "settingsButton"]
 - ["So30UIPasteConfigurationSupportingP", "settingsButtonTapped"]
-- ["So30UIPasteConfigurationSupportingP", "settingsView"]
+- ["So30UIPasteConfigurationSupportingP", "settingsCardViewController"]
+- ["So30UIPasteConfigurationSupportingP", "settingsCardViewDelegate"]
+- ["So30UIPasteConfigurationSupportingP", "settingsCardVisible"]
 - ["So30UIPasteConfigurationSupportingP", "setupCard"]
 - ["So30UIPasteConfigurationSupportingP", "setupUI"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
@@ -3608,7 +3704,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "startInteractiveTransition"]
 - ["So30UIPasteConfigurationSupportingP", "statusBarHidden"]
 - ["So30UIPasteConfigurationSupportingP", "statusBarView"]
-- ["So30UIPasteConfigurationSupportingP", "tapForSettingsButton"]
 - ["So30UIPasteConfigurationSupportingP", "tapToResetButton"]
 - ["So30UIPasteConfigurationSupportingP", "tapToResetButtonTapped"]
 - ["So30UIPasteConfigurationSupportingP", "tapToTurnOffNotificationsButtonTapped"]
@@ -3616,6 +3711,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "timerLabel"]
 - ["So30UIPasteConfigurationSupportingP", "topContainerButtons"]
 - ["So30UIPasteConfigurationSupportingP", "topContainerLabels"]
+- ["So30UIPasteConfigurationSupportingP", "topPaddingValue"]
 - ["So30UIPasteConfigurationSupportingP", "transitionSplashMaskView"]
 - ["So30UIPasteConfigurationSupportingP", "updateInteractiveTransition"]
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
@@ -3652,6 +3748,7 @@ depends-member:
 - !private ["So11UIResponderC", "NotificationCenter"]
 - ["So11UIResponderC", "PDTimerController"]
 - !private ["So11UIResponderC", "ReviewController"]
+- ["So11UIResponderC", "SettingsCardViewController"]
 - !private ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "TimeInterval"]
 - !private ["So11UIResponderC", "Timer"]
@@ -3668,6 +3765,7 @@ depends-member:
 - ["So11UIResponderC", "UIStatusBarStyle"]
 - !private ["So11UIResponderC", "UITapGestureRecognizer"]
 - ["So11UIResponderC", "UIView"]
+- ["So11UIResponderC", "UIViewController"]
 - ["So11UIResponderC", "UIViewPropertyAnimator"]
 - ["So11UIResponderC", "UIVisualEffectView"]
 - !private ["So11UIResponderC", "UInt"]
@@ -3695,7 +3793,6 @@ depends-member:
 - ["So11UIResponderC", "breakLengthLabel"]
 - ["So11UIResponderC", "breakLengthValueLabel"]
 - !private ["So11UIResponderC", "canOpenURL"]
-- ["So11UIResponderC", "cardHandleAreaHeight"]
 - ["So11UIResponderC", "cardHeight"]
 - ["So11UIResponderC", "cardViewController"]
 - ["So11UIResponderC", "cardViewDelegate"]
@@ -3712,6 +3809,8 @@ depends-member:
 - ["So11UIResponderC", "handleCardPan"]
 - ["So11UIResponderC", "handleCardTap"]
 - ["So11UIResponderC", "handleInterruption"]
+- ["So11UIResponderC", "handleSettingsCardPan"]
+- ["So11UIResponderC", "handleSettingsCardTap"]
 - !private ["So11UIResponderC", "handleView"]
 - ["So11UIResponderC", "impactFeedbackGenerator"]
 - ["So11UIResponderC", "increaseBreakLengthTapped"]
@@ -3729,6 +3828,7 @@ depends-member:
 - ["So11UIResponderC", "muteButton"]
 - ["So11UIResponderC", "muteButtonTapped"]
 - ["So11UIResponderC", "nextCardState"]
+- ["So11UIResponderC", "nextSettingsCardState"]
 - ["So11UIResponderC", "notificationCenter"]
 - !private ["So11UIResponderC", "open"]
 - !private ["So11UIResponderC", "openSettingsURLString"]
@@ -3759,7 +3859,9 @@ depends-member:
 - ["So11UIResponderC", "setUpAudio"]
 - ["So11UIResponderC", "settingsButton"]
 - ["So11UIResponderC", "settingsButtonTapped"]
-- ["So11UIResponderC", "settingsView"]
+- ["So11UIResponderC", "settingsCardViewController"]
+- ["So11UIResponderC", "settingsCardViewDelegate"]
+- ["So11UIResponderC", "settingsCardVisible"]
 - ["So11UIResponderC", "setupCard"]
 - ["So11UIResponderC", "setupUI"]
 - !private ["So11UIResponderC", "shared"]
@@ -3770,7 +3872,6 @@ depends-member:
 - ["So11UIResponderC", "startInteractiveTransition"]
 - ["So11UIResponderC", "statusBarHidden"]
 - ["So11UIResponderC", "statusBarView"]
-- ["So11UIResponderC", "tapForSettingsButton"]
 - ["So11UIResponderC", "tapToResetButton"]
 - ["So11UIResponderC", "tapToResetButtonTapped"]
 - ["So11UIResponderC", "tapToTurnOffNotificationsButtonTapped"]
@@ -3778,6 +3879,7 @@ depends-member:
 - ["So11UIResponderC", "timerLabel"]
 - ["So11UIResponderC", "topContainerButtons"]
 - ["So11UIResponderC", "topContainerLabels"]
+- ["So11UIResponderC", "topPaddingValue"]
 - ["So11UIResponderC", "transitionSplashMaskView"]
 - ["So11UIResponderC", "updateInteractiveTransition"]
 - !private ["So11UIResponderC", "view"]
@@ -3814,6 +3916,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "NotificationCenter"]
 - ["So30UIResponderStandardEditActionsP", "PDTimerController"]
 - !private ["So30UIResponderStandardEditActionsP", "ReviewController"]
+- ["So30UIResponderStandardEditActionsP", "SettingsCardViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
 - ["So30UIResponderStandardEditActionsP", "TimeInterval"]
 - !private ["So30UIResponderStandardEditActionsP", "Timer"]
@@ -3830,6 +3933,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIStatusBarStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
 - ["So30UIResponderStandardEditActionsP", "UIView"]
+- ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - ["So30UIResponderStandardEditActionsP", "UIViewPropertyAnimator"]
 - ["So30UIResponderStandardEditActionsP", "UIVisualEffectView"]
 - !private ["So30UIResponderStandardEditActionsP", "UInt"]
@@ -3857,7 +3961,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "breakLengthLabel"]
 - ["So30UIResponderStandardEditActionsP", "breakLengthValueLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "canOpenURL"]
-- ["So30UIResponderStandardEditActionsP", "cardHandleAreaHeight"]
 - ["So30UIResponderStandardEditActionsP", "cardHeight"]
 - ["So30UIResponderStandardEditActionsP", "cardViewController"]
 - ["So30UIResponderStandardEditActionsP", "cardViewDelegate"]
@@ -3874,6 +3977,8 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "handleCardPan"]
 - ["So30UIResponderStandardEditActionsP", "handleCardTap"]
 - ["So30UIResponderStandardEditActionsP", "handleInterruption"]
+- ["So30UIResponderStandardEditActionsP", "handleSettingsCardPan"]
+- ["So30UIResponderStandardEditActionsP", "handleSettingsCardTap"]
 - !private ["So30UIResponderStandardEditActionsP", "handleView"]
 - ["So30UIResponderStandardEditActionsP", "impactFeedbackGenerator"]
 - ["So30UIResponderStandardEditActionsP", "increaseBreakLengthTapped"]
@@ -3891,6 +3996,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "muteButton"]
 - ["So30UIResponderStandardEditActionsP", "muteButtonTapped"]
 - ["So30UIResponderStandardEditActionsP", "nextCardState"]
+- ["So30UIResponderStandardEditActionsP", "nextSettingsCardState"]
 - ["So30UIResponderStandardEditActionsP", "notificationCenter"]
 - !private ["So30UIResponderStandardEditActionsP", "open"]
 - !private ["So30UIResponderStandardEditActionsP", "openSettingsURLString"]
@@ -3921,7 +4027,9 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "setUpAudio"]
 - ["So30UIResponderStandardEditActionsP", "settingsButton"]
 - ["So30UIResponderStandardEditActionsP", "settingsButtonTapped"]
-- ["So30UIResponderStandardEditActionsP", "settingsView"]
+- ["So30UIResponderStandardEditActionsP", "settingsCardViewController"]
+- ["So30UIResponderStandardEditActionsP", "settingsCardViewDelegate"]
+- ["So30UIResponderStandardEditActionsP", "settingsCardVisible"]
 - ["So30UIResponderStandardEditActionsP", "setupCard"]
 - ["So30UIResponderStandardEditActionsP", "setupUI"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
@@ -3932,7 +4040,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "startInteractiveTransition"]
 - ["So30UIResponderStandardEditActionsP", "statusBarHidden"]
 - ["So30UIResponderStandardEditActionsP", "statusBarView"]
-- ["So30UIResponderStandardEditActionsP", "tapForSettingsButton"]
 - ["So30UIResponderStandardEditActionsP", "tapToResetButton"]
 - ["So30UIResponderStandardEditActionsP", "tapToResetButtonTapped"]
 - ["So30UIResponderStandardEditActionsP", "tapToTurnOffNotificationsButtonTapped"]
@@ -3940,6 +4047,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "timerLabel"]
 - ["So30UIResponderStandardEditActionsP", "topContainerButtons"]
 - ["So30UIResponderStandardEditActionsP", "topContainerLabels"]
+- ["So30UIResponderStandardEditActionsP", "topPaddingValue"]
 - ["So30UIResponderStandardEditActionsP", "transitionSplashMaskView"]
 - ["So30UIResponderStandardEditActionsP", "updateInteractiveTransition"]
 - !private ["So30UIResponderStandardEditActionsP", "view"]
@@ -3983,6 +4091,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "NotificationCenter"]
 - ["So16UIStateRestoringP", "PDTimerController"]
 - !private ["So16UIStateRestoringP", "ReviewController"]
+- ["So16UIStateRestoringP", "SettingsCardViewController"]
 - !private ["So16UIStateRestoringP", "String"]
 - ["So16UIStateRestoringP", "TimeInterval"]
 - !private ["So16UIStateRestoringP", "Timer"]
@@ -3999,6 +4108,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UIStatusBarStyle"]
 - !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
 - ["So16UIStateRestoringP", "UIView"]
+- ["So16UIStateRestoringP", "UIViewController"]
 - ["So16UIStateRestoringP", "UIViewPropertyAnimator"]
 - ["So16UIStateRestoringP", "UIVisualEffectView"]
 - !private ["So16UIStateRestoringP", "UInt"]
@@ -4018,7 +4128,6 @@ depends-member:
 - ["So16UIStateRestoringP", "animationProgressWhenInterrupted"]
 - ["So16UIStateRestoringP", "breakLengthLabel"]
 - ["So16UIStateRestoringP", "breakLengthValueLabel"]
-- ["So16UIStateRestoringP", "cardHandleAreaHeight"]
 - ["So16UIStateRestoringP", "cardHeight"]
 - ["So16UIStateRestoringP", "cardViewController"]
 - ["So16UIStateRestoringP", "cardViewDelegate"]
@@ -4029,6 +4138,8 @@ depends-member:
 - ["So16UIStateRestoringP", "handleCardPan"]
 - ["So16UIStateRestoringP", "handleCardTap"]
 - ["So16UIStateRestoringP", "handleInterruption"]
+- ["So16UIStateRestoringP", "handleSettingsCardPan"]
+- ["So16UIStateRestoringP", "handleSettingsCardTap"]
 - !private ["So16UIStateRestoringP", "handleView"]
 - ["So16UIStateRestoringP", "impactFeedbackGenerator"]
 - ["So16UIStateRestoringP", "increaseBreakLengthTapped"]
@@ -4042,6 +4153,7 @@ depends-member:
 - ["So16UIStateRestoringP", "muteButton"]
 - ["So16UIStateRestoringP", "muteButtonTapped"]
 - ["So16UIStateRestoringP", "nextCardState"]
+- ["So16UIStateRestoringP", "nextSettingsCardState"]
 - ["So16UIStateRestoringP", "notificationCenter"]
 - ["So16UIStateRestoringP", "overlayView"]
 - ["So16UIStateRestoringP", "pauseButtonSoundPlayer"]
@@ -4067,7 +4179,9 @@ depends-member:
 - ["So16UIStateRestoringP", "setUpAudio"]
 - ["So16UIStateRestoringP", "settingsButton"]
 - ["So16UIStateRestoringP", "settingsButtonTapped"]
-- ["So16UIStateRestoringP", "settingsView"]
+- ["So16UIStateRestoringP", "settingsCardViewController"]
+- ["So16UIStateRestoringP", "settingsCardViewDelegate"]
+- ["So16UIStateRestoringP", "settingsCardVisible"]
 - ["So16UIStateRestoringP", "setupCard"]
 - ["So16UIStateRestoringP", "setupUI"]
 - ["So16UIStateRestoringP", "splashMaskView"]
@@ -4077,13 +4191,13 @@ depends-member:
 - ["So16UIStateRestoringP", "startInteractiveTransition"]
 - ["So16UIStateRestoringP", "statusBarHidden"]
 - ["So16UIStateRestoringP", "statusBarView"]
-- ["So16UIStateRestoringP", "tapForSettingsButton"]
 - ["So16UIStateRestoringP", "tapToResetButton"]
 - ["So16UIStateRestoringP", "tapToResetButtonTapped"]
 - ["So16UIStateRestoringP", "tapToTurnOffNotificationsButtonTapped"]
 - ["So16UIStateRestoringP", "timerLabel"]
 - ["So16UIStateRestoringP", "topContainerButtons"]
 - ["So16UIStateRestoringP", "topContainerLabels"]
+- ["So16UIStateRestoringP", "topPaddingValue"]
 - ["So16UIStateRestoringP", "transitionSplashMaskView"]
 - ["So16UIStateRestoringP", "updateInteractiveTransition"]
 - !private ["So16UIStateRestoringP", "view"]
@@ -4122,6 +4236,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "NotificationCenter"]
 - ["So18UITraitEnvironmentP", "PDTimerController"]
 - !private ["So18UITraitEnvironmentP", "ReviewController"]
+- ["So18UITraitEnvironmentP", "SettingsCardViewController"]
 - !private ["So18UITraitEnvironmentP", "String"]
 - ["So18UITraitEnvironmentP", "TimeInterval"]
 - !private ["So18UITraitEnvironmentP", "Timer"]
@@ -4138,6 +4253,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIStatusBarStyle"]
 - !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
 - ["So18UITraitEnvironmentP", "UIView"]
+- ["So18UITraitEnvironmentP", "UIViewController"]
 - ["So18UITraitEnvironmentP", "UIViewPropertyAnimator"]
 - ["So18UITraitEnvironmentP", "UIVisualEffectView"]
 - !private ["So18UITraitEnvironmentP", "UInt"]
@@ -4161,7 +4277,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "animationProgressWhenInterrupted"]
 - ["So18UITraitEnvironmentP", "breakLengthLabel"]
 - ["So18UITraitEnvironmentP", "breakLengthValueLabel"]
-- ["So18UITraitEnvironmentP", "cardHandleAreaHeight"]
 - ["So18UITraitEnvironmentP", "cardHeight"]
 - ["So18UITraitEnvironmentP", "cardViewController"]
 - ["So18UITraitEnvironmentP", "cardViewDelegate"]
@@ -4175,6 +4290,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "handleCardPan"]
 - ["So18UITraitEnvironmentP", "handleCardTap"]
 - ["So18UITraitEnvironmentP", "handleInterruption"]
+- ["So18UITraitEnvironmentP", "handleSettingsCardPan"]
+- ["So18UITraitEnvironmentP", "handleSettingsCardTap"]
 - !private ["So18UITraitEnvironmentP", "handleView"]
 - ["So18UITraitEnvironmentP", "impactFeedbackGenerator"]
 - ["So18UITraitEnvironmentP", "increaseBreakLengthTapped"]
@@ -4192,6 +4309,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "muteButton"]
 - ["So18UITraitEnvironmentP", "muteButtonTapped"]
 - ["So18UITraitEnvironmentP", "nextCardState"]
+- ["So18UITraitEnvironmentP", "nextSettingsCardState"]
 - ["So18UITraitEnvironmentP", "notificationCenter"]
 - ["So18UITraitEnvironmentP", "overlayView"]
 - ["So18UITraitEnvironmentP", "pauseButtonSoundPlayer"]
@@ -4218,7 +4336,9 @@ depends-member:
 - ["So18UITraitEnvironmentP", "setUpAudio"]
 - ["So18UITraitEnvironmentP", "settingsButton"]
 - ["So18UITraitEnvironmentP", "settingsButtonTapped"]
-- ["So18UITraitEnvironmentP", "settingsView"]
+- ["So18UITraitEnvironmentP", "settingsCardViewController"]
+- ["So18UITraitEnvironmentP", "settingsCardViewDelegate"]
+- ["So18UITraitEnvironmentP", "settingsCardVisible"]
 - ["So18UITraitEnvironmentP", "setupCard"]
 - ["So18UITraitEnvironmentP", "setupUI"]
 - ["So18UITraitEnvironmentP", "splashMaskView"]
@@ -4228,7 +4348,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "startInteractiveTransition"]
 - ["So18UITraitEnvironmentP", "statusBarHidden"]
 - ["So18UITraitEnvironmentP", "statusBarView"]
-- ["So18UITraitEnvironmentP", "tapForSettingsButton"]
 - ["So18UITraitEnvironmentP", "tapToResetButton"]
 - ["So18UITraitEnvironmentP", "tapToResetButtonTapped"]
 - ["So18UITraitEnvironmentP", "tapToTurnOffNotificationsButtonTapped"]
@@ -4236,6 +4355,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "timerLabel"]
 - ["So18UITraitEnvironmentP", "topContainerButtons"]
 - ["So18UITraitEnvironmentP", "topContainerLabels"]
+- ["So18UITraitEnvironmentP", "topPaddingValue"]
 - ["So18UITraitEnvironmentP", "transitionSplashMaskView"]
 - ["So18UITraitEnvironmentP", "updateInteractiveTransition"]
 - !private ["So18UITraitEnvironmentP", "view"]
@@ -4272,6 +4392,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "NotificationCenter"]
 - ["So23UIUserActivityRestoringP", "PDTimerController"]
 - !private ["So23UIUserActivityRestoringP", "ReviewController"]
+- ["So23UIUserActivityRestoringP", "SettingsCardViewController"]
 - !private ["So23UIUserActivityRestoringP", "String"]
 - ["So23UIUserActivityRestoringP", "TimeInterval"]
 - !private ["So23UIUserActivityRestoringP", "Timer"]
@@ -4288,6 +4409,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UIStatusBarStyle"]
 - !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
 - ["So23UIUserActivityRestoringP", "UIView"]
+- ["So23UIUserActivityRestoringP", "UIViewController"]
 - ["So23UIUserActivityRestoringP", "UIViewPropertyAnimator"]
 - ["So23UIUserActivityRestoringP", "UIVisualEffectView"]
 - !private ["So23UIUserActivityRestoringP", "UInt"]
@@ -4315,7 +4437,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "breakLengthLabel"]
 - ["So23UIUserActivityRestoringP", "breakLengthValueLabel"]
 - !private ["So23UIUserActivityRestoringP", "canOpenURL"]
-- ["So23UIUserActivityRestoringP", "cardHandleAreaHeight"]
 - ["So23UIUserActivityRestoringP", "cardHeight"]
 - ["So23UIUserActivityRestoringP", "cardViewController"]
 - ["So23UIUserActivityRestoringP", "cardViewDelegate"]
@@ -4332,6 +4453,8 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "handleCardPan"]
 - ["So23UIUserActivityRestoringP", "handleCardTap"]
 - ["So23UIUserActivityRestoringP", "handleInterruption"]
+- ["So23UIUserActivityRestoringP", "handleSettingsCardPan"]
+- ["So23UIUserActivityRestoringP", "handleSettingsCardTap"]
 - !private ["So23UIUserActivityRestoringP", "handleView"]
 - ["So23UIUserActivityRestoringP", "impactFeedbackGenerator"]
 - ["So23UIUserActivityRestoringP", "increaseBreakLengthTapped"]
@@ -4349,6 +4472,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "muteButton"]
 - ["So23UIUserActivityRestoringP", "muteButtonTapped"]
 - ["So23UIUserActivityRestoringP", "nextCardState"]
+- ["So23UIUserActivityRestoringP", "nextSettingsCardState"]
 - ["So23UIUserActivityRestoringP", "notificationCenter"]
 - !private ["So23UIUserActivityRestoringP", "open"]
 - !private ["So23UIUserActivityRestoringP", "openSettingsURLString"]
@@ -4379,7 +4503,9 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "setUpAudio"]
 - ["So23UIUserActivityRestoringP", "settingsButton"]
 - ["So23UIUserActivityRestoringP", "settingsButtonTapped"]
-- ["So23UIUserActivityRestoringP", "settingsView"]
+- ["So23UIUserActivityRestoringP", "settingsCardViewController"]
+- ["So23UIUserActivityRestoringP", "settingsCardViewDelegate"]
+- ["So23UIUserActivityRestoringP", "settingsCardVisible"]
 - ["So23UIUserActivityRestoringP", "setupCard"]
 - ["So23UIUserActivityRestoringP", "setupUI"]
 - !private ["So23UIUserActivityRestoringP", "shared"]
@@ -4390,7 +4516,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "startInteractiveTransition"]
 - ["So23UIUserActivityRestoringP", "statusBarHidden"]
 - ["So23UIUserActivityRestoringP", "statusBarView"]
-- ["So23UIUserActivityRestoringP", "tapForSettingsButton"]
 - ["So23UIUserActivityRestoringP", "tapToResetButton"]
 - ["So23UIUserActivityRestoringP", "tapToResetButtonTapped"]
 - ["So23UIUserActivityRestoringP", "tapToTurnOffNotificationsButtonTapped"]
@@ -4398,6 +4523,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "timerLabel"]
 - ["So23UIUserActivityRestoringP", "topContainerButtons"]
 - ["So23UIUserActivityRestoringP", "topContainerLabels"]
+- ["So23UIUserActivityRestoringP", "topPaddingValue"]
 - ["So23UIUserActivityRestoringP", "transitionSplashMaskView"]
 - ["So23UIUserActivityRestoringP", "updateInteractiveTransition"]
 - !private ["So23UIUserActivityRestoringP", "view"]
@@ -4456,6 +4582,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "NotificationCenter"]
 - ["So16UIViewControllerC", "PDTimerController"]
 - !private ["So16UIViewControllerC", "ReviewController"]
+- ["So16UIViewControllerC", "SettingsCardViewController"]
 - !private ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "TimeInterval"]
 - !private ["So16UIViewControllerC", "Timer"]
@@ -4472,6 +4599,7 @@ depends-member:
 - ["So16UIViewControllerC", "UIStatusBarStyle"]
 - !private ["So16UIViewControllerC", "UITapGestureRecognizer"]
 - ["So16UIViewControllerC", "UIView"]
+- ["So16UIViewControllerC", "UIViewController"]
 - ["So16UIViewControllerC", "UIViewPropertyAnimator"]
 - ["So16UIViewControllerC", "UIVisualEffectView"]
 - !private ["So16UIViewControllerC", "UInt"]
@@ -4491,7 +4619,6 @@ depends-member:
 - ["So16UIViewControllerC", "animationProgressWhenInterrupted"]
 - ["So16UIViewControllerC", "breakLengthLabel"]
 - ["So16UIViewControllerC", "breakLengthValueLabel"]
-- ["So16UIViewControllerC", "cardHandleAreaHeight"]
 - ["So16UIViewControllerC", "cardHeight"]
 - ["So16UIViewControllerC", "cardViewController"]
 - ["So16UIViewControllerC", "cardViewDelegate"]
@@ -4502,6 +4629,8 @@ depends-member:
 - ["So16UIViewControllerC", "handleCardPan"]
 - ["So16UIViewControllerC", "handleCardTap"]
 - ["So16UIViewControllerC", "handleInterruption"]
+- ["So16UIViewControllerC", "handleSettingsCardPan"]
+- ["So16UIViewControllerC", "handleSettingsCardTap"]
 - !private ["So16UIViewControllerC", "handleView"]
 - ["So16UIViewControllerC", "impactFeedbackGenerator"]
 - ["So16UIViewControllerC", "increaseBreakLengthTapped"]
@@ -4515,6 +4644,7 @@ depends-member:
 - ["So16UIViewControllerC", "muteButton"]
 - ["So16UIViewControllerC", "muteButtonTapped"]
 - ["So16UIViewControllerC", "nextCardState"]
+- ["So16UIViewControllerC", "nextSettingsCardState"]
 - ["So16UIViewControllerC", "notificationCenter"]
 - ["So16UIViewControllerC", "overlayView"]
 - ["So16UIViewControllerC", "pauseButtonSoundPlayer"]
@@ -4540,7 +4670,9 @@ depends-member:
 - ["So16UIViewControllerC", "setUpAudio"]
 - ["So16UIViewControllerC", "settingsButton"]
 - ["So16UIViewControllerC", "settingsButtonTapped"]
-- ["So16UIViewControllerC", "settingsView"]
+- ["So16UIViewControllerC", "settingsCardViewController"]
+- ["So16UIViewControllerC", "settingsCardViewDelegate"]
+- ["So16UIViewControllerC", "settingsCardVisible"]
 - ["So16UIViewControllerC", "setupCard"]
 - ["So16UIViewControllerC", "setupUI"]
 - ["So16UIViewControllerC", "splashMaskView"]
@@ -4550,13 +4682,13 @@ depends-member:
 - ["So16UIViewControllerC", "startInteractiveTransition"]
 - ["So16UIViewControllerC", "statusBarHidden"]
 - ["So16UIViewControllerC", "statusBarView"]
-- ["So16UIViewControllerC", "tapForSettingsButton"]
 - ["So16UIViewControllerC", "tapToResetButton"]
 - ["So16UIViewControllerC", "tapToResetButtonTapped"]
 - ["So16UIViewControllerC", "tapToTurnOffNotificationsButtonTapped"]
 - ["So16UIViewControllerC", "timerLabel"]
 - ["So16UIViewControllerC", "topContainerButtons"]
 - ["So16UIViewControllerC", "topContainerLabels"]
+- ["So16UIViewControllerC", "topPaddingValue"]
 - ["So16UIViewControllerC", "transitionSplashMaskView"]
 - ["So16UIViewControllerC", "updateInteractiveTransition"]
 - !private ["So16UIViewControllerC", "view"]
@@ -4670,6 +4802,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "PDTimerController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ReviewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SettingsCardViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Timer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
@@ -4730,6 +4863,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleCardPan"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleCardTap"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleInterruption"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "handleSettingsCardPan"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "handleSettingsCardTap"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "impactFeedbackGenerator"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "impactOccurred"]
@@ -4750,6 +4885,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "muteButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "muteButtonTapped"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nextCardState"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nextSettingsCardState"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "notificationCenter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfLoops"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "opacity"]
@@ -4790,7 +4926,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setVolume"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsButtonTapped"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsCardViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsCardViewDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsCardVisible"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setupCard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setupUI"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
@@ -4806,7 +4944,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "statusBarHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "statusBarView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "stop"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "tapForSettingsButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tapToResetButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tapToResetButtonTapped"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
@@ -4815,6 +4952,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "toValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "topContainerButtons"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "topContainerLabels"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "topPaddingValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "transitionSplashMaskView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "translation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateInteractiveTransition"]
@@ -4849,6 +4987,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NotificationCenter"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PDTimerController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ReviewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SettingsCardViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Timer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertAction"]
@@ -4909,6 +5048,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleCardPan"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleCardTap"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleInterruption"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleSettingsCardPan"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleSettingsCardTap"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "impactFeedbackGenerator"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "impactOccurred"]
@@ -4929,6 +5070,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "muteButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "muteButtonTapped"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "nextCardState"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "nextSettingsCardState"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "notificationCenter"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "numberOfLoops"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "opacity"]
@@ -4969,7 +5111,9 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setVolume"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "settingsButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "settingsButtonTapped"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "settingsView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "settingsCardViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "settingsCardViewDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "settingsCardVisible"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setupCard"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setupUI"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
@@ -4985,7 +5129,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "statusBarHidden"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "statusBarView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stop"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tapForSettingsButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tapToResetButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tapToResetButtonTapped"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
@@ -4994,6 +5137,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "toValue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topContainerButtons"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topContainerLabels"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topPaddingValue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "transitionSplashMaskView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "translation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "updateInteractiveTransition"]
@@ -5154,6 +5298,7 @@ depends-nominal:
 - !private "s10SIMDScalarP"
 - "ST"
 - !private "s10SetAlgebraP"
+- !private "8ZenTimer26SettingsCardViewControllerC"
 - !private "8ZenTimer17SettingsMenuStateO"
 - !private "SZ"
 - !private "s13SignedNumericP"
@@ -5370,28 +5515,28 @@ depends-external:
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/DFPBannerView.h"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADSearchBannerView.h"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Headers/GADAdChoicesView.h"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/paper-onboarding/paper_onboarding.framework/Modules/module.modulemap"
 - "/Users/kainoapalama/Desktop/KaiDev/ZenTimer/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/GoogleMobileAds/GoogleMobileAds.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0c3b8c8eecf42757224e0d4a0860c696"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "5022915c93783937814b2287a99fefbe"
