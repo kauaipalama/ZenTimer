@@ -587,24 +587,6 @@ class PDTimerViewController: UIViewController {
         }
     }
     
-    @IBAction func tapToTurnOffNotificationsButtonTapped(_ sender: Any) {
-        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return}
-        if UIApplication.shared.canOpenURL(settingsURL) {
-            UIApplication.shared.open(settingsURL) { (success) in
-                print("Settings open: \(success)")
-            }
-        }
-        for button in topContainerButtons {
-            button.isEnabled = true
-            button.isHidden = false
-        }
-        for label in topContainerLabels {
-            label.isHidden = false
-        }
-        settingsButton.alpha = 0.25
-        pdTimer.settingsMenuState = .closed
-    }
-    
     @IBAction func decreaseBreakLengthTapped(_ sender: Any) {
         if pdTimer.breakLength > 1 {
             pdTimer.breakLength -= 1

@@ -47,6 +47,12 @@ class SettingsCardViewController: UIViewController, CardViewDelegate {
     }
     
     @IBAction func goToDeviceSettingsButtonTapped(_ sender: Any) {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return}
+        if UIApplication.shared.canOpenURL(settingsURL) {
+            UIApplication.shared.open(settingsURL) { (success) in
+                print("Settings open: \(success)")
+            }
+        }
     }
     
     @IBAction func purchaseRemoveAdsButtonTapped(_ sender: Any) {

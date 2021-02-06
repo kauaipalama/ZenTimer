@@ -315,7 +315,6 @@ SWIFT_CLASS("_TtC8ZenTimer21PDTimerViewController")
 - (IBAction)infoButtonTapped:(id _Nonnull)sender;
 - (IBAction)muteButtonTapped:(id _Nonnull)sender;
 - (IBAction)settingsButtonTapped:(id _Nonnull)sender;
-- (IBAction)tapToTurnOffNotificationsButtonTapped:(id _Nonnull)sender;
 - (IBAction)decreaseBreakLengthTapped:(id _Nonnull)sender;
 - (IBAction)increaseBreakLengthTapped:(id _Nonnull)sender;
 - (IBAction)decreaseSessionLengthTapped:(id _Nonnull)sender;
