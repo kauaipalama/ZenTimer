@@ -10,17 +10,9 @@ import UIKit
 
 class CardViewController: UIViewController, CardViewDelegate {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.25) {
-            self.scrollView.flashScrollIndicators()
-        }
     }
     
     func displayScrollIndicator() {

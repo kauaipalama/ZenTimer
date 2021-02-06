@@ -262,7 +262,6 @@ SWIFT_CLASS("_TtC8ZenTimer11AppDelegate")
 SWIFT_CLASS("_TtC8ZenTimer18CardViewController")
 @interface CardViewController : UIViewController
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified aboutLabel1;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified aboutLabel2;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified whyLabel1;
@@ -348,7 +347,6 @@ SWIFT_CLASS("_TtC8ZenTimer21PDTimerViewController")
 SWIFT_CLASS("_TtC8ZenTimer26SettingsCardViewController")
 @interface SettingsCardViewController : UIViewController
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)toggleDynamicBackgroundSwitched:(id _Nonnull)sender;
 - (IBAction)toggleNotificationsSwitched:(id _Nonnull)sender;
 - (IBAction)togglePersonalizedAdsSwitched:(id _Nonnull)sender;
@@ -356,6 +354,7 @@ SWIFT_CLASS("_TtC8ZenTimer26SettingsCardViewController")
 - (IBAction)purchaseRemoveAdsButtonTapped:(id _Nonnull)sender;
 - (IBAction)restoreAllPurchasesButtonTapped:(id _Nonnull)sender;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified handleView;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified scrollView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified settingLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dynamicBackgroundLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dynamicBackgroundLabel2;

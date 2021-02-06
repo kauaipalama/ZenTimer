@@ -13,20 +13,12 @@ import UIKit
 class SettingsCardViewController: UIViewController, CardViewDelegate {
     
     func displayScrollIndicator() {
-        //display scroll indicator here? Clean up logic in CardViewController then replicate here. The original issue was due to the scroll indicator not flashing after the view has finished animating. Not 100 percent, but thats the jist. Fix it.
+        scrollView.flashScrollIndicators()
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //You were calling display scrollindicator here in CardViewController with a dispatch. why. and why nest the flash call in another function. fix that then come back to see me.
-        
-        //Answer: call was nested in order to conform to a protocol set in PDTimerViewController in order to get triggered at the end of the card animation. Assuming was designed in order to contain all outlets in the CardViewController.xib file
     }
     
     func setupViews() {
@@ -64,6 +56,7 @@ class SettingsCardViewController: UIViewController, CardViewDelegate {
     }
     
     @IBOutlet weak var handleView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var settingLabel: UILabel!
     @IBOutlet weak var dynamicBackgroundLabel: UILabel!
     @IBOutlet weak var dynamicBackgroundLabel2: UILabel!

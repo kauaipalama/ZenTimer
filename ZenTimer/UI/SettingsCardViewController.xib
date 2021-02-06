@@ -24,6 +24,7 @@
                 <outlet property="removeAdsLabel1" destination="lCW-xR-fwX" id="P7h-oa-VKU"/>
                 <outlet property="removeAdsLabel2" destination="Dyx-PQ-d7a" id="nIT-Ms-bGA"/>
                 <outlet property="restoreAllPurchasesButton" destination="yp8-DH-GCe" id="jts-ku-Juk"/>
+                <outlet property="scrollView" destination="RLA-3t-XJC" id="e5p-h1-ekT"/>
                 <outlet property="settingLabel" destination="j2s-Mz-Y95" id="y4l-wY-e2L"/>
                 <outlet property="view" destination="qRm-jt-Cwt" id="ODd-dY-256"/>
             </connections>
