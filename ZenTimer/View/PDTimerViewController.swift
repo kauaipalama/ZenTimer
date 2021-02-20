@@ -156,12 +156,13 @@ class PDTimerViewController: UIViewController {
                             button.alpha = 100
                         }
                     }
-                    if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOn {
+                    //Change to play alert sound if sound is on. remove application state
+                    if self?.pdTimer.audioSettingsState == .soundOn {
                         self?.alertSoundPlayer.prepareToPlay()
                         self?.alertSoundPlayer.play()
                         ReviewController.shared.requestReview()
                         AdController.shared.presentInterstitialAd(rootViewController: self!)
-                    } else if UIApplication.shared.applicationState != .background && self?.pdTimer.audioSettingsState == .soundOff {
+                    } else if self?.pdTimer.audioSettingsState == .soundOff {
                         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                         var title: String {
                             var string = ""

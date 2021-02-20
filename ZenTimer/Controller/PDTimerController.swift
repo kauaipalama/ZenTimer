@@ -108,6 +108,7 @@ class PDTimerController {
     // MARK: - Local Notifications
     
     func scheduleAlarmNotification() {
+        //Create condition depending on notification setting state to access notifcation. Remove sound. All sounds handled in PDTimerViewController
         let content = UNMutableNotificationContent()
         var bodyString: String  {
             var string = ""
@@ -120,7 +121,7 @@ class PDTimerController {
         }
         content.title = Constants.notificationTitle
         content.body = bodyString
-        content.sound = UNNotificationSound(named: UNNotificationSoundName("rainbow3+glass_DoneLoud.wav"))
+//        content.sound = UNNotificationSound(named: UNNotificationSoundName("rainbow3+glass_DoneLoud.wav"))
         content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
